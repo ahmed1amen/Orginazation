@@ -106,6 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <img src="assets/images/m-logo.png" alt="SmartBox" class="img-responsive hidden-xs" height="0">
             </a>
             <!-- Image Logo here -->
+            <!-- Completed -->
         </div>
 
         <!-- Button mobile view to collapse sidebar menu -->
