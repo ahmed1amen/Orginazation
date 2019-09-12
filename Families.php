@@ -17,8 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
-
-
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
         /* $employee_name=$_POST["employee_name"];
         $employee_number=$_POST["employee_number"];
