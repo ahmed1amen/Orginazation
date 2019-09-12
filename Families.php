@@ -28,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $employee_email=$_POST["employee_email"];
         $employee_password=$_POST["employee_password"];
         $employee_office=$_POST["employee_office"];
+            $employee_office=$_POST["employee_office"];
 
         if(empty($employee_name) || empty($employee_number)
         || empty($employee_address) || empty($employee_salary)
