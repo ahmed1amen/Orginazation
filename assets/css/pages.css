@@ -728,7 +728,9 @@ body.rtl-page #wrapper.enlarged .content-page {
 	margin-right:70px;
 }
 body.rtl-page .topbar .topbar-left{float:right}
-body.rtl-page.widescreen.fixed-left .logo, body.rtl-page.mobile.smallscreen .logo{left:auto; right:20px;}
+
+body.rtl-page.widescreen.fixed-left .logo, body.rtl-page.mobile.smallscreen .logo {
+}
 body.rtl-page .pull-left{float:right !important}
 body.rtl-page .pull-right{float:left !important}
 body.rtl-page .caret{margin-left:0px; margin-right:2px;}

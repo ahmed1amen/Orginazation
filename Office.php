@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/core.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/components.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/pages.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
 
@@ -386,106 +386,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="left side-menu">
-        <div class="sidebar-inner slimscrollleft">
-            <!--- Divider -->
-            <div id="sidebar-menu">
-                <ul>
-                    <li class="menu-title">Navigation</li>
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-dashboard"></i> <span> Dashboard </span>
-                            <span class="label label-success pull-right">1</span> <span
-                                    class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled">
-                            <li><a href="dashboard.php">Dashboard1</a></li>
-                        </ul>
-                    </li>
-
-
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect subdrop"> <i class="fa fa-file"></i> <span> UI Elements </span>
-                            <span class="label label-warning pull-right">7</span> <span
-                                    class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled block">
-
-                            <li><a href="typography.html">Typography</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                            <li><a href="icons.html">Icons</a></li>
-                            <li><a href="panels.html">Panels</a></li>
-                            <li><a href="tabs-accordions.html">Tabs &amp; Accordions</a></li>
-                            <li><a href="bootstrap-ui.html">BS Elements</a></li>
-                            <li><a href="progressbars.html">Progress Bars</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li><a href="mailbox.html" class="waves-effect"> <i class="fa fa-envelope"></i>
-                            <span> Mailbox </span> </a></li>
-                    <li><a href="calendar.html" class="waves-effect"> <i class="fa fa-calendar"></i>
-                            <span> Calendar </span> </a></li>
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect subdrop"> <i class="fa fa-file"></i> <span> Pages </span>
-                            <span class="label label-warning pull-right">3</span> <span
-                                    class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled block">
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="blank.html">Blank</a></li>
-                            <li><a href="buttons.html">Buttons</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="profile.html" class="waves-effect"> <i class="fa fa-user"></i> <span> Profile</span>
-                        </a></li>
-
-
-                    <li class="text-muted menu-title">Component</li>
-
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-tasks"></i>
-                            <span> Forms </span> <span class="label label-warning pull-right">3</span> <span
-                                    class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled">
-                            <li><a href="form-elements.html">Form Elements</a></li>
-                            <li><a href="login.php"> Login</a></li>
-                            <li><a href="login.php"> login2</a></li>
-                        </ul>
-                    </li>
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-table"></i>
-                            <span> Tabels </span> <span class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled">
-                            <li><a href="tables.html">Tabel 1</a></li>
-                        </ul>
-                    </li>
-                    <li class="has_sub">
-                        <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-area-chart"></i> <span> Charts </span>
-                            <span class="fa fa-angle-right cb-nav-arrow"></span> </a>
-                        <ul class="list-unstyled">
-                            <li><a href="chart.html">Charts 1</a></li>
-                        </ul>
-                    </li>
-
-                </ul>
-                <div class="clearfix"></div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="data-points col-md-12">
-                <div class="title-text text-left m-b-20">Data Points</div>
-                <p class="font-400">Milestone <span class="text-primary pull-right">80%</span></p>
-                <div class="progress m-b-30">
-                    <div class="progress-bar progress-bar-primary progress-animated wow animated progress-80"
-                         role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                    <!-- /.progress-bar .progress-bar-danger -->
-                </div>
-                <!-- /.progress .no-rounded -->
-                <p class="font-400">Release <span class="text-pink pull-right">50%</span></p>
-                <div class="progress m-b-20">
-                    <div class="progress-bar progress-bar-pink progress-animated wow animated progress-50"
-                         role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-                    <!-- /.progress-bar .progress-bar-pink -->
-                </div>
-                <!-- /.progress .no-rounded -->
-            </div>
-        </div>
+        <?php include('sidebar.php'); ?>
     </div>
     <!-- Left Sidebar End -->
 
@@ -501,7 +402,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Page-Title -->
             <div class="page-title-group">
                 <h4 class="page-title">الموظفين</h4>
-                <h5 class="text-muted page-title-alt">اضافه جديد</h5>
+
             </div>
             <div class="cb-page-content">
                 <div class="container">

@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/core.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/components.css" type="text/css"/>
-    <link rel="stylesheet" href="assets/css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/pages.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
 

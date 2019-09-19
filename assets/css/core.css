@@ -1395,7 +1395,7 @@ body.fixed-left .side-menu.right {
 #sidebar-menu ul ul a {
     color: #c1daec;
     display: block;
-    padding: 10px 20px 10px 65px;
+    padding: 10px 20px 10px;
     background: #17242d;
 }
 #sidebar-menu ul ul a:hover {
@@ -2142,7 +2142,12 @@ body.fixed-left-void .side-menu.left{ position: fixed;}
     box-sizing: CONTENT-BOX;
     padding-bottom: 11px;
 }
-.widescreen.fixed-left .logo{ background: url(../images/logo.png) no-repeat; width: 118px;}
+
+.widescreen.fixed-left .logo {
+    background: url(../images/logo.png) no-repeat;
+    width: 60px;
+    background-size: contain;
+}
 .mobile.smallscreen .logo ,.widescreen.fixed-left-void .logo{background: url(../images/m-logo.png) no-repeat; width:31px; }
 .mobile.smallscreen .logo{top: 15px;}
 
