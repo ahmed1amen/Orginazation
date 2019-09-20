@@ -113,14 +113,14 @@ if (isset($_SESSION['Username'])) {
 
         <!-- Button mobile view to collapse sidebar menu -->
         <div class="navbar navbar-default" role="navigation">
-
+            <?php include('Includes/navbar.php'); ?>
         </div>
     </div>
     <!-- Top Bar End -->
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="left side-menu">
-        <?php include('sidebar.php'); ?>
+        <?php include('Includes/sidebar.php'); ?>
     </div>
     <!-- Left Sidebar End -->
 

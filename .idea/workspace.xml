@@ -4,10 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/../../aa.html" description="       &lt;/ul&gt;" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Complete-Design">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Include">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Families.php" beforeDir="false" afterPath="$PROJECT_DIR$/Families.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Office.php" beforeDir="false" afterPath="$PROJECT_DIR$/Office.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,26 +26,44 @@
       <file leaf-file-name="Families.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Families.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1153">
-              <caret line="982" column="26" selection-start-line="951" selection-start-column="4" selection-end-line="982" selection-end-column="26" />
+            <state relative-caret-position="95">
+              <caret line="103" column="7" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registers.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Registers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Registers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="153">
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sidebar.php">
+      <file leaf-file-name="dashboard.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="604">
+              <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Office.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Office.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="129" column="56" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Includes/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -50,24 +72,19 @@
         </entry>
       </file>
       <file leaf-file-name="navbar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/navbar.php">
+        <entry file="file://$PROJECT_DIR$/Includes/navbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
+            <state relative-caret-position="-2133">
+              <caret line="85" column="49" lean-forward="true" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="115" selection-start-line="115" selection-end-line="115" />
+              <caret line="115" column="34" lean-forward="true" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -76,11 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>navbar navbar-static-top</find>
-      <find>void</find>
-      <find>left side-menu</find>
-      <find>subdrop</find>
-      <find>waves-effect</find>
       <find>Navigation</find>
       <find>das</find>
       <find>side</find>
@@ -96,7 +108,6 @@
       <find>active</find>
       <find>:active {</find>
       <find>.active</find>
-      <find>navbar navbar-default</find>
       <find>التنقل</find>
       <find>fa fa-bell-o</find>
       <find>#sidebar-menu ul ul a {</find>
@@ -104,12 +115,20 @@
       <find>.mobile.smallscreen .logo</find>
       <find>body.rtl-page.mobile.smallscreen .logo</find>
       <find>&lt;h5 class=&quot;text-muted page-title-alt&quot;&gt;اضافه جديد&lt;/h5&gt;</find>
-      <find>الموظفين</find>
+      <find>include('sidebar.php')</find>
+      <find>include('navbar.php')</find>
+      <find>&lt;?php include(</find>
       <find>view</find>
+      <find>nav</find>
+      <find>navbar</find>
+      <find>navbar navbar-default</find>
+      <find>الموظفين</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
       <replace />
+      <replace>include('Includes/sidebar.php')</replace>
+      <replace>include('Includes/navbar.php')</replace>
       <replace>fa fa-bell</replace>
     </replaceStrings>
   </component>
@@ -127,16 +146,17 @@
       <list>
         <option value="$PROJECT_DIR$/New Theme/Employee.php" />
         <option value="$PROJECT_DIR$/../../aa.html" />
-        <option value="$PROJECT_DIR$/Families.php" />
-        <option value="$PROJECT_DIR$/dashboard.php" />
-        <option value="$PROJECT_DIR$/Office.php" />
         <option value="$PROJECT_DIR$/assets/css/_notes/dwsync.xml" />
-        <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/navbar.php" />
         <option value="$PROJECT_DIR$/assets/css/core.css" />
         <option value="$PROJECT_DIR$/assets/css/pages.css" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/Registers.php" />
+        <option value="$PROJECT_DIR$/Office.php" />
+        <option value="$PROJECT_DIR$/dashboard.php" />
+        <option value="$PROJECT_DIR$/Families.php" />
+        <option value="$PROJECT_DIR$/Employee.php" />
+        <option value="$PROJECT_DIR$/Includes/sidebar.php" />
       </list>
     </option>
   </component>
@@ -176,6 +196,11 @@
               <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
+              <item name="Includes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -190,6 +215,9 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
     </key>
@@ -241,7 +269,7 @@
       <workItem from="1568736877558" duration="3133000" />
       <workItem from="1568817241860" duration="3614000" />
       <workItem from="1568891887017" duration="3728000" />
-      <workItem from="1568922306766" duration="7610000" />
+      <workItem from="1568922306766" duration="8231000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -299,11 +327,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568928012339</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Organizing">
+      <created>1568939142519</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568939142519</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23165000" />
+    <option name="totallyTimeSpent" value="23786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +360,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.24291939" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
@@ -388,18 +423,12 @@
     <MESSAGE value="Complete Design" />
     <MESSAGE value="Complete-Design" />
     <MESSAGE value="Update UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update UI" />
+    <MESSAGE value="Organizing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Organizing" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/Registers.php</url>
-          <line>114</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
   </component>
@@ -450,18 +479,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/EmpLogin.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="319" column="23" lean-forward="true" selection-start-line="319" selection-start-column="23" selection-end-line="319" selection-end-column="23" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ALL/profile.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -487,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Office.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="91" column="54" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/plugins/bs-datepicker/datepicker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -505,23 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="2396" column="33" selection-start-line="2396" selection-start-column="24" selection-end-line="2396" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -539,27 +534,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sidebar.php">
+    <entry file="file://$PROJECT_DIR$/page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="216">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Families.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1153">
-          <caret line="982" column="26" selection-start-line="951" selection-start-column="4" selection-end-line="982" selection-end-column="26" />
+        <state relative-caret-position="95">
+          <caret line="103" column="7" selection-start-line="103" selection-start-column="7" selection-end-line="103" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Office.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="129" column="56" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="115" column="34" lean-forward="true" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2133">
+          <caret line="85" column="49" lean-forward="true" selection-start-line="85" selection-start-column="49" selection-end-line="85" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Registers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="153">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
