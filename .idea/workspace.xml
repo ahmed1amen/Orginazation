@@ -5,37 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Complete-Design">
-      <change afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/navbar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sidebar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/blank.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/blank.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/bootstrap-ui.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/bootstrap-ui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/buttons.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/buttons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/calendar.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/calendar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/chart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/chart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/form-elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/form-elements.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/icons.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/mailbox.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/mailbox.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/panels.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/panels.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/progressbars.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/progressbars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/tabs-accordions.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/tabs-accordions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ALL/typography.html" beforeDir="false" afterPath="$PROJECT_DIR$/ALL/typography.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmpLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/EmpLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Families.php" beforeDir="false" afterPath="$PROJECT_DIR$/Families.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Office.php" beforeDir="false" afterPath="$PROJECT_DIR$/Office.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/_notes/dwsync.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/core.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/core.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/pages.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/pages.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blank.php" beforeDir="false" afterPath="$PROJECT_DIR$/blank.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,11 +19,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Families.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Families.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1153">
+              <caret line="982" column="26" selection-start-line="951" selection-start-column="4" selection-end-line="982" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Registers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Registers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="146" column="37" lean-forward="true" selection-start-line="146" selection-start-column="37" selection-end-line="146" selection-end-column="37" />
+            <state relative-caret-position="405">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -60,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/sidebar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -95,7 +76,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pe=&quot;text&quot;</find>
       <find>navbar navbar-static-top</find>
       <find>void</find>
       <find>left side-menu</find>
@@ -125,11 +105,12 @@
       <find>body.rtl-page.mobile.smallscreen .logo</find>
       <find>&lt;h5 class=&quot;text-muted page-title-alt&quot;&gt;اضافه جديد&lt;/h5&gt;</find>
       <find>الموظفين</find>
+      <find>view</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
-      <replace>fa fa-bell</replace>
       <replace />
+      <replace>fa fa-bell</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -168,6 +149,14 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../../php/PEAR" />
+    </include_path>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
@@ -187,17 +176,6 @@
               <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
               <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -206,10 +184,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../O/FUCK/o" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../php/php.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -228,6 +206,24 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="PHP Script.Registers.php">
+    <configuration name="Registers.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:54815/OrginaztionGIT/Registers.php" />
+    <configuration name="Registers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Registers.php">
+      <method>
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:54815/OrginaztionGIT/Registers.php" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.Registers.php" />
+      <item itemvalue="JavaScript Debug.Registers.php" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.Registers.php" />
+        <item itemvalue="JavaScript Debug.Registers.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -245,7 +241,7 @@
       <workItem from="1568736877558" duration="3133000" />
       <workItem from="1568817241860" duration="3614000" />
       <workItem from="1568891887017" duration="3728000" />
-      <workItem from="1568922306766" duration="5647000" />
+      <workItem from="1568922306766" duration="7610000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -296,11 +292,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568315064713</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update UI">
+      <created>1568928012339</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1568928012339</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21202000" />
+    <option name="totallyTimeSpent" value="23165000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,10 +319,11 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="PHP-CGI Server" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.24291939" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32897604" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -327,7 +331,7 @@
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -383,8 +387,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Complete Design" />
     <MESSAGE value="Complete-Design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete-Design" />
+    <MESSAGE value="Update UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update UI" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/Registers.php</url>
+          <line>114</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Families.php">
@@ -438,13 +455,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EmpLogin.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Families.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="371" column="40" selection-start-line="371" selection-start-column="40" selection-end-line="371" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -532,17 +542,24 @@
     <entry file="file://$PROJECT_DIR$/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Families.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1153">
+          <caret line="982" column="26" selection-start-line="951" selection-start-column="4" selection-end-line="982" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Registers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="146" column="37" lean-forward="true" selection-start-line="146" selection-start-column="37" selection-end-line="146" selection-end-column="37" />
+        <state relative-caret-position="405">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

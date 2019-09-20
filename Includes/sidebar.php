@@ -8,9 +8,9 @@
                     <span class="label label-success pull-right">1</span> <span
                             class="fa fa-angle-right cb-nav-arrow"></span> </a>
                 <ul class="list-unstyled">
-                    <li><a href="Employee.php"><i class="fa fa-users-cog"></i> الموظفين </a></li>
-                    <li><a href="Families.php"><i class="fa fa-users"></i> العائلات </a></li>
-                    <li><a href="Registers.php"><i class="fa fa-folder-open"></i> بيانات المشتركين </a></li>
+                    <li><a href="../Employee.php"><i class="fa fa-users-cog"></i> الموظفين </a></li>
+                    <li><a href="../Families.php"><i class="fa fa-users"></i> العائلات </a></li>
+                    <li><a href="../Registers.php"><i class="fa fa-folder-open"></i> بيانات المشتركين </a></li>
                 </ul>
             </li>
 

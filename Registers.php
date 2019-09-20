@@ -393,7 +393,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات الموظفين</b></h4>
+                                            <h4 class="header-title"><b> بيانات العائلة</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -420,78 +420,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="clearfix"></div>
-                                            <br>
 
-
-                                            <div class="table-responsive data-table">
-                                                <table class="table table-bordred table-striped">
-                                                    <thead>
-                                                    <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-
-                                                    <?php
-
-                                                    foreach ($rows as $row) {
-                                                        echo "<tr>";
-
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
-                                                        echo "<td>
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
-                                                            
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash-o'></span></button>
-                                                             </td>";
-
-
-                                                        echo "</tr>";
-                                                    }
-
-
-                                                    ?>
-
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div class="row mob-center">
-                                                <div class="col-sm-5">
-                                                    <p>Showing 20-30 of 50 items</p>
-                                                </div>
-                                                <div class="col-sm-7">
-                                                    <ul class="pagination pull-right">
-                                                        <li><a href="tables.html#"><span
-                                                                        class="fa fa-angle-double-left"></span></a></li>
-                                                        <li class="active"><a href="tables.html#">1</a></li>
-                                                        <li><a href="tables.html#">2</a></li>
-                                                        <li><a href="tables.html#">3</a></li>
-                                                        <li><a href="tables.html#">4</a></li>
-                                                        <li><a href="tables.html#">5</a></li>
-                                                        <li><a href="tables.html#"><span
-                                                                        class="fa fa-angle-double-right"></span></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <?php

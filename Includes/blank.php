@@ -12,16 +12,16 @@
 <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
 
 <!-- FAVICON -->
-<link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="shortcut icon" href="../assets/images/favicon.png">
 
 <!-- STYLESHEETS -->
-<link rel="stylesheet" href="assets/plugins/morris/morris.css">
-<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
-<link rel="stylesheet" href="assets/css/core.css" type="text/css" />
-<link rel="stylesheet" href="assets/css/components.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
-<link rel="stylesheet" href="assets/css/pages.css" type="text/css" />
-<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/plugins/morris/morris.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/core.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/components.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/all.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/pages.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/responsive.css" type="text/css"/>
 
 <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,7 +31,7 @@
 <![endif]-->
 
 <!-- MODERNIZER -->
-<script src="assets/js/modernizr.min.js"></script>
+    <script src="../assets/js/modernizr.min.js"></script>
 
 </head>
 
@@ -46,7 +46,7 @@
 			<a href="javascript:void(0)" class="logo d-logo hidden-xs hidden-sm">
 			</a> 
 			<a href="javascript:void(0)" class="logo d-logo hidden visible-xs visible-sm">
-				<img src="assets/images/m-logo.png" alt="SmartBox" class="img-responsive hidden-xs" height="0">
+                <img src="../assets/images/m-logo.png" alt="SmartBox" class="img-responsive hidden-xs" height="0">
 			</a> 
 			<!-- Image Logo here --> 
 		</div>
@@ -241,7 +241,11 @@
 								<li> <a href="javascript:void(0);" class="list-group-item text-right"> <small class="font-600">See all notifications</small> </a> </li>
 							</ul>
 						</li>
-						<li class="dropdown top-menu-item-xs"> <a href="javascript:void(0)" class="right-bar-toggle profile waves-effect waves-light"><span class="user-name">Hoang.Thai</span> <span class="caret"></span> <img src="assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle"> </a> </li>
+                        <li class="dropdown top-menu-item-xs"><a href="javascript:void(0)"
+                                                                 class="right-bar-toggle profile waves-effect waves-light"><span
+                                        class="user-name">Hoang.Thai</span> <span class="caret"></span> <img
+                                        src="../assets/images/users/avatar-1.jpg" alt="user-img" class="img-circle">
+                            </a></li>
 					</ul>
 				</div>
 				<!--/.nav-collapse --> 
@@ -394,7 +398,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -407,7 +411,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -420,7 +424,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -433,7 +437,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -446,7 +450,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -459,7 +463,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -472,7 +476,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -485,7 +489,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -498,7 +502,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -519,7 +523,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -532,7 +536,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -545,7 +549,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -558,7 +562,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -571,7 +575,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -584,7 +588,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -597,7 +601,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -610,7 +614,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -623,7 +627,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -644,7 +648,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -657,7 +661,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -670,7 +674,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -683,7 +687,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -696,7 +700,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -709,7 +713,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -722,7 +726,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle danger"></i>
-										<img src="assets/images/users/avatar-1.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Amelia Nelson</span>
@@ -735,7 +739,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-2.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-2.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Alyssa Molligan</span>
@@ -748,7 +752,7 @@
 								<a href="javascript:void(0)">
 									<div class="thumb-box">
 										<i class="fa fa-circle online"></i>
-										<img src="assets/images/users/avatar-3.jpg" alt="">
+                                        <img src="../assets/images/users/avatar-3.jpg" alt="">
 									</div>
 									<div class="info-box">
 										<span class="info-name">Kaitlyn Eddington</span>
@@ -799,34 +803,34 @@
 
 <!-- Page Loader --> 
 <div class="page-loader">
-	<a href="blank.html#"><img src="assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
+    <a href="blank.html#"><img src="../assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
 	<span class="text-uppercase">Loading...</span>
 </div>
 
 <!-- SmartBox Js files --> 
 <script>
        var resizefunc = [];
-</script> 
+</script>
 
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/pace.min.js"></script> 
-<script src="assets/js/loader.js"></script> 
-<script src="assets/js/detect.js"></script> 
-<script src="assets/js/fastclick.js"></script> 
-<script src="assets/js/waves.js"></script> 
-<script src="assets/js/wow.min.js"></script> 
-<script src="assets/js/jquery.slimscroll.js"></script> 
-<script src="assets/js/jquery.nicescroll.js"></script> 
-<script src="assets/js/jquery.scrollTo.min.js"></script> 
-<script src="assets/pages/jquery.todo.js"></script> 
-<script src="assets/plugins/moment/moment.js"></script> 
-<script src="assets/plugins/morris/morris.min.js"></script> 
-<script src="assets/plugins/raphael/raphael-min.js"></script> 
-<script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script> 
-<script src="assets/pages/jquery.charts-sparkline.js"></script> 
-<script src="assets/js/jquery.app.js"></script> 
-<script src="assets/js/cb-chart.js"></script> 
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/pace.min.js"></script>
+<script src="../assets/js/loader.js"></script>
+<script src="../assets/js/detect.js"></script>
+<script src="../assets/js/fastclick.js"></script>
+<script src="../assets/js/waves.js"></script>
+<script src="../assets/js/wow.min.js"></script>
+<script src="../assets/js/jquery.slimscroll.js"></script>
+<script src="../assets/js/jquery.nicescroll.js"></script>
+<script src="../assets/js/jquery.scrollTo.min.js"></script>
+<script src="../assets/pages/jquery.todo.js"></script>
+<script src="../assets/plugins/moment/moment.js"></script>
+<script src="../assets/plugins/morris/morris.min.js"></script>
+<script src="../assets/plugins/raphael/raphael-min.js"></script>
+<script src="../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+<script src="../assets/pages/jquery.charts-sparkline.js"></script>
+<script src="../assets/js/jquery.app.js"></script>
+<script src="../assets/js/cb-chart.js"></script>
 
 </body>
 </html>
