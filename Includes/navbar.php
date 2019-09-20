@@ -19,7 +19,7 @@
                     <li><a href="javascript:void(0)"><i class="ti-lock m-r-10 text-custom"></i> Lock screen</a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="../logout.php"><i class="ti-power-off m-r-10 text-danger"></i>تسجيل الخروج</a>
+                    <li><a href="./logout.php"><i class="ti-power-off m-r-10 text-danger"></i>تسجيل الخروج</a>
                     </li>
                 </ul>
             </li>

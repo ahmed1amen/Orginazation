@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
+    <title>العائلات</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -212,18 +212,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <div class="form-group">
                                         <input type="hidden" name="do" value="add"/>
 
-                                        <label class="control-label col-sm-2">الرقم الأحصائي</label>
+                                        <label class="control-label col-sm-0">الرقم الأحصائي</label>
                                             <input  required type="text" class="form-control" placeholder="ادخل الرقم الأحصائي"  >
 
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">اسم المعيل</label>
+                                        <label class="control-label col-sm-0">اسم المعيل</label>
                                             <input required type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل">
 
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">نسب المعيل</label>
+                                        <label class="control-label col-sm-0">نسب المعيل</label>
 
                                             <select class="form-control">
                                                 <option>هاشمي</option>
@@ -232,7 +232,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">اسم الأب</label>
+                                        <label class="control-label col-sm-0">اسم الأب</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم الأب">
@@ -241,14 +241,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">اسم المعيل 2</label>
+                                        <label class="control-label col-sm-0">اسم المعيل 2</label>
 
                                             <input required type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل 2 ">
 
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2"> نسب المعيل 2</label>
+                                        <label class="control-label col-sm-0"> نسب المعيل 2</label>
 
                                             <select class="form-control">
                                                 <option></option>
@@ -259,14 +259,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">اسم المعرف</label>
+                                        <label class="control-label col-sm-0">اسم المعرف</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم المعرف">
 
                                     </div>
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">اسم المذكي</label>
+                                        <label class="control-label col-sm-0">اسم المذكي</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم المذكي">
@@ -274,7 +274,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">جوال المذكي</label>
+                                        <label class="control-label col-sm-0">جوال المذكي</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم جوال المذكي">
@@ -282,7 +282,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">ملاحظه</label>
+                                        <label class="control-label col-sm-0">ملاحظه</label>
 
                                                             <textarea class="form-control" rows="5" placeholder="ملاحظه"
                                                                       id="comment"></textarea>
@@ -294,7 +294,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">رصيد العائله</label>
+                                        <label class="control-label col-sm-0">رصيد العائله</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رصيد العائله">
@@ -303,7 +303,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">مكتب المؤسسة</label>
+                                        <label class="control-label col-sm-0">مكتب المؤسسة</label>
 
                                             <select class="form-control">
                                                 <option>22</option>
@@ -315,7 +315,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">رقم الأضبارة</label>
+                                        <label class="control-label col-sm-0">رقم الأضبارة</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم الأضبارة">
@@ -323,7 +323,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">تاريخ ملف المعاملة</label>
+                                        <label class="control-label col-sm-0">تاريخ ملف المعاملة</label>
 
                                             <input style="font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'; text-align: center;"
                                                    type="date" class="form-control">
@@ -331,7 +331,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">الموقف الحالي</label>
+                                        <label class="control-label col-sm-0">الموقف الحالي</label>
 
                                             <select class="form-control">
                                                 <option>ايقاف</option>
@@ -342,7 +342,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">نوع العائلة</label>
+                                        <label class="control-label col-sm-0">نوع العائلة</label>
 
                                             <select class="form-control">
                                                 <option>ايتام</option>
@@ -353,7 +353,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">الحالة الخاصة</label>
+                                        <label class="control-label col-sm-0">الحالة الخاصة</label>
 
                                             <select class="form-control">
                                                 <option>الحشد الشعبي</option>
@@ -367,7 +367,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">يوم التسوق</label>
+                                        <label class="control-label col-sm-0">يوم التسوق</label>
 
                                             <select class="form-control">
                                                 <option>السبت</option>
@@ -384,7 +384,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="form-group">
-                                        <label class="control-label col-sm-2">رقم الجنسية</label>
+                                        <label class="control-label col-sm-0">رقم الجنسية</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم الجنسية">
@@ -430,7 +430,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">عضوية ذخر الأخرة</label>
+                                                        <label class="control-label col-sm-0">عضوية ذخر الأخرة</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -442,13 +442,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">اسم الوصي</label>
+                                                        <label class="control-label col-sm-0">اسم الوصي</label>
 
                                                         <input type="text" class="form-control " placeholder="ادخل اسم الوصي">
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">موبيل الوصي</label>
+                                                        <label class="control-label col-sm-0">موبيل الوصي</label>
 
                                                         <input type="text" class="form-control " placeholder="ادخل موبيل الوصي">
 
@@ -456,7 +456,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">الأستعداد لعقد المجالس الحسينية في البيت</label>
+                                                        <label class="control-label col-sm-0">الأستعداد لعقد المجالس
+                                                            الحسينية في البيت</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -475,7 +476,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">الوكالة الشرعية</label>
+                                                        <label class="control-label col-sm-0">الوكالة الشرعية</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -487,7 +488,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                                     </div>
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">اختبار الاستحقاق</label>
+                                                        <label class="control-label col-sm-0">اختبار الاستحقاق</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -505,7 +506,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">الصدقة الجارية</label>
+                                                        <label class="control-label col-sm-0">الصدقة الجارية</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -516,7 +517,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">ملبغ اشتراك الجارية</label>
+                                                        <label class="control-label col-sm-0">ملبغ اشتراك
+                                                            الجارية</label>
 
                                                         <input type="text" class="form-control " placeholder="ادخل ملبغ اشتراك الجارية">
 
@@ -524,7 +526,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">اشتراك الدعم</label>
+                                                        <label class="control-label col-sm-0">اشتراك الدعم</label>
 
                                                         <select class="form-control">
                                                             <option></option>
@@ -535,7 +537,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">ملبغ اشتراك الدعم</label>
+                                                        <label class="control-label col-sm-0">ملبغ اشتراك الدعم</label>
 
                                                         <input type="text" class="form-control " placeholder="ادخل ملبغ اشتراك الدعم">
 
@@ -552,7 +554,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div class="tab-pane" id="v-ContactAndAdress">
 
                                                     <div class="form-group">
-                                                        <label class="control-label col-sm-2">عناوين التواصل</label>
+                                                        <label class="control-label col-sm-0">عناوين التواصل</label>
 
                                                         <textarea class="form-control" rows="7" placeholder="ادخل جميع عناوين التواصل" >
 اسم المنطقة  :  &nbsp;&nbsp;
@@ -619,42 +621,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                   method="post">
                                 <div class="form-group">
                                     <input type="hidden" name="do" value="add"/>
-                                    <label class="control-label col-sm-2">أسم المكتب</label>
+                                    <label class="control-label col-sm-0">أسم المكتب</label>
                                     <div class="col-sm-10">
                                         <input required type="text" class="form-control"
                                                placeholder="ادخل أسم المكتب">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2">عنوان المكتب</label>
+                                    <label class="control-label col-sm-0">عنوان المكتب</label>
                                     <div class="col-sm-10">
                                         <input required type="text" class="form-control"
                                                placeholder="ادخل عنوان المكتب">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2">رقم جوال اول</label>
+                                    <label class="control-label col-sm-0">رقم جوال اول</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control"
                                                placeholder="ادخل رقم جوال">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2">رقم جوال ثاني</label>
+                                    <label class="control-label col-sm-0">رقم جوال ثاني</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control"
                                                placeholder="ادخل رقم جوال">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2">رقم جوال ثالث</label>
+                                    <label class="control-label col-sm-0">رقم جوال ثالث</label>
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control"
                                                placeholder="ادخل رقم جوال">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-2" for="email">البريد
+                                    <label class="control-label col-sm-0" for="email">البريد
                                         الالكتروني</label>
                                     <div class="col-sm-10">
                                         <input type="email" class="form-control" id="email"

@@ -17,7 +17,8 @@
 
 body {
     background: #f0f3f4;
-    font-family: vip_rawybold;
+    font-family: "Cairo Black";
+    font-weight: bold;
     margin: 0;
     overflow-x: hidden;
     color: #555;
@@ -826,7 +827,7 @@ textarea.form-control {
     letter-spacing: 0.03em;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: "Source Sans Pro", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 .nav.nav-tabs > li > a:hover,
 .nav.tabs-vertical > li > a:hover {
@@ -1129,7 +1130,7 @@ pre {
 .topbar .topbar-left {
     float: left;
     position: relative;
-    width: 205px;
+    width: 240px;
     z-index: 1;
     background: #1c2b36;
 }
@@ -1288,7 +1289,7 @@ pre {
 .side-menu {
     bottom: 0;
     top: 0;
-    width: 205px;
+    width: 240px;
     z-index: 9;
 }
 .side-menu.left {
@@ -1395,7 +1396,7 @@ body.fixed-left .side-menu.right {
 #sidebar-menu ul ul a {
     color: #c1daec;
     display: block;
-    padding: 10px 20px 10px;
+    padding: 10px 9px 10px;
     background: #17242d;
 }
 #sidebar-menu ul ul a:hover {

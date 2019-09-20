@@ -76,10 +76,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <a href="login.php#"><img src="assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
 
-        <p style="font-family: vip_rawybold;" class="lead">مؤسسة ابي الزهراء الخيرية</p>
+        <p class="lead">مؤسسة ابي الزهراء الخيرية</p>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
-              style="font-family: vip_rawybold;">
+        >
             <div class="form-group">
                 <label>اسم المستخدم</label>
                 <input name="employee_email" type="text" placeholder="ادخل اسم المستخدم" autocomplete="false"
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
         </form>
 
-        <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
+        <p class="copy">&copy; 2019 Eng.Ahmed <span>Amen</span></p>
     </div>
 </div>
 <!-- END wrapper -->

@@ -231,42 +231,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
                                                 <div class="form-group">
                                                     <input type="hidden" name="do" value="add"/>
-                                                    <label class="control-label col-sm-2"> ادخل اسم المكتب </label>
+                                                    <label class="control-label col-sm-0"> ادخل اسم المكتب </label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="Office_name" class="form-control"
                                                                placeholder="ادخل أسم المكتب">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">عنوان المكتب</label>
+                                                    <label class="control-label col-sm-0">عنوان المكتب</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="Office_address" class="form-control"
                                                                placeholder="ادخل عنوان المكتب">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال اول</label>
+                                                    <label class="control-label col-sm-0">رقم جوال اول</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="Office_number1" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال ثاني</label>
+                                                    <label class="control-label col-sm-0">رقم جوال ثاني</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" name="Office_number2" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال ثالث</label>
+                                                    <label class="control-label col-sm-0">رقم جوال ثالث</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" name="Office_number3" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2" for="email">البريد
+                                                    <label class="control-label col-sm-0" for="email">البريد
                                                         الالكتروني</label>
                                                     <div class="col-sm-10">
                                                         <input required type="email" name="Office_email" class="form-control" id="email"
@@ -302,42 +302,42 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
                                                 <div class="form-group">
                                                     <input type="hidden" name="do" value="add"/>
-                                                    <label class="control-label col-sm-2">أسم المكتب</label>
+                                                    <label class="control-label col-sm-0">أسم المكتب</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" class="form-control"
                                                                placeholder="ادخل أسم المكتب">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">عنوان المكتب</label>
+                                                    <label class="control-label col-sm-0">عنوان المكتب</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" class="form-control"
                                                                placeholder="ادخل عنوان المكتب">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال اول</label>
+                                                    <label class="control-label col-sm-0">رقم جوال اول</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال ثاني</label>
+                                                    <label class="control-label col-sm-0">رقم جوال ثاني</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2">رقم جوال ثالث</label>
+                                                    <label class="control-label col-sm-0">رقم جوال ثالث</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
                                                                placeholder="ادخل رقم جوال">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-2" for="email">البريد
+                                                    <label class="control-label col-sm-0" for="email">البريد
                                                         الالكتروني</label>
                                                     <div class="col-sm-10">
                                                         <input type="email" class="form-control" id="email"

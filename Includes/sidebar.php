@@ -8,9 +8,126 @@
                     <span class="label label-success pull-right">1</span> <span
                             class="fa fa-angle-right cb-nav-arrow"></span> </a>
                 <ul class="list-unstyled">
-                    <li><a href="./Employee.php"><i class="fa fa-users-cog"></i> الموظفين </a></li>
-                    <li><a href="./Families.php"><i class="fa fa-users"></i> العائلات </a></li>
-                    <li><a href="./Registers.php"><i class="fa fa-folder-open"></i> بيانات المشتركين </a></li>
+
+                    <li><a href="./Login.php"><i class="fa fa-key"></i> تعديل بيانات الدخول </a></li>
+
+                </ul>
+            </li>
+
+            <li class="menu-title">ادارة البيانات</li>
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-map-marked-alt"> </i>
+                    <span> المناطق </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Areas.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Areas.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-users-cog"> </i>
+                    <span> الموظفين </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+
+                    <li><a href="./Employee.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Employee.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-id-card-alt"> </i>
+                    <span> المعرفون </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Knowers.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Knowers.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-users"> </i> <span> العوائل </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Families.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Families.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-coins"> </i> <span> الوكلاء </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Agents.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Agents.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-layer-group"> </i>
+                    <span> المجاميع </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Groups.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Groups.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-user-friends"> </i>
+                    <span> المشتركون </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Registers.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Registers.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-file-invoice-dollar"> </i> <span> الحسابات </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Funds.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Funds.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-dollar-sign"> </i>
+                    <span> سجل ايراد </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Records.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Records.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
                 </ul>
             </li>
 

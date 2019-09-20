@@ -722,7 +722,11 @@ body.rtl-page .col-md-11,
 body.rtl-page .col-md-12{float:right}
 
 body.rtl-page{direction:rtl}
-body.rtl-page .content-page{margin-left:0px;margin-right: 205px;}
+
+body.rtl-page .content-page {
+    margin-left: 0px;
+    margin-right: 220px;
+}
 body.rtl-page #wrapper.enlarged .content-page {
     margin-left: 0px;
 	margin-right:70px;
