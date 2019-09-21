@@ -18,32 +18,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        /* $employee_name=$_POST["employee_name"];
-        $employee_number=$_POST["employee_number"];
-        $employee_address=$_POST["employee_address"];
-        $employee_salary=$_POST["employee_salary"];
-        $employee_jobName=$_POST["employee_jobName"];
-        $employee_email=$_POST["employee_email"];
-        $employee_password=$_POST["employee_password"];
-        $employee_office=$_POST["employee_office"];
-            $employee_office=$_POST["employee_office"];
+        /*    $employee_name=$_POST["employee_name"];
+           $employee_number=$_POST["employee_number"];
+           $employee_address=$_POST["employee_address"];
+           $employee_salary=$_POST["employee_salary"];
+           $employee_jobName=$_POST["employee_jobName"];
+           $employee_email=$_POST["employee_email"];
+           $employee_password=$_POST["employee_password"];
+           $employee_office=$_POST["employee_office"];
+               $employee_office=$_POST["employee_office"];
 
-        if(empty($employee_name) || empty($employee_number)
-        || empty($employee_address) || empty($employee_salary)
-        || empty($employee_jobName) || empty($employee_email)
-        || empty($employee_password) || empty($employee_office))
-        {
-        $message = "Fill all fields/برجاء إدخال جميع البيانات";
-        echo "<script type='text/javascript'>alert('$message');</script>";
-        }
-        else
-        {
+           if(empty($employee_name) || empty($employee_number)
+           || empty($employee_address) || empty($employee_salary)
+           || empty($employee_jobName) || empty($employee_email)
+           || empty($employee_password) || empty($employee_office))
+           {
+           $message = "Fill all fields/برجاء إدخال جميع البيانات";
+           echo "<script type='text/javascript'>alert('$message');</script>";
+           }
+           else
+           {
 
-        // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-        $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
-        $stmt->execute();
-        // بس خلاص الموظف اضاف تمام كده
-        }*/
+           // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
+           $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+           $stmt->execute();
+           // بس خلاص الموظف اضاف تمام كده
+           }*/
 
 
     }
@@ -208,47 +208,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                   method="post">
                                 <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input type="hidden" name="do" value="add"/>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="hidden" name="do" value="add"/>
 
-                                        <label class="control-label col-sm-0">الرقم الأحصائي</label>
-                                            <input  required type="text" class="form-control" placeholder="ادخل الرقم الأحصائي"  >
+                                            <label class="control-label col-sm-0">الرقم الأحصائي</label>
+                                            <input required type="text" class="form-control"
+                                                   placeholder="ادخل الرقم الأحصائي">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">اسم المعيل</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">اسم المعيل</label>
                                             <input required type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">نسب المعيل</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">نسب المعيل</label>
 
                                             <select class="form-control">
                                                 <option>هاشمي</option>
                                                 <option>غير هاشمي</option>
                                             </select>
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">اسم الأب</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">اسم الأب</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم الأب">
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">اسم المعيل 2</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">اسم المعيل 2</label>
 
                                             <input required type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل 2 ">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0"> نسب المعيل 2</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0"> نسب المعيل 2</label>
 
                                             <select class="form-control">
                                                 <option></option>
@@ -256,54 +257,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <option>غير هاشمي</option>
                                             </select>
 
-                                    </div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">اسم المعرف</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">اسم المعرف</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم المعرف">
 
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">اسم المذكي</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">اسم المذكي</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل اسم المذكي">
 
-                                    </div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">جوال المذكي</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">جوال المذكي</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم جوال المذكي">
 
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">ملاحظه</label>
+
+                                            <textarea class="form-control" rows="5" placeholder="ملاحظه"
+                                                      id="comment"></textarea>
+
+                                        </div>
+
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">ملاحظه</label>
-
-                                                            <textarea class="form-control" rows="5" placeholder="ملاحظه"
-                                                                      id="comment"></textarea>
-
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
+                                    <div class="col-md-6">
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">رصيد العائله</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">رصيد العائله</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رصيد العائله">
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">مكتب المؤسسة</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">مكتب المؤسسة</label>
 
                                             <select class="form-control">
                                                 <option>22</option>
@@ -311,38 +312,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <option>2</option>
                                             </select>
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">رقم الأضبارة</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">رقم الأضبارة</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم الأضبارة">
 
-                                    </div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">تاريخ ملف المعاملة</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">تاريخ ملف المعاملة</label>
 
                                             <input style="font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'; text-align: center;"
                                                    type="date" class="form-control">
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">الموقف الحالي</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">الموقف الحالي</label>
 
                                             <select class="form-control">
                                                 <option>ايقاف</option>
                                                 <option>مستمرة</option>
                                             </select>
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">نوع العائلة</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">نوع العائلة</label>
 
                                             <select class="form-control">
                                                 <option>ايتام</option>
@@ -350,10 +351,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <option>تبرعات</option>
                                             </select>
 
-                                    </div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">الحالة الخاصة</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">الحالة الخاصة</label>
 
                                             <select class="form-control">
                                                 <option>الحشد الشعبي</option>
@@ -363,11 +364,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <option>عوائل سجناء</option>
                                             </select>
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">يوم التسوق</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">يوم التسوق</label>
 
                                             <select class="form-control">
                                                 <option>السبت</option>
@@ -380,18 +381,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                             </select>
 
-                                    </div>
+                                        </div>
 
 
-                                    <div class="form-group">
-                                        <label class="control-label col-sm-0">رقم الجنسية</label>
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-0">رقم الجنسية</label>
 
                                             <input type="text" class="form-control"
                                                    placeholder="ادخل رقم الجنسية">
 
+                                        </div>
                                     </div>
-                                </div>
-
 
 
                                 </div>
@@ -399,164 +399,280 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <div class="row">
 
 
-                                            <ul class="nav nav-tabs">
-                                                <li class="active">
-                                                    <a href="tabs-accordions.html#v-Pics" data-toggle="tab" aria-expanded="false">صور الكشف</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="tabs-accordions.html#v-otherSub" data-toggle="tab" aria-expanded="true">اشتراكات اخري</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="tabs-accordions.html#v-BenefitsAndAgency" data-toggle="tab" aria-expanded="false">الأستحقاقات والوكالة</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="tabs-accordions.html#v-SupportAndOngoing" data-toggle="tab" aria-expanded="false">الدعم والجاريه</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="tabs-accordions.html#v-FieldInspection" data-toggle="tab" aria-expanded="false">الكشف الميداني</a>
-                                                </li>
-                                                <li class="">
-                                                    <a href="tabs-accordions.html#v-ContactAndAdress" data-toggle="tab" aria-expanded="false">عناوين الاتصال والتواصل</a>
-                                                </li>
-                                            </ul>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="tabs-accordions.html#v-Pics" data-toggle="tab"
+                                               aria-expanded="false">صور الكشف</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="tabs-accordions.html#v-otherSub" data-toggle="tab"
+                                               aria-expanded="true">اشتراكات اخري</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="tabs-accordions.html#v-BenefitsAndAgency" data-toggle="tab"
+                                               aria-expanded="false">الأستحقاقات والوكالة</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="tabs-accordions.html#v-SupportAndOngoing" data-toggle="tab"
+                                               aria-expanded="false">الدعم والجاريه</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="tabs-accordions.html#v-FieldInspection" data-toggle="tab"
+                                               aria-expanded="false">الكشف الميداني</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="tabs-accordions.html#v-ContactAndAdress" data-toggle="tab"
+                                               aria-expanded="false">عناوين الاتصال والتواصل</a>
+                                        </li>
+                                    </ul>
 
-                                            <div class="tab-content">
-                                                <div class="tab-pane active" id="v-Pics">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="v-Pics">
 
 
+                                        </div>
+                                        <div class="tab-pane " id="v-otherSub">
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">عضوية ذخر الأخرة</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مشتركة</option>
+                                                    <option>غير مشتركة</option>
+                                                </select>
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">اسم الوصي</label>
+
+                                                <input type="text" class="form-control " placeholder="ادخل اسم الوصي">
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">موبيل الوصي</label>
+
+                                                <input type="text" class="form-control " placeholder="ادخل موبيل الوصي">
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">الأستعداد لعقد المجالس
+                                                    الحسينية في البيت</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مستعدة</option>
+                                                    <option>غير مستعدة</option>
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="tab-pane" id="v-BenefitsAndAgency">
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">الوكالة الشرعية</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>وكالة شرعية مطلقة</option>
+                                                    <option>وكالة شرعية عامة</option>
+                                                    <option>وكالة شرعية</option>
+                                                    <option>بدون وكالة شرعية</option>
+                                                </select>
+
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">اختبار الاستحقاق</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مستحقة</option>
+                                                    <option>غير مستحقة</option>
+                                                    <option>المعيل الثاني هو المستحق</option>
+                                                    <option>لم يتم الاختبار</option>
+
+                                                </select>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="tab-pane" id="v-SupportAndOngoing">
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">الصدقة الجارية</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مساهمة</option>
+                                                    <option>غير مساهمة</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">ملبغ اشتراك
+                                                    الجارية</label>
+
+                                                <input type="text" class="form-control "
+                                                       placeholder="ادخل ملبغ اشتراك الجارية">
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">اشتراك الدعم</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مشتركة</option>
+                                                    <option>غير مشتركة</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">ملبغ اشتراك الدعم</label>
+
+                                                <input type="text" class="form-control "
+                                                       placeholder="ادخل ملبغ اشتراك الدعم">
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="tab-pane" id="v-FieldInspection">
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">الكششف الميداني</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>مكشوفة</option>
+                                                    <option>غير مكشوفة</option>
+                                                </select>
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">صنف العائلة</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>أ</option>
+                                                    <option>ب</option>
+                                                    <option>ج</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">نوع السكن</label>
+
+                                                <select class="form-control">
+                                                    <option></option>
+                                                    <option>ملك صرف</option>
+                                                    <option>ملك زراعي</option>
+                                                    <option>تجاوز</option>
+                                                    <option>ايجار</option>
+                                                    <option>مع اخرين</option>
+                                                </select>
+
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">مبلغ الايجار</label>
+
+                                                <input type="text" class="form-control "
+                                                       placeholder="ادخل ملبغ الايجار">
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">المبلغ الشهري المقترج</label>
+
+                                                <input type="text" class="form-control "
+                                                       placeholder="ادخل المبلغ الشهري المقترج">
+
+                                            </div>
+
+                                            <div class="form-group">
+
+
+                                                <div class="col-md-6">
+                                                    <div class="panel-group" id="accordion-test-2">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h4 class="panel-title">
+
+                                                                    <a data-toggle="collapse"
+                                                                       data-parent="#accordion-test-2"
+                                                                       href="tabs-accordions.html#collapseOne-2"
+                                                                       aria-expanded="true">
+                                                                        <i class="fa fa-tachometer-alt"> مؤسسات
+                                                                            اخري </i>
+                                                                    </a>
+
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseOne-2" class="panel-collapse collapse"
+                                                                 aria-expanded="true" style="">
+                                                                <div class="panel-body">
+
+                                                                    <div class="checkbox checkbox-primary col-sm-4">
+                                                                        <input id="ch1" type="checkbox">
+                                                                        <label for="ch1"> رواتب شهداء الحشد
+                                                                            الشعبي</label>
+                                                                    </div>
+                                                                    <div class="checkbox checkbox-primary col-sm-4">
+                                                                        <input id="ch2" type="checkbox">
+                                                                        <label for="ch2"> شبكة الرعاية
+                                                                            الاجتماعية</label>
+                                                                    </div>
+
+
+                                                                    <div class="checkbox checkbox-primary col-sm-4">
+                                                                        <input id="ch3" type="checkbox">
+                                                                        <label for="ch3"> مؤسسة الباقر ع</label>
+                                                                    </div>
+                                                                    <div class="checkbox checkbox-primary col-sm-4">
+                                                                        <input id="ch4" type="checkbox">
+                                                                        <label for="ch4"> مؤسسة السجاد الخيرية</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
                                                 </div>
-                                                <div class="tab-pane " id="v-otherSub">
 
 
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">عضوية ذخر الأخرة</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>مشتركة</option>
-                                                            <option>غير مشتركة</option>
-                                                        </select>
-
-                                                    </div>
+                                            </div>
 
 
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">اسم الوصي</label>
+                                        </div>
 
-                                                        <input type="text" class="form-control " placeholder="ادخل اسم الوصي">
+                                        <div class="tab-pane" id="v-ContactAndAdress">
 
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">موبيل الوصي</label>
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">عناوين التواصل</label>
 
-                                                        <input type="text" class="form-control " placeholder="ادخل موبيل الوصي">
-
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">الأستعداد لعقد المجالس
-                                                            الحسينية في البيت</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>مستعدة</option>
-                                                            <option>غير مستعدة</option>
-                                                        </select>
-
-                                                    </div>
-
-
-
-
-
-                                                </div>
-                                                <div class="tab-pane" id="v-BenefitsAndAgency">
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">الوكالة الشرعية</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>وكالة شرعية مطلقة</option>
-                                                            <option>وكالة شرعية عامة</option>
-                                                            <option>وكالة شرعية</option>
-                                                            <option>بدون وكالة شرعية</option>
-                                                        </select>
-
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">اختبار الاستحقاق</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>مستحقة</option>
-                                                            <option>غير مستحقة</option>
-                                                            <option>المعيل الثاني هو المستحق</option>
-                                                            <option>لم يتم الاختبار</option>
-
-                                                        </select>
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="tab-pane" id="v-SupportAndOngoing">
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">الصدقة الجارية</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>مساهمة</option>
-                                                            <option>غير مساهمة</option>
-                                                        </select>
-
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">ملبغ اشتراك
-                                                            الجارية</label>
-
-                                                        <input type="text" class="form-control " placeholder="ادخل ملبغ اشتراك الجارية">
-
-                                                    </div>
-
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">اشتراك الدعم</label>
-
-                                                        <select class="form-control">
-                                                            <option></option>
-                                                            <option>مشتركة</option>
-                                                            <option>غير مشتركة</option>
-                                                        </select>
-
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">ملبغ اشتراك الدعم</label>
-
-                                                        <input type="text" class="form-control " placeholder="ادخل ملبغ اشتراك الدعم">
-
-                                                    </div>
-
-
-                                                </div>
-
-                                                <div class="tab-pane" id="v-FieldInspection">
-
-
-                                                </div>
-
-                                                <div class="tab-pane" id="v-ContactAndAdress">
-
-                                                    <div class="form-group">
-                                                        <label class="control-label col-sm-0">عناوين التواصل</label>
-
-                                                        <textarea class="form-control" rows="7" placeholder="ادخل جميع عناوين التواصل" >
+                                                <textarea class="form-control" rows="7"
+                                                          placeholder="ادخل جميع عناوين التواصل">
 اسم المنطقة  :  &nbsp;&nbsp;
 عنوان السكن التفصيلي  :  &nbsp;&nbsp;
 رقم الموبيل 1  :  &nbsp;&nbsp;
@@ -565,20 +681,98 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 معرف الموبيل الثاني  :  &nbsp;&nbsp;
  </textarea>
 
-                                                    </div>
-
-                                                </div>
                                             </div>
 
+                                        </div>
                                     </div>
 
+                                </div>
 
 
-                        <div class="row">
+                                <div class="row">
+
+
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-7">
+                                            <button type="submit" class="btn btn-purple btn-md"> اضافه
+                                                العائلة
+                                                <i class="fa fa-plus"></i>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                        </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <?php
+            } elseif ($_GET["do"] == "update") {
+                ?>
+                <div class="card-box">
+                    <div class="card-box-head  border-b m-t-0">
+                        <h4 class="header-title"><b>اضافة عائله</b></h4>
+                    </div>
+                    <div class="card-box-content form-compoenent">
+                        <form class="form-horizontal"
+                              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+                              method="post">
+                            <div class="form-group">
+                                <input type="hidden" name="do" value="add"/>
+                                <label class="control-label col-sm-0">أسم المكتب</label>
+                                <div class="col-sm-10">
+                                    <input required type="text" class="form-control"
+                                           placeholder="ادخل أسم المكتب">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-0">عنوان المكتب</label>
+                                <div class="col-sm-10">
+                                    <input required type="text" class="form-control"
+                                           placeholder="ادخل عنوان المكتب">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-0">رقم جوال اول</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           placeholder="ادخل رقم جوال">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-0">رقم جوال ثاني</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           placeholder="ادخل رقم جوال">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-0">رقم جوال ثالث</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control"
+                                           placeholder="ادخل رقم جوال">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-0" for="email">البريد
+                                    الالكتروني</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email"
+                                           placeholder="ادخل البريد الالكتروني">
+                                </div>
+                            </div>
 
 
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-7">
+                                <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-purple btn-md"> اضافه
                                         العائلة
                                         <i class="fa fa-plus"></i>
@@ -586,167 +780,79 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                 </div>
                             </div>
-                        </div>
 
 
-
-
-
-
-
-
-
-
-
-                        </div>
-
-
-                            </form>
-                        </div>
+                        </form>
                     </div>
-
-
                 </div>
-
                 <?php
-                } elseif ($_GET["do"] == "update") {
-                    ?>
-                    <div class="card-box">
-                        <div class="card-box-head  border-b m-t-0">
-                            <h4 class="header-title"><b>اضافة عائله</b></h4>
-                        </div>
-                        <div class="card-box-content form-compoenent">
-                            <form class="form-horizontal"
-                                  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                  method="post">
-                                <div class="form-group">
-                                    <input type="hidden" name="do" value="add"/>
-                                    <label class="control-label col-sm-0">أسم المكتب</label>
-                                    <div class="col-sm-10">
-                                        <input required type="text" class="form-control"
-                                               placeholder="ادخل أسم المكتب">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-0">عنوان المكتب</label>
-                                    <div class="col-sm-10">
-                                        <input required type="text" class="form-control"
-                                               placeholder="ادخل عنوان المكتب">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-0">رقم جوال اول</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control"
-                                               placeholder="ادخل رقم جوال">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-0">رقم جوال ثاني</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control"
-                                               placeholder="ادخل رقم جوال">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-0">رقم جوال ثالث</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control"
-                                               placeholder="ادخل رقم جوال">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-sm-0" for="email">البريد
-                                        الالكتروني</label>
-                                    <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="email"
-                                               placeholder="ادخل البريد الالكتروني">
-                                    </div>
-                                </div>
 
+            } elseif ($_GET['do'] == "view") {
+                include 'config.php';
 
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-10">
-                                        <button type="submit" class="btn btn-purple btn-md"> اضافه
-                                            العائلة
-                                            <i class="fa fa-plus"></i>
-                                        </button>
+                if (isset($_GET["searchq"])) {
+                    //         $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50 ");
 
-                                    </div>
-                                </div>
+                } else {
 
-
-                            </form>
-                        </div>
-                    </div>
-                    <?php
-
-                } elseif ($_GET['do'] == "view") {
-                    include 'config.php';
-
-                    if (isset($_GET["searchq"])) {
-                        //         $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50 ");
-
-                    } else {
-
-                        //      $stmt= $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
-                    }
+                    //      $stmt= $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                }
 
 
 //    $stmt->execute();
 //$rows= $stmt->fetchAll();
-                    ?>
-
-
-                    <div class="card-box">
-                        <div class="card-box-head  border-b m-t-0">
-                            <h4 class="header-title"><b> بيانات العائلة</b></h4>
-                        </div>
-                        <div class="card-box-content form-compoenent">
-                            <div class="cb-res-table">
-                                <div class="cb-table-search">
-
-                                    <div class="input-group pull-left cb-ta-search">
-                                        <form class="form-horizontal"
-                                              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                              method="GET">
-                                            <input name="searchq" type="text" class="form-control"
-                                                   placeholder="بحث..." style="text-align: center;">
-                                            <input type="hidden" name="do" value="view"/>
-                                            <button style="margin-top: 10px;" type="submit"
-                                                    class="btn btn-success btn-md">بحث
-                                                <i class="fa fa-search"></i>
-                                            </button>
-
-
-                                            </button>
-
-
-                                        </form>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <?php
-
-
-                }
-
-                }
                 ?>
 
 
-            </div>
+                <div class="card-box">
+                    <div class="card-box-head  border-b m-t-0">
+                        <h4 class="header-title"><b> بيانات العائلة</b></h4>
+                    </div>
+                    <div class="card-box-content form-compoenent">
+                        <div class="cb-res-table">
+                            <div class="cb-table-search">
+
+                                <div class="input-group pull-left cb-ta-search">
+                                    <form class="form-horizontal"
+                                          action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+                                          method="GET">
+                                        <input name="searchq" type="text" class="form-control"
+                                               placeholder="بحث..." style="text-align: center;">
+                                        <input type="hidden" name="do" value="view"/>
+                                        <button style="margin-top: 10px;" type="submit"
+                                                class="btn btn-success btn-md">بحث
+                                            <i class="fa fa-search"></i>
+                                        </button>
+
+
+                                        </button>
+
+
+                                    </form>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <?php
+
+
+            }
+
+            }
+            ?>
+
+
         </div>
-        <!-- container -->
     </div>
-    <!-- content -->
-    <footer class="footer text-right">
-        <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
-    </footer>
+    <!-- container -->
+</div>
+<!-- content -->
+<footer class="footer text-right">
+    <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
+</footer>
 </div>
 
 <!-- ============================================================== -->

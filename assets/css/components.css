@@ -14,6 +14,9 @@
 /* =============
    Buttons
 ============= */
+@import url(//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
 
 .btn-compoenent a {
 	margin:0 13px 13px 0;
@@ -513,14 +516,13 @@ label, label:before {
 .checkbox label::after {
     color: #555555;
     display: inline-block;
-    font-size: 11px;
+    font-size: 14px;
     height: 16px;
     left: 2px;
     margin-left: -20px;
     padding-left: 3px;
     padding-top: 1px;
     position: absolute;
-    top: 2px;
     width: 16px;
 }
 .checkbox input[type="checkbox"] {
@@ -538,8 +540,10 @@ label, label:before {
     outline: thin dotted;
 }
 .checkbox input[type="checkbox"]:checked + label::after {
-    content: "\f00c";
-    font-family: 'FontAwesome';
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f046";
+
 }
 .checkbox input[type="checkbox"]:disabled + label::before {
     background-color: #eeeeee;
@@ -876,24 +880,14 @@ label, label:before {
     border-color: #4c5667;
     color: #4c5667;
 }
-.panel-group .panel .panel-heading a[data-toggle=collapse].collapsed:before {
-    content: '\f0d7';
-}
+
 .panel-group .panel .panel-heading .accordion-toggle.collapsed:before {
     content: '\f0d7';
 }
 .panel-group .panel .panel-heading a[data-toggle=collapse] {
     display: block;
 }
-.panel-group .panel .panel-heading a[data-toggle=collapse]:before {
-    content: '\f0d8';
-    display: block;
-    float: right;
-    font-family: 'FontAwesome';
-    font-size: 14px;
-    text-align: right;
-    width: 25px;
-}
+
 .panel-group .panel .panel-heading .accordion-toggle {
     display: block;
 }
