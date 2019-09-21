@@ -430,6 +430,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="tab-pane active" id="v-Pics">
 
 
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-0">صور الحالة</label>
+                                                <input class="form-control" id='Files' name="Files[]" type="file"
+                                                       multiple="multiple" accept="image/*"/>
+
+
+                                            </div>
+
+
                                         </div>
                                         <div class="tab-pane " id="v-otherSub">
 
