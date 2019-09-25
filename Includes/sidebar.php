@@ -30,6 +30,20 @@
 
 
             <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-chair"> </i>
+                    <span> المكاتب </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Office.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Office.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
+
+            <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-users-cog"> </i>
                     <span> الموظفين </span>
                     <span

@@ -30,14 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // check duplication of email
         $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
-        $rows= $stmt->fetchAll();
-        if($rows>0)
-        {
+        $rows = $stmt->fetchAll();
+        if ($rows > 0) {
             $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
             echo "<script type='text/javascript'>alert('$message');</script>";
-        }
-        else
-        {
+        } else {
             // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
             $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
             $stmt->execute();
@@ -63,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>ادارة المكاتب | </title>
+    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -129,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المكاتب</h4>
+                <h4 class="page-title">المناطق</h4>
 
             </div>
             <div class="cb-page-content">
@@ -146,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المكاتب الحالية</div>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد الموظفين</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -161,13 +158,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 </div>
 
 
-
                                 <div class="panel-body">
 
 
                                     <div class="dropdown pull-left">
                                         <button class="btn btn-danger btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المكاتب
+                                                data-toggle="dropdown" aria-expanded="false">الموظفين
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -199,10 +195,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     ?>
 
 
-
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة مكتب جديد</b></h4>
+                                            <h4 class="header-title"><b>اضافة الموظفين</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
@@ -211,65 +206,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1"> اسم المكتب</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
-                                                               placeholder=" ادخل اسم المكتب">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1"> عنوان المكتب</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
-                                                               placeholder=" ادخل عنوان المكتب">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">الصفحة علي فيس بوك</label>
+                                                    <label class="control-label col-sm-1"> اسم المنطقة</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
-                                                               placeholder=" ادخل رابط الصفحة">
+                                                               placeholder=" ادخل اسم المنطقة">
                                                     </div>
                                                 </div>
-
-
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1">موبيل الادارة</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
-                                                               placeholder=" ادخل موبيل الادارة">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">موبيل شعبه العوائل</label>
+                                                    <label class="control-label col-sm-1"> وصف المنطقة</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
-                                                               placeholder=" ادخل موبيل شعبه العوائل">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">موبيل شعبه المشتركين</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" class="form-control"
-                                                               placeholder=" ادخل موبيل شعبه المشتركين   ">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-success btn-md"> اضافه
-                                                            المكتب
-                                                            <i class="fa fa-plus"></i>
-                                                        </button>
-
+                                                               placeholder=" ادخل وصف المنطقة">
                                                     </div>
                                                 </div>
 
@@ -379,7 +326,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     $stmt->execute();
-                                    $rows= $stmt->fetchAll();
+                                    $rows = $stmt->fetchAll();
                                     ?>
 
 
@@ -407,7 +354,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                             </button>
 
 
-
                                                         </form>
                                                         </span>
                                                     </div>
@@ -415,7 +361,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             </div>
                                             <div class="clearfix"></div>
                                             <br>
-
 
 
                                             <div class="table-responsive data-table">
@@ -438,8 +383,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                                     <?php
 
-                                                    foreach ($rows as $row)
-                                                    {
+                                                    foreach ($rows as $row) {
                                                         echo "<tr>";
 
                                                         echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
