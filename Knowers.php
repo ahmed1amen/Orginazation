@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
+    <title>معرفو المؤسسة</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -126,24 +126,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المناطق</h4>
+                <h4 class="page-title">المعرفون</h4>
 
             </div>
             <div class="cb-page-content">
                 <div class="container">
                     <div class="row">
                         <div class="cb-col-20 col-sm-6">
-                            <div class="widget-panel widget-style-1 bg-warning">
+                            <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
                                 include 'config.php';
 
                                 $stmt = $con->prepare("SELECT * FROM employee_data");
                                 $stmt->execute();
 
-                                echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المناطق</div>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المعرفون</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -162,8 +162,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="dropdown pull-left">
-                                        <button class="btn btn-warning btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المناطق
+                                        <button class="btn btn-danger btn-md dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-expanded="false">المعرفون
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -197,34 +197,62 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
+                                            <h4 class="header-title"><b>اضافة معرف جديد</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
 
-
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1"> اسم المنطقة</label>
+                                                    <label class="control-label col-sm-1"> اسم المعرف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" class="form-control"
-                                                               placeholder=" ادخل اسم المنطقة">
+                                                               placeholder=" ادخل اسم المعرف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1"> وصف المنطقة</label>
+                                                    <label class="control-label col-sm-1"> صفة المناداة</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" class="form-control"
-                                                               placeholder=" ادخل وصف المنطقة">
+                                                               placeholder=" ادخل صفة المناداة">
                                                     </div>
                                                 </div>
-
-
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم المكتب</label>
+                                                    <label class="control-label col-sm-1"> عنوان المعرف</label>
+                                                    <div class="col-sm-10">
+                                                        <input required type="text" class="form-control"
+                                                               placeholder=" ادخل عنوان المعرف">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> الصفة</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control">
+                                                            <option>موظف</option>
+                                                            <option>غير موظف</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> رفم الموبيل 1</label>
+                                                    <div required class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل رفم الموبيل 1">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> رقم الموبيل 2</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل رقم الموبيل 2">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> مكتب المؤسسة</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control" name="employee_office" id="sel1">
                                                             <option>مكتب بغداد</option>
                                                             <option>مكتب البصرة</option>
                                                             <option>مكتب النجف</option>
@@ -233,27 +261,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
 
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم القطاع</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control">
-                                                            <option>المشخاب</option>
-                                                            <option>القادسية</option>
-                                                            <option>سوق شعلان</option>
-                                                            <option>سوق شعلان</option>
-                                                            <option>الحسانية</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-warning btn-md">اضافة
-                                                            المنطقة
+                                                        <button type="submit" class="btn btn-success btn-md"> اضافه
+                                                            المعرف
                                                             <i class="fa fa-plus"></i>
                                                         </button>
+
                                                     </div>
                                                 </div>
 
