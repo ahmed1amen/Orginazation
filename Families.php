@@ -18,41 +18,179 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        /*    $employee_name=$_POST["employee_name"];
-           $employee_number=$_POST["employee_number"];
-           $employee_address=$_POST["employee_address"];
-           $employee_salary=$_POST["employee_salary"];
-           $employee_jobName=$_POST["employee_jobName"];
-           $employee_email=$_POST["employee_email"];
-           $employee_password=$_POST["employee_password"];
-           $employee_office=$_POST["employee_office"];
-               $employee_office=$_POST["employee_office"];
+        $statistics_numer = $_POST["statistics_numer"];
+        $family_balance = $_POST["family_balance"];
+        $provider_name = $_POST["provider_name"];
+        $company_office = $_POST["company_office"];
+        $hashimy = $_POST["hashimy"];
+        $number_of_files = $_POST["number_of_files"];
+        $father_name = $_POST["father_name"];
+        $treatment_date = $_POST["treatment_date"];
+        $provider_name2 = $_POST["provider_name2"];
 
-           if(empty($employee_name) || empty($employee_number)
-           || empty($employee_address) || empty($employee_salary)
-           || empty($employee_jobName) || empty($employee_email)
-           || empty($employee_password) || empty($employee_office))
-           {
-           $message = "Fill all fields/برجاء إدخال جميع البيانات";
-           echo "<script type='text/javascript'>alert('$message');</script>";
-           }
-           else
-           {
+        $current_situation = $_POST["current_situation"];
+        $hashimy2 = $_POST["hashimy2"];
+        $family_type = $_POST["family_type"];
+        $mo3aref_name = $_POST["mo3aref_name"];
+        $special_case = $_POST["special_case"];
+        $mozaky_name = $_POST["mozaky_name"];
+        $shopping_day = $_POST["shopping_day"];
+        $mozaky_number = $_POST["mozaky_number"];
+        $nationality_number = $_POST["nationality_number"];
 
-           // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-           $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
-           $stmt->execute();
-           // بس خلاص الموظف اضاف تمام كده
-           }*/
+        $note = $_POST["note"];
 
+        $membership = $_POST["membership"];
+        $wasy_name = $_POST["wasy_name"];
+        $wasy_number = $_POST["wasy_number"];
+        $mgls_preparation = $_POST["mgls_preparation"];
+
+        $sharia_agency = $_POST["sharia_agency"];
+        $esthqak_test = $_POST["esthqak_test"];
+        $sadaka_garia = $_POST["sadaka_garia"];
+        $garia_eshtrak = $_POST["garia_eshtrak"];
+        $eshtrak_da3m = $_POST["eshtrak_da3m"];
+        $da3m_money = $_POST["da3m_money"];
+
+        $contacts = $_POST["contacts"];
+
+        $kashf_medany = $_POST["kashf_medany"];
+        $family_sanf = $_POST["family_sanf"];
+        $sakan_type = $_POST["sakan_type"];
+        $egar_money = $_POST["egar_money"];
+        $suggested_money = $_POST["suggested_money"];
+        //$another_companies_array=$_POST["another_companies"]; // array
+
+        //$another_companies=;
+        // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
+        $hashimy2_flag = false;
+
+        if (!empty($provider_name2)) {
+            if (empty($hashimy2)) {
+                $hashimy2_flag = true;
+                $message = "من فضلك أدخل نسب المعيل2";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+        } else {
+            $provider_name2 = "NULL";
+            $hashimy2 = "NULL";
+        }
+        if (empty($note)) $note = "NULL";
+        $wasy_flag = false;
+        if (!empty($wasy_name)) {
+            if (empty($wasy_number)) {
+                $wasy_flag = true;
+                $message = "من فضلك أدخل موبيل الواصي";
+
+                echo "<script type='text/javascript'>alert('$message');</script>";
+
+            }
+        } else {
+            $wasy_name = "NULL";
+            $wasy_number = "NULL";
+        }
+        $garia_falg = false;
+        if (!empty($sadaka_garia)) {
+            if (empty($garia_eshtrak)) {
+                $garia_falg = true;
+                $message = "من فضلك أدخل مبلغ اشتراك الجارية";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+        } else {
+            $sadaka_garia = "NULL";
+            $garia_eshtrak = "NULL";
+        }
+        $da3m_falg = false;
+        if (!empty($eshtrak_da3m)) {
+            if (empty($da3m_money)) {
+                $da3m_falg = true;
+                $message = "من فضلك أدخل مبلغ اشتراك الدعم";
+                echo "<script type='text/javascript'>alert('$message');</script>";
+            }
+        } else {
+            $eshtrak_da3m = "NULL";
+            $da3m_money = "NULL";
+        }
+        if (empty($contacts)) $contacts = "NULL";
+        if (empty($kashf_medany)) $kashf_medany = "NULL";
+        if (empty($family_sanf)) $family_sanf = "NULL";
+        if (empty($sakan_type)) $sakan_type = "NULL";
+        if (empty($egar_money)) $egar_money = "NULL";
+        if (empty($suggested_money)) $suggested_money = "NULL";
+        if (!empty($_POST['another_companies'])) {
+            $another_companies = "";
+            foreach ($_POST['another_companies'] as $selected)  //salaries,social,company,charity_company
+            {
+                // Here $results holding all the check box values as a string
+                $another_companies .= $selected . " ";
+                //if you need space for each value use $results .= $selected . " ";
+            }
+        } else {
+            $another_companies = "NULL";
+        }
+        echo $another_companies;
+
+
+        if ($hashimy2_flag == false && $wasy_flag == false && $garia_falg == false && $da3m_falg == false) {
+            $stmt = $con->prepare("INSERT INTO family(statistics_numer, family_balance, provider_name, company_office, hashimy, number_of_files, father_name, treatment_date, provider_name2, current_situation, hashimy2, family_type, mo3aref_name, special_case, mozaky_name, shopping_day, mozaky_number, nationality_number, note, membership, wasy_name, wasy_number, mgls_preparation, sharia_agency, esthqak_test, sadaka_garia, garia_eshtrak, eshtrak_da3m, da3m_money, contacts, kashf_medany, family_sanf, sakan_type, egar_money, suggested_money, another_companies)
+ VALUES ('$statistics_numer', '$family_balance', '$provider_name', '$company_office', '$hashimy', '$number_of_files', '$father_name', '$treatment_date', '$provider_name2', '$current_situation', '$hashimy2', '$family_type', '$mo3aref_name', '$special_case', '$mozaky_name', '$shopping_day', '$mozaky_number', '$nationality_number', '$note', '$membership', '$wasy_name', '$wasy_number', '$mgls_preparation', '$sharia_agency', '$esthqak_test', '$sadaka_garia', '$garia_eshtrak', '$eshtrak_da3m', '$da3m_money', '$contacts', '$kashf_medany', '$family_sanf', '$sakan_type', '$egar_money', '$suggested_money', '$another_companies')");
+            $stmt->execute();
+        }
+
+        // بس خلاص الموظف اضاف تمام كده
+
+        /* *********************** IMAGES ****************** */
+
+        // File upload configuration
+
+
+        $targetDir = "uploads/" . $statistics_numer . "/";
+        if (!(is_dir($targetDir))) {
+            mkdir($targetDir);
+        }
+
+
+        $statusMsg = $errorMsg = $errorUpload = '';
+        if (!empty(array_filter($_FILES['files']['name']))) {
+
+            foreach ($_FILES['files']['name'] as $key => $val) {
+
+                //File Type
+                $fileType = pathinfo($_FILES['files']['name'][$key], PATHINFO_EXTENSION);
+
+
+                //File NAME Serial Generator
+                $FileName = $targetDir . time() . "_" . rand() . "." . $fileType;
+
+                // File upload path
+
+                $targetFilePath = $FileName;
+
+
+                // Upload file to server
+                if (!(move_uploaded_file($_FILES["files"]["tmp_name"][$key], $targetFilePath))) {
+                    $errorUpload .= $_FILES['files']['name'][$key] . ', ';
+                }
+            }
+
+            if (!($errorUpload != '')) {
+                echo "<script type='text/javascript'>alert('$errorUpload');</script>";
+            }
+
+        } else {
+            $statusMsg = 'يرجى اختيار ملف للتحميل.';
+            echo "<script type='text/javascript'>alert('$statusMsg');</script>";
+        }
 
     }
-
-
+    /* *********************** IMAGES END ****************** */
 }
-
-
 ?>
+
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +216,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/pages.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
+
 
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,6 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </a>
             <!-- Image Logo here -->
 
+
         </div>
         <!-- Button mobile view to collapse sidebar menu -->
         <div class="navbar navbar-default" role="navigation">
@@ -132,7 +272,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Page-Title -->
             <div class="page-title-group">
                 <h4 class="page-title">العائلات</h4>
-
             </div>
             <div class="cb-page-content">
                 <div class="container">
@@ -206,27 +345,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="card-box-content form-compoenent">
                             <form class="form-horizontal"
                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                  method="post">
+                                  method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="hidden" name="do" value="add"/>
 
                                             <label class="control-label col-sm-0">الرقم الأحصائي</label>
-                                            <input required type="text" class="form-control"
+                                            <input required name="statistics_numer" type="text" class="form-control"
                                                    placeholder="ادخل الرقم الأحصائي">
 
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">اسم المعيل</label>
-                                            <input required type="text" class="form-control"
+                                            <input required name="provider_name" type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل">
 
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">نسب المعيل</label>
 
-                                            <select class="form-control">
+                                            <select required name="hashimy" class="form-control">
                                                 <option>هاشمي</option>
                                                 <option>غير هاشمي</option>
                                             </select>
@@ -235,7 +374,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">اسم الأب</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="father_name" type="text" class="form-control"
                                                    placeholder="ادخل اسم الأب">
 
                                         </div>
@@ -244,14 +383,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">اسم المعيل 2</label>
 
-                                            <input required type="text" class="form-control"
+                                            <input name="provider_name2" type="text" class="form-control"
                                                    placeholder="ادخل اسم المعيل 2 ">
 
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-0"> نسب المعيل 2</label>
 
-                                            <select class="form-control">
+                                            <select name="hashimy2" class="form-control">
                                                 <option></option>
                                                 <option>هاشمي</option>
                                                 <option>غير هاشمي</option>
@@ -262,14 +401,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">اسم المعرف</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="mo3aref_name" type="text" class="form-control"
                                                    placeholder="ادخل اسم المعرف">
 
                                         </div>
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">اسم المذكي</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="mozaky_name" type="text" class="form-control"
                                                    placeholder="ادخل اسم المذكي">
 
                                         </div>
@@ -277,7 +416,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">جوال المذكي</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="mozaky_number" type="text" class="form-control"
                                                    placeholder="ادخل رقم جوال المذكي">
 
                                         </div>
@@ -285,7 +424,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">ملاحظه</label>
 
-                                            <textarea class="form-control" rows="5" placeholder="ملاحظه"
+                                            <textarea name="note" class="form-control" rows="5" placeholder="ملاحظه"
                                                       id="comment"></textarea>
 
                                         </div>
@@ -297,7 +436,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">رصيد العائله</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="family_balance" type="text" class="form-control"
                                                    placeholder="ادخل رصيد العائله">
 
                                         </div>
@@ -306,7 +445,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">مكتب المؤسسة</label>
 
-                                            <select class="form-control">
+                                            <select required name="company_office" class="form-control">
                                                 <option>22</option>
                                                 <option>1</option>
                                                 <option>2</option>
@@ -318,7 +457,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">رقم الأضبارة</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="number_of_files" type="text" class="form-control"
                                                    placeholder="ادخل رقم الأضبارة">
 
                                         </div>
@@ -326,7 +465,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">تاريخ ملف المعاملة</label>
 
-                                            <input style="font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'; text-align: center;"
+                                            <input required name="treatment_date"
+                                                   style="font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', 'Arial Black', 'sans-serif'; text-align: center;"
                                                    type="date" class="form-control">
                                         </div>
 
@@ -334,7 +474,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">الموقف الحالي</label>
 
-                                            <select class="form-control">
+                                            <select required name="current_situation" class="form-control">
                                                 <option>ايقاف</option>
                                                 <option>مستمرة</option>
                                             </select>
@@ -345,7 +485,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">نوع العائلة</label>
 
-                                            <select class="form-control">
+                                            <select required name="family_type" class="form-control">
                                                 <option>ايتام</option>
                                                 <option>متعففة</option>
                                                 <option>تبرعات</option>
@@ -356,7 +496,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">الحالة الخاصة</label>
 
-                                            <select class="form-control">
+                                            <select required name="special_case" class="form-control">
                                                 <option>الحشد الشعبي</option>
                                                 <option>مطلقة</option>
                                                 <option>عجزة</option>
@@ -370,7 +510,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">يوم التسوق</label>
 
-                                            <select class="form-control">
+                                            <select required name="	shopping_day" class="form-control">
                                                 <option>السبت</option>
                                                 <option>الأحد</option>
                                                 <option>الأثنين</option>
@@ -387,7 +527,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         <div class="form-group">
                                             <label class="control-label col-sm-0">رقم الجنسية</label>
 
-                                            <input type="text" class="form-control"
+                                            <input required name="nationality_number" type="text" class="form-control"
                                                    placeholder="ادخل رقم الجنسية">
 
                                         </div>
@@ -432,7 +572,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">صور الحالة</label>
-                                                <input class="form-control" id='Files' name="Files[]" type="file"
+                                                <input class="form-control" id='Files' name="files[]" type="file"
                                                        multiple="multiple" accept="image/*"/>
 
 
@@ -446,7 +586,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">عضوية ذخر الأخرة</label>
 
-                                                <select class="form-control">
+                                                <select name="membership" class="form-control">
                                                     <option></option>
                                                     <option>مشتركة</option>
                                                     <option>غير مشتركة</option>
@@ -458,13 +598,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">اسم الوصي</label>
 
-                                                <input type="text" class="form-control " placeholder="ادخل اسم الوصي">
+                                                <input name="wasy_name" type="text" class="form-control "
+                                                       placeholder="ادخل اسم الوصي">
 
                                             </div>
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">موبيل الوصي</label>
 
-                                                <input type="text" class="form-control " placeholder="ادخل موبيل الوصي">
+                                                <input name="wasy_number" type="text" class="form-control "
+                                                       placeholder="ادخل موبيل الوصي">
 
                                             </div>
 
@@ -473,7 +615,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <label class="control-label col-sm-0">الأستعداد لعقد المجالس
                                                     الحسينية في البيت</label>
 
-                                                <select class="form-control">
+                                                <select name="mgls_preparation" class="form-control">
                                                     <option></option>
                                                     <option>مستعدة</option>
                                                     <option>غير مستعدة</option>
@@ -489,7 +631,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">الوكالة الشرعية</label>
 
-                                                <select class="form-control">
+                                                <select name="sharia_agency" class="form-control">
                                                     <option></option>
                                                     <option>وكالة شرعية مطلقة</option>
                                                     <option>وكالة شرعية عامة</option>
@@ -501,7 +643,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">اختبار الاستحقاق</label>
 
-                                                <select class="form-control">
+                                                <select name="esthqak_test" class="form-control">
                                                     <option></option>
                                                     <option>مستحقة</option>
                                                     <option>غير مستحقة</option>
@@ -519,7 +661,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">الصدقة الجارية</label>
 
-                                                <select class="form-control">
+                                                <select name="sadaka_garia" class="form-control">
                                                     <option></option>
                                                     <option>مساهمة</option>
                                                     <option>غير مساهمة</option>
@@ -531,7 +673,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <label class="control-label col-sm-0">ملبغ اشتراك
                                                     الجارية</label>
 
-                                                <input type="text" class="form-control "
+                                                <input name="garia_eshtrak" type="text" class="form-control "
                                                        placeholder="ادخل ملبغ اشتراك الجارية">
 
                                             </div>
@@ -540,7 +682,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">اشتراك الدعم</label>
 
-                                                <select class="form-control">
+                                                <select name="eshtrak_da3m" class="form-control">
                                                     <option></option>
                                                     <option>مشتركة</option>
                                                     <option>غير مشتركة</option>
@@ -551,7 +693,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">ملبغ اشتراك الدعم</label>
 
-                                                <input type="text" class="form-control "
+                                                <input name="da3m_money" type="text" class="form-control "
                                                        placeholder="ادخل ملبغ اشتراك الدعم">
 
                                             </div>
@@ -565,7 +707,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">الكششف الميداني</label>
 
-                                                <select class="form-control">
+                                                <select name="kashf_medany" class="form-control">
                                                     <option></option>
                                                     <option>مكشوفة</option>
                                                     <option>غير مكشوفة</option>
@@ -577,7 +719,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">صنف العائلة</label>
 
-                                                <select class="form-control">
+                                                <select name="family_sanf" class="form-control">
                                                     <option></option>
                                                     <option>أ</option>
                                                     <option>ب</option>
@@ -589,7 +731,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">نوع السكن</label>
 
-                                                <select class="form-control">
+                                                <select name="sakan_type" class="form-control">
                                                     <option></option>
                                                     <option>ملك صرف</option>
                                                     <option>ملك زراعي</option>
@@ -604,7 +746,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">مبلغ الايجار</label>
 
-                                                <input type="text" class="form-control "
+                                                <input name="egar_money" type="text" class="form-control "
                                                        placeholder="ادخل ملبغ الايجار">
 
                                             </div>
@@ -612,7 +754,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">المبلغ الشهري المقترج</label>
 
-                                                <input type="text" class="form-control "
+                                                <input name="suggested_money" type="text" class="form-control "
                                                        placeholder="ادخل المبلغ الشهري المقترج">
 
                                             </div>
@@ -641,23 +783,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                 <div class="panel-body">
 
                                                                     <div class="checkbox checkbox-primary col-sm-4">
-                                                                        <input id="ch1" type="checkbox">
+                                                                        <input name="another_companies[]"
+                                                                               value="salaries" id="ch1"
+                                                                               type="checkbox">
                                                                         <label for="ch1"> رواتب شهداء الحشد
                                                                             الشعبي</label>
                                                                     </div>
                                                                     <div class="checkbox checkbox-primary col-sm-4">
-                                                                        <input id="ch2" type="checkbox">
+                                                                        <input name="another_companies[]" value="social"
+                                                                               id="ch2" type="checkbox">
                                                                         <label for="ch2"> شبكة الرعاية
                                                                             الاجتماعية</label>
                                                                     </div>
 
 
                                                                     <div class="checkbox checkbox-primary col-sm-4">
-                                                                        <input id="ch3" type="checkbox">
+                                                                        <input name="another_companies[]"
+                                                                               value="company" id="ch3" type="checkbox">
                                                                         <label for="ch3"> مؤسسة الباقر ع</label>
                                                                     </div>
                                                                     <div class="checkbox checkbox-primary col-sm-4">
-                                                                        <input id="ch4" type="checkbox">
+                                                                        <input name="another_companies[]"
+                                                                               value="charity_company" id="ch4"
+                                                                               type="checkbox">
                                                                         <label for="ch4"> مؤسسة السجاد الخيرية</label>
                                                                     </div>
                                                                 </div>
@@ -680,7 +828,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <div class="form-group">
                                                 <label class="control-label col-sm-0">عناوين التواصل</label>
 
-                                                <textarea class="form-control" rows="7"
+                                                <textarea name="contacts" class="form-control" rows="7"
                                                           placeholder="ادخل جميع عناوين التواصل">
 اسم المنطقة  :  &nbsp;&nbsp;
 عنوان السكن التفصيلي  :  &nbsp;&nbsp;
