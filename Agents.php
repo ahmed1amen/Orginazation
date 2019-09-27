@@ -205,20 +205,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
 
                                                 <div class="row">
-                                                    <div class="form-group pull-left2 col-lg-6">
-                                                        <label class="control-label col-sm-3"> صنف الوكيل</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control"
-                                                                   placeholder=" ادخل صنف الوكيل">
+
+
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-sm-3"> صنف الوكيل</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder=" ادخل صنف الوكيل">
+                                                            </div>
                                                         </div>
                                                     </div>
 
-                                                    <div class="form-group pull-left col-lg-6">
-                                                        <label class="control-label col-sm-3"> مكتب المؤسسة</label>
-                                                        <div class="col-sm-10">
-                                                            <input type="text" class="form-control"
-                                                                   placeholder=" ادخل مكتب المؤسسة">
+                                                    <div class="col-lg-6">
+                                                        <div class="form-group ">
+                                                            <label class="control-label col-sm-3"> مكتب المؤسسة</label>
+                                                            <div class="col-sm-12">
+                                                                <input type="text" class="form-control"
+                                                                       placeholder=" ادخل مكتب المؤسسة">
+                                                            </div>
                                                         </div>
+
                                                     </div>
 
                                                     <div class="col-lg-6">
