@@ -69,7 +69,7 @@ if (isset($_SESSION['Username'])) {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
+    <title>الموظف</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
