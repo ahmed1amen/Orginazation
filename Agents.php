@@ -655,7 +655,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <!-- content -->
         <footer class="footer text-right">
-            <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
+
         </footer>
     </div>
 

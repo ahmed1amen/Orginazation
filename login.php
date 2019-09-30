@@ -91,8 +91,8 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 			<button  style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
 		</form>
 
-        <p class="copy">&copy; 2019 Eng.Ahmed <span>Amen</span></p>
-	</div>
+
+    </div>
 </div>
 <!-- END wrapper --> 
 

@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>تسجيل الدخول إلي النظام</title>
+    <title>تسجيل الدخول إلي النظام | الموظفين</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="container">
         <a href="login.php#"><img src="assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
 
-        <p class="lead">مؤسسة ابي الزهراء الخيرية</p>
+        <p class="lead">مؤسسة ابي الزهراء الخيرية {دخول الموظفين}</p>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
         >
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
         </form>
 
-        <p class="copy">&copy; 2019 Eng.Ahmed <span>Amen</span></p>
+
     </div>
 </div>
 <!-- END wrapper -->

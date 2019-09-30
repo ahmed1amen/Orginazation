@@ -450,7 +450,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                         echo "<td>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash-o'></span></button>
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 
 
@@ -468,17 +468,20 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                 <div class="col-sm-5">
                                                     <p>Showing 20-30 of 50 items</p>
                                                 </div>
-                                                <div class="col-sm-7">
-                                                    <ul class="pagination pull-right">
-                                                        <li><a href="tables.html#"><span class="fa fa-angle-double-left"></span></a></li>
-                                                        <li class="active"><a href="tables.html#">1</a></li>
-                                                        <li><a href="tables.html#">2</a></li>
-                                                        <li><a href="tables.html#">3</a></li>
-                                                        <li><a href="tables.html#">4</a></li>
-                                                        <li><a href="tables.html#">5</a></li>
-                                                        <li><a href="tables.html#"><span class="fa fa-angle-double-right"></span></a></li>
-                                                    </ul>
-                                                </div>
+                                                <!--
+                                                    <div class="col-sm-7">
+                                                        <ul class="pagination pull-right">
+                                                            <li><a href="tables.html#"><span class="fa fa-angle-double-left"></span></a></li>
+                                                            <li class="active"><a href="tables.html#">1</a></li>
+                                                            <li><a href="tables.html#">2</a></li>
+                                                            <li><a href="tables.html#">3</a></li>
+                                                            <li><a href="tables.html#">4</a></li>
+                                                            <li><a href="tables.html#">5</a></li>
+                                                            <li><a href="tables.html#"><span class="fa fa-angle-double-right"></span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                    !-->
+
                                             </div>
                                         </div>
                                     </div>
@@ -501,7 +504,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
         </div>
         <!-- content -->
         <footer class="footer text-right">
-            <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
+
         </footer>
     </div>
 

@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
+    <title>المناطق</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -488,7 +488,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
         <!-- content -->
         <footer class="footer text-right">
-            <p class="copy">&copy; 2019. Eng.Ahmed<span>Amen</span></p>
+
         </footer>
     </div>
 
