@@ -23,10 +23,12 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
     if ($count > 0){
             $_SESSION['Username'] = $username;   // Register Session Name
             $_SESSION['UserType'] = 'admin';   // Register UserType
+        unset($_SESSION['ERROR']);
             header('Location: DashBoard.php');
             exit();
+    } else {
+        $_SESSION['ERROR'] = "خطأ في اسم المستخدم او كلمه السر.";
     }
-
 
 }
 
@@ -90,6 +92,16 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 			<button  style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
 		</form>
+
+        <div>
+
+            <?php
+
+            if (isset($_SESSION['ERROR'])) {
+                include('Includes/alerterror.php');
+            }
+            ?>
+        </div>
 
 
     </div>

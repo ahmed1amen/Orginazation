@@ -1,5 +1,6 @@
 <?php
 session_start();
+$Error = false;
 if (isset($_SESSION['Username'])) {
     header('Location: Employee.php');
 
@@ -23,9 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         //echo  "Welcome :". $employee_email;
         $_SESSION['Username'] = $employee_email;   // Register Session Name
         $_SESSION['UserType'] = 'employee';   // Register UserType
+        unset($_SESSION['ERROR']);
         //يوزرتايب علشان لما يعمل logout يقدر يفرق هيحوله علي لوجن الادمن ولا لوجن الموظفين
         header('Location: Employee.php');
         exit();
+    } else {
+        $_SESSION['ERROR'] = "خطأ في اسم المستخدم او كلمه السر.";
     }
 
 
@@ -78,8 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <p class="lead">مؤسسة ابي الزهراء الخيرية {دخول الموظفين}</p>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"
-        >
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>اسم المستخدم</label>
                 <input name="employee_email" type="text" placeholder="ادخل اسم المستخدم" autocomplete="false"
@@ -95,6 +98,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
         </form>
 
+        <div>
+
+            <?php
+
+            if (isset($_SESSION['ERROR'])) {
+                include('Includes/alerterror.php');
+            }
+            ?>
+        </div>
 
     </div>
 </div>
