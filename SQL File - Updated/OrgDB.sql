@@ -1,85 +1,165 @@
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (1, 'Tiger Nixon', 320800, 61);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (2, 'Garrett Winters', 170750, 63);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (3, 'Ashton Cox', 86000, 66);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (4, 'Cedric Kelly', 433060, 22);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (5, 'Airi Satou', 162700, 33);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (6, 'Brielle Williamson', 372000, 61);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (7, 'Herrod Chandler', 137500, 59);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (8, 'Rhona Davidson', 327900, 55);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (9, 'Colleen Hurst', 205500, 39);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (10, 'Sonya Frost', 103600, 23);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (11, 'Jena Gaines', 90560, 30);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (12, 'Quinn Flynn', 342000, 22);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (13, 'Charde Marshall', 470600, 36);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (14, 'Haley Kennedy', 313500, 43);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (15, 'Tatyana Fitzpatrick', 385750, 19);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (16, 'Michael Silva', 198500, 66);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (17, 'Paul Byrd', 725000, 64);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (18, 'Gloria Little', 237500, 59);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (19, 'Bradley Greer', 132000, 41);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (20, 'Dai Rios', 217500, 35);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (21, 'Jenette Caldwell', 345000, 30);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (22, 'Yuri Berry', 675000, 40);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (23, 'Caesar Vance', 106450, 21);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (24, 'Doris Wilder', 85600, 23);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (25, 'Angelica Ramos', 1200000, 47);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (26, 'Gavin Joyce', 92575, 42);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (27, 'Jennifer Chang', 357650, 28);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (28, 'Brenden Wagner', 206850, 28);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (29, 'Fiona Green', 850000, 48);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (30, 'Shou Itou', 163000, 20);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (31, 'Michelle House', 95400, 37);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (32, 'Suki Burks', 114500, 53);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (33, 'Prescott Bartlett', 145000, 27);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (34, 'Gavin Cortez', 235500, 22);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (35, 'Martena Mccray', 324050, 46);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (36, 'Unity Butler', 85675, 47);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (37, 'Howard Hatfield', 164500, 51);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (38, 'Hope Fuentes', 109850, 41);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (39, 'Vivian Harrell', 452500, 62);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (40, 'Timothy Mooney', 136200, 37);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (41, 'Jackson Bradshaw', 645750, 65);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (42, 'Olivia Liang', 234500, 64);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (43, 'Bruno Nash', 163500, 38);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (44, 'Sakura Yamamoto', 139575, 37);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (45, 'Thor Walton', 98540, 61);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (46, 'Finn Camacho', 87500, 47);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (47, 'Serge Baldwin', 138575, 64);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (48, 'Zenaida Frank', 125250, 63);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (49, 'Zorita Serrano', 115000, 56);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (50, 'Jennifer Acosta', 75650, 43);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (51, 'Cara Stevens', 145600, 46);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (52, 'Hermione Butler', 356250, 47);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (53, 'Lael Greer', 103500, 21);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (54, 'Jonas Alexander', 86500, 30);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (55, 'Shad Decker', 183000, 51);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (56, 'Michael Bruce', 183000, 29);
-INSERT INTO `employee`(`id`, `employee_name`, `employee_salary`, `employee_age`) VALUES (57, 'Donna Snider', 112000, 27);
-INSERT INTO `employee_data`(`ID`, `employee_name`, `employee_number`, `employee_address`, `employee_salary`, `employee_jobName`, `employee_email`, `employee_password`, `employee_office`) VALUES (1, 'منار', 1000, 'القاهره', 5000, 'developer', 'mano@hotmail.com', '2589646', 'مكتب البصرة');
-INSERT INTO `employee_data`(`ID`, `employee_name`, `employee_number`, `employee_address`, `employee_salary`, `employee_jobName`, `employee_email`, `employee_password`, `employee_office`) VALUES (12, 'Ahmed', 1066104107, '123456', 123456, '123456', 'ahmed1amen.g@gmail.com', '123456', 'مكتب بغداد');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (1, 5, 5555, 'manar', 22, 'هاشمي', 5, 'abdelsalam', '2019-09-16', 'hamada', 'ايقاف', '', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', 'السبت', 200132, 600, '', '', '', 0, '', '', '', '', 0, '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (2, 5, 5555, 'manar', 22, 'غير هاشمي', 5, 'abdelsalam', '2019-09-16', 'hamada', 'ايقاف', 'غير هاشمي', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', 'السبت', 200132, 600, '', '', '', 0, '', '', '', '', 0, '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (3, 5, 5555, 'manar', 22, 'غير هاشمي', 5, 'abdelsalam', '2019-09-16', 'hamada', 'ايقاف', 'غير هاشمي', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', 'السبت', 200132, 600, 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 'NULL', 'NULL', 0, 'NULL', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (4, 5, 5555, 'manar', 22, 'غير هاشمي', 5, 'abdelsalam', '2019-09-16', 'hamada', 'ايقاف', 'غير هاشمي', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', 'السبت', 200132, 600, 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 'NULL', 'NULL', 0, 'NULL', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (5, 5, 5555, 'manar', 22, 'غير هاشمي', 5, 'abdelsalam', '2019-09-11', 'hamada', 'ايقاف', 'هاشمي', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', 'السبت', 200132, 600, 'NULL', 'NULL', 'NULL', 0, 'NULL', 'NULL', 'NULL', 'NULL', 0, 'NULL', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (6, 5, 5555, 'manar', 22, 'غير هاشمي', 5, ' sultan', '2018-11-30', 'NULL', 'ايقاف', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 200132, 600, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'salaries company ');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (7, 5, 5555, 'manar', 2, 'هاشمي', 5, 'abdelsalam', '2019-11-27', 'NULL', 'ايقاف', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 200132, 534, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'salaries company ');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (8, 5, 2147483647, 'manar', 22, 'هاشمي', 5, 'abdelsalam', '2019-12-31', 'NULL', 'مستمرة', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 2147483647, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (9, 5, 2147483647, 'manar', 22, 'هاشمي', 5, 'abdelsalam', '2019-12-31', 'NULL', 'مستمرة', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 2147483647, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (10, 5, 2147483647, 'manar', 22, 'هاشمي', 5, 'abdelsalam', '2019-12-31', 'NULL', 'مستمرة', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 2147483647, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (11, 5, 2147483647, 'manar', 22, 'هاشمي', 5, 'abdelsalam', '2019-12-31', 'NULL', 'مستمرة', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 2147483647, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (12, 5, 5555, 'manar', 22, 'غير هاشمي', 5, ' sultan', '2018-12-30', 'NULL', 'مستمرة', 'NULL', 'متعففة', 'nada', 'مطلقة', 'marwa', '', 200132, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (13, 5, 5555, 'manar', 22, 'غير هاشمي', 5, ' sultan', '2018-12-30', 'NULL', 'مستمرة', 'NULL', 'متعففة', 'nada', 'مطلقة', 'marwa', '', 200132, 700, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (14, 5, 5555, 'manar', 22, 'غير هاشمي', 5, 'abdelsalam', '2019-12-30', 'NULL', 'مستمرة', 'NULL', 'ايتام', 'nada', 'الحشد الشعبي', 'marwa', '', 200132, 67445, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (15, 123, 500, 'ahmed amen', 22, 'هاشمي', 2147483647, 'ascec as d', '2016-04-10', 'asdasddasasd', 'مستمرة', 'غير هاشمي', 'ايتام', 'ajef a', 'الحشد الشعبي', 'asdfdbwdfasdf', '', 2147483647, 1342567, '5u6iydsazjkgfsad', 'غير مشتركة', '12435678', 2147483647, '', 'وكالة شرعية مطلقة', 'غير مستحقة', 'مساهمة', 23453678, 'غير مشتركة', 2147483647, 'اسم المنطقة  :    3543453454\r\nعنوان السكن التفصيلي  :    34535354\r\nرقم الموبيل 1  :    345345\r\nمعرف الموبيل الاول  :    345345345\r\nرقم الموبيل 2  :    535345\r\nمعرف الموبيل الثاني  :    12334\r\n ', 'مكشوفة', 'أ', 'تجاوز', 2345768, 1234657, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (16, 123123213, 123213123, '123123213', 22, 'هاشمي', 1213123, '123213', '1234-11-11', 'asdasd', 'ايقاف', 'هاشمي', 'ايتام', 'wqewqe', 'الحشد الشعبي', 'weqweqwe', '', 0, 0, 'qweqwe', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (17, 123, 123123123, '123', 22, 'هاشمي', 2147483647, '123', '0000-00-00', 'NULL', 'ايقاف', 'NULL', 'متعففة', '1231231232', 'الحشد الشعبي', '123123123', '', 1231231, 23123123, 'NULL', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'salaries social company charity_company ');
-INSERT INTO `family`(`family_ID`, `statistics_numer`, `family_balance`, `provider_name`, `company_office`, `hashimy`, `number_of_files`, `father_name`, `treatment_date`, `provider_name2`, `current_situation`, `hashimy2`, `family_type`, `mo3aref_name`, `special_case`, `mozaky_name`, `shopping_day`, `mozaky_number`, `nationality_number`, `note`, `membership`, `wasy_name`, `wasy_number`, `mgls_preparation`, `sharia_agency`, `esthqak_test`, `sadaka_garia`, `garia_eshtrak`, `eshtrak_da3m`, `da3m_money`, `contacts`, `kashf_medany`, `family_sanf`, `sakan_type`, `egar_money`, `suggested_money`, `another_companies`) VALUES (18, 123123, 123123, 'AAAAAAAAAAAAAA', 1, 'هاشمي', 34324234, 'AAAAAAAAAAAAAA', '0000-00-00', 'NULL', 'ايقاف', 'NULL', 'ايتام', 'AAAAAAAAAAAAAA', 'الحشد الشعبي', 'AAAAAAAAAAAAAA', '', 3333333, 2147483647, 'AAAAAAAAAAAAAA', '', 'NULL', 0, '', '', '', 'NULL', 0, 'NULL', 0, 'اسم المنطقة  :    \r\nعنوان السكن التفصيلي  :    \r\nرقم الموبيل 1  :    \r\nمعرف الموبيل الاول  :    \r\nرقم الموبيل 2  :    \r\nمعرف الموبيل الثاني  :    \r\n ', 'NULL', 'NULL', 'NULL', 0, 0, 'NULL');
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (1, 'cairo office', 'cairo', 'menah@gmail.com', 100000000, NULL, NULL);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (2, 'cairo office', 'cairo', 'menah1@gmail.com', 100000000, 2147483647, NULL);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (3, 'cairo office', 'cairo', 'menah2@gmail.com', 100000000, NULL, 15646878);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (4, 'cairo office', 'cairo', 'menah3@gmail.com', 4444, 55555, 666666);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (5, 'cairo office', 'cairo', 'menah1@gmail.com', 100000000, NULL, NULL);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (6, 'new one', 'alex', 'menah@gmail.com', 5000000, NULL, NULL);
-INSERT INTO `office_data`(`Office_ID`, `Office_name`, `Office_address`, `Office_facebook`, `Office_number1`, `Office_number2`, `Office_number3`) VALUES (7, 'new one', 'alex', 'menah@gmail.com', 5000000, NULL, NULL);
-INSERT INTO `org_users`(`ID`, `Username`, `Password`, `Privileges`) VALUES (1, 'admin', 'admin', 1);
+CREATE TABLE `Users` (
+`Admin_ID` int(11) NOT NULL AUTO_INCREMENT,
+`Admin_Username` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Admin_Password` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Admin_Privileges` int(11) NULL DEFAULT NULL,
+PRIMARY KEY (`Admin_ID`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `Areas` (
+`Area_ID` int(11) NOT NULL AUTO_INCREMENT,
+`Area_Name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Area_OfficeID` int(11) NULL DEFAULT NULL,
+`Area_Section` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Area_Description` varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+PRIMARY KEY (`Area_ID`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `Employees` (
+`Emp_ID` int(11) NOT NULL AUTO_INCREMENT,
+`Employee_Name` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Number` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Address` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Salary` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_JobName` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Email` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Password` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Employee_Office` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+PRIMARY KEY (`Emp_ID`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `Offices` (
+`Office_ID` int(11) NOT NULL AUTO_INCREMENT,
+`Office_Name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Office_Address` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Office_Facebook` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Office_Phone` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Office_PhoneFamilies` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+`Office_PhoneSubscribers` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+PRIMARY KEY (`Office_ID`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_general_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `Families` (
+`family_ID` int(11) NOT NULL AUTO_INCREMENT,
+`statistics_numer` int(11) NOT NULL,
+`family_balance` int(11) NOT NULL,
+`provider_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`company_office` int(11) NOT NULL,
+`hashimy` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`number_of_files` int(11) NOT NULL,
+`father_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`treatment_date` date NOT NULL,
+`provider_name2` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`current_situation` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`hashimy2` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`family_type` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`mo3aref_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`special_case` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`mozaky_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`shopping_day` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`mozaky_number` int(11) NOT NULL,
+`nationality_number` int(11) NOT NULL,
+`note` varchar(2000) CHARACTER SET utf32 COLLATE utf32_unicode_ci NULL DEFAULT NULL,
+`membership` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`wasy_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`wasy_number` int(11) NULL DEFAULT NULL,
+`mgls_preparation` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`sharia_agency` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`esthqak_test` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`sadaka_garia` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`garia_eshtrak` int(11) NULL DEFAULT NULL,
+`eshtrak_da3m` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`da3m_money` int(11) NULL DEFAULT NULL,
+`contacts` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`kashf_medany` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`family_sanf` varchar(20) CHARACTER SET utf32 COLLATE utf32_unicode_ci NULL DEFAULT NULL,
+`sakan_type` varchar(20) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+`egar_money` int(11) NULL DEFAULT NULL,
+`suggested_money` int(11) NULL DEFAULT NULL,
+`another_companies` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL DEFAULT NULL,
+PRIMARY KEY (`family_ID`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 19
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = latin1
+COLLATE = latin1_swedish_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `images` (
+`id` int(11) NOT NULL AUTO_INCREMENT,
+`file_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+`uploaded_on` datetime NOT NULL,
+`status` enum('1','0') CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '1',
+PRIMARY KEY (`id`) 
+)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1
+AVG_ROW_LENGTH = 0
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci
+KEY_BLOCK_SIZE = 0
+MAX_ROWS = 0
+MIN_ROWS = 0
+ROW_FORMAT = Compact;
+CREATE TABLE `Agents` (
+);
+CREATE TABLE `Groups` (
+`GroupID` int(11) NOT NULL AUTO_INCREMENT,
+`GroupOffice` varchar(255) NULL,
+`GroupName` varchar(255) NULL,
+`GroupAgent` varchar(255) NULL,
+`GroupUpdateNo` int(11) NULL,
+`GroupDateOfConstitution` datetime NULL ON UPDATE CURRENT_TIMESTAMP,
+`GroupAddNo` int(11) NULL,
+`GroupUpdateDate` datetime NULL ON UPDATE CURRENT_TIMESTAMP,
+`GroupNote` varchar(255) NULL,
+`GroupClass` varchar(255) NULL,
+`GroupCurrentSatuation` varchar(255) NULL,
+`GroupFollowEmployee` varchar(255) NULL,
+`GroupDEU` varchar(255) NULL,
+`GroupDTU` varchar(255) NULL,
+`GroupRegion` varchar(255) NULL,
+`GroupDateOfRecMoney` datetime NULL ON UPDATE CURRENT_TIMESTAMP,
+PRIMARY KEY (`GroupID`) 
+);
+CREATE TABLE `Registers` (
+);
+CREATE TABLE `Funds` (
+);
+CREATE TABLE `Knowers` (
+);
