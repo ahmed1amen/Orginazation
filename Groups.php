@@ -10,20 +10,43 @@ if (isset($_SESSION['Username'])) {
 
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST["do"] == "add") {
+
+
+        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
+// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
+        $employee_name = $_POST["employee_name"];
+        $employee_number = $_POST["employee_number"];
+        $employee_address = $_POST["employee_address"];
+        $employee_salary = $_POST["employee_salary"];
+        $employee_jobName = $_POST["employee_jobName"];
+        $employee_email = $_POST["employee_email"];
+        $employee_password = $_POST["employee_password"];
+        $employee_office = $_POST["employee_office"];
 
-        $Area_Name = $_POST["Area_Name"];
-        $Area_Office = $_POST["Area_Office"];
-        $Area_Section = $_POST["Area_Section"];
-        $Area_Description = $_POST["Area_Description"];
-        $stmt = $con->prepare("INSERT INTO Areas(Area_Name, Area_OfficeID, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+        // check duplication of email
+        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
+        $rows = $stmt->fetchAll();
+        if ($rows > 0) {
+            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
+            echo "<script type='text/javascript'>alert('$message');</script>";
+        } else {
+            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
+            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+            $stmt->execute();
+// بس خلاص الموظف اضاف تمام كده
+        }
+
     }
+
+
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>المناطق</title>
+    <title>المجاميع</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -57,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <![endif]-->
 
     <!-- MODERNIZER -->
@@ -104,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المناطق</h4>
+                <h4 class="page-title">مجاميع المؤسسة</h4>
 
             </div>
             <div class="cb-page-content">
@@ -121,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المناطق</div>
+                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المجاميع</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -141,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="dropdown pull-left">
                                         <button class="btn btn-warning btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المناطق
+                                                data-toggle="dropdown" aria-expanded="false">المجاميع
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -178,45 +200,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
-                                            <form id="frm" class="form-horizontal"
+                                            <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
 
 
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-1"> اسم المنطقة</label>
+                                                    <label class="control-label col-sm-1">مكتب المؤسسة</label>
                                                     <div class="col-sm-10">
-                                                        <input name="Area_Name" required type="text"
-                                                               class="form-control"
-                                                               placeholder=" ادخل اسم المنطقة">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1"> وصف المنطقة</label>
-                                                    <div class="col-sm-10">
-                                                        <input name="Area_Description" class="form-control"
-                                                               placeholder=" ادخل وصف المنطقة">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم المكتب</label>
-                                                    <div class="col-sm-10">
-                                                        <select name="Area_Office" class="form-control">
-                                                            <option>مكتب بغداد</option>
-                                                            <option>مكتب البصرة</option>
-                                                            <option>مكتب النجف</option>
-                                                            <option>مكتب بغداد حي المنصور</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم القطاع</label>
-                                                    <div class="col-sm-10">
-                                                        <select name="Area_Section" class="form-control">
+                                                        <select class="form-control">
                                                             <option>المشخاب</option>
                                                             <option>القادسية</option>
                                                             <option>سوق شعلان</option>
@@ -227,11 +219,78 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
 
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> اسم المجموعة</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل اسم المجموعة">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> اسم الوكيل</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل اسم الوكيل">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> اسم المنطقة</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل اسم المنطقة">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> ملاحظة</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل ملاحظة">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> صنف المجموعة</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control">
+                                                            <option>دائرة</option>
+                                                            <option>مدرسة</option>
+                                                            <option>غيرها</option>
+                                                            <option>كلية</option>
+                                                            <option>أطباء</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> الموقف الحالي</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control">
+                                                            <option>مستمرة</option>
+                                                            <option>متوقفة</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> موظف المتابعة</label>
+                                                    <div class="col-sm-10">
+                                                        <select class="form-control">
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-1"> يوم الجبابة الشهري</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" class="form-control"
+                                                               placeholder=" ادخل يوم الجبابة الشهري">
+                                                    </div>
+                                                </div>
+
+
                                                 <div class="form-group">
                                                     <div class="col-sm-offset-2 col-sm-10">
-                                                        <button id="save" type="submit" class="btn btn-warning btn-md">
-                                                            اضافة
-                                                            المنطقة
+                                                        <button type="submit" class="btn btn-warning btn-md">اضافة
+                                                            المجموعة
                                                             <i class="fa fa-plus"></i>
                                                         </button>
                                                     </div>
@@ -487,29 +546,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <!-- SmartBox Js files -->
-
 <script>
-
-
-    $(document).ready(function () {
-        alert('xasdc');
-        $("#save").click(function () {
-
-            $.ajax({
-                url: "test.php"
-                type: "post"
-                data: $("#frm").serialize(),
-                success: function (d) {
-
-                    alert(d);
-
-                }
-
-
-            })
-        })
-    })
+    var resizefunc = [];
 </script>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/pace.min.js"></script>
@@ -532,3 +572,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </body>
 </html>
+

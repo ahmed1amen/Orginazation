@@ -4,13 +4,14 @@
     <bookmark url="file://$PROJECT_DIR$/../../aa.html" description="       &lt;/ul&gt;" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
-    </list>
     <list id="e98e0360-e866-4094-a00e-c12a501f5e62" name="add htaccess and Error404 page , Update UI" comment="">
       <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
+    </list>
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/jquery.min.js" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,8 +35,8 @@
       <file leaf-file-name="EmpLogin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmpLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1998">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="270">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -43,8 +44,21 @@
       <file leaf-file-name="areas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/areas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="621">
+              <caret line="509" column="4" selection-start-line="509" selection-start-column="4" selection-end-line="509" selection-end-column="6" />
+              <folding>
+                <element signature="e#10957#17754#0#PHP" />
+                <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -52,7 +66,7 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="3024">
               <caret line="112" column="39" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="39" />
             </state>
           </provider>
@@ -84,7 +98,7 @@
       <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="7155">
               <caret line="265" column="60" selection-start-line="265" selection-start-column="54" selection-end-line="265" selection-end-column="60" />
             </state>
           </provider>
@@ -103,7 +117,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>content</find>
       <find>fontaw</find>
       <find>fonta</find>
       <find>body</find>
@@ -133,6 +146,7 @@
       <find>inclu</find>
       <find>se</find>
       <find>select</find>
+      <find>&lt;form</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
@@ -174,7 +188,6 @@
         <option value="$PROJECT_DIR$/Includes/Forms/Emplyee.php" />
         <option value="$PROJECT_DIR$/assets/css/pages.css" />
         <option value="$PROJECT_DIR$/Registers.php" />
-        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/assets/css/components.css" />
         <option value="$PROJECT_DIR$/assets/css/core.css" />
         <option value="$USER_HOME$/Desktop/New folder (6)/microsoft_follower.php" />
@@ -192,6 +205,7 @@
         <option value="$PROJECT_DIR$/login.php" />
         <option value="$USER_HOME$/Downloads/calendar.xml" />
         <option value="$PROJECT_DIR$/Test.xml" />
+        <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/areas.php" />
       </list>
     </option>
@@ -262,11 +276,11 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
     </key>
   </component>
@@ -347,7 +361,8 @@
       <workItem from="1570530367191" duration="3093000" />
       <workItem from="1570541539854" duration="961000" />
       <workItem from="1570548249792" duration="36000" />
-      <workItem from="1570782023148" duration="1102000" />
+      <workItem from="1570782023148" duration="1833000" />
+      <workItem from="1570822828698" duration="2635000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -517,11 +532,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570457849276</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Bounded-WithDatabase">
+      <created>1570785397795</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1570785397796</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115759000" />
+    <option name="totallyTimeSpent" value="119125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,7 +558,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.20415778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.20628998" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -559,10 +581,10 @@
       <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.24291939" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.1748401" />
       <window_info id="Structure" order="1" sideWeight="0.50217867" side_tool="true" weight="0.1748401" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -575,7 +597,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.24291939" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39978212" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32897604" />
@@ -639,7 +661,8 @@
     <MESSAGE value="Add Index.PHP , Remove Copyright" />
     <MESSAGE value="Add Error Alert" />
     <MESSAGE value="Update Database File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Database File" />
+    <MESSAGE value="Bounded-WithDatabase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bounded-WithDatabase" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -746,7 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php" />
     <entry file="file://$PROJECT_DIR$/ALL/assets/css/pages.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -911,29 +933,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="3024">
           <caret line="112" column="39" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EmpLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1998">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="270">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="7155">
           <caret line="265" column="60" selection-start-line="265" selection-start-column="54" selection-end-line="265" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/areas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="621">
+          <caret line="509" column="4" selection-start-line="509" selection-start-column="4" selection-end-line="509" selection-end-column="6" />
+          <folding>
+            <element signature="e#10957#17754#0#PHP" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
