@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
     </list>
     <list id="e98e0360-e866-4094-a00e-c12a501f5e62" name="add htaccess and Error404 page , Update UI" comment="">
       <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
@@ -22,16 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="areas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/areas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" selection-start-line="9" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -43,8 +34,17 @@
       <file leaf-file-name="EmpLogin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EmpLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2700">
-              <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="108" selection-end-column="14" />
+            <state relative-caret-position="-1998">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="areas.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/areas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -52,8 +52,8 @@
       <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2916">
-              <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+            <state relative-caret-position="281">
+              <caret line="112" column="39" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -84,8 +84,8 @@
       <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3105">
-              <caret line="115" column="52" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="52" />
+            <state relative-caret-position="281">
+              <caret line="265" column="60" selection-start-line="265" selection-start-column="54" selection-end-line="265" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -99,21 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Includes/sidebar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="90" column="45" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>control-label col-sm-0</find>
-      <find>الكشف الم</find>
       <find>content</find>
       <find>fontaw</find>
       <find>fonta</find>
@@ -142,6 +131,8 @@
       <find>&lt;p class=&quot;copy&quot;&gt;&amp;copy; 2019. Eng.Ahmed&lt;span&gt;Amen&lt;/span&gt;&lt;/p&gt;</find>
       <find>fa fa-trash</find>
       <find>inclu</find>
+      <find>se</find>
+      <find>select</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
@@ -193,13 +184,15 @@
         <option value="$PROJECT_DIR$/Knowers.php" />
         <option value="$PROJECT_DIR$/Agents.php" />
         <option value="$PROJECT_DIR$/Groups.php" />
-        <option value="$PROJECT_DIR$/areas.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/Includes/alerterror.php" />
         <option value="$PROJECT_DIR$/EmpLogin.php" />
         <option value="$PROJECT_DIR$/login.php" />
+        <option value="$USER_HOME$/Downloads/calendar.xml" />
+        <option value="$PROJECT_DIR$/Test.xml" />
+        <option value="$PROJECT_DIR$/areas.php" />
       </list>
     </option>
   </component>
@@ -232,6 +225,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,7 +252,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,12 +262,12 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
-      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -350,7 +343,11 @@
       <workItem from="1570207866323" duration="1766000" />
       <workItem from="1570321807908" duration="1295000" />
       <workItem from="1570449720657" duration="57000" />
-      <workItem from="1570457264350" duration="546000" />
+      <workItem from="1570457264350" duration="1274000" />
+      <workItem from="1570530367191" duration="3093000" />
+      <workItem from="1570541539854" duration="961000" />
+      <workItem from="1570548249792" duration="36000" />
+      <workItem from="1570782023148" duration="1102000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -513,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569964068434</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Update Database File">
+      <created>1570457849276</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1570457849276</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109839000" />
+    <option name="totallyTimeSpent" value="115759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,8 +534,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.195629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.20415778" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -633,7 +638,8 @@
     <MESSAGE value="Include SQL File - Exported DB" />
     <MESSAGE value="Add Index.PHP , Remove Copyright" />
     <MESSAGE value="Add Error Alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Error Alert" />
+    <MESSAGE value="Update Database File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Database File" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -642,27 +648,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2403">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2619">
-          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Registers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5616">
-          <caret line="208" column="82" selection-start-line="208" selection-start-column="82" selection-end-line="208" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Families.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3537">
@@ -871,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/areas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" selection-start-line="9" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Includes/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
@@ -887,13 +865,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3105">
-          <caret line="115" column="52" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="52" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -916,24 +887,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
+    <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2700">
-          <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="108" selection-end-column="14" />
+        <state relative-caret-position="432">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/calendar.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="9" column="2443" selection-start-line="9" selection-start-column="2439" selection-end-line="9" selection-end-column="2443" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test.xml" />
+    <entry file="file://F:/PEN_ONIXFULL.XML">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="297">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2916">
-          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+        <state relative-caret-position="281">
+          <caret line="112" column="39" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
+    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="-1998">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="265" column="60" selection-start-line="265" selection-start-column="54" selection-end-line="265" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/areas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>

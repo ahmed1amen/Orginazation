@@ -14,32 +14,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST["do"] == "add") {
 
 
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
 
-        // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
-        $stmt->execute();
-        $rows = $stmt->fetchAll();
-        if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
-            echo "<script type='text/javascript'>alert('$message');</script>";
-        } else {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+        $Area_Name = $_POST["Area_Name"];
+        $Area_Office = $_POST["Area_Office"];
+        $Area_Section = $_POST["Area_Section"];
+        $Area_Description = $_POST["Area_Description"];
+
+
+        $stmt = $con->prepare("INSERT INTO Areas(Area_Name, Area_OfficeID, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
             $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
-        }
+
 
     }
 
@@ -208,14 +194,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> اسم المنطقة</label>
                                                     <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
+                                                        <input name="Area_Name" required type="text"
+                                                               class="form-control"
                                                                placeholder=" ادخل اسم المنطقة">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> وصف المنطقة</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control"
+                                                        <input name="Area_Description" class="form-control"
                                                                placeholder=" ادخل وصف المنطقة">
                                                     </div>
                                                 </div>
@@ -224,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1">اسم المكتب</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control">
+                                                        <select name="Area_Office" class="form-control">
                                                             <option>مكتب بغداد</option>
                                                             <option>مكتب البصرة</option>
                                                             <option>مكتب النجف</option>
@@ -237,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1">اسم القطاع</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control">
+                                                        <select name="Area_Section" class="form-control">
                                                             <option>المشخاب</option>
                                                             <option>القادسية</option>
                                                             <option>سوق شعلان</option>
