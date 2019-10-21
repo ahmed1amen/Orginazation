@@ -415,7 +415,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash-o'></span></button>
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 
 

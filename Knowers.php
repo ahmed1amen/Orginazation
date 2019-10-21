@@ -18,28 +18,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
+        $Knower_Name = $_POST["Knower_Name"];
+        $Calling_Adj = $_POST["Calling_Adj"];
+        $Knower_Address = $_POST["Knower_Address"];
+        $Adjective = $_POST["Adjective"];
+        $Phone_Number1 = $_POST["Phone_Number1"];
+        $Phone_Number2 = $_POST["Phone_Number2"];
         $employee_office = $_POST["employee_office"];
 
+
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
-        $stmt->execute();
-        $rows = $stmt->fetchAll();
-        if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+
+        // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
+        if (empty($Phone_Number2)) {
+            $stmt = $con->prepare("INSERT INTO Knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
+ VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$employee_office')");
         } else {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
-            $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
+            $stmt = $con->prepare("INSERT INTO Knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
+ VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$Phone_Number2','$employee_office')");
+
         }
+        $stmt->execute();
+        $stmt->errorCode();
+// بس خلاص الموظف اضاف تمام كده
+
 
     }
 
@@ -203,32 +205,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
+                                                <input type="hidden" name="do" value="add"/>
 
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> اسم المعرف</label>
                                                     <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
+                                                        <input required name="Knower_Name" type="text"
+                                                               class="form-control"
                                                                placeholder=" ادخل اسم المعرف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> صفة المناداة</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control"
+                                                        <input required name="Calling_Adj" type="text"
+                                                               class="form-control"
                                                                placeholder=" ادخل صفة المناداة">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> عنوان المعرف</label>
                                                     <div class="col-sm-10">
-                                                        <input required type="text" class="form-control"
+                                                        <input required name="Knower_Address" type="text"
+                                                               class="form-control"
                                                                placeholder=" ادخل عنوان المعرف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> الصفة</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control">
+                                                        <select required name="Adjective" class="form-control">
                                                             <option>موظف</option>
                                                             <option>غير موظف</option>
 
@@ -238,21 +244,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> رفم الموبيل 1</label>
                                                     <div required class="col-sm-10">
-                                                        <input type="text" class="form-control"
+                                                        <input required name="Phone_Number1" type="text"
+                                                               class="form-control"
                                                                placeholder=" ادخل رفم الموبيل 1">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> رقم الموبيل 2</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" class="form-control"
+                                                        <input name="Phone_Number2" type="text" class="form-control"
                                                                placeholder=" ادخل رقم الموبيل 2">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-1"> مكتب المؤسسة</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control" name="employee_office" id="sel1">
+                                                        <select required class="form-control" name="employee_office"
+                                                                id="sel1">
                                                             <option>مكتب بغداد</option>
                                                             <option>مكتب البصرة</option>
                                                             <option>مكتب النجف</option>
@@ -368,17 +376,105 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM Knower LIMIT 50 ");
                                     }
 
 
                                     $stmt->execute();
                                     $rows = $stmt->fetchAll();
                                     ?>
+
+
+                                    <div id="modal-wrapper" class="modal">
+
+                                        <form class="modal-content animate" action="/action_page.php">
+
+
+                                            <div class="container">
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">أسم الموظف</label>
+                                                    <div class="col-sm-0">
+                                                        <input required type="text" name="employee_name"
+                                                               class="form-control" placeholder="ادخل اسم الموظف">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">رقم الجوال</label>
+                                                    <div class="col-sm-0">
+                                                        <input required type="text" name="employee_number"
+                                                               class="form-control" placeholder="ادخل رقم الجوال">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">عنوان الموظف</label>
+                                                    <div class="col-sm-0">
+                                                        <input type="text" name="employee_address" class="form-control"
+                                                               placeholder="ادخل عنوان الموظف">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">راتب الموظف</label>
+                                                    <div class="col-sm-0">
+                                                        <input required type="text" name="employee_salary"
+                                                               class="form-control" placeholder="ادخل راتب الموظف">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">المسمى الوظيفي الموظف</label>
+                                                    <div class="col-sm-0">
+                                                        <input type="text" name="employee_jobName" class="form-control"
+                                                               placeholder="ادخل المسمى الوظيفي الموظف">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0" for="email">البريد
+                                                        الالكتروني</label>
+                                                    <div class="col-sm-0">
+                                                        <input required type="email" name="employee_email"
+                                                               class="form-control" id="email"
+                                                               placeholder="ادخل البريد الالكتروني">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">كلمه المرور</label>
+                                                    <div class="col-sm-0">
+                                                        <input required type="text" name="employee_password"
+                                                               class="form-control" placeholder="ادخل كلمه المرور">
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-0">المكتب التابع له</label>
+                                                    <div class="col-sm-0">
+                                                        <select class="form-control" name="employee_office" id="sel1">
+                                                            <option>مكتب بغداد</option>
+                                                            <option>مكتب البصرة</option>
+                                                            <option>مكتب النجف</option>
+                                                            <option>مكتب بغداد حي المنصور</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="" style="display: flex;justify-content: center;">
+                                                    <button type="submit" class="btn btn-success btn-lg"> تحديث البيانات
+                                                        <i class="fa fa-user-edit"></i>
+                                                    </button>
+
+                                                </div>
+                                            </div>
+
+                                        </form>
+
+                                    </div>
 
 
                                     <div class="card-box">
@@ -419,15 +515,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     <thead>
                                                     <tr>
                                                         <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
+                                                        <td class="text-center"><b>اسم المعرف</b></td>
+                                                        <td class="text-center"><b>صفة المناداة</b></td>
+                                                        <td><b>عنوان المعرف</b></td>
+                                                        <td class="text-center"><b>الصفه</b></td>
+                                                        <td class="text-center"><b>رقم الجوال 1</b></td>
+                                                        <td class="text-center"><b>رقم الجوال 2</b></td>
+                                                        <td class="text-center"><b>مكتب المؤسسة</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -437,19 +531,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Knower_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Knower_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Calling_Adj"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Knower_Address"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Adjective"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phone_Number1"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
                                                         echo "<td>
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
-                                                            
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash-o'></span></button>
+                                                          
+                                                       <button onclick=\"document.getElementById('modal-wrapper').style.display='block'\" id=\"btnedit\"  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                      <button  class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>      
                                                              </td>";
 
 
@@ -463,6 +556,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </tbody>
                                                 </table>
                                             </div>
+
+
                                             <div class="row mob-center">
                                                 <div class="col-sm-5">
                                                     <p>Showing 20-30 of 50 items</p>
@@ -522,7 +617,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!-- SmartBox Js files -->
 <script>
-    var resizefunc = [];
+
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    $('.table tbody').on("click", "#btnedit", function () {
+        alert($(this).text());
+    });
 </script>
 
 <script src="assets/js/jquery.min.js"></script>

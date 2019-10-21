@@ -18,25 +18,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
+        $Agent_Type = $_POST["Agent_Type"];
+        $Charity_Office = $_POST["Charity_Office"];
+        $Full_Name = $_POST["Full_Name"];
+        $Calling_Adj = $_POST["Calling_Adj"];
+        $Gender = $_POST["Gender"];
+        $Knower_Name = $_POST["Knower_Name"];
+        $Phnoe_Number1 = $_POST["Phnoe_Number1"];
+        $Phnoe_Number2 = $_POST["Phnoe_Number2"];
+        $Facebook_Address = $_POST["Facebook_Address"];
+        $Email = $_POST["Email"];
+        $Home_Address = $_POST["Home_Address"];
+        $Work_Address = $_POST["Work_Address"];
+        $Note = $_POST["Note"];
+        $Form_Number = $_POST["Form_Number"];
+        $Form_Date = $_POST["Form_Date"];
+        $Wasy_Name = $_POST["Wasy_Name"];
+        $Wasy_Phone_Number = $_POST["Wasy_Phone_Number"];
+
+
+
 
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
+        $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
         if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
+            $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+            if (empty($Phnoe_Number2)) $Phnoe_Number2 = "NULL";
+            if (empty($Note)) $note = "NULL";
+            $stmt = $con->prepare("INSERT INTO Agent(Agent_Type, Charity_Office, Full_Name,Calling_Adj, Gender,Knower_Name,Phnoe_Number1,Phnoe_Number2,Facebook_Address,Email,Home_Address,Work_Address,Note,Form_Number,Form_Date,Wasy_Name,Wasy_Phone_Number) VALUES ('$Agent_Type', '$Charity_Office', '$Full_Name','$Calling_Adj', '$Gender','$Knower_Name','$Phnoe_Number1','$Phnoe_Number2','$Facebook_Address','$Email','$Home_Address','$Work_Address','$Note','$Form_Number',
+            '$Form_Date','$Wasy_Name','$Wasy_Phone_Number')");
             $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
         }
@@ -203,6 +218,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
+                                                <input type="hidden" name="do" value="add"/>
 
                                                 <div class="row">
 
@@ -211,7 +227,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         <div class="form-group">
                                                             <label class="control-label col-sm-3"> صنف الوكيل</label>
                                                             <div class="col-sm-12">
-                                                                <input type="text" class="form-control"
+                                                                <input required name="Agent_Type" type="text"
+                                                                       class="form-control"
                                                                        placeholder=" ادخل صنف الوكيل">
                                                             </div>
                                                         </div>
@@ -221,7 +238,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         <div class="form-group ">
                                                             <label class="control-label col-sm-3"> مكتب المؤسسة</label>
                                                             <div class="col-sm-12">
-                                                                <input type="text" class="form-control"
+                                                                <input required name="Charity_Office" type="text"
+                                                                       class="form-control"
                                                                        placeholder=" ادخل مكتب المؤسسة">
                                                             </div>
                                                         </div>
@@ -240,7 +258,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> الاسم
                                                                         الكامل</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Full_Name" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل الاسم الكامل">
                                                                     </div>
                                                                 </div>
@@ -250,14 +269,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> الصفة
                                                                         للمناداة</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Calling_Adj" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل الصفة للمناداة">
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label class="control-label col-sm-3"> الجنس</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Gender" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل الجنس">
                                                                     </div>
                                                                 </div>
@@ -265,7 +286,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> اسم
                                                                         المعرف</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Knower_Name" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل اسم المعرف">
                                                                     </div>
                                                                 </div>
@@ -288,7 +310,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> رقم الموبيل
                                                                         1</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Phnoe_Number1" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل رقم الموبيل 1">
                                                                     </div>
                                                                 </div>
@@ -296,7 +319,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> رقم الموبيل
                                                                         2</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input name="Phnoe_Number2" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل رقم الموبيل 2">
                                                                     </div>
                                                                 </div>
@@ -305,7 +329,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                            class="control-label col-sm-3"> عنوان
                                                                         الفيسبوك</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Facebook_Address"
+                                                                               type="text" class="form-control"
                                                                                placeholder=" ادخل عنوان الفيسبوك">
                                                                     </div>
                                                                 </div>
@@ -313,7 +338,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> البريد
                                                                         الاكتروني</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Email" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل البريد الاكتروني">
                                                                     </div>
                                                                 </div>
@@ -336,7 +362,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> عنوان
                                                                         السكن</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Home_Address" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل عنوان السكن">
                                                                     </div>
                                                                 </div>
@@ -344,7 +371,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> عنوان
                                                                         العمل</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Work_Address" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل عنوان العمل">
                                                                     </div>
                                                                 </div>
@@ -352,7 +380,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3">
                                                                         ملاحظة</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input name="Note" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل ملاحظة">
                                                                     </div>
                                                                 </div>
@@ -375,7 +404,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> رقم
                                                                         الاستمارة</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Form_Number" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل رقم الاستمارة">
                                                                     </div>
                                                                 </div>
@@ -383,7 +413,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> تاريخ
                                                                         الاستمارة</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Form_Date" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل تاريخ الاستمارة">
                                                                     </div>
                                                                 </div>
@@ -391,7 +422,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                     <label class="control-label col-sm-3"> اسم
                                                                         الوصي</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Wasy_Name" type="text"
+                                                                               class="form-control"
                                                                                placeholder=" ادخل اسم الوصي">
                                                                     </div>
                                                                 </div>
@@ -400,7 +432,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                                            class="control-label col-sm-3"> رقم موبيل
                                                                         الوصي</label>
                                                                     <div class="col-sm-12">
-                                                                        <input type="text" class="form-control"
+                                                                        <input required name="Wasy_Phone_Number"
+                                                                               type="text" class="form-control"
                                                                                placeholder=" ادخل رقم موبيل الوصي">
                                                                     </div>
                                                                 </div>
@@ -521,11 +554,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM Agent WHERE Full_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM Agent LIMIT 50 ");
                                     }
 
 
@@ -571,16 +604,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
+                                                        <td class="text-center"><b>كود الوكيل</b></td>
+                                                        <td class="text-center"><b>صنف الوكيل</b></td>
+                                                        <td class="text-center"><b>مكتب المؤسسة</b></td>
+                                                        <td><b>الاسم الكامل</b></td>
+                                                        <td class="text-center"><b>الصفة للمناداة</b></td>
+                                                        <td class="text-center"><b>الجنس</b></td>
+                                                        <td class="text-center"><b>اسم المعرف</b></td>
+                                                        <td class="text-center"><b>رقم الموبيل 1</b></td>
+                                                        <td class="text-center"><b>رقم الموبيل 2</b></td>
+                                                        <td class="text-center"><b>عنوان الفيسبوك</b></td>
+                                                        <td class="text-center"><b>البريد الاكتروني</b></td>
+                                                        <td class="text-center"><b>عنوان السكن</b></td>
+                                                        <td class="text-center"><b>عنوان العمل</b></td>
+                                                        <td class="text-center"><b>ملاحظة</b></td>
+                                                        <td class="text-center"><b>رقم الاستمارة</b></td>
+                                                        <td class="text-center"><b>تاريخ الاستمارة</b></td>
+                                                        <td class="text-center"><b>اسم الوصي</b></td>
+                                                        <td class="text-center"><b>رقم موبيل الوصي</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -590,19 +631,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Agent_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Agent_Type"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Charity_Office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Full_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Calling_Adj"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Gender"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Knower_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phnoe_Number1"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phnoe_Number2"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Facebook_Address"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Email"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Home_Address"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Work_Address"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Note"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Form_Number"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Form_Date"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Wasy_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Wasy_Phone_Number"] . "</td>";
                                                         echo "<td>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash-o'></span></button>
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 
 

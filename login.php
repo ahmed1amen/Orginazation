@@ -2,36 +2,27 @@
 session_start();
 if (isset($_SESSION['Username'] )){
     header('Location: DashBoard.php');
-
 }
 include 'config.php';
-
-
 if   ($_SERVER['REQUEST_METHOD'] == 'POST')
-
 {
-
-         $username =$_POST['Username'];
-         $password =$_POST['Passowrd'];
-
-         // Check if user in DB
-        $stmt = $con->prepare("SELECT Username ,Password FROM Org_Users WHERE Username = ? AND Password = ?");
-        $stmt->execute(array($username,$password));
-        $count = $stmt->rowCount();
-        //Check If User Correct
-
+    $username = $_POST['Username'];
+    $password = $_POST['Passowrd'];
+    // Check if user in DB
+    $stmt = $con->prepare("SELECT Username ,Password FROM Org_Users WHERE Username = ? AND Password = ?");
+    $stmt->execute(array($username, $password));
+    $count = $stmt->rowCount();
+    //Check If User Correct
     if ($count > 0){
-            $_SESSION['Username'] = $username;   // Register Session Name
-            $_SESSION['UserType'] = 'admin';   // Register UserType
+        $_SESSION['Username'] = $username;   // Register Session Name
+        $_SESSION['UserType'] = 'admin';   // Register UserType
         unset($_SESSION['ERROR']);
-            header('Location: DashBoard.php');
-            exit();
+        header('Location: DashBoard.php');
+        exit();
     } else {
         $_SESSION['ERROR'] = "خطأ في اسم المستخدم او كلمه السر.";
     }
-
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -76,10 +67,8 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 <div id="logreg-wrapper" class="login-style2 text-center"> 
 	<div class="container">
 		<a href="login.php#"><img src="assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
-
         <p class="lead">مؤسسة ابي الزهراء الخيرية</p>
-
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form id="frm" method="post">
 			<div class="form-group">
 				<label>اسم المستخدم</label>
 				<input name="Username" type="text" placeholder="ادخل اسم المستخدم" autocomplete="false" class="form-control" >
@@ -90,11 +79,9 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 				<input name="Passowrd" type="password" placeholder="ادخل كلمه المرور" autocomplete="false"  class="form-control" >
 			</div>
 
-			<button  style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
+            <button id="btn-login" style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
 		</form>
-
         <div>
-
             <?php
 
             if (isset($_SESSION['ERROR'])) {
@@ -137,8 +124,44 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script> 
 <script src="assets/pages/jquery.charts-sparkline.js"></script> 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-<script src="assets/js/jquery.app.js"></script> 
-<script src="assets/js/cb-chart.js"></script> 
+<script src="assets/js/jquery.app.js"></script>
+<script src="assets/js/cb-chart.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+
+        $("#btn-login").click(function () {
+
+            var data = $("frm").serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'test.php',
+                data: data,
+                beforeSend: function () {
+                    $("#error").fadeOut();
+                    $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; جاري تسجيل الدخول ...');
+                },
+                success: function (response) {
+                    if ($.trim(response) === "1") {
+
+                        setTimeout(' window.location.href = "dashboard.php"; ', 2000);
+                    } else {
+                        $("#error").fadeIn(1000, function () {
+                            $("#error").html(response).show();
+                        });
+
+                        $("#btn-login").html('دخول');
+                    }
+                }
+            });
+            return false;
+
+        })
+
+    });
+</script>
+
 
 </body>
 </html>

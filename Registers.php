@@ -206,14 +206,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
                                                 <div class="form-group">
                                                     <input type="hidden" name="do" value="add"/>
-                                                    <label class="control-label col-sm-0">أسم الموظف</label>
+                                                    <label class="control-label col-sm-1">أسم الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_name"
                                                                class="form-control" placeholder="ادخل اسم الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">رقم الجوال</label>
+                                                    <label class="control-label col-sm-1">رقم الجوال</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_number"
                                                                class="form-control" placeholder="ادخل رقم الجوال">
@@ -221,21 +221,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">عنوان الموظف</label>
+                                                    <label class="control-label col-sm-1">عنوان الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_address"
                                                                class="form-control" placeholder="ادخل عنوان الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">راتب الموظف</label>
+                                                    <label class="control-label col-sm-1">راتب الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_salary"
                                                                class="form-control" placeholder="ادخل راتب الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">المسمى الوظيفي الموظف</label>
+                                                    <label class="control-label col-sm-1">المسمى الوظيفي الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_jobName"
                                                                class="form-control"
@@ -243,7 +243,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0" for="email">البريد
+                                                    <label class="control-label col-sm-1" for="email">البريد
                                                         الالكتروني</label>
                                                     <div class="col-sm-10">
                                                         <input required type="email" name="employee_email"
@@ -252,7 +252,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">كلمه المرور</label>
+                                                    <label class="control-label col-sm-1">كلمه المرور</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_password"
                                                                class="form-control" placeholder="ادخل كلمه المرور">
@@ -260,7 +260,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">المكتب التابع له</label>
+                                                    <label class="control-label col-sm-1">المكتب التابع له</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="employee_office" id="sel1">
                                                             <option>مكتب بغداد</option>
@@ -296,14 +296,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">أسم الموظف</label>
+                                                    <label class="control-label col-sm-1">أسم الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_name"
                                                                class="form-control" placeholder="ادخل اسم الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">رقم الجوال</label>
+                                                    <label class="control-label col-sm-1">رقم الجوال</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_number"
                                                                class="form-control" placeholder="ادخل رقم الجوال">
@@ -311,28 +311,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">عنوان الموظف</label>
+                                                    <label class="control-label col-sm-1">عنوان الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" name="employee_address" class="form-control"
                                                                placeholder="ادخل عنوان الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">راتب الموظف</label>
+                                                    <label class="control-label col-sm-1">راتب الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_salary"
                                                                class="form-control" placeholder="ادخل راتب الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">المسمى الوظيفي الموظف</label>
+                                                    <label class="control-label col-sm-1">المسمى الوظيفي الموظف</label>
                                                     <div class="col-sm-10">
                                                         <input type="text" name="employee_jobName" class="form-control"
                                                                placeholder="ادخل المسمى الوظيفي الموظف">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0" for="email">البريد
+                                                    <label class="control-label col-sm-1" for="email">البريد
                                                         الالكتروني</label>
                                                     <div class="col-sm-10">
                                                         <input required type="email" name="employee_email"
@@ -341,7 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">كلمه المرور</label>
+                                                    <label class="control-label col-sm-1">كلمه المرور</label>
                                                     <div class="col-sm-10">
                                                         <input required type="text" name="employee_password"
                                                                class="form-control" placeholder="ادخل كلمه المرور">
@@ -349,7 +349,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label class="control-label col-sm-0">المكتب التابع له</label>
+                                                    <label class="control-label col-sm-1">المكتب التابع له</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control" name="employee_office" id="sel1">
                                                             <option>مكتب بغداد</option>
