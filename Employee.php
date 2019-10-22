@@ -319,7 +319,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                         echo "<td class=\"text-center\">". $row["employee_password"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_office"]. "</td>";
                                                         echo "<td>
-                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                               <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
