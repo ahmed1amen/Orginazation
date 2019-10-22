@@ -514,7 +514,7 @@ else
                                     <div class="clearfix"></div>
                                     <br>
                                     <div class="table-responsive data-table">
-                                        <table class="table table-bordred table-striped">
+                                        <table id="table1" class="table table-bordred table-striped">
                                             <thead>
                                             <tr>
                                                 <th></th>

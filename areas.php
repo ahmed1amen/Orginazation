@@ -182,154 +182,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
 
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1"> اسم المنطقة</label>
-                                                    <div class="col-sm-10">
-                                                        <input name="Area_Name" required type="text"
-                                                               class="form-control"
-                                                               placeholder=" ادخل اسم المنطقة">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1"> وصف المنطقة</label>
-                                                    <div class="col-sm-10">
-                                                        <input name="Area_Description" class="form-control"
-                                                               placeholder=" ادخل وصف المنطقة">
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم المكتب</label>
-                                                    <div class="col-sm-10">
-                                                        <select name="Area_Office" class="form-control">
-                                                            <option>مكتب بغداد</option>
-                                                            <option>مكتب البصرة</option>
-                                                            <option>مكتب النجف</option>
-                                                            <option>مكتب بغداد حي المنصور</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">اسم القطاع</label>
-                                                    <div class="col-sm-10">
-                                                        <select name="Area_Section" class="form-control">
-                                                            <option>المشخاب</option>
-                                                            <option>القادسية</option>
-                                                            <option>سوق شعلان</option>
-                                                            <option>سوق شعلان</option>
-                                                            <option>الحسانية</option>
-
-                                                        </select>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button id="save" type="submit" class="btn btn-warning btn-md">
-                                                            اضافة
-                                                            المنطقة
-                                                            <i class="fa fa-plus"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-
+                                                <?php include("Views/Areas_Component.php"); ?>
                                             </form>
                                         </div>
                                     </div>
                                     <?php
-                                } elseif ($_GET["do"] == "update") {
-                                    ?>
-                                    <div class="card-box">
-                                        <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>تحديث بيانات الموظفين</b></h4>
-                                        </div>
-                                        <div class="card-box-content form-compoenent">
-                                            <form class="form-horizontal"
-                                                  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                                  method="post">
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">أسم الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_name"
-                                                               class="form-control" placeholder="ادخل اسم الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">رقم الجوال</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_number"
-                                                               class="form-control" placeholder="ادخل رقم الجوال">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">عنوان الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" name="employee_address" class="form-control"
-                                                               placeholder="ادخل عنوان الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">راتب الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_salary"
-                                                               class="form-control" placeholder="ادخل راتب الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المسمى الوظيفي الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" name="employee_jobName" class="form-control"
-                                                               placeholder="ادخل المسمى الوظيفي الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1" for="email">البريد
-                                                        الالكتروني</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="email" name="employee_email"
-                                                               class="form-control" id="email"
-                                                               placeholder="ادخل البريد الالكتروني">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">كلمه المرور</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_password"
-                                                               class="form-control" placeholder="ادخل كلمه المرور">
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المكتب التابع له</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="employee_office" id="sel1">
-                                                            <option>مكتب بغداد</option>
-                                                            <option>مكتب البصرة</option>
-                                                            <option>مكتب النجف</option>
-                                                            <option>مكتب بغداد حي المنصور</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-success btn-md"> تعديل
-                                                            الموظف
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <?php
-
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
 
@@ -345,8 +202,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     $stmt->execute();
                                     $rows = $stmt->fetchAll();
                                     ?>
-
-
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
                                             <h4 class="header-title"><b> بيانات الموظفين</b></h4>
@@ -381,7 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                             <div class="table-responsive data-table">
-                                                <table class="table table-bordred table-striped">
+                                                <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
                                                         <td class="text-center"><b>كود الموظف</b></td>
@@ -413,7 +268,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
                                                         echo "<td>
-                                                            <button class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
@@ -450,6 +305,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             </div>
                                         </div>
                                     </div>
+                                    <div id="modal-wrapper" class="modal">
+
+                                        <form id="frm-modal" class="modal-content animate"
+                                              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+
+                                            <div class="container">
+                                                <div>
+                                                    <button style="float: left;font-size: 25px;min-width: 30px;min-height: 30px;"
+                                                            type="button" class="close" data-dismiss="alert"
+                                                            aria-hidden="true"
+                                                            onclick="document.getElementById('modal-wrapper').style.display='none'">
+                                                        ×
+                                                    </button>
+                                                </div>
+
+                                                <input type="hidden" id="currentrecord" value="">
+                                                <input type="hidden" name="do" value="update"/>
+
+
+                                                <div id="model-component" style="padding-top: 40px;">
+
+
+                                                    <?php include('Views/Areas_Component.php'); ?>
+
+                                                    <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
+
+                                                        <button type="submit" class="btn btn-danger btn-lg">تحديث
+                                                            البيانات <i class="fa fa-edit"></i>
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+
+                                        </form>
+                                    </div>
+
                                     <?php
 
 
@@ -488,28 +380,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!-- SmartBox Js files -->
 
-<script>
-
-
-    $(document).ready(function () {
-        alert('xasdc');
-        $("#save").click(function () {
-
-            $.ajax({
-                url: "test.php"
-                type: "post"
-                data: $("#frm").serialize(),
-                success: function (d) {
-
-                    alert(d);
-
-                }
-
-
-            })
-        })
-    })
-</script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/pace.min.js"></script>
@@ -529,6 +399,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/pages/jquery.charts-sparkline.js"></script>
 <script src="assets/js/jquery.app.js"></script>
 <script src="assets/js/cb-chart.js"></script>
+
+
+<script>
+
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    $("#table1").on('click', '#btnedit', function () {
+
+        $("#modal-wrapper").fadeIn("fast", function () {
+            (document.getElementById('modal-wrapper').style.display = 'block');
+        });
+
+
+        $("#btnsubmit").first().remove();
+        $("#model-component > div > div").attr("class", "col-sm-0");
+        $("#model-component > div > label").attr("class", "col-sm-0");
+
+
+        // get the current row
+        var currentRow = $(this).closest("tr");
+
+
+        $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+
+
+        // //$("#frm-modal :input").eq(2).val(currentRow.find("td:eq(1)").html());
+
+        //  $("form#frm-modal :input").each(function(){
+        //      $(this).val("asd");
+        //  });
+    });
+
+
+</script>
+
 
 </body>
 </html>

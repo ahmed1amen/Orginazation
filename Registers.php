@@ -204,170 +204,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
-                                                <div class="form-group">
-                                                    <input type="hidden" name="do" value="add"/>
-                                                    <label class="control-label col-sm-1">أسم الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_name"
-                                                               class="form-control" placeholder="ادخل اسم الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">رقم الجوال</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_number"
-                                                               class="form-control" placeholder="ادخل رقم الجوال">
 
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">عنوان الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_address"
-                                                               class="form-control" placeholder="ادخل عنوان الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">راتب الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_salary"
-                                                               class="form-control" placeholder="ادخل راتب الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المسمى الوظيفي الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_jobName"
-                                                               class="form-control"
-                                                               placeholder="ادخل المسمى الوظيفي الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1" for="email">البريد
-                                                        الالكتروني</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="email" name="employee_email"
-                                                               class="form-control" id="email"
-                                                               placeholder="ادخل البريد الالكتروني">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">كلمه المرور</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_password"
-                                                               class="form-control" placeholder="ادخل كلمه المرور">
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المكتب التابع له</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="employee_office" id="sel1">
-                                                            <option>مكتب بغداد</option>
-                                                            <option>مكتب البصرة</option>
-                                                            <option>مكتب النجف</option>
-                                                            <option>مكتب بغداد حي المنصور</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-success btn-md"> اضافه
-                                                            الموظف
-                                                            <i class="fa fa-plus"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <?php
-                                } elseif ($_GET["do"] == "update") {
-                                    ?>
-                                    <div class="card-box">
-                                        <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>تحديث بيانات الموظفين</b></h4>
-                                        </div>
-                                        <div class="card-box-content form-compoenent">
-                                            <form class="form-horizontal"
-                                                  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                                  method="post">
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">أسم الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_name"
-                                                               class="form-control" placeholder="ادخل اسم الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">رقم الجوال</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_number"
-                                                               class="form-control" placeholder="ادخل رقم الجوال">
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">عنوان الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" name="employee_address" class="form-control"
-                                                               placeholder="ادخل عنوان الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">راتب الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_salary"
-                                                               class="form-control" placeholder="ادخل راتب الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المسمى الوظيفي الموظف</label>
-                                                    <div class="col-sm-10">
-                                                        <input type="text" name="employee_jobName" class="form-control"
-                                                               placeholder="ادخل المسمى الوظيفي الموظف">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1" for="email">البريد
-                                                        الالكتروني</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="email" name="employee_email"
-                                                               class="form-control" id="email"
-                                                               placeholder="ادخل البريد الالكتروني">
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">كلمه المرور</label>
-                                                    <div class="col-sm-10">
-                                                        <input required type="text" name="employee_password"
-                                                               class="form-control" placeholder="ادخل كلمه المرور">
-
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label col-sm-1">المكتب التابع له</label>
-                                                    <div class="col-sm-10">
-                                                        <select class="form-control" name="employee_office" id="sel1">
-                                                            <option>مكتب بغداد</option>
-                                                            <option>مكتب البصرة</option>
-                                                            <option>مكتب النجف</option>
-                                                            <option>مكتب بغداد حي المنصور</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <div class="col-sm-offset-2 col-sm-10">
-                                                        <button type="submit" class="btn btn-success btn-md"> تعديل
-                                                            الموظف
-                                                            <i class="fa fa-edit"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-
+                                                <?php include("Views/Registers_Component.php"); ?>
 
                                             </form>
                                         </div>
@@ -389,8 +227,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     $stmt->execute();
                                     $rows = $stmt->fetchAll();
                                     ?>
-
-
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
                                             <h4 class="header-title"><b> بيانات العائلة</b></h4>
@@ -423,6 +259,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                         </div>
                                     </div>
+                                    <div id="modal-wrapper" class="modal">
+
+                                        <form id="frm-modal" class="modal-content animate"
+                                              action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+
+
+                                            <div class="container">
+                                                <div>
+                                                    <button style="float: left;font-size: 25px;min-width: 30px;min-height: 30px;"
+                                                            type="button" class="close" data-dismiss="alert"
+                                                            aria-hidden="true"
+                                                            onclick="document.getElementById('modal-wrapper').style.display='none'">
+                                                        ×
+                                                    </button>
+                                                </div>
+
+                                                <input type="hidden" id="currentrecord" value="">
+                                                <input type="hidden" name="do" value="update"/>
+
+
+                                                <div id="model-component" style="padding-top: 40px;">
+
+
+                                                    <?php include('Views/Registers_Component.php'); ?>
+
+                                                    <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
+
+                                                        <button type="submit" class="btn btn-danger btn-lg">تحديث
+                                                            البيانات <i class="fa fa-edit"></i>
+                                                        </button>
+                                                    </div>
+
+                                                </div>
+
+                                        </form>
+                                    </div>
+
                                     <?php
 
 
@@ -459,10 +332,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 
-<!-- SmartBox Js files -->
-<script>
-    var resizefunc = [];
-</script>
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
@@ -483,6 +352,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/pages/jquery.charts-sparkline.js"></script>
 <script src="assets/js/jquery.app.js"></script>
 <script src="assets/js/cb-chart.js"></script>
+
+
+<script>
+
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    $("#table1").on('click', '#btnedit', function () {
+
+        $("#modal-wrapper").fadeIn("fast", function () {
+            (document.getElementById('modal-wrapper').style.display = 'block');
+        });
+
+
+        $("#btnsubmit").first().remove();
+        $("#model-component > div > div").attr("class", "col-sm-0");
+        $("#model-component > div > label").attr("class", "col-sm-0");
+
+
+        // get the current row
+        var currentRow = $(this).closest("tr");
+
+
+        $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+
+
+        //$("#frm-modal :input").eq(2).val(currentRow.find("td:eq(1)").html());
+
+        //  $("form#frm-modal :input").each(function(){
+        //      $(this).val("asd");
+        //  });
+    });
+
+
+</script>
 
 </body>
 </html>
