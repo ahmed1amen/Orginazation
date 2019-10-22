@@ -5,24 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Views/Agent_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Areas_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Employee_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Families_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Groups_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Knowers_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Office_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Registers_Component.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Agents.php" beforeDir="false" afterPath="$PROJECT_DIR$/Agents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmpLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/EmpLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Families.php" beforeDir="false" afterPath="$PROJECT_DIR$/Families.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/Groups.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Knowers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Knowers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Office.php" beforeDir="false" afterPath="$PROJECT_DIR$/Office.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Registers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Registers_Component.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,47 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Employee_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Employee_Component.php">
+      <file leaf-file-name="EmpLogin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EmpLogin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Areas_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Agent_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Agent_Component.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="229" column="48" lean-forward="true" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Agents.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Agents.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="497" lean-forward="true" selection-start-line="497" selection-end-line="497" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Families_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="506" column="47" selection-start-line="506" selection-start-column="38" selection-end-line="506" selection-end-column="47" />
+            <state relative-caret-position="627">
+              <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
             </state>
           </provider>
         </entry>
@@ -82,26 +40,67 @@
       <file leaf-file-name="areas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/areas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="435" column="80" lean-forward="true" selection-start-line="435" selection-start-column="11" selection-end-line="435" selection-end-column="80" />
+            <state relative-caret-position="2403">
+              <caret line="89" selection-start-line="89" selection-end-line="89" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Knowers_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Knowers_Component.php">
+      <file leaf-file-name="Agents.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="65" column="85" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="85" />
+            <state relative-caret-position="208">
+              <caret line="465" column="54" lean-forward="true" selection-start-line="465" selection-start-column="54" selection-end-line="465" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Office_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Office_Component.php">
+      <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="559">
+              <caret line="455" lean-forward="true" selection-start-line="455" selection-end-line="455" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Families.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Families.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="586">
+              <caret line="496" lean-forward="true" selection-start-line="496" selection-end-line="496" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Knowers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Knowers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="424" column="36" selection-start-line="424" selection-start-column="36" selection-end-line="424" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Office.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Office.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="464" lean-forward="true" selection-start-line="464" selection-end-line="464" />
             </state>
           </provider>
         </entry>
@@ -109,26 +108,32 @@
       <file leaf-file-name="Registers_Component.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+            <state relative-caret-position="461">
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Groups_Component.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Groups_Component.php">
+      <file leaf-file-name="UpdateModel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="438">
+              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fa fa-trash</find>
       <find>inclu</find>
       <find>se</find>
       <find>select</find>
@@ -158,6 +163,7 @@
       <find>&lt;button type=&quot;submit&quot; id=&quot;btnsubmit&quot;</find>
       <find>view</find>
       <find>$(&quot;#frm-modal :input&quot;).eq(2).val(currentRow.find(&quot;td:eq(1)&quot;).html());</find>
+      <find>&lt;input type=&quot;hidden&quot; id=&quot;currentrecord&quot; value=&quot;&quot;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
@@ -181,6 +187,7 @@
       <replace>&lt;button id='btnedit'  class='btn btn-default btn-xs'&gt;&lt;span class='fa fa-edit'&gt;&lt;/span&gt;&lt;/button&gt;</replace>
       <replace>&lt;table id=&quot;table1&quot; class=&quot;table table-bordred table-striped&quot;&gt;</replace>
       <replace>//$(&quot;#frm-modal :input&quot;).eq(2).val(currentRow.find(&quot;td:eq(1)&quot;).html());</replace>
+      <replace>&lt;input type=&quot;hidden&quot; name=&quot;currentrecord&quot; id=&quot;currentrecord&quot; value=&quot;&quot;&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -211,7 +218,6 @@
         <option value="$PROJECT_DIR$/Includes/sidebar.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/Includes/alerterror.php" />
-        <option value="$PROJECT_DIR$/EmpLogin.php" />
         <option value="$USER_HOME$/Downloads/calendar.xml" />
         <option value="$PROJECT_DIR$/Test.xml" />
         <option value="$PROJECT_DIR$/test.php" />
@@ -225,19 +231,21 @@
         <option value="$PROJECT_DIR$/Views/Families_Component.php" />
         <option value="$PROJECT_DIR$/Views/Groups_Component.php" />
         <option value="$PROJECT_DIR$/Views/Office_Component.php" />
-        <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
         <option value="$PROJECT_DIR$/Views/Agent_Component.php" />
         <option value="$PROJECT_DIR$/Includes/UpdateModel.php" />
-        <option value="$PROJECT_DIR$/Knowers.php" />
-        <option value="$PROJECT_DIR$/Registers.php" />
-        <option value="$PROJECT_DIR$/Families.php" />
-        <option value="$PROJECT_DIR$/Office.php" />
-        <option value="$PROJECT_DIR$/Groups.php" />
-        <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/Views/Employee_Component.php" />
         <option value="$PROJECT_DIR$/Views/Areas_Component.php" />
-        <option value="$PROJECT_DIR$/areas.php" />
+        <option value="$PROJECT_DIR$/Knowers.php" />
+        <option value="$PROJECT_DIR$/EmpLogin.php" />
+        <option value="$PROJECT_DIR$/Registers.php" />
+        <option value="$PROJECT_DIR$/Office.php" />
+        <option value="$PROJECT_DIR$/Groups.php" />
+        <option value="$PROJECT_DIR$/Families.php" />
+        <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/Agents.php" />
+        <option value="$PROJECT_DIR$/areas.php" />
+        <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
+        <option value="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" />
       </list>
     </option>
   </component>
@@ -283,6 +291,17 @@
               <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
               <item name="Includes" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
+              <item name="Includes" type="462c0819:PsiDirectoryNode" />
+              <item name="JSHelper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OrginaztionGIT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OrginaztionGIT" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -297,16 +316,133 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Views" />
-      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
-      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Views" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Views" />
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Agents.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Employee.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Families.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Knowers.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Office.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Agent_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Areas_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/areas.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -389,7 +525,8 @@
       <workItem from="1570866747936" duration="281000" />
       <workItem from="1571619136275" duration="3774000" />
       <workItem from="1571622958756" duration="19000" />
-      <workItem from="1571680210327" duration="18280000" />
+      <workItem from="1571680210327" duration="18690000" />
+      <workItem from="1571753632476" duration="2518000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -580,11 +717,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571622906926</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Implement Script - Split Component - Add Update Feature">
+      <created>1571710959681</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1571710959681</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147578000" />
+    <option name="totallyTimeSpent" value="150506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,7 +749,7 @@
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.24291939" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32897604" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.17004265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.1716418" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
@@ -682,7 +826,8 @@
     <MESSAGE value="Bounded-WithDatabase" />
     <MESSAGE value="Implement Ajax" />
     <MESSAGE value="Update &amp; Implement Update Dialog" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update &amp; Implement Update Dialog" />
+    <MESSAGE value="Implement Script - Split Component - Add Update Feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Script - Split Component - Add Update Feature" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -691,8 +836,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/page.php" />
-    <entry file="file://$PROJECT_DIR$/Includes/Forms/Emplyee.php" />
     <entry file="file://$PROJECT_DIR$/../Orginaztion/New Theme/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -806,20 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="31" selection-start-line="22" selection-end-line="23" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1988">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -875,99 +1004,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.htaccess">
+    <entry file="file://$PROJECT_DIR$/Includes/UpdateModel.php" />
+    <entry file="file://$PROJECT_DIR$/Views/Agent_Component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="6183">
+          <caret line="229" column="48" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
+    <entry file="file://$PROJECT_DIR$/Views/Groups_Component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1990">
-          <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
+        <state relative-caret-position="2160">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Includes/UpdateModel.php">
+    <entry file="file://$PROJECT_DIR$/Views/Knowers_Component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="1728">
+          <caret line="64" column="81" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Office_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/cb-chart.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7371">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="38" column="19" lean-forward="true" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Employee_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Registers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="279" column="96" selection-start-line="279" selection-start-column="96" selection-end-line="279" selection-end-column="96" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Families.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="425" column="75" selection-start-line="425" selection-start-column="75" selection-end-line="425" selection-end-column="75" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="586">
+          <caret line="357" lean-forward="true" selection-start-line="357" selection-end-line="357" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Office.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="358" column="93" selection-start-line="358" selection-start-column="93" selection-end-line="358" selection-end-column="93" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Knowers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="359" column="90" selection-start-line="359" selection-start-column="73" selection-end-line="359" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="559">
+          <caret line="464" lean-forward="true" selection-start-line="464" selection-end-line="464" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Groups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="351" column="93" selection-start-line="351" selection-start-column="93" selection-end-line="351" selection-end-column="93" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="559">
+          <caret line="428" lean-forward="true" selection-start-line="428" selection-end-line="428" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Employee.php">
+    <entry file="file://$PROJECT_DIR$/Families.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="457" column="7" lean-forward="true" selection-start-line="457" selection-start-column="7" selection-end-line="457" selection-end-column="7" />
+        <state relative-caret-position="586">
+          <caret line="496" lean-forward="true" selection-start-line="496" selection-end-line="496" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="145" lean-forward="true" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/areas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2403">
+          <caret line="89" selection-start-line="89" selection-end-line="89" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -976,73 +1118,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Agent_Component.php">
+    <entry file="file://$PROJECT_DIR$/Agents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="229" column="48" lean-forward="true" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="48" />
+        <state relative-caret-position="208">
+          <caret line="465" column="54" lean-forward="true" selection-start-line="465" selection-start-column="54" selection-end-line="465" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
+    <entry file="file://$PROJECT_DIR$/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+        <state relative-caret-position="559">
+          <caret line="455" lean-forward="true" selection-start-line="455" selection-end-line="455" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Employee_Component.php">
+    <entry file="file://$PROJECT_DIR$/Knowers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        <state relative-caret-position="208">
+          <caret line="424" column="36" selection-start-line="424" selection-start-column="36" selection-end-line="424" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="506" column="47" selection-start-line="506" selection-start-column="38" selection-end-line="506" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Groups_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Knowers_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="65" column="85" lean-forward="true" selection-start-line="65" selection-start-column="12" selection-end-line="65" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Office_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        <state relative-caret-position="461">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/areas.php">
+    <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="435" column="80" lean-forward="true" selection-start-line="435" selection-start-column="11" selection-end-line="435" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="497" lean-forward="true" selection-start-line="497" selection-end-line="497" />
+        <state relative-caret-position="438">
+          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
         </state>
       </provider>
     </entry>

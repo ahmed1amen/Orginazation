@@ -145,4 +145,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/js/cb-chart.js"></script>
 
 </body>
+
 </html>

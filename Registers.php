@@ -275,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </button>
                                                 </div>
 
-                                                <input type="hidden" id="currentrecord" value="">
+                                                <input type="hidden" name="currentrecord" id="currentrecord" value="">
                                                 <input type="hidden" name="do" value="update"/>
 
 
@@ -354,45 +354,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/js/cb-chart.js"></script>
 
 
-<script>
+<script src="Includes/JSHelper/UpdateModel.js"></script>
 
-
-    var modal = document.getElementById('modal-wrapper');
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-
-
-    $("#table1").on('click', '#btnedit', function () {
-
-        $("#modal-wrapper").fadeIn("fast", function () {
-            (document.getElementById('modal-wrapper').style.display = 'block');
-        });
-
-
-        $("#btnsubmit").first().remove();
-        $("#model-component > div > div").attr("class", "col-sm-0");
-        $("#model-component > div > label").attr("class", "col-sm-0");
-
-
-        // get the current row
-        var currentRow = $(this).closest("tr");
-
-
-        $("#currentrecord").val(currentRow.find("td:eq(0)").html());
-
-
-        //$("#frm-modal :input").eq(2).val(currentRow.find("td:eq(1)").html());
-
-        //  $("form#frm-modal :input").each(function(){
-        //      $(this).val("asd");
-        //  });
-    });
-
-
-</script>
 
 </body>
 </html>
