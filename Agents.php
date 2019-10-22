@@ -333,12 +333,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["Gender"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Knower_Name"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Phone_Number1"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
+                                                        if ($row["Phone_Number2"] == "NULL")
+                                                            echo "<td class=\"text-center\">" . " " . "</td>";
+                                                        else
+                                                            echo "<td class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Facebook_Address"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Email"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Home_Address"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Work_Address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Note"] . "</td>";
+                                                        if ($row["Note"] == "NULL")
+                                                            echo "<td class=\"text-center\">" . " " . "</td>";
+                                                        else
+                                                            echo "<td class=\"text-center\">" . $row["Note"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Form_Number"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Form_Date"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Wasy_Name"] . "</td>";
