@@ -11,6 +11,7 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
     if ($_POST["do"] == "add") {
 
 
@@ -41,6 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute();
         $stmt->errorCode();
 // بس خلاص الموظف اضاف تمام كده
+
+
+    } elseif ($_POST["do"] == "update") {
 
 
     }
@@ -348,7 +352,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div id="modal-wrapper" class="modal">
 
-                                        <form id="frm-modal" class="modal-content animate"
+                                        <form method="post" id="frm-modal" class="modal-content animate"
                                               action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 
@@ -439,7 +443,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/pages/jquery.charts-sparkline.js"></script>
 <script src="assets/js/jquery.app.js"></script>
 <script src="assets/js/cb-chart.js"></script>
-
 
 <script src="Includes/JSHelper/UpdateModel.js"></script>
 

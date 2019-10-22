@@ -237,7 +237,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
                                         {
-                                            //or Agent_ID=$_GET["searchq"] 
+                                            //or Agent_ID=$_GET["searchq"]
                                              $stmt = $con->prepare("SELECT * FROM Agent WHERE Agent_ID=$textInfo or Form_Number=$textInfo LIMIT 50");
                                         }
                                         elseif(preg_match('/@/', $textInfo))
@@ -389,7 +389,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <div id="modal-wrapper" class="modal">
 
-                                        <form id="frm-modal" class="modal-content animate"
+                                        <form method="post" id="frm-modal" class="modal-content animate"
                                               action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 

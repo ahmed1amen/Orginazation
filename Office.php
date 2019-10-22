@@ -368,7 +368,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <div id="modal-wrapper" class="modal">
 
-                                        <form id="frm-modal" class="modal-content animate"
+                                        <form method="post" id="frm-modal" class="modal-content animate"
                                               action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 

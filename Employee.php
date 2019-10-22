@@ -359,7 +359,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
 
                                     <div id="modal-wrapper" class="modal">
 
-                                        <form id="frm-modal" class="modal-content animate"
+                                        <form method="post" id="frm-modal" class="modal-content animate"
                                               action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 
