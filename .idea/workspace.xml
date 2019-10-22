@@ -4,16 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/../../aa.html" description="       &lt;/ul&gt;" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Remove attribute Required &amp; Move View Handel Script to JSHELPER - Fixing CurrentRecord Issue">
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Agents.php" beforeDir="false" afterPath="$PROJECT_DIR$/Agents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Families.php" beforeDir="false" afterPath="$PROJECT_DIR$/Families.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Groups.php" beforeDir="false" afterPath="$PROJECT_DIR$/Groups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Knowers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Knowers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Office.php" beforeDir="false" afterPath="$PROJECT_DIR$/Office.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/areas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +44,8 @@
       <file leaf-file-name="Agents.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Agents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="479" lean-forward="true" selection-start-line="479" selection-end-line="479" />
+            <state relative-caret-position="1950">
+              <caret line="476" column="34" selection-start-line="476" selection-start-column="34" selection-end-line="476" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -60,8 +53,8 @@
       <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Employee.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1801">
-              <caret line="370" column="130" lean-forward="true" selection-start-line="370" selection-start-column="69" selection-end-line="370" selection-end-column="130" />
+            <state relative-caret-position="478">
+              <caret line="321" column="60" selection-start-line="321" selection-start-column="60" selection-end-line="321" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -69,8 +62,8 @@
       <file leaf-file-name="Families.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Families.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="789">
-              <caret line="424" column="61" selection-start-line="424" selection-start-column="61" selection-end-line="424" selection-end-column="61" />
+            <state relative-caret-position="573">
+              <caret line="416" column="40" selection-start-line="416" selection-start-column="40" selection-end-line="416" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -78,20 +71,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Knowers.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Knowers.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Knowers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state relative-caret-position="-455">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateModel.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UpdateModel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="486">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -197,7 +190,7 @@
         <option value="ahmed1amen &lt;47221870+ahmed1amen@users.noreply.github.com&gt;" />
       </list>
     </option>
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -240,13 +233,13 @@
         <option value="$PROJECT_DIR$/Registers.php" />
         <option value="$PROJECT_DIR$/Office.php" />
         <option value="$PROJECT_DIR$/Groups.php" />
-        <option value="$PROJECT_DIR$/Families.php" />
-        <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/areas.php" />
         <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
+        <option value="$PROJECT_DIR$/Knowers.php" />
+        <option value="$PROJECT_DIR$/Families.php" />
+        <option value="$PROJECT_DIR$/Employee.php" />
         <option value="$PROJECT_DIR$/Agents.php" />
         <option value="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" />
-        <option value="$PROJECT_DIR$/Knowers.php" />
       </list>
     </option>
   </component>
@@ -527,7 +520,7 @@
       <workItem from="1571619136275" duration="3774000" />
       <workItem from="1571622958756" duration="19000" />
       <workItem from="1571680210327" duration="18690000" />
-      <workItem from="1571753632476" duration="8389000" />
+      <workItem from="1571753632476" duration="11057000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -732,11 +725,25 @@
       <option name="project" value="LOCAL" />
       <updated>1571756445572</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixing Form Method">
+      <created>1571768633963</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1571768633963</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fixing Form Method">
+      <created>1571773538071</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1571773538071</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156377000" />
+    <option name="totallyTimeSpent" value="159045000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -836,7 +843,8 @@
     <MESSAGE value="Update &amp; Implement Update Dialog" />
     <MESSAGE value="Implement Script - Split Component - Add Update Feature" />
     <MESSAGE value="Remove attribute Required &amp; Move View Handel Script to JSHELPER - Fixing CurrentRecord Issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove attribute Required &amp; Move View Handel Script to JSHELPER - Fixing CurrentRecord Issue" />
+    <MESSAGE value="Fixing Form Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing Form Method" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1122,20 +1130,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Employee.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1801">
-          <caret line="370" column="130" lean-forward="true" selection-start-line="370" selection-start-column="69" selection-end-line="370" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="479" lean-forward="true" selection-start-line="479" selection-end-line="479" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/areas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2403">
@@ -1148,27 +1142,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
+    <entry file="file://$PROJECT_DIR$/Knowers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="-455">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Families.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="424" column="61" selection-start-line="424" selection-start-column="61" selection-end-line="424" selection-end-column="61" />
+        <state relative-caret-position="573">
+          <caret line="416" column="40" selection-start-line="416" selection-start-column="40" selection-end-line="416" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Knowers.php">
+    <entry file="file://$PROJECT_DIR$/Employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="478">
+          <caret line="321" column="60" selection-start-line="321" selection-start-column="60" selection-end-line="321" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="476" column="34" selection-start-line="476" selection-start-column="34" selection-end-line="476" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
         </state>
       </provider>
     </entry>

@@ -16,7 +16,7 @@ $("#table1").on('click', '#btnedit', function () {
     $("#btnsubmit").first().remove();
     $("#model-component > div > div").attr("class", "col-sm-0");
     $("#model-component > div > label").attr("class", "col-sm-0");
-    $("#model-component :input").removeAttr("required");
+    $("#model-componentt :input").removeAttr("required");
 
     // get the current row
     var currentRow = $(this).closest("tr");
