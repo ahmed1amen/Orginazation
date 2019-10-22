@@ -24,8 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Calling_Adj = $_POST["Calling_Adj"];
         $Gender = $_POST["Gender"];
         $Knower_Name = $_POST["Knower_Name"];
-        $Phnoe_Number1 = $_POST["Phnoe_Number1"];
-        $Phnoe_Number2 = $_POST["Phnoe_Number2"];
+        $Phone_Number1 = $_POST["Phone_Number1"];
+        $Phone_Number2 = $_POST["Phone_Number2"];
         $Facebook_Address = $_POST["Facebook_Address"];
         $Email = $_POST["Email"];
         $Home_Address = $_POST["Home_Address"];
@@ -43,19 +43,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
-        if ($rows > 0) {
+        if (count($rows) > 0) {
             $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
             if (empty($Phnoe_Number2)) $Phnoe_Number2 = "NULL";
-            if (empty($Note)) $note = "NULL";
-            $stmt = $con->prepare("INSERT INTO Agent(Agent_Type, Charity_Office, Full_Name,Calling_Adj, Gender,Knower_Name,Phnoe_Number1,Phnoe_Number2,Facebook_Address,Email,Home_Address,Work_Address,Note,Form_Number,Form_Date,Wasy_Name,Wasy_Phone_Number) VALUES ('$Agent_Type', '$Charity_Office', '$Full_Name','$Calling_Adj', '$Gender','$Knower_Name','$Phnoe_Number1','$Phnoe_Number2','$Facebook_Address','$Email','$Home_Address','$Work_Address','$Note','$Form_Number',
+            if (empty($Note)) $Note = "NULL";
+            $stmt = $con->prepare("INSERT INTO Agent(Agent_Type, Charity_Office, Full_Name,Calling_Adj, Gender,Knower_Name,Phone_Number1,Phone_Number2,Facebook_Address,Email,Home_Address,Work_Address,Note,Form_Number,Form_Date,Wasy_Name,Wasy_Phone_Number) VALUES ('$Agent_Type', '$Charity_Office', '$Full_Name','$Calling_Adj', '$Gender','$Knower_Name','$Phone_Number1','$Phone_Number2','$Facebook_Address','$Email','$Home_Address','$Work_Address','$Note','$Form_Number',
             '$Form_Date','$Wasy_Name','$Wasy_Phone_Number')");
             $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
         }
 
+    }
+    elseif($_POST["do"] == "update")
+    {
+        
     }
 
 
@@ -152,7 +156,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt = $con->prepare("SELECT * FROM agent");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -230,7 +234,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM Agent WHERE Full_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $textInfo=$_GET["searchq"];
+                                        if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
+                                        {
+                                            //or Agent_ID=$_GET["searchq"] 
+                                             $stmt = $con->prepare("SELECT * FROM Agent WHERE Agent_ID=$textInfo or Form_Number=$textInfo LIMIT 50");
+                                        }
+                                        elseif(preg_match('/@/', $textInfo))
+                                        {
+                                         $stmt= $con->prepare("SELECT * FROM Agent WHERE Email='$textInfo' LIMIT 50");
+                                        }
+                                        else
+                                        {
+                                            $stmt = $con->prepare("SELECT * FROM Agent WHERE Full_Name  LIKE '".$_GET["searchq"]."%' 
+                                            or Agent_Type='$textInfo' or Charity_Office='$textInfo' or Calling_Adj='$textInfo' or Gender='$textInfo' 
+                                            or Knower_Name='$textInfo' or Facebook_Address='$textInfo' or Wasy_Name='$textInfo' LIMIT 50");
+   
+                                        }
 
                                     } else {
 
@@ -312,8 +332,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["Calling_Adj"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Gender"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Knower_Name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Phnoe_Number1"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Phnoe_Number2"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phone_Number1"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Facebook_Address"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Email"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Home_Address"] . "</td>";

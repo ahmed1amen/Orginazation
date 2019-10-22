@@ -281,11 +281,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                //  $stmt= $con->prepare("SELECT * FROM employee_data");
-                                //    $stmt->execute();
+                                   $stmt= $con->prepare("SELECT * FROM family");
+                                   $stmt->execute();
 
-                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . /* $stmt->rowCount()*/
-                                    0 . "</h2>";
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
                                 <div class="text-white text-opt  m-t-5 text-center font-12">عدد العائلات</div>

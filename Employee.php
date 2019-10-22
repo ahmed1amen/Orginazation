@@ -32,9 +32,9 @@ if (isset($_SESSION['Username'])) {
         $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
         $rows= $stmt->fetchAll();
-        if($rows>0)
+        if(count($rows)>0)
         {
-         $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
+         $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
         echo "<script type='text/javascript'>alert('$message');</script>";   
         }
         else
@@ -228,7 +228,20 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                 include 'config.php';
 
                                     if (isset($_GET["searchq"])){
-                                        $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50 ");
+                                        $textInfo=$_GET["searchq"];
+                                        if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
+                                        {
+                                         $stmt= $con->prepare("SELECT * FROM employee_data WHERE Employee_ID=$textInfo LIMIT 50");
+                                        }
+                                        elseif(preg_match('/@/', $textInfo))
+                                        {
+                                         $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_email='$textInfo' LIMIT 50");
+                                        }
+                                        else
+                                        {
+                                $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50");
+
+                                        }
 
                                     }else{
 
@@ -296,7 +309,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                     {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">". $row["ID"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Employee_ID"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_name"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_number"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_address"]. "</td>";

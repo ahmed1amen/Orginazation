@@ -18,33 +18,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
+       $Office_name=$_POST["Office_name"];
+         $Office_address=$_POST["Office_address"];
+         $Office_number1=$_POST["Office_number1"];
+         $Office_number2=$_POST["Office_number2"];
+         $Office_number3=$_POST["Office_number3"];
+         $Office_email=$_POST["Office_email"];
 
-        // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
+        $stmt = $con->prepare("SELECT * FROM office_data WHERE Office_email='$Office_email'");
         $stmt->execute();
         $rows= $stmt->fetchAll();
-        if($rows>0)
+        if(count($rows)>0)
         {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
-            echo "<script type='text/javascript'>alert('$message');</script>";
+         $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
+        echo "<script type='text/javascript'>alert('$message');</script>";   
         }
         else
         {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+
+            if(empty($Office_number2) &&empty($Office_number3) )
+         	{
+         		$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1,Office_email) VALUES ('$Office_name','$Office_address','$Office_number1','$Office_email')");
+         	}
+            else if(empty($Office_number2) && !empty($Office_number3))
+            {
+            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number3, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1','$Office_number3',
+            		'$Office_email')");
+
+            }
+            else if(empty($Office_number3) && !empty($Office_number2))
+            {
+            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number2, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1',
+            		'$Office_number2','$Office_email')");
+
+            }
+            else
+            {
+            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number2, Office_number3, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1',
+            		'$Office_number2', '$Office_number3','$Office_email')");
+            }
             $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
+        }         
+     // بس خلاص الموظف اضاف تمام كده
+        
         }
 
-    }
+    
 
 
 }
@@ -140,7 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt = $con->prepare("SELECT * FROM office_data");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -221,12 +240,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $textInfo=$_GET["searchq"];
+                                        if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
+                                        {
+                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_ID=$textInfo LIMIT 50");
+                                        }
+                                        elseif(preg_match('/@/', $textInfo))
+                                        {
+                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_email='$textInfo' LIMIT 50");
+                                        }
+                                        else
+                                        {
+                                       $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_name  LIKE '".$_GET["searchq"]."%' LIMIT 50");
+                                        }
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                             $stmt= $con->prepare("SELECT * FROM office_data LIMIT 50 ");
                                     }
+
 
 
                                     $stmt->execute();
@@ -271,15 +303,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
+                                                        <td class="text-center"><b>كود المكتب</b></td>
+                                                        <td class="text-center"><b>أسم المكتب</b></td>
+                                                        <td class="text-center"><b>عنوان المكتب</b></td>
+                                                        <td class="text-center"><b>رقم جوال اول</b></td>
+                                                        <td class="text-center"><b>رقم جوال ثاني</b></td>
+                                                        <td class="text-center"><b>رقم جوال ثالث</b></td>
                                                         <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
                                                         <td class="text-center"><b>الخيارات</b></td>
                                                     </tr>
                                                     </thead>
@@ -291,17 +321,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_ID"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_name"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_address"]. "</td>";
+                                                        echo "<td  class=\"text-center\">". $row["Office_number1"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_number2"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_number3"]. "</td>";
+                                                        echo "<td class=\"text-center\">". $row["Office_email"]. "</td>";
                                                         echo "<td>
-                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";

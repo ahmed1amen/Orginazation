@@ -1,7 +1,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> اسم المنطقة</label>
     <div class="col-sm-10">
-        <input name="Area_Name" required type="text"
+        <input required name="Area_Name" required type="text"
                class="form-control"
                placeholder=" ادخل اسم المنطقة">
     </div>
@@ -18,7 +18,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1">اسم المكتب</label>
     <div class="col-sm-10">
-        <select name="Area_Office" class="form-control">
+        <select required name="Area_Office" class="form-control">
             <option>مكتب بغداد</option>
             <option>مكتب البصرة</option>
             <option>مكتب النجف</option>
@@ -31,7 +31,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1">اسم القطاع</label>
     <div class="col-sm-10">
-        <select name="Area_Section" class="form-control">
+        <select required name="Area_Section" class="form-control">
             <option>المشخاب</option>
             <option>القادسية</option>
             <option>سوق شعلان</option>

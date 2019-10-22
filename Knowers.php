@@ -139,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt = $con->prepare("SELECT * FROM knower");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -221,8 +221,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
 
-                                    if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                   if (isset($_GET["searchq"])) {
+                                        $textInfo=$_GET["searchq"];
+                                        if(preg_match('/[0-9]/', $textInfo))
+                                           {
+                                               $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_ID=$textInfo LIMIT 50");
+                                           }
+                                        else
+                                           {
+                                        $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_Name  LIKE '".$_GET["searchq"]."%' or
+                                        Calling_Adj='$textInfo' or Adjective='$textInfo' or employee_office='$textInfo' LIMIT 50");
+                                           }
 
                                     } else {
 

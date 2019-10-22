@@ -20,7 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Area_Office = $_POST["Area_Office"];
         $Area_Section = $_POST["Area_Section"];
         $Area_Description = $_POST["Area_Description"];
-        $stmt = $con->prepare("INSERT INTO Areas(Area_Name, Area_OfficeID, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+        if(empty($Area_Description)) $Area_Description="NULL";
+        $stmt = $con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+        
         $stmt->execute();
     }
 }
@@ -115,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt = $con->prepare("SELECT * FROM area");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -181,6 +183,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form id="frm" class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
+                                                <input type="hidden" name="do" value="add"/>
 
                                                 <?php include("Views/Areas_Component.php"); ?>
                                             </form>
@@ -191,11 +194,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
-
+                                        $textInfo=$_GET["searchq"];
+                                        if(preg_match('/[0-9]/', $textInfo))
+                                        {
+                                             $stmt = $con->prepare("SELECT * FROM area WHERE Area_ID=$textInfo LIMIT 50");
+                                        }
+                                        else
+                                        {
+                                            $stmt = $con->prepare("SELECT * FROM area WHERE Area_Name  LIKE '".$_GET["searchq"]."%' 
+                                            or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50"); 
+                                        }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM area LIMIT 50 ");
                                     }
 
 
@@ -239,16 +250,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
+                                                        <td class="text-center"><b>كود المنطقة</b></td>
+                                                        <td class="text-center"><b>اسم المنطقة</b></td>
+                                                        <td class="text-center"><b>وصف المنطقة</b></td>
+                                                        <td class="text-center"><b>اسم المكتب</b></td>
+                                                        <td class="text-center"><b>اسم القطاع</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -258,17 +264,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Area_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Area_Name"] . "</td>";                                                                                   echo "<td class=\"text-center\">" . $row["Area_Description"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Area_Office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Area_Section"] . "</td>";
                                                         echo "<td>
-                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";

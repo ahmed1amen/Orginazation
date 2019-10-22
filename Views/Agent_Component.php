@@ -88,7 +88,7 @@
                     <label class="control-label col-sm-3"> رقم الموبيل
                         1</label>
                     <div class="col-sm-12">
-                        <input required name="Phnoe_Number1" type="text"
+                        <input required name="Phone_Number1" type="text"
                                class="form-control"
                                placeholder=" ادخل رقم الموبيل 1">
                     </div>
@@ -97,7 +97,7 @@
                     <label class="control-label col-sm-3"> رقم الموبيل
                         2</label>
                     <div class="col-sm-12">
-                        <input name="Phnoe_Number2" type="text"
+                        <input name="Phone_Number2" type="text"
                                class="form-control"
                                placeholder=" ادخل رقم الموبيل 2">
                     </div>
