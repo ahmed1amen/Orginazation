@@ -1,5 +1,5 @@
 <div class="form-group">
-    <input type="hidden" name="do" value="add"/>
+
     <label class="control-label col-sm-1">أسم الموظف</label>
     <div class="col-sm-10">
         <input required type="text" name="employee_name" class="form-control" placeholder="ادخل اسم الموظف">
