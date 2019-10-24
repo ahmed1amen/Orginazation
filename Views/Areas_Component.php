@@ -18,7 +18,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1">اسم المكتب</label>
     <div class="col-sm-10">
-        <select required name="Area_Office" class="form-control">
+        <select required name="Area_Office" id="Area_Office" class="form-control">
             <option>مكتب بغداد</option>
             <option>مكتب البصرة</option>
             <option>مكتب النجف</option>
@@ -27,14 +27,12 @@
     </div>
 </div>
 
-
 <div class="form-group">
     <label class="control-label col-sm-1">اسم القطاع</label>
     <div class="col-sm-10">
         <select required name="Area_Section" class="form-control">
             <option>المشخاب</option>
             <option>القادسية</option>
-            <option>سوق شعلان</option>
             <option>سوق شعلان</option>
             <option>الحسانية</option>
 

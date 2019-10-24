@@ -11,57 +11,52 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
+// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
+
+    $Office_name = $_POST["Office_name"];
+    $Office_address = $_POST["Office_address"];
+    $Office_facebook = $_POST["Office_facebook"];
+    $Mangement_Nmber = $_POST["Mangement_Nmber"];
+    $Family_Number = $_POST["Family_Number"];
+    $Participants_Number = $_POST["Participants_Number"];
+
     if ($_POST["do"] == "add") {
 
+        $stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_facebook, Mangement_Nmber, Family_Number, Participants_Number)
+ VALUES ('$Office_name','$Office_address','$Office_facebook','$Mangement_Nmber', '$Family_Number','$Participants_Number')");
 
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-       $Office_name=$_POST["Office_name"];
-         $Office_address=$_POST["Office_address"];
-         $Office_number1=$_POST["Office_number1"];
-         $Office_number2=$_POST["Office_number2"];
-         $Office_number3=$_POST["Office_number3"];
-         $Office_email=$_POST["Office_email"];
-
-        $stmt = $con->prepare("SELECT * FROM office_data WHERE Office_email='$Office_email'");
-        $stmt->execute();
-        $rows= $stmt->fetchAll();
-        if(count($rows)>0)
-        {
-         $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
-        echo "<script type='text/javascript'>alert('$message');</script>";   
-        }
-        else
-        {
-
-            if(empty($Office_number2) &&empty($Office_number3) )
-         	{
-         		$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1,Office_email) VALUES ('$Office_name','$Office_address','$Office_number1','$Office_email')");
-         	}
-            else if(empty($Office_number2) && !empty($Office_number3))
-            {
-            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number3, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1','$Office_number3',
-            		'$Office_email')");
-
-            }
-            else if(empty($Office_number3) && !empty($Office_number2))
-            {
-            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number2, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1',
-            		'$Office_number2','$Office_email')");
-
-            }
-            else
-            {
-            	$stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_number1, Office_number2, Office_number3, Office_email) VALUES ('$Office_name','$Office_address','$Office_number1',
-            		'$Office_number2', '$Office_number3','$Office_email')");
-            }
             $stmt->execute();
-        }         
-     // بس خلاص الموظف اضاف تمام كده
-        
+        } elseif ($_POST["do"] == "update") {
+        $Changed_ID = $_POST["currentrecord"];
+
+        if (!empty($Office_name)) {
+            $stmt = $con->prepare("UPDATE office_data SET Office_name='$Office_name' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
         }
+        if (!empty($Office_address)) {
+            $stmt = $con->prepare("UPDATE office_data SET Office_address='$Office_address' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Office_facebook)) {
+            $stmt = $con->prepare("UPDATE office_data SET Office_facebook='$Office_facebook' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Mangement_Nmber)) {
+            $stmt = $con->prepare("UPDATE office_data SET Mangement_Nmber='$Mangement_Nmber' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Family_Number)) {
+            $stmt = $con->prepare("UPDATE office_data SET Family_Number='$Family_Number' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Participants_Number)) {
+            $stmt = $con->prepare("UPDATE office_data SET Participants_Number='$Participants_Number' WHERE Office_ID=$Changed_ID");
+            $stmt->execute();
+        }
+    }
 
     
 
@@ -306,11 +301,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         <td class="text-center"><b>كود المكتب</b></td>
                                                         <td class="text-center"><b>أسم المكتب</b></td>
                                                         <td class="text-center"><b>عنوان المكتب</b></td>
-                                                        <td class="text-center"><b>رقم جوال اول</b></td>
-                                                        <td class="text-center"><b>رقم جوال ثاني</b></td>
-                                                        <td class="text-center"><b>رقم جوال ثالث</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
+                                                        <td class="text-center"><b>الصفحة علي فيس بوك</b></td>
+                                                        <td class="text-center"><b>موبيل الادارة</b></td>
+                                                        <td class="text-center"><b>موبيل شعبه العوائل</b></td>
+                                                        <td class="text-center"><b>موبيل شعبه المشتركين</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -324,10 +318,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">". $row["Office_ID"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["Office_name"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["Office_address"]. "</td>";
-                                                        echo "<td  class=\"text-center\">". $row["Office_number1"]. "</td>";
-                                                        echo "<td class=\"text-center\">". $row["Office_number2"]. "</td>";
-                                                        echo "<td class=\"text-center\">". $row["Office_number3"]. "</td>";
-                                                        echo "<td class=\"text-center\">". $row["Office_email"]. "</td>";
+                                                        echo "<td  class=\"text-center\">" . $row["Office_facebook"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Mangement_Nmber"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Family_Number"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Participants_Number"] . "</td>";
                                                         echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
