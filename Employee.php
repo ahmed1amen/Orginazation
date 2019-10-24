@@ -69,15 +69,22 @@ if (isset($_SESSION['Username'])) {
             }
             if (!empty($employee_email)) //////////////////// check new mail exist or not
             {
+                $stmt = $con->prepare("SELECT employee_email FROM employee_data WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+                $rows = $stmt->fetchAll();
+                $temp = $rows[0]["employee_email"];
+
                 $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
                 $stmt->execute();
                 $rows = $stmt->fetchAll();
-                if (count($rows) > 0) {
-                    $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
-                    echo "<script type='text/javascript'>alert('$message');</script>";
-                } else {
-                    $stmt = $con->prepare("UPDATE employee_data SET employee_email='$employee_email' WHERE Employee_ID=$Changed_ID");
-                    $stmt->execute();
+                if ($temp != $employee_email) {
+                    if ($stmt->rowCount() > 0) {
+                        $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
+                        echo "<script type='text/javascript'>alert('$message');</script>";
+                    } else {
+                        $stmt = $con->prepare("UPDATE employee_data SET employee_email='$employee_email' WHERE Employee_ID=$Changed_ID");
+                        $stmt->execute();
+                    }
                 }
             }
             if (!empty($employee_password)) {
@@ -85,12 +92,8 @@ if (isset($_SESSION['Username'])) {
                 $stmt->execute();
             }
             if (isset($_POST["employee_office"])) {
-                $stmt = $con->prepare("SELECT employee_office FROM employee_data WHERE Employee_ID=$Changed_ID");
-                $stmt->execute();
-                if ($stmt->getAttribute() != $employee_office) {
                     $stmt = $con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
                     $stmt->execute();
-                }
             }
 
         }
@@ -346,7 +349,6 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                     <td class="text-center"><b>البريد الالكتروني</b></td>
                                                     <td class="text-center"><b>كلمه المرور</b></td>
                                                     <td class="text-center"><b>المكتب التابع له</b></td>
-                                                    <td class="text-center"><b>الخيارات</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

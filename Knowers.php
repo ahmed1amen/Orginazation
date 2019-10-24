@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $employee_office = $_POST["employee_office"];
 
     if ($_POST["do"] == "add") {
-        // check duplication of email
 
         // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
         if (empty($Phone_Number2)) {

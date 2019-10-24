@@ -11,10 +11,7 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if ($_POST["do"] == "add") {
-
-
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
         include 'config.php';
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
@@ -37,13 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Wasy_Phone_Number = $_POST["Wasy_Phone_Number"];
 
 
-
-
+    if ($_POST["do"] == "add") {
         // check duplication of email
         $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
-        if (count($rows) > 0) {
+        if ($stmt->rowCount() > 0) {
             $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
@@ -55,11 +51,95 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
         }
-
     }
     elseif($_POST["do"] == "update")
     {
-        
+        $Changed_ID = $_POST["currentrecord"];
+        if (!empty($Agent_Type)) {
+            $stmt = $con->prepare("UPDATE Agent SET Agent_Type='$Agent_Type' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Charity_Office)) {
+            $stmt = $con->prepare("UPDATE Agent SET Charity_Office='$Charity_Office' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Full_Name)) {
+            $stmt = $con->prepare("UPDATE Agent SET Full_Name='$Full_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Calling_Adj)) {
+            $stmt = $con->prepare("UPDATE Agent SET Calling_Adj='$Calling_Adj' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Gender)) {
+            $stmt = $con->prepare("UPDATE Agent SET Gender='$Gender' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Knower_Name)) {
+            $stmt = $con->prepare("UPDATE Agent SET Knower_Name='$Knower_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Phone_Number1)) {
+            $stmt = $con->prepare("UPDATE Agent SET Phone_Number1='$Phone_Number1' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Phone_Number2)) {
+            $stmt = $con->prepare("UPDATE Agent SET Phone_Number2='$Phone_Number2' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Facebook_Address)) {
+            $stmt = $con->prepare("UPDATE Agent SET Facebook_Address='$Facebook_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Email)) {
+            $stmt = $con->prepare("SELECT Email FROM Agent WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
+            $temp = $rows[0]["Email"];
+
+            $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
+            if ($temp != $Email) {
+                if ($stmt->rowCount() > 0) {
+                    $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                } else {
+                    $stmt = $con->prepare("UPDATE Agent SET Email='$Email' WHERE Agent_ID=$Changed_ID");
+                    $stmt->execute();
+
+                }
+            }
+        }
+        if (!empty($Home_Address)) {
+            $stmt = $con->prepare("UPDATE Agent SET Home_Address='$Home_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Work_Address)) {
+            $stmt = $con->prepare("UPDATE Agent SET Work_Address='$Work_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Note)) {
+            $stmt = $con->prepare("UPDATE Agent SET Note='$Note' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Form_Number)) {
+            $stmt = $con->prepare("UPDATE Agent SET Form_Number='$Form_Number' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Form_Date)) {
+            $stmt = $con->prepare("UPDATE Agent SET Form_Date='$Form_Date' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Wasy_Name)) {
+            $stmt = $con->prepare("UPDATE Agent SET Wasy_Name='$Wasy_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Wasy_Phone_Number)) {
+            $stmt = $con->prepare("UPDATE Agent SET Wasy_Phone_Number='$Wasy_Phone_Number' WHERE Agent_ID=$Changed_ID");
+            $stmt->execute();
+        }
+
     }
 
 

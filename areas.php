@@ -39,20 +39,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         if (isset($_POST["Area_Office"])) {
-            $stmt = $con->prepare("SELECT Area_Office FROM Area WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-            if ($stmt->getAttribute() != $Area_Office) {
                 $stmt = $con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
-            }
         }
         if (isset($_POST["Area_Section"])) {
-            $stmt = $con->prepare("SELECT Area_Section FROM Area WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-            if ($stmt->getAttribute() != $Area_Section) {
                 $stmt = $con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
-            }
         }
 
 
