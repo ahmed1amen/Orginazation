@@ -216,7 +216,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                method="post">
 
-
+                                             <input type="hidden" name="do" value="add"/>
                                              <?php include("Views/Employee_Component.php"); ?>
 
                                          </form>
@@ -308,6 +308,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                     foreach ($rows as $row)
                                                     {
                                                         echo "<tr>";
+
 
                                                         echo "<td class=\"text-center\">". $row["Employee_ID"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_name"]. "</td>";
