@@ -12,22 +12,19 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    if ($_POST["do"] == "add") {
-
-
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
+    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $Knower_Name = $_POST["Knower_Name"];
-        $Calling_Adj = $_POST["Calling_Adj"];
-        $Knower_Address = $_POST["Knower_Address"];
-        $Adjective = $_POST["Adjective"];
-        $Phone_Number1 = $_POST["Phone_Number1"];
-        $Phone_Number2 = $_POST["Phone_Number2"];
-        $employee_office = $_POST["employee_office"];
+    $Knower_Name = $_POST["Knower_Name"];
+    $Calling_Adj = $_POST["Calling_Adj"];
+    $Knower_Address = $_POST["Knower_Address"];
+    $Adjective = $_POST["Adjective"];
+    $Phone_Number1 = $_POST["Phone_Number1"];
+    $Phone_Number2 = $_POST["Phone_Number2"];
+    $employee_office = $_POST["employee_office"];
 
-
+    if ($_POST["do"] == "add") {
         // check duplication of email
 
         // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
@@ -45,6 +42,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     } elseif ($_POST["do"] == "update") {
+        $Changed_ID = $_POST["currentrecord"];
+        if (!empty($Knower_Name)) {
+            $stmt = $con->prepare("UPDATE knower SET Knower_Name='$Knower_Name' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Calling_Adj)) {
+            $stmt = $con->prepare("UPDATE knower SET Calling_Adj='$Calling_Adj' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Knower_Address)) {
+            $stmt = $con->prepare("UPDATE knower SET Knower_Address='$Knower_Address' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (isset($_POST["Adjective"])) {
+
+            $stmt = $con->prepare("UPDATE knower SET Adjective='$Adjective' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Phone_Number1)) {
+            $stmt = $con->prepare("UPDATE knower SET Phone_Number1='$Phone_Number1' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Phone_Number2)) {
+            $stmt = $con->prepare("UPDATE knower SET Phone_Number2='$Phone_Number2' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (isset($_POST["employee_office"])) {
+            $stmt = $con->prepare("UPDATE knower SET employee_office='$employee_office' WHERE Knower_ID=$Changed_ID");
+            $stmt->execute();
+        }
 
 
     }
@@ -311,7 +338,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td id='employee_office' class=\"text-center\">" . $row["employee_office"] . "</td>";
                                                         echo "<td>
                                                           
-                                                       <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                   <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                       <button  class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>      
                                                              </td>";
 
