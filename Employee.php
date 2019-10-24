@@ -12,22 +12,22 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
     if   ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-    if ($_POST["do"] == "add"){
 
-
-    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-    include 'config.php';
-    header('Content-Type: text/html; charset=utf-8');
+        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+        include 'config.php';
+        header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-    $employee_name=$_POST["employee_name"];
-    $employee_number=$_POST["employee_number"];
-    $employee_address=$_POST["employee_address"];
-    $employee_salary=$_POST["employee_salary"];
-    $employee_jobName=$_POST["employee_jobName"];
-    $employee_email=$_POST["employee_email"];
-    $employee_password=$_POST["employee_password"];
-    $employee_office=$_POST["employee_office"];
-    
+        $employee_name = $_POST["employee_name"];
+        $employee_number = $_POST["employee_number"];
+        $employee_address = $_POST["employee_address"];
+        $employee_salary = $_POST["employee_salary"];
+        $employee_jobName = $_POST["employee_jobName"];
+        $employee_email = $_POST["employee_email"];
+        $employee_password = $_POST["employee_password"];
+        $employee_office = $_POST["employee_office"];
+
+        if ($_POST["do"] == "add") {
+
         // check duplication of email
         $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
@@ -45,7 +45,55 @@ if (isset($_SESSION['Username'])) {
 // بس خلاص الموظف اضاف تمام كده
         }      
     
-    }
+    } elseif ($_POST["do"] == "update") {
+            $Changed_ID = $_POST["currentrecord"];
+            if (!empty($employee_name)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_name='$employee_name' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (!empty($employee_number)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_number='$employee_number' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (!empty($employee_address)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_address='$employee_address' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (!empty($employee_salary)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_salary='$employee_salary' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (!empty($employee_jobName)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_jobName='$employee_jobName' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (!empty($employee_email)) //////////////////// check new mail exist or not
+            {
+                $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
+                $stmt->execute();
+                $rows = $stmt->fetchAll();
+                if (count($rows) > 0) {
+                    $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
+                } else {
+                    $stmt = $con->prepare("UPDATE employee_data SET employee_email='$employee_email' WHERE Employee_ID=$Changed_ID");
+                    $stmt->execute();
+                }
+            }
+            if (!empty($employee_password)) {
+                $stmt = $con->prepare("UPDATE employee_data SET employee_password='$employee_password' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (isset($_POST["employee_office"])) {
+                $stmt = $con->prepare("SELECT employee_office FROM employee_data WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+                if ($stmt->getAttribute() != $employee_office) {
+                    $stmt = $con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
+                    $stmt->execute();
+                }
+            }
+
+        }
 
 
 }
