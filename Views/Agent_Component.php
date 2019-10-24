@@ -193,7 +193,7 @@
                     <div class="col-sm-12">
                         <input required name="Form_Date" type="text"
                                class="form-control"
-                               placeholder=" ادخل تاريخ الاستمارة">
+                               placeholder=" ادخل تاريخ الاستمارة YYYY-MM-DD">
                     </div>
                 </div>
                 <div class="form-group">

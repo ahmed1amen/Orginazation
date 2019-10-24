@@ -12,21 +12,54 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if ($_POST["do"] == "add") {
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
 
-        $Area_Name = $_POST["Area_Name"];
-        $Area_Office = $_POST["Area_Office"];
-        $Area_Section = $_POST["Area_Section"];
-        $Area_Description = $_POST["Area_Description"];
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
+
+    $Area_Name = $_POST["Area_Name"];
+    $Area_Office = $_POST["Area_Office"];
+    $Area_Section = $_POST["Area_Section"];
+    $Area_Description = $_POST["Area_Description"];
+
+    if ($_POST["do"] == "add") {
+
         if(empty($Area_Description)) $Area_Description="NULL";
         $stmt = $con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
         
         $stmt->execute();
+    } elseif ($_POST["do"] == "update") {
+        $Changed_ID = $_POST["currentrecord"];
+        if (!empty($Area_Name)) {
+            $stmt = $con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($Area_Description)) {
+            $stmt = $con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
+            $stmt->execute();
+        }
+
+        if (isset($_POST["Area_Office"])) {
+            $stmt = $con->prepare("SELECT Area_Office FROM Area WHERE Area_ID=$Changed_ID");
+            $stmt->execute();
+            if ($stmt->getAttribute() != $Area_Office) {
+                $stmt = $con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
+                $stmt->execute();
+            }
+        }
+        if (isset($_POST["Area_Section"])) {
+            $stmt = $con->prepare("SELECT Area_Section FROM Area WHERE Area_ID=$Changed_ID");
+            $stmt->execute();
+            if ($stmt->getAttribute() != $Area_Section) {
+                $stmt = $con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
+                $stmt->execute();
+            }
+        }
+
+
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -265,7 +298,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<tr>";
 
                                                         echo "<td class=\"text-center\">" . $row["Area_ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Name"] . "</td>";                                                                                   echo "<td class=\"text-center\">" . $row["Area_Description"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Area_Name"] . "</td>";
+                                                        if ($row["Area_Description"] == "NULL")
+                                                            echo "<td class=\"text-center\">" . " " . "</td>";
+                                                        else
+                                                            echo "<td class=\"text-center\">" . $row["Area_Description"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Area_Office"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Area_Section"] . "</td>";
                                                         echo "<td>
