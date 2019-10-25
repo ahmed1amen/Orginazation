@@ -11,34 +11,35 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if ($_POST["do"] == "add") {
 
 
 // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $statistics_numer = $_POST["statistics_numer"];
-        $family_balance = $_POST["family_balance"];
-        $provider_name = $_POST["provider_name"];
-        $company_office = $_POST["company_office"];
-        $hashimy = $_POST["hashimy"];
-        $number_of_files = $_POST["number_of_files"];
-        $father_name = $_POST["father_name"];
-        $treatment_date = $_POST["treatment_date"];
-        $provider_name2 = $_POST["provider_name2"];
+    $statistics_numer = $_POST["statistics_numer"];
+    $family_balance = $_POST["family_balance"];
+    $provider_name = $_POST["provider_name"];
+    $company_office = $_POST["company_office"];
+    $hashimy = $_POST["hashimy"];
+    $number_of_files = $_POST["number_of_files"];
+    $father_name = $_POST["father_name"];
+    $treatment_date = $_POST["treatment_date"];
+    $provider_name2 = $_POST["provider_name2"];
 
-        $current_situation = $_POST["current_situation"];
-        $hashimy2 = $_POST["hashimy2"];
-        $family_type = $_POST["family_type"];
-        $mo3aref_name = $_POST["mo3aref_name"];
-        $special_case = $_POST["special_case"];
-        $mozaky_name = $_POST["mozaky_name"];
-        $shopping_day = $_POST["shopping_day"];
-        $mozaky_number = $_POST["mozaky_number"];
-        $nationality_number = $_POST["nationality_number"];
+    $current_situation = $_POST["current_situation"];
+    $hashimy2 = $_POST["hashimy2"];
+    $family_type = $_POST["family_type"];
+    $mo3aref_name = $_POST["mo3aref_name"];
+    $special_case = $_POST["special_case"];
+    $mozaky_name = $_POST["mozaky_name"];
+    $shopping_day = $_POST["shopping_day"];
+    $mozaky_number = $_POST["mozaky_number"];
+    $nationality_number = $_POST["nationality_number"];
 
-        $note = $_POST["note"];
+    $note = $_POST["note"];
+
+    if ($_POST["do"] == "add") {
 
         $membership = $_POST["membership"];
         $wasy_name = $_POST["wasy_name"];
@@ -128,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $another_companies = "NULL";
         }
-        echo $another_companies;
+        // echo $another_companies;
 
 
         if ($hashimy2_flag == false && $wasy_flag == false && $garia_falg == false && $da3m_falg == false) {
@@ -183,6 +184,87 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         /* *********************** IMAGES END ****************** */
 
     } elseif ($_POST["do"] == "update") {
+
+        $Changed_ID = $_POST["currentrecord"];
+
+        if (!empty($statistics_numer)) {
+            $stmt = $con->prepare("UPDATE family SET statistics_numer='$statistics_numer' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($family_balance)) {
+            $stmt = $con->prepare("UPDATE family SET family_balance='$family_balance' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($provider_name)) {
+            $stmt = $con->prepare("UPDATE family SET provider_name='$provider_name' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($company_office)) {
+            $stmt = $con->prepare("UPDATE family SET company_office='$company_office' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($hashimy)) {
+            $stmt = $con->prepare("UPDATE family SET hashimy='$hashimy' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($number_of_files)) {
+            $stmt = $con->prepare("UPDATE family SET number_of_files='$number_of_files' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($father_name)) {
+            $stmt = $con->prepare("UPDATE family SET father_name='$father_name' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($treatment_date)) {
+            $stmt = $con->prepare("UPDATE family SET treatment_date='$treatment_date' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($provider_name2)) {
+            $stmt = $con->prepare("UPDATE family SET provider_name2='$provider_name2' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+
+        if (!empty($current_situation)) {
+            $stmt = $con->prepare("UPDATE family SET current_situation='$current_situation' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($hashimy2)) {
+            $stmt = $con->prepare("UPDATE family SET hashimy2='$hashimy2' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($family_type)) {
+            $stmt = $con->prepare("UPDATE family SET family_type='$family_type' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($mo3aref_name)) {
+            $stmt = $con->prepare("UPDATE family SET mo3aref_name='$mo3aref_name' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($special_case)) {
+            $stmt = $con->prepare("UPDATE family SET special_case='$special_case' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($mozaky_name)) {
+            $stmt = $con->prepare("UPDATE family SET mozaky_name='$mozaky_name' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($shopping_day)) {
+            $stmt = $con->prepare("UPDATE family SET shopping_day='$shopping_day' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($mozaky_number)) {
+            $stmt = $con->prepare("UPDATE family SET mozaky_number='$mozaky_number' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+        if (!empty($nationality_number)) {
+            $stmt = $con->prepare("UPDATE family SET nationality_number='$nationality_number' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
+
+        if (!empty($note)) {
+            $stmt = $con->prepare("UPDATE family SET note='$note' WHERE family_ID=$Changed_ID");
+            $stmt->execute();
+        }
 
     }
 }
@@ -364,7 +446,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 if (isset($_GET["searchq"])) {
                     $textInfo = $_GET["searchq"];
                     if (preg_match('/[0-9]/', $textInfo)) {
-                        $stmt = $con->prepare("SELECT * FROM family WHERE family_ID=$textInfo or statistics_numer=$textInfo LIMIT 50");
+                        $stmt = $con->prepare("SELECT * FROM family WHERE family_ID= or statistics_numer=$textInfo or number_of_files=$textInfo LIMIT 50");
                     } else {
                         $stmt = $con->prepare("SELECT * FROM family WHERE provider_name  LIKE '" . $_GET["searchq"] . "%' or father_name LIKE '" . $_GET["searchq"] . "%' or mo3aref_name LIKE '" . $_GET["searchq"] . "%' or mozaky_name LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
                     }
