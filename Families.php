@@ -418,27 +418,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <table id="table1" class="table table-bordred table-striped">
                         <thead>
                         <tr>
+
                             <td class="text-center"><b>كود العائلة</b></td>
                             <td class="text-center"><b>الرقم الإحصائي</b></td>
-                            <td class="text-center"><b>رصيد العائله</b></td>
                             <td class="text-center"><b>اسم المعيل</b></td>
-                            <td class="text-center"><b>مكتب المؤسسة</b></td>
                             <td class="text-center"><b>نسب المعيل</b></td>
-                            <td class="text-center"><b>رقم الأضبارة</b></td>
                             <td class="text-center"><b>اسم الأب</b></td>
-                            <td class="text-center"><b>تاريخ ملف المعاملة</b></td>
                             <td class="text-center"><b>اسم المعيل 2</b></td>
-                            <td class="text-center"><b>الموقف الحالي</b></td>
-
                             <td class="text-center"><b>نسب المعيل 2</b></td>
-                            <td class="text-center"><b>نوع العائلة</b></td>
                             <td class="text-center"><b>اسم المعرف</b></td>
-                            <td class="text-center"><b>الحالة الخاصة</b></td>
                             <td class="text-center"><b>اسم المذكي</b></td>
-                            <td class="text-center"><b>يوم التسوق</b></td>
                             <td class="text-center"><b>جوال المذكي</b></td>
-                            <td class="text-center"><b>رقم الجنسية</b></td>
                             <td class="text-center"><b>ملاحظه</b></td>
+
+                            <td class="text-center"><b>رصيد العائله</b></td>
+                            <td class="text-center"><b>مكتب المؤسسة</b></td>
+                            <td class="text-center"><b>رقم الأضبارة</b></td>
+                            <td class="text-center"><b>تاريخ ملف المعاملة</b></td>
+                            <td class="text-center"><b>الموقف الحالي</b></td>
+                            <td class="text-center"><b>نوع العائلة</b></td>
+                            <td class="text-center"><b>الحالة الخاصة</b></td>
+                            <td class="text-center"><b>يوم التسوق</b></td>
+                            <td class="text-center"><b>رقم الجنسية</b></td>
                         </tr>
                         </thead>
                         <tbody>
@@ -450,31 +451,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             echo "<td class=\"text-center\">" . $row["family_ID"] . "</td>";
                             echo "<td class=\"text-center\">" . $row["statistics_numer"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["family_balance"] . "</td>";
                             echo "<td  class=\"text-center\">" . $row["provider_name"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["company_office"] . "</td>";
                             echo "<td class=\"text-center\">" . $row["hashimy"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["number_of_files"] . "</td>";
                             echo "<td class=\"text-center\">" . $row["father_name"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["treatment_date"] . "</td>";
                             if ($row["provider_name2"] == "NULL")
-                                echo "<td class=\"text-center\">" . $row["provider_name2"] . "</td>";
+                                echo "<td class=\"text-center\">" . " " . "</td>";
                             else
                                 echo "<td class=\"text-center\">" . $row["provider_name2"] . "</td>";
-                            echo "<td  class=\"text-center\">" . $row["current_situation"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["hashimy2"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["family_type"] . "</td>";
+                            if ($row["hashimy2"] == "NULL")
+                                echo "<td class=\"text-center\">" . " " . "</td>";
+                            else
+                                echo "<td class=\"text-center\">" . $row["hashimy2"] . "</td>";
                             echo "<td class=\"text-center\">" . $row["mo3aref_name"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["special_case"] . "</td>";
                             echo "<td class=\"text-center\">" . $row["mozaky_name"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["shopping_day"] . "</td>";
 
                             echo "<td  class=\"text-center\">" . $row["mozaky_number"] . "</td>";
-                            echo "<td class=\"text-center\">" . $row["nationality_number"] . "</td>";
                             if ($row["note"] == "NULL")
                                 echo "<td class=\"text-center\">" . " " . "</td>";
                             else
                                 echo "<td class=\"text-center\">" . $row["note"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["family_balance"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["company_office"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["number_of_files"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["treatment_date"] . "</td>";
+                            echo "<td  class=\"text-center\">" . $row["current_situation"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["family_type"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["special_case"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["shopping_day"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["nationality_number"] . "</td>";
 
                             echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
