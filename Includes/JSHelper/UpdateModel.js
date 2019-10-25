@@ -43,7 +43,9 @@ $("#table1").on('click', '#btnedit', function () {
     $("#model-component :input").eq(14).val(currentRow.find("td:eq(15)").html());
     $("#model-component :input").eq(15).val(currentRow.find("td:eq(16)").html());
     $("#model-component :input").eq(16).val(currentRow.find("td:eq(17)").html());
-    $("#model-component :input").eq(18).val(currentRow.find("td:eq(18)").html());
+    $("#model-component :input").eq(17).val(currentRow.find("td:eq(18)").html());
+    $("#model-component :input").eq(18).val(currentRow.find("td:eq(19)").html());
+
     //  $("form#frm-modal :input").each(function(){
     //      $(this).val("asd");
     //  });
