@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
-            <input type="hidden" name="do" value="add"/>
+
 
             <label class="control-label col-sm-0">الرقم الأحصائي</label>
             <input required name="statistics_numer" type="text" class="form-control"
@@ -162,7 +162,7 @@
         <div class="form-group">
             <label class="control-label col-sm-0">يوم التسوق</label>
 
-            <select required name="	shopping_day" class="form-control">
+            <select required name="shopping_day" class="form-control">
                 <option>السبت</option>
                 <option>الأحد</option>
                 <option>الأثنين</option>
