@@ -346,7 +346,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <form class="form-horizontal"
                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                   method="post" enctype="multipart/form-data">
-
+                                <input type="hidden" name="do" value="add"/>
                                 <?php include("Views/Families_Component.php"); ?>
 
 
@@ -366,9 +366,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if (preg_match('/[0-9]/', $textInfo)) {
                         $stmt = $con->prepare("SELECT * FROM family WHERE family_ID=$textInfo or statistics_numer=$textInfo LIMIT 50");
                     } else {
-                        $stmt = $con->prepare("SELECT * FROM family WHERE provider_name  LIKE '" . $_GET["searchq"] . "%'
-                         or father_name LIKE '" . $_GET["searchq"] . "%' or mo3aref_name LIKE '" . $_GET["searchq"] . "%'
-                          or mozaky_name LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                        $stmt = $con->prepare("SELECT * FROM family WHERE provider_name  LIKE '" . $_GET["searchq"] . "%' or father_name LIKE '" . $_GET["searchq"] . "%' or mo3aref_name LIKE '" . $_GET["searchq"] . "%' or mozaky_name LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
                     }
                 } else {
 
