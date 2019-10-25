@@ -137,7 +137,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt->execute();
         }
 
-        // بس خلاص الموظف اضاف تمام كده
 
         /* *********************** IMAGES ****************** */
 
@@ -181,9 +180,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $statusMsg = 'يرجى اختيار ملف للتحميل.';
             echo "<script type='text/javascript'>alert('$statusMsg');</script>";
         }
+        /* *********************** IMAGES END ****************** */
+
+    } elseif ($_POST["do"] == "update") {
 
     }
-    /* *********************** IMAGES END ****************** */
 }
 ?>
 
@@ -361,16 +362,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 include 'config.php';
 
                 if (isset($_GET["searchq"])) {
-                    //         $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50 ");
-
+                    $textInfo = $_GET["searchq"];
+                    if (preg_match('/[0-9]/', $textInfo)) {
+                        $stmt = $con->prepare("SELECT * FROM family WHERE family_ID=$textInfo or statistics_numer=$textInfo LIMIT 50");
+                    } else {
+                        $stmt = $con->prepare("SELECT * FROM family WHERE provider_name  LIKE '" . $_GET["searchq"] . "%'
+                         or father_name LIKE '" . $_GET["searchq"] . "%' or mo3aref_name LIKE '" . $_GET["searchq"] . "%'
+                          or mozaky_name LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                    }
                 } else {
 
-                    //      $stmt= $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                    $stmt = $con->prepare("SELECT * FROM family LIMIT 50 ");
                 }
 
 
-//    $stmt->execute();
-//$rows= $stmt->fetchAll();
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
                 ?>
                 <div class="card-box">
                     <div class="card-box-head  border-b m-t-0">
@@ -404,6 +411,116 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     </div>
                 </div>
+
+
+                /////////////////////////////////////////////////////////////////
+                <div class="table-responsive data-table">
+                    <table id="table1" class="table table-bordred table-striped">
+                        <thead>
+                        <tr>
+                            <td class="text-center"><b>كود العائلة</b></td>
+                            <td class="text-center"><b>الرقم الإحصائي</b></td>
+                            <td class="text-center"><b>رصيد العائله</b></td>
+                            <td class="text-center"><b>اسم المعيل</b></td>
+                            <td class="text-center"><b>مكتب المؤسسة</b></td>
+                            <td class="text-center"><b>نسب المعيل</b></td>
+                            <td class="text-center"><b>رقم الأضبارة</b></td>
+                            <td class="text-center"><b>اسم الأب</b></td>
+                            <td class="text-center"><b>تاريخ ملف المعاملة</b></td>
+                            <td class="text-center"><b>اسم المعيل 2</b></td>
+                            <td class="text-center"><b>الموقف الحالي</b></td>
+
+                            <td class="text-center"><b>نسب المعيل 2</b></td>
+                            <td class="text-center"><b>نوع العائلة</b></td>
+                            <td class="text-center"><b>اسم المعرف</b></td>
+                            <td class="text-center"><b>الحالة الخاصة</b></td>
+                            <td class="text-center"><b>اسم المذكي</b></td>
+                            <td class="text-center"><b>يوم التسوق</b></td>
+                            <td class="text-center"><b>جوال المذكي</b></td>
+                            <td class="text-center"><b>رقم الجنسية</b></td>
+                            <td class="text-center"><b>ملاحظه</b></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <?php
+
+                        foreach ($rows as $row) {
+                            echo "<tr>";
+
+                            echo "<td class=\"text-center\">" . $row["family_ID"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["statistics_numer"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["family_balance"] . "</td>";
+                            echo "<td  class=\"text-center\">" . $row["provider_name"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["company_office"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["hashimy"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["number_of_files"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["father_name"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["treatment_date"] . "</td>";
+                            if ($row["provider_name2"] == "NULL")
+                                echo "<td class=\"text-center\">" . $row["provider_name2"] . "</td>";
+                            else
+                                echo "<td class=\"text-center\">" . $row["provider_name2"] . "</td>";
+                            echo "<td  class=\"text-center\">" . $row["current_situation"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["hashimy2"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["family_type"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["mo3aref_name"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["special_case"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["mozaky_name"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["shopping_day"] . "</td>";
+
+                            echo "<td  class=\"text-center\">" . $row["mozaky_number"] . "</td>";
+                            echo "<td class=\"text-center\">" . $row["nationality_number"] . "</td>";
+                            if ($row["note"] == "NULL")
+                                echo "<td class=\"text-center\">" . " " . "</td>";
+                            else
+                                echo "<td class=\"text-center\">" . $row["note"] . "</td>";
+
+                            echo "<td>
+                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                            
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
+                                                             </td>";
+
+
+                            echo "</tr>";
+                        }
+
+
+                        ?>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row mob-center">
+                    <div class="col-sm-5">
+                        <p>Showing 20-30 of 50 items</p>
+                    </div>
+                    <div class="col-sm-7">
+                        <ul class="pagination pull-right">
+                            <li><a href="tables.html#"><span
+                                            class="fa fa-angle-double-left"></span></a></li>
+                            <li class="active"><a href="tables.html#">1</a></li>
+                            <li><a href="tables.html#">2</a></li>
+                            <li><a href="tables.html#">3</a></li>
+                            <li><a href="tables.html#">4</a></li>
+                            <li><a href="tables.html#">5</a></li>
+                            <li><a href="tables.html#"><span
+                                            class="fa fa-angle-double-right"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        //////////////////////////////////////////////////////////
+
+
+
+
                 <div id="modal-wrapper" class="modal">
 
                     <form method="post" id="frm-modal" class="modal-content animate"
