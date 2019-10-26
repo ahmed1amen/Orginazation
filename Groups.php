@@ -11,40 +11,48 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
+    //الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
+
+    $Group_Office = $_POST["Group_Office"];
+    $Group_Name = $_POST["Group_Name"];
+    $Group_Agent = $_POST["Group_Agent"];
+    $Group_Region = $_POST["Group_Region"];
+    $Group_Note = $_POST["Group_Note"];
+    $Group_Class = $_POST["Group_Class"];
+    $Group_CurrentSatuation = $_POST["Group_CurrentSatuation"];
+    $Group_FollowEmployee = $_POST["Group_FollowEmployee"];
+    $Group_DateOfRecMoney = $_POST["Group_DateOfRecMoney"];
+
+
     if ($_POST["do"] == "add") {
 
 
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
-
-        // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
-        $stmt->execute();
-        $rows = $stmt->fetchAll();
-        if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
-            echo "<script type='text/javascript'>alert('$message');</script>";
-        } else {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+        $stmt = $con->prepare("INSERT INTO
+   groups(Group_Office, Group_Name, Group_Agent, Group_Region,
+   Group_Note, Group_Class, Group_CurrentSatuation, Group_FollowEmployee, Group_DateOfRecMoney) 
+ VALUES ('$Group_Office','$Group_Name','$Group_Agent','$Group_Region',
+ '$Group_Note','$Group_Class','$Group_CurrentSatuation','$Group_FollowEmployee','$Group_DateOfRecMoney')");
             $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
-        }
+
+
+    } elseif ($_POST["do"] == "update") {
+        $currentrecord = $_POST["currentrecord"];
+        $stmt = $con->prepare("UPDATE groups SET
+        Group_Office='$Group_Office',Group_Name='$Group_Name',Group_Agent='$Group_Agent',Group_Region='$Group_Region',
+        Group_Note='$Group_Note',Group_Class='$Group_Class',Group_CurrentSatuation='$Group_CurrentSatuation',
+        Group_FollowEmployee='$Group_FollowEmployee',Group_DateOfRecMoney='$Group_DateOfRecMoney' WHERE Group_ID=$currentrecord");
+        $stmt->execute();
+
 
     }
 
-
 }
+
 
 
 ?>
@@ -203,6 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
+                                                <input type="hidden" name="do" value="add"/>
 
                                                 <?php include("Views/Groups_Component.php"); ?>
 
@@ -215,11 +224,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM groups WHERE Group_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM groups LIMIT 50 ");
                                     }
 
 
@@ -284,15 +293,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_name"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_address"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_salary"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_jobName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_email"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_password"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["employee_office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Agent"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Region"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Note"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_Class"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_CurrentSatuation"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_FollowEmployee"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Group_DateOfRecMoney"] . "</td>";
                                                         echo "<td>
                                                             <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
