@@ -320,8 +320,6 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                           <button style="margin-top: 10px;"  type="submit" class="btn btn-success btn-md">بحث
                                                          <i class="fa fa-search"></i>
                                                      </button>
-
-
                                                 </button>
 
 
@@ -335,20 +333,19 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                             <br>
 
 
-
                                             <div class="table-responsive data-table">
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                    <td class="text-center" > <b>كود الموظف</b></td>
-                                                    <td class="text-center"> <b>اسم الموظف</b></td>
-                                                    <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                    <td class="text-center"> <b>راتب الموظف</b></td>
-                                                    <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                    <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                    <td class="text-center"><b>كلمه المرور</b></td>
-                                                    <td class="text-center"><b>المكتب التابع له</b></td>
+                                                        <td class="text-center"><b>كود الموظف</b></td>
+                                                        <td class="text-center"><b>اسم الموظف</b></td>
+                                                        <td class="text-center"><b>رقم الجوال</b></td>
+                                                        <td class="text-center"><b>عنوان الموظف</b></td>
+                                                        <td class="text-center"><b>راتب الموظف</b></td>
+                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
+                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
+                                                        <td class="text-center"><b>كلمه المرور</b></td>
+                                                        <td class="text-center"><b>المكتب التابع له</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -370,8 +367,7 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                                         echo "<td class=\"text-center\">". $row["employee_password"]. "</td>";
                                                         echo "<td class=\"text-center\">". $row["employee_office"]. "</td>";
                                                         echo "<td>
-                                                               <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
-                                                            
+                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 
