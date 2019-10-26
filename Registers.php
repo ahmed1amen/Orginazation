@@ -229,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     ?>
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات العائلة</b></h4>
+                                            <h4 class="header-title"><b> بيانات المشتركين</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">

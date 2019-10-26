@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM area");
+                                $stmt = $con->prepare("SELECT * FROM areas");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -222,16 +222,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo))
                                         {
-                                             $stmt = $con->prepare("SELECT * FROM area WHERE Area_ID=$textInfo LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM areas WHERE Area_ID=$textInfo LIMIT 50");
                                         }
                                         else
                                         {
-                                            $stmt = $con->prepare("SELECT * FROM area WHERE Area_Name  LIKE '".$_GET["searchq"]."%' 
+                                            $stmt = $con->prepare("SELECT * FROM areas WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
                                             or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50"); 
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM area LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM areas LIMIT 50 ");
                                     }
 
 
@@ -240,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     ?>
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات الموظفين</b></h4>
+                                            <h4 class="header-title"><b> بيانات المناطق</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">

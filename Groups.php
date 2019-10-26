@@ -197,7 +197,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
+                                            <h4 class="header-title"><b>اضافة مجموعه جديدة</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
@@ -230,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات الموظفين</b></h4>
+                                            <h4 class="header-title"><b> بيانات المجاميع</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -265,16 +265,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
-                                                        <td class="text-center"><b>اسم الموظف</b></td>
-                                                        <td class="text-center"><b>رقم الجوال</b></td>
-                                                        <td><b>عنوان الموظف</b></td>
-                                                        <td class="text-center"><b>راتب الموظف</b></td>
-                                                        <td class="text-center"><b>المسمى الوظيفي الموظف</b></td>
-                                                        <td class="text-center"><b>البريد الالكتروني</b></td>
-                                                        <td class="text-center"><b>كلمه المرور</b></td>
-                                                        <td class="text-center"><b>المكتب التابع له</b></td>
-                                                        <td class="text-center"><b>الخيارات</b></td>
+                                                        <td class="text-center"><b>كود المجموعه</b></td>
+                                                        <td class="text-center"><b>مكتب المؤسسة</b></td>
+                                                        <td class="text-center"><b>اسم المجموعة</b></td>
+                                                        <td class="text-center"><b>اسم الوكيل</b></td>
+                                                        <td class="text-center"><b>اسم المنطقة</b></td>
+                                                        <td class="text-center"><b>ملاحظة</b></td>
+                                                        <td class="text-center"><b>صنف المجموعة</b></td>
+                                                        <td class="text-center"><b>الموقف الحالي</b></td>
+                                                        <td class="text-center"><b>موظف المتابعة</b></td>
+                                                        <td class="text-center"><b>يوم الجبابة الشهري</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>

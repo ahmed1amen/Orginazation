@@ -133,7 +133,6 @@ if (isset($_SESSION['Username'])) {
     <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/pages.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" />
-
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

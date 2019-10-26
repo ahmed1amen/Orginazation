@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
         if (empty($Phone_Number2)) {
-            $stmt = $con->prepare("INSERT INTO Knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
+            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
  VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$employee_office')");
         } else {
-            $stmt = $con->prepare("INSERT INTO Knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
+            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
  VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$Phone_Number2','$employee_office')");
 
         }
@@ -255,17 +255,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo))
                                            {
-                                               $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_ID=$textInfo LIMIT 50");
+                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_ID=$textInfo LIMIT 50");
                                            }
                                         else
                                            {
-                                        $stmt = $con->prepare("SELECT * FROM Knower WHERE Knower_Name  LIKE '".$_GET["searchq"]."%' or
+                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' or
                                         Calling_Adj='$textInfo' or Adjective='$textInfo' or employee_office='$textInfo' LIMIT 50");
                                            }
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM Knower LIMIT 50 ");
+                                       $stmt = $con->prepare("SELECT * FROM knower LIMIT 50 ");
                                     }
 
 
@@ -275,7 +275,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات الموظفين</b></h4>
+                                            <h4 class="header-title"><b> بيانات المعرفين</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -310,10 +310,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الموظف</b></td>
+                                                        <td class="text-center"><b>كود المعرف</b></td>
                                                         <td class="text-center"><b>اسم المعرف</b></td>
                                                         <td class="text-center"><b>صفة المناداة</b></td>
-                                                        <td><b>عنوان المعرف</b></td>
+                                                        <td class="text-center"><b>عنوان المعرف</b></td>
                                                         <td class="text-center"><b>الصفه</b></td>
                                                         <td class="text-center"><b>رقم الجوال 1</b></td>
                                                         <td class="text-center"><b>رقم الجوال 2</b></td>
