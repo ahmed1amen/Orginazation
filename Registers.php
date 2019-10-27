@@ -204,7 +204,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
-
+                                                <input type="hidden" name="do" value="add"/>
                                                 <?php include("Views/Registers_Component.php"); ?>
 
                                             </form>

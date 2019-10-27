@@ -95,7 +95,7 @@ if (isset($_SESSION['Username'])) {
                     $stmt = $con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
                     $stmt->execute();
             }
-
+            header("Location: Employee.php?do=view");
         }
 
 

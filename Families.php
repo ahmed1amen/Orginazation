@@ -265,7 +265,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $con->prepare("UPDATE family SET note='$note' WHERE family_ID=$Changed_ID");
             $stmt->execute();
         }
-
+        header("Location: Families.php?do=view");
     }
 }
 ?>

@@ -16,50 +16,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
 
-    $Office_name = $_POST["Office_name"];
-    $Office_address = $_POST["Office_address"];
-    $Office_facebook = $_POST["Office_facebook"];
-    $Mangement_Nmber = $_POST["Mangement_Nmber"];
-    $Family_Number = $_POST["Family_Number"];
-    $Participants_Number = $_POST["Participants_Number"];
+    $SectionName = $_POST["SectionName"];
+    $SectionDiscription = $_POST["SectionDiscription"];
+
 
     if ($_POST["do"] == "add") {
 
-        $stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_facebook, Mangement_Nmber, Family_Number, Participants_Number)
- VALUES ('$Office_name','$Office_address','$Office_facebook','$Mangement_Nmber', '$Family_Number','$Participants_Number')");
+        $stmt = $con->prepare("INSERT INTO sections(SectionName, SectionDiscription)
+ VALUES ('$SectionName','$SectionDiscription')");
 
         $stmt->execute();
-        } elseif ($_POST["do"] == "update") {
-        $Changed_ID = $_POST["currentrecord"];
+    } elseif ($_POST["do"] == "update") {
+        $currentrecord = $_POST["currentrecord"];
 
-        if (!empty($Office_name)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_name='$Office_name' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Office_address)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_address='$Office_address' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Office_facebook)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_facebook='$Office_facebook' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Mangement_Nmber)) {
-            $stmt = $con->prepare("UPDATE office_data SET Mangement_Nmber='$Mangement_Nmber' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Family_Number)) {
-            $stmt = $con->prepare("UPDATE office_data SET Family_Number='$Family_Number' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Participants_Number)) {
-            $stmt = $con->prepare("UPDATE office_data SET Participants_Number='$Participants_Number' WHERE Office_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        header("Location: Office.php?do=view");
+
+        $stmt = $con->prepare("UPDATE sections SET
+        SectionName='$SectionName',SectionDiscription='$SectionDiscription' WHERE SectionID=$currentrecord");
+        $stmt->execute();
+
+        header("Location: Sections.php?do=view");
     }
-
-    
 
 
 }
@@ -78,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>ادارة المكاتب | </title>
+    <title>ادارة القطاعات | </title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -144,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المكاتب</h4>
+                <h4 class="page-title">القطاعات</h4>
 
             </div>
             <div class="cb-page-content">
@@ -155,13 +131,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM office_data");
+                                $stmt = $con->prepare("SELECT * FROM sections");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المكاتب الحالية</div>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد القطاعات الحالية</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -176,13 +152,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 </div>
 
 
-
                                 <div class="panel-body">
 
 
                                     <div class="dropdown pull-left">
                                         <button class="btn btn-danger btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المكاتب
+                                                data-toggle="dropdown" aria-expanded="false">القطاعات
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -214,10 +189,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     ?>
 
 
-
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة مكتب جديد</b></h4>
+                                            <h4 class="header-title"><b>اضافة قطاع جديد</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
@@ -225,8 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
 
                                                 <input type="hidden" name="do" value="add"/>
-                                                <?php include("Views/Office_Component.php"); ?>
-
+                                                <?php include("Views/Sections_Component.php"); ?>
 
 
                                             </form>
@@ -237,33 +210,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $textInfo=$_GET["searchq"];
-                                        if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
-                                        {
-                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_ID=$textInfo LIMIT 50");
-                                        }
-                                        elseif(preg_match('/@/', $textInfo))
-                                        {
-                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_email='$textInfo' LIMIT 50");
-                                        }
-                                        else
-                                        {
-                                       $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_name  LIKE '".$_GET["searchq"]."%' LIMIT 50");
+                                        $textInfo = $_GET["searchq"];
+                                        if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM sections WHERE SectionID=$textInfo LIMIT 50");
+                                        } elseif (preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM sections WHERE SectionName='$textInfo' LIMIT 50");
                                         }
 
                                     } else {
 
-                                             $stmt= $con->prepare("SELECT * FROM office_data LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM sections LIMIT 50 ");
                                     }
 
 
-
                                     $stmt->execute();
-                                    $rows= $stmt->fetchAll();
+                                    $rows = $stmt->fetchAll();
                                     ?>
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات المكاتب</b></h4>
+                                            <h4 class="header-title"><b> بيانات القطاع</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -285,7 +250,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                             </button>
 
 
-
                                                         </form>
                                                         </span>
                                                     </div>
@@ -295,35 +259,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             <br>
 
 
-
                                             <div class="table-responsive data-table">
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود المكتب</b></td>
-                                                        <td class="text-center"><b>أسم المكتب</b></td>
-                                                        <td class="text-center"><b>عنوان المكتب</b></td>
-                                                        <td class="text-center"><b>الصفحة علي فيس بوك</b></td>
-                                                        <td class="text-center"><b>موبيل الادارة</b></td>
-                                                        <td class="text-center"><b>موبيل شعبه العوائل</b></td>
-                                                        <td class="text-center"><b>موبيل شعبه المشتركين</b></td>
+                                                        <td class="text-center"><b>كود القطاع</b></td>
+                                                        <td class="text-center"><b>أسم القطاع</b></td>
+                                                        <td class="text-center"><b>وصف القطاع</b></td>
+
                                                     </tr>
                                                     </thead>
                                                     <tbody>
 
                                                     <?php
 
-                                                    foreach ($rows as $row)
-                                                    {
+                                                    foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">". $row["Office_ID"]. "</td>";
-                                                        echo "<td class=\"text-center\">". $row["Office_name"]. "</td>";
-                                                        echo "<td class=\"text-center\">". $row["Office_address"]. "</td>";
-                                                        echo "<td  class=\"text-center\">" . $row["Office_facebook"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Mangement_Nmber"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Family_Number"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Participants_Number"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionName"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionDiscription"] . "</td>";
+
                                                         echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
@@ -385,7 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div id="model-component" style="padding-top: 40px;">
 
 
-                                                    <?php include('Views/Office_Component.php'); ?>
+                                                    <?php include('Views/Sections_Component.php'); ?>
 
                                                     <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
 
@@ -404,6 +360,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                 }
+
 
                             }
                             ?>

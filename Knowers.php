@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $con->prepare("UPDATE knower SET employee_office='$employee_office' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
-
+        header("Location: Knowers.php?do=view");
 
     }
 
