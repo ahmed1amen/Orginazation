@@ -98,9 +98,10 @@
             <label class="control-label col-sm-0">مكتب المؤسسة</label>
 
             <select required name="company_office" class="form-control">
-                <option>22</option>
-                <option>1</option>
-                <option>2</option>
+                <?php
+
+                include 'config.php';
+                include("Includes/PHPHelper/RetrieveOffices.php"); ?>
             </select>
 
         </div>

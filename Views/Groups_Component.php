@@ -2,12 +2,10 @@
     <label class="control-label col-sm-1">مكتب المؤسسة</label>
     <div class="col-sm-10">
         <select name="Group_Office" class="form-control">
-            <option>المشخاب</option>
-            <option>القادسية</option>
-            <option>سوق شعلان</option>
-            <option>سوق شعلان</option>
-            <option>الحسانية</option>
+            <?php
 
+            include 'config.php';
+            include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>
 </div>

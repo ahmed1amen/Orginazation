@@ -19,10 +19,11 @@
     <label class="control-label col-sm-1">اسم المكتب</label>
     <div class="col-sm-10">
         <select required name="Area_Office" id="Area_Office" class="form-control">
-            <option>مكتب بغداد</option>
-            <option>مكتب البصرة</option>
-            <option>مكتب النجف</option>
-            <option>مكتب بغداد حي المنصور</option>
+
+            <?php
+
+            include 'config.php';
+            include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>
 </div>

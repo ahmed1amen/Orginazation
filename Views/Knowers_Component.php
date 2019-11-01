@@ -52,10 +52,10 @@
     <div class="col-sm-10">
         <select required class="form-control" name="employee_office"
                 id="sel1">
-            <option>مكتب بغداد</option>
-            <option>مكتب البصرة</option>
-            <option>مكتب النجف</option>
-            <option>مكتب بغداد حي المنصور</option>
+            <?php
+
+            include 'config.php';
+            include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>
 </div>

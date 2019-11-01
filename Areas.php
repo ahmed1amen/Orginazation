@@ -143,6 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 include 'config.php';
 
                                 $stmt = $con->prepare("SELECT * FROM areas");
+
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -210,7 +211,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   method="post">
                                                 <input type="hidden" name="do" value="add"/>
 
-                                                <?php include("Views/Areas_Component.php"); ?>
+                                                <?php
+                                                include("Views/Areas_Component.php"); ?>
                                             </form>
                                         </div>
                                     </div>
