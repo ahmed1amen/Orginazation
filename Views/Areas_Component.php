@@ -32,10 +32,10 @@
     <label class="control-label col-sm-1">اسم القطاع</label>
     <div class="col-sm-10">
         <select required name="Area_Section" class="form-control">
-            <option>المشخاب</option>
-            <option>القادسية</option>
-            <option>سوق شعلان</option>
-            <option>الحسانية</option>
+            <?php
+
+            include 'config.php';
+            include("Includes/PHPHelper/RetrieveSections.php"); ?>
 
         </select>
     </div>

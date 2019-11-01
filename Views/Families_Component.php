@@ -58,18 +58,18 @@
 
         </div>
         <div class="form-group">
-            <label class="control-label col-sm-0">اسم المذكي</label>
+            <label class="control-label col-sm-0">اسم المزكي</label>
 
             <input required name="mozaky_name" type="text" class="form-control"
-                   placeholder="ادخل اسم المذكي">
+                   placeholder="ادخل اسم المزكي">
 
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-0">جوال المذكي</label>
+            <label class="control-label col-sm-0">جوال المزكي</label>
 
             <input required name="mozaky_number" type="text" class="form-control"
-                   placeholder="ادخل رقم جوال المذكي">
+                   placeholder="ادخل رقم جوال المزكي">
 
         </div>
 

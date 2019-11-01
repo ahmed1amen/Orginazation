@@ -4,16 +4,80 @@
     <bookmark url="file://$PROJECT_DIR$/../../aa.html" description="       &lt;/ul&gt;" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Add New Form , Applying Some Redirections ,">
-      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php" afterDir="false" />
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Allow Retrieve Offices &amp; Sections from DB&#10;Adding Sections.php">
+      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/Areas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/components.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/ionicons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/pages.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/generator_config.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/glyphicons-halflings-regular_162a16fe.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/ionicons_cdea77b9.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/ionicons_cdea77b9.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/ionicons_cdea77b9.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/ionicons_cdea77b9.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/specimen_files/grid_12-825-55-15.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/specimen_files/specimen_stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/vip-rawy-bold1-demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/vip-rawy-bold1.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/vip-rawy-bold1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/fonts/vip-rawy-bold1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/67645794_2314402665542558_4812073253835112448_n.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/67667260_1160496057472099_1432416119141957632_o.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/Strength-Thought-Facebook-Cover-Photo-851-x-315.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/event-img1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/event-img2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/logo-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/m-logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/profile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/users/avatar-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/users/avatar-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/images/users/avatar-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/pages/jquery.charts-sparkline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/pages/jquery.todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/bs-datepicker/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/bs-datepicker/datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/jquery-sparkline/jquery.sparkline.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/moment/moment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/morris/morris.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/morris/morris.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/assets/plugins/raphael/raphael-min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/bootstrap-ui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/buttons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/calendar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/dashboard.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/form-elements.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/icons.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/mailbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/panels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/progressbars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/tables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/tabs-accordions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALL/typography.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Areas_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Areas_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee_Component.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Families_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Families_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Groups_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Groups_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Knowers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Knowers_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Registers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Registers_Component.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,20 +130,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Areas_Component.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Areas_Component.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="270">
+              <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registers_Component.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sections_Component.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Sections_Component.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Registers_Component.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+            <state relative-caret-position="110">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Families_Component.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -87,8 +169,8 @@
       <file leaf-file-name="Families.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Families.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="431" column="81" lean-forward="true" selection-start-line="431" selection-start-column="27" selection-end-line="431" selection-end-column="81" />
+            <state relative-caret-position="27">
+              <caret line="425" selection-start-line="425" selection-end-line="425" />
             </state>
           </provider>
         </entry>
@@ -97,34 +179,7 @@
         <entry file="file://$PROJECT_DIR$/Knowers.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-837">
-              <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sections.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sections.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Office.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Office.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="837">
-              <caret line="31" column="45" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Employee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1269">
-              <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="41" />
+              <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -140,7 +195,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$(&quot;#frm-modal :input&quot;).eq(2).val(currentRow.find(&quot;td:eq(1)&quot;).html());</find>
       <find>&lt;input type=&quot;hidden&quot; id=&quot;currentrecord&quot; value=&quot;&quot;&gt;</find>
       <find>alert</find>
       <find>&lt;form id=&quot;frm-modal&quot; class=&quot;modal-content a</find>
@@ -167,9 +221,10 @@
       <find>eif ($_POST[&quot;do&quot;] == &quot;update&quot;) {</find>
       <find>moda</find>
       <find>slec</find>
-      <find>config</find>
-      <find>Office&quot;</find>
       <find>&lt;/select&gt;</find>
+      <find>المذكي</find>
+      <find>Office&quot;</find>
+      <find>config</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/all.css&quot; type=&quot;text/css&quot; /&gt;</replace>
@@ -199,6 +254,7 @@
       <replace>&lt;select name=&quot;xxxx&quot;</replace>
       <replace>Office_Component</replace>
       <replace>Sections_Component</replace>
+      <replace>المزكي</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -236,7 +292,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/assets/css/components.css" />
         <option value="$PROJECT_DIR$/Views/Knowers_Component.php" />
-        <option value="$PROJECT_DIR$/Views/Families_Component.php" />
         <option value="$PROJECT_DIR$/Views/Office_Component.php" />
         <option value="$PROJECT_DIR$/Views/Agent_Component.php" />
         <option value="$PROJECT_DIR$/Includes/UpdateModel.php" />
@@ -259,8 +314,10 @@
         <option value="$PROJECT_DIR$/Includes/sidebar.php" />
         <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php" />
         <option value="$PROJECT_DIR$/Areas.php" />
-        <option value="$PROJECT_DIR$/Views/Areas_Component.php" />
         <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
+        <option value="$PROJECT_DIR$/Views/Families_Component.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php" />
+        <option value="$PROJECT_DIR$/Views/Areas_Component.php" />
       </list>
     </option>
   </component>
@@ -337,6 +394,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes\PHPHelper" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Views" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT" />
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
@@ -438,7 +496,7 @@
       <workItem from="1572101934240" duration="6474000" />
       <workItem from="1572191662491" duration="7179000" />
       <workItem from="1572371684509" duration="1450000" />
-      <workItem from="1572596266506" duration="2665000" />
+      <workItem from="1572596266506" duration="3972000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -713,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572198771760</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Allow Retrieve Offices from DB&#10;Adding Sections.php">
+      <created>1572599058874</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1572599058874</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="190538000" />
+    <option name="totallyTimeSpent" value="191845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,7 +795,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.24291939" />
@@ -823,7 +887,8 @@
     <MESSAGE value="Update UI" />
     <MESSAGE value="Finalize Groups.php" />
     <MESSAGE value="Add New Form , Applying Some Redirections ," />
-    <option name="LAST_COMMIT_MESSAGE" value="Add New Form , Applying Some Redirections ," />
+    <MESSAGE value="Allow Retrieve Offices from DB&#10;Adding Sections.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Allow Retrieve Offices from DB&#10;Adding Sections.php" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -832,13 +897,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/New folder (6)/microsoft_follower.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms2.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1040,20 +1098,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Sections.php" />
-    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2106">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="79" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Sections_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Includes/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4725">
@@ -1099,14 +1143,7 @@
     <entry file="file://$PROJECT_DIR$/Knowers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-837">
-          <caret line="93" column="18" lean-forward="true" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Families.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="431" column="81" lean-forward="true" selection-start-line="431" selection-start-column="27" selection-end-line="431" selection-end-column="81" />
+          <caret line="93" column="18" selection-start-line="93" selection-start-column="18" selection-end-line="93" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1131,17 +1168,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
+    <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="110">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
+    <entry file="file://$PROJECT_DIR$/Families.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="47" column="24" lean-forward="true" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        <state relative-caret-position="27">
+          <caret line="425" selection-start-line="425" selection-end-line="425" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="62" column="28" lean-forward="true" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Sections_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
         </state>
       </provider>
     </entry>
