@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
 } else {
-// كده مفيش , ف حوله علي اللوجن الخاص ب المشتركين
+// كده مفيش , ف حوله علي اللوجن الخاص ب الموظفين
     //    header('Location: EmpLogin.php');
 
 }
@@ -11,36 +11,30 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
+    include 'config.php';
+    header('Content-Type: text/html; charset=utf-8');
+// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
+
+    $SectionName = $_POST["SectionName"];
+    $SectionDiscription = $_POST["SectionDiscription"];
+
+
     if ($_POST["do"] == "add") {
 
+        $stmt = $con->prepare("INSERT INTO donors(SectionName, SectionDiscription)
+ VALUES ('$SectionName','$SectionDiscription')");
 
-        // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
-
-        // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM registers WHERE employee_email='$employee_email'");
         $stmt->execute();
-        $rows = $stmt->fetchAll();
-        if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
-            echo "<script type='text/javascript'>alert('$message');</script>";
-        } else {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO registers(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
-            $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
-        }
+    } elseif ($_POST["do"] == "update") {
+        $currentrecord = $_POST["currentrecord"];
 
+
+        $stmt = $con->prepare("UPDATE donors SET
+        SectionName='$SectionName',SectionDiscription='$SectionDiscription' WHERE SectionID=$currentrecord");
+        $stmt->execute();
+
+        header("Location: donors.php?do=view");
     }
 
 
@@ -60,13 +54,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>بيانات المشتركين</title>
+    <title>ادارة المبرات | </title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
 
     <!-- STYLESHEETS -->
-
     <link rel="stylesheet" href="assets/plugins/morris/morris.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/core.css" type="text/css"/>
@@ -127,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المشتركين</h4>
+                <h4 class="page-title">المبرات</h4>
 
             </div>
             <div class="cb-page-content">
@@ -138,13 +131,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM registers");
+                                $stmt = $con->prepare("SELECT * FROM donors");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المشتركين</div>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المبرات الحالية</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -164,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="dropdown pull-left">
                                         <button class="btn btn-danger btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المشتركين
+                                                data-toggle="dropdown" aria-expanded="false">المبرات
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -192,37 +185,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             if (isset($_GET["do"])) {
 
                                 if ($_GET["do"] == "add") {
-                                    include 'config.php';
+
                                     ?>
-
-
 
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة المشتركين</b></h4>
+                                            <h4 class="header-title"><b>اضافة قطاع جديد</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
+
                                                 <input type="hidden" name="do" value="add"/>
-                                                <?php include("Views/Registers_Component.php"); ?>
+                                                <?php include("Views/donors_Component.php"); ?>
+
 
                                             </form>
                                         </div>
                                     </div>
                                     <?php
-
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM registers WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $textInfo = $_GET["searchq"];
+                                        if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM donors WHERE SectionID=$textInfo LIMIT 50");
+                                        } elseif (preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM donors WHERE SectionName='$textInfo' LIMIT 50");
+                                        }
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM registers LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM donors LIMIT 50 ");
                                     }
 
 
@@ -231,7 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     ?>
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات المشتركين</b></h4>
+                                            <h4 class="header-title"><b> بيانات المبرة</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -258,7 +255,65 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="clearfix"></div>
+                                            <br>
 
+
+                                            <div class="table-responsive data-table">
+                                                <table id="table1" class="table table-bordred table-striped">
+                                                    <thead>
+                                                    <tr>
+                                                        <td class="text-center"><b>كود المبرة</b></td>
+                                                        <td class="text-center"><b>أسم المبرة</b></td>
+                                                        <td class="text-center"><b>وصف المبرة</b></td>
+
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+
+                                                    <?php
+
+                                                    foreach ($rows as $row) {
+                                                        echo "<tr>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionName"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["SectionDiscription"] . "</td>";
+                                                        echo "<td>
+                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                            
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
+                                                             </td>";
+
+
+                                                        echo "</tr>";
+                                                    }
+
+
+                                                    ?>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="row mob-center">
+                                                <div class="col-sm-5">
+                                                    <p>Showing 20-30 of 50 items</p>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <ul class="pagination pull-right">
+                                                        <li><a href="tables.html#"><span
+                                                                        class="fa fa-angle-double-left"></span></a></li>
+                                                        <li class="active"><a href="tables.html#">1</a></li>
+                                                        <li><a href="tables.html#">2</a></li>
+                                                        <li><a href="tables.html#">3</a></li>
+                                                        <li><a href="tables.html#">4</a></li>
+                                                        <li><a href="tables.html#">5</a></li>
+                                                        <li><a href="tables.html#"><span
+                                                                        class="fa fa-angle-double-right"></span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="modal-wrapper" class="modal">
@@ -284,7 +339,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div id="model-component" style="padding-top: 40px;">
 
 
-                                                    <?php include('Views/Registers_Component.php'); ?>
+                                                    <?php include('Views/donors_Component.php'); ?>
 
                                                     <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
 
@@ -298,10 +353,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                         </form>
                                     </div>
 
+
                                     <?php
 
 
                                 }
+
 
                             }
                             ?>
@@ -334,7 +391,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/pace.min.js"></script>
@@ -357,54 +413,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <script src="Includes/JSHelper/UpdateModel.js"></script>
-
-
-<script>
-    var i = 1;
-
-
-    var OptionsData;
-
-
-    $.ajax({
-        url: "Includes/PHPHelper/RetrieveDonors.php",
-        method: "GET",
-        success: function (data) {
-            OptionsData = data;
-        }
-    });
-
-
-    $('#add').click(function () {
-        i++;
-        $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + ' class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="text" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
-    });
-
-
-    $(document).on('click', '.btn_remove', function () {
-        // var button_id = $(this).attr("id");
-        //    $('#row'+button_id+'').remove();
-
-        //alert($( "#Donner_Name" ).each(););
-
-
-        var texts = [];
-        $('select[name$="Donner_Name[]"]').each(function () {
-            texts.push(this.value);
-        });
-        var r_Array = texts.sort();
-        for (var i = 0; i < r_Array.length - 1; i++) {
-            if (r_Array[i + 1] == r_Array[i]) {
-                alert("لايمكن تكرار نفس المبرة لمشترك واحد");
-                return false;
-            }
-        }
-
-
-    });
-
-
-</script>
 
 
 </body>

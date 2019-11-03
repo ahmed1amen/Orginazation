@@ -34,7 +34,6 @@
         <select required name="Area_Section" class="form-control">
             <?php
 
-            include 'config.php';
             include("Includes/PHPHelper/RetrieveSections.php"); ?>
 
         </select>

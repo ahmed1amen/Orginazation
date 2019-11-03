@@ -7,7 +7,7 @@
  */
 
 include dirname(__DIR__) . '../../config.php';
-$smt = $con->prepare("SELECT Office_Name From office_data");
+$smt = $con->prepare("SELECT Donner_Name From donors");
 
 $smt->execute();
 
@@ -16,7 +16,7 @@ $rows = $smt->fetchAll();
 
 foreach ($rows as $row) {
 
-    echo ' <option>' . $row['Office_Name'] . '</option>';
+    echo ' <option>' . $row['Donner_Name'] . '</option>';
 }
 
 

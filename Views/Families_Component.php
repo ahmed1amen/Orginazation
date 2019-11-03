@@ -100,7 +100,6 @@
             <select required name="company_office" class="form-control">
                 <?php
 
-                include 'config.php';
                 include("Includes/PHPHelper/RetrieveOffices.php"); ?>
             </select>
 

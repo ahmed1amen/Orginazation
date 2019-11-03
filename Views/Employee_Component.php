@@ -50,10 +50,7 @@
     <label class="control-label col-sm-1">المكتب التابع له</label>
     <div class="col-sm-10">
         <select class="form-control" name="employee_office" id="sel1">
-            <?php
-
-            include 'config.php';
-            include("Includes/PHPHelper/RetrieveOffices.php"); ?>
+            <?php include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>
 </div>

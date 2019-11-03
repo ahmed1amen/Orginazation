@@ -7,7 +7,9 @@
  */
 
 include dirname(__DIR__) . '../../config.php';
-$smt = $con->prepare("SELECT Office_Name From office_data");
+
+
+$smt = $con->prepare("SELECT Group_Name From groups");
 
 $smt->execute();
 
@@ -16,7 +18,7 @@ $rows = $smt->fetchAll();
 
 foreach ($rows as $row) {
 
-    echo ' <option>' . $row['Office_Name'] . '</option>';
+    echo ' <option>' . $row['Group_Name'] . '</option>';
 }
 
 

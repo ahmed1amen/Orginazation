@@ -109,7 +109,7 @@
 
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-user-friends"> </i>
-                    <span> المشتركون </span>
+                    <span> المشتركين </span>
                     <span
                             class="fa fa-angle-right cb-nav-arrow"></span> </a>
                 <ul class="list-unstyled">
@@ -133,6 +133,21 @@
 
                 </ul>
             </li>
+
+
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-donate"> </i>
+                    <span> المبرات </span>
+                    <span
+                            class="fa fa-angle-right cb-nav-arrow"></span> </a>
+                <ul class="list-unstyled">
+                    <li><a href="./Donors.php?do=add"><i class="fa fa-plus-circle"></i> اضافة </a></li>
+                    <li><a href="./Donors.php?do=view"><i class="fa fa-eye"></i> عرض </a></li>
+
+
+                </ul>
+            </li>
+
 
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"> <i class="fa fa-file-invoice-dollar"> </i> <span> الحسابات </span>

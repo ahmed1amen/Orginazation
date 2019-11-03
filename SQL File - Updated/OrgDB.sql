@@ -11,7 +11,7 @@
  Target Server Version : 100138
  File Encoding         : 65001
 
- Date: 01/11/2019 11:00:48
+ Date: 03/11/2019 05:29:15
 */
 
 SET NAMES utf8mb4;
@@ -57,53 +57,15 @@ CREATE TABLE `areas`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Table structure for donor1tbl
+-- Table structure for donors
 -- ----------------------------
-DROP TABLE IF EXISTS `donor1tbl`;
-CREATE TABLE `donor1tbl`  (
-  `DonorID` int(10) NULL DEFAULT NULL,
-  `DonorMontadherAmma` int(10) NULL DEFAULT NULL,
-  `DonorRedhaJarya` int(10) NULL DEFAULT NULL,
-  `DonorNabIrahmaAytam` int(10) NULL DEFAULT NULL,
-  `DonorImamAilMonthKiswa` int(10) NULL DEFAULT NULL,
-  `DonorImamAilYearKiswa` int(10) NULL DEFAULT NULL,
-  `DonorHusainMonthZawaj` int(10) NULL DEFAULT NULL,
-  `DonorHusainYearZawaj` int(10) NULL DEFAULT NULL,
-  `DonorBaqerMotaffa` int(10) NULL DEFAULT NULL,
-  `DonorSajadTibya` int(10) NULL DEFAULT NULL,
-  `DonorHasanMonthEftar` int(10) NULL DEFAULT NULL,
-  `DonorHasanYearEftar` int(10) NULL DEFAULT NULL,
-  `DonorMontadhemHuquq` int(10) NULL DEFAULT NULL,
-  `DonorMontadhemHuquqnote` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorSufonNajat` int(10) NULL DEFAULT NULL,
-  `DonorRadMadhalim` int(10) NULL DEFAULT NULL,
-  `DonorAddDate` datetime(0) NULL DEFAULT NULL,
-  `Donornote` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorUpdateNo` int(10) NULL DEFAULT NULL,
-  `DonorUpdateDate` datetime(0) NULL DEFAULT NULL,
-  `DonorSpecifiedName` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorCurrentSatuation` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorKadhemQardh` int(10) NULL DEFAULT NULL,
-  `DonorJawadBenaa` int(10) NULL DEFAULT NULL,
-  `DonorHadiOtherHuqoq` int(10) NULL DEFAULT NULL,
-  `DonorFashalKelawi` int(10) NULL DEFAULT NULL,
-  `DonorAddNo` int(10) NULL DEFAULT NULL,
-  `DonorJaryano` int(10) NULL DEFAULT NULL,
-  `DonorJaryadate` datetime(0) NULL DEFAULT NULL,
-  `DonorFacebook` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDokhrAkheraNo` int(10) NULL DEFAULT NULL,
-  `DonorDokhrAkheraDate` datetime(0) NULL DEFAULT NULL,
-  `DonorGuardian` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorGuardianPhone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDeterminedPerson` int(10) NULL DEFAULT NULL,
-  `Donorpic` int(10) NULL DEFAULT NULL,
-  `DonorDEU` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDTU` datetime(0) NULL DEFAULT NULL,
-  `DonorArrivedCatch` bit(1) NULL DEFAULT NULL,
-  `DonorSuffonBW` int(10) NULL DEFAULT NULL,
-  `DonorRadJameelTo` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDateOfRecMoney` int(10) NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+DROP TABLE IF EXISTS `donors`;
+CREATE TABLE `donors`  (
+  `Donner_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Donner_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `Donner_Description` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`Donner_ID`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Table structure for employee_data
@@ -233,58 +195,30 @@ CREATE TABLE `office_data`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `registers`;
 CREATE TABLE `registers`  (
-  `Register_ID` int(11) NOT NULL,
-  `Register_Office` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Register_Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Register_Nikename` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_Gender` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_Specifedname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_CurrentStatus` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_Knower` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_Note` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_Group` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `Rgister_DateOfRec` datetime(0) NULL DEFAULT NULL,
-  `DonorMontadherAmma` int(10) NULL DEFAULT NULL,
-  `DonorRedhaJarya` int(10) NULL DEFAULT NULL,
-  `DonorNabIrahmaAytam` int(10) NULL DEFAULT NULL,
-  `DonorImamAilMonthKiswa` int(10) NULL DEFAULT NULL,
-  `DonorImamAilYearKiswa` int(10) NULL DEFAULT NULL,
-  `DonorHusainMonthZawaj` int(10) NULL DEFAULT NULL,
-  `DonorHusainYearZawaj` int(10) NULL DEFAULT NULL,
-  `DonorBaqerMotaffa` int(10) NULL DEFAULT NULL,
-  `DonorSajadTibya` int(10) NULL DEFAULT NULL,
-  `DonorHasanMonthEftar` int(10) NULL DEFAULT NULL,
-  `DonorHasanYearEftar` int(10) NULL DEFAULT NULL,
-  `DonorMontadhemHuquq` int(10) NULL DEFAULT NULL,
-  `DonorMontadhemHuquqnote` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorSufonNajat` int(10) NULL DEFAULT NULL,
-  `DonorRadMadhalim` int(10) NULL DEFAULT NULL,
-  `Donornote` varchar(80) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorUpdateNo` int(10) NULL DEFAULT NULL,
-  `DonorUpdateDate` datetime(0) NULL DEFAULT NULL,
-  `DonorSpecifiedName` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorCurrentSatuation` varchar(15) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorKadhemQardh` int(10) NULL DEFAULT NULL,
-  `DonorJawadBenaa` int(10) NULL DEFAULT NULL,
-  `DonorHadiOtherHuqoq` int(10) NULL DEFAULT NULL,
-  `DonorFashalKelawi` int(10) NULL DEFAULT NULL,
-  `DonorAddNo` int(10) NULL DEFAULT NULL,
-  `DonorJaryano` int(10) NULL DEFAULT NULL,
-  `DonorJaryadate` datetime(0) NULL DEFAULT NULL,
-  `DonorFacebook` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDokhrAkheraNo` int(10) NULL DEFAULT NULL,
-  `DonorDokhrAkheraDate` datetime(0) NULL DEFAULT NULL,
-  `DonorGuardian` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorGuardianPhone` varchar(11) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDeterminedPerson` int(10) NULL DEFAULT NULL,
-  `Donorpic` int(10) NULL DEFAULT NULL,
-  `DonorDEU` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDTU` datetime(0) NULL DEFAULT NULL,
-  `DonorArrivedCatch` bit(1) NULL DEFAULT NULL,
-  `DonorSuffonBW` int(10) NULL DEFAULT NULL,
-  `DonorRadJameelTo` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `DonorDateOfRecMoney` int(10) NULL DEFAULT NULL,
-  PRIMARY KEY (`Register_ID`) USING BTREE
+  `RegisterID` int(40) NOT NULL AUTO_INCREMENT,
+  `RegisterName` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterOffice` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterGroup` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterNickname` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterGender` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `Knower_Name` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterHomeAddress` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterJobAddress` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterPhone1` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterPhone2` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterE_mail` varchar(40) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `RegisterArrivedCatch` bit(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`RegisterID`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Table structure for regiters_donors
+-- ----------------------------
+DROP TABLE IF EXISTS `regiters_donors`;
+CREATE TABLE `regiters_donors`  (
+  `DonorID` int(11) NULL DEFAULT NULL,
+  `RegisterID` int(11) NULL DEFAULT NULL,
+  `RegisterCredit` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
 -- ----------------------------

@@ -4,7 +4,6 @@
         <select name="Group_Office" class="form-control">
             <?php
 
-            include 'config.php';
             include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>
