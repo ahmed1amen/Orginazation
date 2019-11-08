@@ -210,12 +210,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $textInfo = $_GET["searchq"];
-                                        if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM sections WHERE SectionID=$textInfo LIMIT 50");
-                                        } elseif (preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM sections WHERE SectionName='$textInfo' LIMIT 50");
-                                        }
+                                        $stmt = $con->prepare("SELECT * FROM sections WHERE SectionName  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
+
 
                                     } else {
 

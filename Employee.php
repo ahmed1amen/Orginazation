@@ -32,7 +32,7 @@ if (isset($_SESSION['Username'])) {
         $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
         $rows= $stmt->fetchAll();
-        if(count($rows)>0)
+            if ($stmt->rowCount() > 0)
         {
          $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
         echo "<script type='text/javascript'>alert('$message');</script>";   

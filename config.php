@@ -11,9 +11,9 @@ if($link === false){
 die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 */
-$dsn = 'mysql:host=localhost;dbname=orgdb';
+$dsn = 'mysql:host=localhost;dbname=test';
 $usr = 'root';
-$pass = '123456';
+$pass = '';
 
 $option = array(
   PDO::MYSQL_ATTR_INIT_COMMAND=> 'SET NAMES utf8',

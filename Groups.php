@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt = $con->prepare("SELECT * FROM groups");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";

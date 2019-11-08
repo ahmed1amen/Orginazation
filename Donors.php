@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($_POST["do"] == "add") {
 
-        $stmt = $con->prepare("INSERT INTO donors(SectionName, SectionDiscription)
+        $stmt = $con->prepare("INSERT INTO donors(Donner_Name, Donner_Description)
  VALUES ('$SectionName','$SectionDiscription')");
 
         $stmt->execute();
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         $stmt = $con->prepare("UPDATE donors SET
-        SectionName='$SectionName',SectionDiscription='$SectionDiscription' WHERE SectionID=$currentrecord");
+        Donner_Name='$SectionName',Donner_Description='$SectionDiscription' WHERE Donner_ID=$currentrecord");
         $stmt->execute();
 
         header("Location: donors.php?do=view");
@@ -208,14 +208,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
-
                                     if (isset($_GET["searchq"])) {
-                                        $textInfo = $_GET["searchq"];
-                                        if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM donors WHERE SectionID=$textInfo LIMIT 50");
-                                        } elseif (preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM donors WHERE SectionName='$textInfo' LIMIT 50");
-                                        }
+                                        $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
+
 
                                     } else {
 
@@ -275,9 +270,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
-                                                        echo "<td class=\"text-center\">" . $row["SectionID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["SectionName"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["SectionDiscription"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Donner_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Donner_Name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["Donner_Description"] . "</td>";
                                                         echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             

@@ -11,35 +11,91 @@ if (isset($_SESSION['Username'])) {
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
+    include 'config.php';
+
+    $RegisterName = $_POST["RegisterName"];
+    $RegisterOffice = $_POST["RegisterOffice"];
+    $RegisterGroup = $_POST["RegisterGroup"];
+    $RegisterNickname = $_POST["RegisterNickname"];
+    $RegisterGender = $_POST["RegisterGender"];
+    $Knower_Name = $_POST["Knower_Name"];
+    $RegisterHomeAddress = $_POST["RegisterHomeAddress"];
+    $RegisterJobAddress = $_POST["RegisterJobAddress"];
+    $RegisterPhone1 = $_POST["RegisterPhone1"];
+    $RegisterPhone2 = $_POST["RegisterPhone2"];
+    $RegisterE_mail = $_POST["RegisterE_mail"];
+    $RegisterFacebook = $_POST["RegisterFacebook"];
+    $RegisterArrivedCatch = $_POST["RegisterArrivedCatch"];
+
+
+
+
     if ($_POST["do"] == "add") {
 
 
         // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
-        header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-        $employee_name = $_POST["employee_name"];
-        $employee_number = $_POST["employee_number"];
-        $employee_address = $_POST["employee_address"];
-        $employee_salary = $_POST["employee_salary"];
-        $employee_jobName = $_POST["employee_jobName"];
-        $employee_email = $_POST["employee_email"];
-        $employee_password = $_POST["employee_password"];
-        $employee_office = $_POST["employee_office"];
+
 
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM registers WHERE employee_email='$employee_email'");
+        $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$RegisterE_mail'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
-        if ($rows > 0) {
-            $message = "Please enter another email address/   ﺮﺧﺁ ﻱﺪﻳﺮﺑ ﻥاﻮﻨﻋ ﻞﺧﺩﺃ ﻚﻠﻀﻓ ﻦﻣ ";
+        if ($stmt->rowCount() > 0) {
+            $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
-            // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = $con->prepare("INSERT INTO registers(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+            $stmt = $con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterArrivedCatch)
+        VALUES ('$RegisterName', '$RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail', '$RegisterArrivedCatch')");
             $stmt->execute();
-// بس خلاص الموظف اضاف تمام كده
+
+            //DonorID
+            $RegisterID = $con->lastInsertId();
+            //RegisterCredit
+
+            $Donors_IDs = array();
+            $index1 = 0;
+            if (isset($_POST["Donner_Name"]) && is_array($_POST["Donner_Name"])) {
+                foreach ($_POST["Donner_Name"] as $key => $text_field) {
+                    $stmt = $con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
+                    $stmt->execute();
+                    $rows = $stmt->fetchAll();
+                    $DonorID = $rows[0]["Donner_ID"];
+                    $Donors_IDs[$index1] = $DonorID;
+                    $index1 += 1;
+                }
+            }
+
+            $Credit = array();
+            $index2 = 0;
+            if (isset($_POST["RegisterCredit"]) && is_array($_POST["RegisterCredit"])) {
+                foreach ($_POST["RegisterCredit"] as $key => $text_field) {
+                    $Credit[$index2] = $text_field;
+                    $index2 += 1;
+
+                }
+            }
+            // IN LOOP
+            $length = count($Credit);
+            for ($x = 0; $x < $length; $x++) {
+                $stmt = $con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
+             values ('$Donors_IDs[$x]','$RegisterID','$Credit[$x]')");
+                $stmt->execute();
+            }
+
+            //fbird_wait_event();
+
         }
+
+
+        header('Content-Type: text/html; charset=utf-8');
+
+
+    } else if ($_POST["do"] == "update") {
+        $stmt = $con->prepare("UPDATE  Registers SET 
+RegisterName = '$RegisterName',RegisterOffice = '$RegisterOffice',RegisterGroup = '$RegisterGroup',RegisterNickname = '$RegisterNickname',RegisterGender = '$RegisterGender',Knower_Name = '$Knower_Name',RegisterHomeAddress = '$RegisterHomeAddress',RegisterJobAddress = '$RegisterJobAddress',RegisterPhone1  = '$RegisterPhone1 ',RegisterPhone2 = '$RegisterPhone2',RegisterE_mail = '$RegisterE_mail',RegisterArrivedCatch = '$RegisterArrivedCatch'
+WHERE ID=$currentrecord");
+        $stmt->execute();
 
     }
 
@@ -218,7 +274,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     include 'config.php';
 
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM registers WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        $textInfo = $_GET["searchq"];
+                                        if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM registers WHERE 	RegisterID=$textInfo LIMIT 50");
+                                        } elseif (preg_match('/@/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$textInfo' LIMIT 50");
+                                        } else {
+                                            $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterName  LIKE '" . $_GET["searchq"] . "%' or 
+                                            RegisterOffice LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
+                                        }
 
                                     } else {
 
@@ -260,7 +324,85 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             </div>
 
                                         </div>
+                                        <br>
+                                        <div class="table-responsive data-table">
+                                            <table id="table1" class="table table-bordred table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <td class="text-center"><b>كود المشترك</b></td>
+                                                    <td class="text-center"><b>اسم المشترك</b></td>
+                                                    <td class="text-center"><b>مكتب المؤسسة</b></td>
+                                                    <td class="text-center"><b>اسم المجموعة</b></td>
+                                                    <td class="text-center"><b>الاسم التعريفي</b></td>
+                                                    <td class="text-center"><b>النوع</b></td>
+                                                    <td class="text-center"><b>عنوان السكن</b></td>
+                                                    <td class="text-center"><b>عنوان العمل</b></td>
+                                                    <td class="text-center"><b>رقم الموبيل 1</b></td>
+                                                    <td class="text-center"><b>رقم الموبيل 2</b></td>
+                                                    <td class="text-center"><b>البريد الالكتروني</b></td>
+                                                    <td class="text-center"><b>عنوان الفيس بوك</b></td>
+                                                    <td class="text-center"><b>لا يرغب يوصل شهري</b></td>
+
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                <?php
+
+                                                foreach ($rows as $row) {
+                                                    echo "<tr>";
+
+
+                                                    echo "<td class=\"text-center\">" . $row["RegisterID"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterName"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterOffice"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterGroup"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterNickname"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterGender"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["Knower_Name"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterHomeAddress"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterJobAddress"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterPhone1"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterPhone2"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterE_mail"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterArrivedCatch"] . "</td>";
+                                                    echo "<td>
+                                                            <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
+                                                             </td>";
+
+
+                                                    echo "</tr>";
+                                                }
+
+
+                                                ?>
+
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="row mob-center">
+                                            <div class="col-sm-5">
+                                                <p>Showing 20-30 of 50 items</p>
+                                            </div>
+                                            <!--
+                                                <div class="col-sm-7">
+                                                    <ul class="pagination pull-right">
+                                                        <li><a href="tables.html#"><span class="fa fa-angle-double-left"></span></a></li>
+                                                        <li class="active"><a href="tables.html#">1</a></li>
+                                                        <li><a href="tables.html#">2</a></li>
+                                                        <li><a href="tables.html#">3</a></li>
+                                                        <li><a href="tables.html#">4</a></li>
+                                                        <li><a href="tables.html#">5</a></li>
+                                                        <li><a href="tables.html#"><span class="fa fa-angle-double-right"></span></a></li>
+                                                    </ul>
+                                                </div>
+                                                !-->
+
+                                        </div>
                                     </div>
+                        </div>
                                     <div id="modal-wrapper" class="modal">
 
                                         <form method="post" id="frm-modal" class="modal-content animate"
