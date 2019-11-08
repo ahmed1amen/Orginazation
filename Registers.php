@@ -322,6 +322,8 @@ WHERE ID=$currentrecord");
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="clearfix"></div>
+
 
                                         </div>
                                         <br>
@@ -386,7 +388,7 @@ WHERE ID=$currentrecord");
                                             <div class="col-sm-5">
                                                 <p>Showing 20-30 of 50 items</p>
                                             </div>
-                                            <!--
+
                                                 <div class="col-sm-7">
                                                     <ul class="pagination pull-right">
                                                         <li><a href="tables.html#"><span class="fa fa-angle-double-left"></span></a></li>
@@ -398,7 +400,6 @@ WHERE ID=$currentrecord");
                                                         <li><a href="tables.html#"><span class="fa fa-angle-double-right"></span></a></li>
                                                     </ul>
                                                 </div>
-                                                !-->
 
                                         </div>
                                     </div>

@@ -11,17 +11,17 @@ if($link === false){
 die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 */
-$dsn = 'mysql:host=localhost;dbname=test';
+$dsn = 'mysql:host=localhost;dbname=orgdb';
 $usr = 'root';
-$pass = '';
+$pass = '123456';
 
 $option = array(
-  PDO::MYSQL_ATTR_INIT_COMMAND=> 'SET NAMES utf8',
+    PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
 );
 
 try {
-$con = new PDO($dsn,$usr,$pass,$option);
-$con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    $con = new PDO($dsn, $usr, $pass, $option);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //echo 'YOU Are Connected';
 
 }
