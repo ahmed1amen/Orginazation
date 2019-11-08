@@ -209,8 +209,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
                                     if (isset($_GET["searchq"])) {
-                                        $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
-
+                                        $textInfo = $_GET["searchq"];
+                                        if (preg_match('/[0-9]/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_ID=$textInfo LIMIT 50");
+                                        } else {
+                                            $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
+                                        }
 
                                     } else {
 
