@@ -26,9 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $RegisterPhone2 = $_POST["RegisterPhone2"];
     $RegisterE_mail = $_POST["RegisterE_mail"];
     $RegisterFacebook = $_POST["RegisterFacebook"];
-    $RegisterArrivedCatch = $_POST["RegisterArrivedCatch"];
-
-
+    $RegisterArrivedCatch = isset($_POST["RegisterArrivedCatch"]) ? $_POST["RegisterArrivedCatch"] : '';
+    $RegisterCredit = isset($_POST["RegisterCredit"]) ? $_POST["RegisterCredit"] : '';
 
 
     if ($_POST["do"] == "add") {
@@ -45,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
-            $stmt = $con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterArrivedCatch)
-        VALUES ('$RegisterName', ' $RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail', '$RegisterArrivedCatch')");
+            $stmt = $con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterFacebook, RegisterArrivedCatch)
+        VALUES ('$RegisterName', ' $RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail','$RegisterFacebook', '$RegisterArrivedCatch')");
             $stmt->execute();
 
             //DonorID
@@ -92,10 +91,47 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     } else if ($_POST["do"] == "update") {
+        $currentrecord = $_POST["currentrecord"];
         $stmt = $con->prepare("UPDATE  Registers SET 
-RegisterName = '$RegisterName',RegisterOffice = '$RegisterOffice',RegisterGroup = '$RegisterGroup',RegisterNickname = '$RegisterNickname',RegisterGender = '$RegisterGender',Knower_Name = '$Knower_Name',RegisterHomeAddress = '$RegisterHomeAddress',RegisterJobAddress = '$RegisterJobAddress',RegisterPhone1  = '$RegisterPhone1 ',RegisterPhone2 = '$RegisterPhone2',RegisterE_mail = '$RegisterE_mail',RegisterArrivedCatch = '$RegisterArrivedCatch'
-WHERE ID=$currentrecord");
+RegisterName = '$RegisterName',RegisterOffice = '$RegisterOffice',RegisterGroup = '$RegisterGroup',RegisterNickname = '$RegisterNickname',RegisterGender = '$RegisterGender',Knower_Name = '$Knower_Name',RegisterHomeAddress = '$RegisterHomeAddress',RegisterJobAddress = '$RegisterJobAddress',RegisterPhone1  = '$RegisterPhone1 ',RegisterPhone2 = '$RegisterPhone2',RegisterE_mail = '$RegisterE_mail',RegisterFacebook = '$RegisterFacebook',RegisterArrivedCatch = '$RegisterArrivedCatch'
+WHERE RegisterID=$currentrecord");
         $stmt->execute();
+
+
+        $stmt = $con->prepare("DELETE FROM regiters_donors WHERE RegisterID=$currentrecord");
+        $stmt->execute();
+
+        $Donors_IDs = array();
+        $index1 = 0;
+        if (isset($_POST["Donner_Name"]) && is_array($_POST["Donner_Name"])) {
+            foreach ($_POST["Donner_Name"] as $key => $text_field) {
+                $stmt = $con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
+                $stmt->execute();
+                $DonorID = $stmt->fetch()['Donner_ID'];
+                $Donors_IDs[$index1] = $DonorID;
+                $index1 += 1;
+            }
+        }
+
+
+        $Credit = array();
+        $index2 = 0;
+        if (isset($_POST["RegisterCredit"]) && is_array($_POST["RegisterCredit"])) {
+            foreach ($_POST["RegisterCredit"] as $key => $text_field) {
+                $Credit[$index2] = $text_field;
+                $index2 += 1;
+
+            }
+        }
+
+
+        $N = count($Credit);
+        for ($i = 0; $i < $N; $i++) {
+            $stmt = $con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
+             values ('$Donors_IDs[$i]','$currentrecord','$Credit[$i]')");
+            $stmt->execute();
+        }
+
 
     }
 
@@ -261,7 +297,7 @@ WHERE ID=$currentrecord");
                                         <div class="card-box-content form-compoenent">
                                             <form class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
-                                                  method="post">
+                                                  method="post" onsubmit="return checkdup()">
                                                 <input type="hidden" name="do" value="add"/>
                                                 <?php include("Views/Registers_Component.php"); ?>
 
@@ -336,6 +372,7 @@ WHERE ID=$currentrecord");
                                                     <td class="text-center"><b>مكتب المؤسسة</b></td>
                                                     <td class="text-center"><b>اسم المجموعة</b></td>
                                                     <td class="text-center"><b>الاسم التعريفي</b></td>
+                                                    <td class="text-center"><b>اسم المعرف</b></td>
                                                     <td class="text-center"><b>النوع</b></td>
                                                     <td class="text-center"><b>عنوان السكن</b></td>
                                                     <td class="text-center"><b>عنوان العمل</b></td>
@@ -367,7 +404,10 @@ WHERE ID=$currentrecord");
                                                     echo "<td class=\"text-center\">" . $row["RegisterPhone1"] . "</td>";
                                                     echo "<td class=\"text-center\">" . $row["RegisterPhone2"] . "</td>";
                                                     echo "<td class=\"text-center\">" . $row["RegisterE_mail"] . "</td>";
-                                                    echo "<td class=\"text-center\">" . $row["RegisterArrivedCatch"] . "</td>";
+                                                    echo "<td class=\"text-center\">" . $row["RegisterFacebook"] . "</td>";
+                                                    echo "<td class=\"text-center\"> <input  name='chk' disabled type=\"checkbox\" name=\"country\"   " . ($row["RegisterArrivedCatch"] == 1 ? 'checked' : '') . " value=\"" . $row["RegisterArrivedCatch"] . "\" ></td>";
+
+
                                                     echo "<td>
                                                             <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
@@ -406,7 +446,8 @@ WHERE ID=$currentrecord");
                         </div>
                                     <div id="modal-wrapper" class="modal">
 
-                                        <form method="post" id="frm-modal" class="modal-content animate"
+                                        <form method="post" onsubmit="return checkdup()" id="frm-modal"
+                                              class="modal-content animate"
                                               action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
 
@@ -503,11 +544,17 @@ WHERE ID=$currentrecord");
 <script src="assets/js/cb-chart.js"></script>
 
 
-<script src="Includes/JSHelper/UpdateModel.js"></script>
-
 
 <script>
-    var i = 1;
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+
+    var i = 0;
 
 
     var OptionsData;
@@ -523,8 +570,9 @@ WHERE ID=$currentrecord");
 
 
     $('#add').click(function () {
+        i = document.getElementById("dynamic_field").getElementsByTagName("tbody")[0].getElementsByTagName("tr").length;
         i++;
-        $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + ' class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="text" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
+        $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + ' class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="number" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
     });
 
     function checkdup() {
@@ -544,43 +592,61 @@ WHERE ID=$currentrecord");
 
     }
 
-    $(document).on('click', '.btn_remove', function () {
-        // var button_id = $(this).attr("id");
-        //    $('#row'+button_id+'').remove();
-
-        //alert($( "#Donner_Name" ).each(););
-        checkdup();
-
-
-
-    });
 
 
 
 
     $("#table1").on('click', '#btnedit', function () {
 
+
+        $("#modal-wrapper").fadeIn("fast", function () {
+            (document.getElementById('modal-wrapper').style.display = 'block');
+        });
+        $("#btnsubmit").first().remove();
+        $("#model-component > div > div").attr("class", "col-sm-0");
+        $("#model-component > div > label").attr("class", "col-sm-0");
+        //    $("#model-component > div > div > input").removeAttr("required");
+        $("#model-component :input").removeAttr("required");
+        // get the current row
+        var currentRow = $(this).closest("tr");
+        $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+        $("#model-component :input").eq(0).val(currentRow.find("td:eq(1)").html());
+        $("#model-component :input").eq(1).val(currentRow.find("td:eq(2)").html());
+        $("#model-component :input").eq(2).val(currentRow.find("td:eq(3)").html());
+        $("#model-component :input").eq(3).val(currentRow.find("td:eq(4)").html());
+        $("#model-component :input").eq(4).val(currentRow.find("td:eq(5)").html());
+        $("#model-component :input").eq(5).val(currentRow.find("td:eq(6)").html());
+        $("#model-component :input").eq(6).val(currentRow.find("td:eq(7)").html());
+        $("#model-component :input").eq(7).val(currentRow.find("td:eq(8)").html());
+        $("#model-component :input").eq(8).val(currentRow.find("td:eq(9)").html());
+        $("#model-component :input").eq(9).val(currentRow.find("td:eq(10)").html());
+        $("#model-component :input").eq(10).val(currentRow.find("td:eq(11)").html());
+        $("#model-component :input").eq(11).val(currentRow.find("td:eq(12)").html());
+
+        var $xa = $.parseHTML(currentRow.find("td:eq(13)").html())[1];
+
+        if ($xa.hasAttribute("checked") == true) {
+
+            document.getElementById("RegisterArrivedCatch").checked = true;
+        }
+        else {
+
+        }
+
+        $regid = document.getElementById("currentrecord").value;
+
         $.ajax({
-            url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
+            url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=" + $regid,
             method: "GET",
             success: function (data) {
 
                 $("#dynamic_field").html(data);
 
 
-                $('#btn_donordelte').click(function () {
-
-                    $.ajax({
-                        url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
-                        method: "GET",
-                        success: function (data) {
-
-
-                            checkdup();
-                        }
-                    });
-
-
+                $('#btn_donoradd').click(function () {
+                    i = document.getElementById("dynamic_field").getElementsByTagName("tbody")[0].getElementsByTagName("tr").length;
+                    i++;
+                    $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + '  onclick="$(' + "'" + '#row' + i + "'" + ').remove();" class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="number" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
                 });
 
 

@@ -30,18 +30,29 @@ foreach ($tbl_regiters_donors as $row) {
     $currid = $row['DonorID'];
     $smt = $con->prepare("SELECT Donner_Name From donors where Donner_ID=$currid");
     $smt->execute();
+
     $tbl_donors = $smt->fetch();
 
     $Donners[$tbl_donors['Donner_Name']] = $row['DonorID'];
 //    $Donners[] = ['DonorID' => $row['DonorID'], 'Donner_Name' => $tbl_donors['Donner_Name']];
 }
+?>
 
+    <tbody>
+    <?php
+    $indexer = 0;
 foreach ($tbl_regiters_donors as $row) {
-
+    $indexer++
     ?>
 
-    <tr>
-        <td><input name="selector[]" type="checkbox" value="<?php echo $row['DonorID']; ?>"></td>
+    <tr id="row<?php echo $indexer ?>">
+        <td>
+            <button type="button" name="remove" id="<?php echo $indexer ?>"
+                    onclick="$('#row<?php echo $indexer ?>').remove();" class="btn btn-danger btn_remove">X
+            </button>
+
+
+        </td>
 
 
         <td>
@@ -72,7 +83,7 @@ foreach ($tbl_regiters_donors as $row) {
         </td>
 
 
-        <td><input type="text" name="RegisterCredit[]" placeholder="ادخل القيمه" class="form-control name_list"
+        <td><input type="number" name="RegisterCredit[]" placeholder="ادخل القيمه" class="form-control name_list"
                    value="<?php echo $row['RegisterCredit'] ?>"></td>
 
     </tr>
@@ -83,17 +94,20 @@ foreach ($tbl_regiters_donors as $row) {
 
 }
 
-?>
-    <td>
+    ?>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>
+        </td>
+        <td align="center">
 
-    </td>
-    <td align="center">
-        <button type="button" id="btn_donordelte" class="btn btn-warning btn-lg" value="">حذف المبرات المحددة<i
-                    class="fa fa-edit"></i>
-        </button>
-
-    <td>
-
+            <button type="button" id="btn_donoradd" class="btn btn-warning btn-lg" value="">اضافة مبرة<i
+                        class="fa fa-edit"></i>
+            </button>
+        <td>
+    </tr>
+    </tfoot>
 <?php
 
 

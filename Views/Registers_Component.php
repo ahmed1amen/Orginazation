@@ -105,7 +105,7 @@
             <td><select type="text" name="Donner_Name[]"
                         class="form-control name_list">      <?php include("Includes/PHPHelper/RetrieveDonors.php"); ?>   </select>
             </td>
-            <td><input type="text" name="RegisterCredit[]" placeholder="ادخل القيمه" class="form-control name_list"
+            <td><input type="number" name="RegisterCredit[]" placeholder="ادخل القيمه" class="form-control name_list"
                        value="0"/></td>
 
         </tr>
@@ -117,7 +117,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> لا يرغب يوصل شهري</label>
     <div class="col-sm-10">
-        <input type="checkbox" name="RegisterArrivedCatch" value="1">
+        <input type="checkbox" name="RegisterArrivedCatch" id="RegisterArrivedCatch" value="1">
     </div>
 </div>
 

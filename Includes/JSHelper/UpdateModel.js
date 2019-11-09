@@ -22,10 +22,7 @@ $("#table1").on('click', '#btnedit', function () {
     // get the current row
     var currentRow = $(this).closest("tr");
 
-
     $("#currentrecord").val(currentRow.find("td:eq(0)").html());
-
-
     $("#model-component :input").eq(0).val(currentRow.find("td:eq(1)").html());
     $("#model-component :input").eq(1).val(currentRow.find("td:eq(2)").html());
     $("#model-component :input").eq(2).val(currentRow.find("td:eq(3)").html());
