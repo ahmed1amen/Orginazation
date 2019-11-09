@@ -54,3 +54,17 @@
         <input type="text" class="form-control" placeholder=" ادخل عدد المواد المجهزة" name="iteamCountOfPrepare">
     </div>
 </div>
+
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-7">
+        <button type="submit" id="btnsubmit" class="btn btn-warning btn-md"> اضافه
+
+            <i class="fa fa-plus"></i>
+        </button>
+
+    </div>
+</div>
+</div>
+
+

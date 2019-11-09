@@ -4,13 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/../../aa.html" description="       &lt;/ul&gt;" line="19" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/FamilyMembers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Familyneeds.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/FamilyMembers_Component.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Familyneeds_Component.php" afterDir="false" />
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="Sql File Updated OrgDB.sql&#10;Adding &#10;FamilyMembers.php&#10;Familyneeds.php &#10;FamilyMembers_Component.php&#10;Familyneeds_Component.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyMembers.php" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyMembers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Familyneeds.php" beforeDir="false" afterPath="$PROJECT_DIR$/Familyneeds.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/FamilyMembers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/FamilyMembers_Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Familyneeds_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Familyneeds_Component.php" afterDir="false" />
     </list>
     <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FamilyMembers_Component.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FamilyMembers_Component.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/FamilyMembers_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="74" selection-start-line="74" selection-end-line="74" selection-end-column="27" />
+            <state relative-caret-position="627">
+              <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
               <folding>
                 <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
@@ -63,17 +62,33 @@
       <file leaf-file-name="Familyneeds_Component.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Familyneeds_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="999">
-              <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
+            <state relative-caret-position="-21">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Familyneeds.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Familyneeds.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Familyneeds.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="194" column="22" lean-forward="true" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
+            <state relative-caret-position="246">
+              <caret line="222" column="46" lean-forward="true" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FamilyMembers.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FamilyMembers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-34">
+              <caret line="205" column="32" lean-forward="true" selection-start-line="205" selection-start-column="32" selection-end-line="205" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -88,24 +103,8 @@
       <file leaf-file-name="Families_Component.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="121" column="52" lean-forward="true" selection-start-line="119" selection-start-column="11" selection-end-line="121" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FamilyMembers.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FamilyMembers.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="331">
+              <caret line="503" selection-start-line="503" selection-end-line="514" />
             </state>
           </provider>
         </entry>
@@ -160,7 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;view</find>
       <find>&quot;vi</find>
       <find>&lt;!--</find>
       <find>dynamic_field</find>
@@ -187,12 +185,12 @@
       <find>files</find>
       <find>RegisterArrivedCatch</find>
       <find>نسب</find>
-      <find>date</find>
       <find>FamilyMembers_Component.php</find>
       <find>افراد العائلة</find>
+      <find>family_members</find>
+      <find>date</find>
     </findStrings>
     <replaceStrings>
-      <replace>control-label col-sm-1</replace>
       <replace>col-sm-3</replace>
       <replace>col-sm-3&quot;&gt;</replace>
       <replace>ass=&quot;col-sm-12&quot;&gt;</replace>
@@ -219,9 +217,10 @@
       <replace>registers</replace>
       <replace>المبرات</replace>
       <replace>المبرة</replace>
-      <replace>الفرد</replace>
       <replace>Familyneeds_Component.php</replace>
       <replace>احتياجات العائلة</replace>
+      <replace>family_needs</replace>
+      <replace>الفرد</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -284,9 +283,9 @@
         <option value="$PROJECT_DIR$/Registers.php" />
         <option value="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" />
         <option value="$PROJECT_DIR$/FamilyMembers.php" />
-        <option value="$PROJECT_DIR$/Views/FamilyMembers_Component.php" />
         <option value="$PROJECT_DIR$/Familyneeds.php" />
         <option value="$PROJECT_DIR$/Views/Familyneeds_Component.php" />
+        <option value="$PROJECT_DIR$/Views/FamilyMembers_Component.php" />
       </list>
     </option>
   </component>
@@ -474,7 +473,7 @@
       <workItem from="1572609250743" duration="2497000" />
       <workItem from="1572722925272" duration="4296000" />
       <workItem from="1572739180768" duration="11108000" />
-      <workItem from="1573294975961" duration="25698000" />
+      <workItem from="1573294975961" duration="26163000" />
     </task>
     <task id="LOCAL-00001">
       <created>1568309785788</created>
@@ -798,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573316980970</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Sql File Updated OrgDB.sql&#10;Adding &#10;FamilyMembers.php&#10;Familyneeds.php &#10;FamilyMembers_Component.php&#10;Familyneeds_Component.php">
+      <created>1573324160784</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1573324160784</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259087000" />
+    <option name="totallyTimeSpent" value="259552000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,7 +890,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add New Forms" />
     <MESSAGE value="Include SQL File - Exported DB" />
     <MESSAGE value="Add Index.PHP , Remove Copyright" />
     <MESSAGE value="Add Error Alert" />
@@ -909,7 +914,8 @@
     <MESSAGE value="updating donor option 90%" />
     <MESSAGE value="updating donor option 98%" />
     <MESSAGE value="-Complete Register &#10;-Fixing View&#10;-Implement AJAX" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Complete Register &#10;-Fixing View&#10;-Implement AJAX" />
+    <MESSAGE value="Sql File Updated OrgDB.sql&#10;Adding &#10;FamilyMembers.php&#10;Familyneeds.php &#10;FamilyMembers_Component.php&#10;Familyneeds_Component.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sql File Updated OrgDB.sql&#10;Adding &#10;FamilyMembers.php&#10;Familyneeds.php &#10;FamilyMembers_Component.php&#10;Familyneeds_Component.php" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1220,20 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FamilyMembers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="280" column="79" selection-start-line="280" selection-start-column="79" selection-end-line="280" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Registers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1244,40 +1236,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+    <entry file="file://$PROJECT_DIR$/FamilyMembers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="121" column="52" lean-forward="true" selection-start-line="119" selection-start-column="11" selection-end-line="121" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/FamilyMembers_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="74" selection-start-line="74" selection-end-line="74" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Familyneeds_Component.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="37" column="36" lean-forward="true" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Familyneeds.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="194" column="22" lean-forward="true" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
+        <state relative-caret-position="-34">
+          <caret line="205" column="32" lean-forward="true" selection-start-line="205" selection-start-column="32" selection-end-line="205" selection-end-column="32" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Familyneeds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="222" column="46" lean-forward="true" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#form#0;n#div#2;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="503" selection-start-line="503" selection-end-line="514" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Familyneeds_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/FamilyMembers_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="94" column="5" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

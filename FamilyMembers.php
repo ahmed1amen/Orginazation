@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
+                                            <h4 class="header-title"><b>اضافة فرد جديد</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form id="frm" class="form-horizontal"

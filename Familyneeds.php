@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM family_members");
+                                $stmt = $con->prepare("SELECT * FROM family_needs");
 
                                 $stmt->execute();
 
@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
+                                            <h4 class="header-title"><b>اضافة احتياجات العائله</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <form id="frm" class="form-horizontal"
@@ -223,14 +223,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE Area_ID=$textInfo LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE Area_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
+                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
                                             or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50");
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM family_members LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM family_needs LIMIT 50 ");
                                     }
 
 

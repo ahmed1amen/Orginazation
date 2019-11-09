@@ -89,3 +89,14 @@
         <input class="form-control" id='Files' name="FamilyMemberpic" type="file" accept="image/*"/>
     </div>
 </div>
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-7">
+        <button type="submit" id="btnsubmit" class="btn btn-warning btn-md"> اضافه
+            الفرد
+            <i class="fa fa-plus"></i>
+        </button>
+
+    </div>
+</div>
+</div>
+
