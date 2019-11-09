@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
     </list>
@@ -33,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Registers.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Registers.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Registers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="564" column="17" selection-start-line="564" selection-start-column="17" selection-end-line="564" selection-end-column="28" />
+            <state relative-caret-position="438">
+              <caret line="579" lean-forward="true" selection-start-line="579" selection-end-line="579" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RetrieveRegitserDonors.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RetrieveRegitserDonors.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state relative-caret-position="675">
+              <caret line="91" column="43" lean-forward="true" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -167,8 +166,8 @@
       <find>currentrecord</find>
       <find>dono</find>
       <find>ajax</find>
-      <find>RegisterCredit</find>
       <find>alert</find>
+      <find>RegisterCredit</find>
     </findStrings>
     <replaceStrings>
       <replace>control-label col-sm-0</replace>
@@ -264,8 +263,8 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
         <option value="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" />
-        <option value="$PROJECT_DIR$/Registers.php" />
         <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" />
+        <option value="$PROJECT_DIR$/Registers.php" />
       </list>
     </option>
   </component>
@@ -880,11 +879,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573237494914</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="updating donor option 90%">
+      <created>1573264955632</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1573264955632</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232919000" />
+    <option name="totallyTimeSpent" value="233330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -978,8 +984,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix-Include" />
-    <MESSAGE value="add htaccess and Error404 page , Update UI" />
     <MESSAGE value="Family Modified" />
     <MESSAGE value="Family - File NAME Serial Generator" />
     <MESSAGE value="Add New Forms" />
@@ -1003,7 +1007,9 @@
     <MESSAGE value="Allow Retrieve Offices &amp; Sections from DB&#10;Adding Sections.php" />
     <MESSAGE value="Update OrgDB.sql" />
     <MESSAGE value="fix registers table" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix registers table" />
+    <MESSAGE value="updateing donor option 90%" />
+    <MESSAGE value="updating donor option 90%" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating donor option 90%" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1335,22 +1341,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="91" column="43" lean-forward="true" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Registers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="564" column="17" selection-start-line="564" selection-start-column="17" selection-end-line="564" selection-end-column="28" />
+        <state relative-caret-position="438">
+          <caret line="579" lean-forward="true" selection-start-line="579" selection-end-line="579" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
         </state>
       </provider>
     </entry>

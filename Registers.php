@@ -527,12 +527,7 @@ WHERE ID=$currentrecord");
         $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + ' class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="text" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
     });
 
-
-    $(document).on('click', '.btn_remove', function () {
-        // var button_id = $(this).attr("id");
-        //    $('#row'+button_id+'').remove();
-
-        //alert($( "#Donner_Name" ).each(););
+    function checkdup() {
 
 
         var texts = [];
@@ -547,22 +542,20 @@ WHERE ID=$currentrecord");
             }
         }
 
+    }
+
+    $(document).on('click', '.btn_remove', function () {
+        // var button_id = $(this).attr("id");
+        //    $('#row'+button_id+'').remove();
+
+        //alert($( "#Donner_Name" ).each(););
+        checkdup();
+
+
 
     });
 
 
-    $('#btn_donordelte').click(function () {
-
-        $.ajax({
-            url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
-            method: "GET",
-            success: function (data) {
-                alert(data);
-            }
-        });
-
-
-    });
 
 
     $("#table1").on('click', '#btnedit', function () {
@@ -573,14 +566,29 @@ WHERE ID=$currentrecord");
             success: function (data) {
 
                 $("#dynamic_field").html(data);
+
+
+                $('#btn_donordelte').click(function () {
+
+                    $.ajax({
+                        url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
+                        method: "GET",
+                        success: function (data) {
+
+
+                            checkdup();
+                        }
+                    });
+
+
+                });
+
+
             }
         });
 
 
     });
-
-
-
 
 
 </script>
