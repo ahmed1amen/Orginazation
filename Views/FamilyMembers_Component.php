@@ -72,9 +72,6 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> الحالة الزوجية</label>
     <div class="col-sm-10">
-        <input type="text" class="form-control" placeholder=" ادخل الحالة الزوجية" name="FamilyMemberMarital">
-
-
         <select required name="FamilyMemberStudy" class="form-control">
             <option>متزوج/متزوجه</option>
             <option>متوفي</option>
