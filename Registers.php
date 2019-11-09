@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
             $stmt = $con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterArrivedCatch)
-        VALUES ('$RegisterName', '$RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail', '$RegisterArrivedCatch')");
+        VALUES ('$RegisterName', ' $RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail', '$RegisterArrivedCatch')");
             $stmt->execute();
 
             //DonorID
@@ -429,6 +429,10 @@ WHERE ID=$currentrecord");
 
                                                     <?php include('Views/Registers_Component.php'); ?>
 
+                                                    <script>
+
+                                                        // document.querySelector("#dynamic_field > tbody > tr").remove();
+                                                    </script>
                                                     <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
 
                                                         <button type="submit" class="btn btn-danger btn-lg">تحديث
@@ -545,6 +549,38 @@ WHERE ID=$currentrecord");
 
 
     });
+
+
+    $('#btn_donordelte').click(function () {
+
+        $.ajax({
+            url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
+            method: "GET",
+            success: function (data) {
+                alert(data);
+            }
+        });
+
+
+    });
+
+
+    $("#table1").on('click', '#btnedit', function () {
+
+        $.ajax({
+            url: "Includes/PHPHelper/RetrieveRegitserDonors.php?registerid=1",
+            method: "GET",
+            success: function (data) {
+
+                $("#dynamic_field").html(data);
+            }
+        });
+
+
+    });
+
+
+
 
 
 </script>
