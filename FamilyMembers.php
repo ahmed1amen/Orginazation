@@ -210,7 +210,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
                                                 <input type="hidden" name="do" value="add"/>
-
+                                                <input type="hidden" name="family_ID"
+                                                       value="<?php echo($_GET['family_ID']); ?>"/>
                                                 <?php
                                                 include("Views/FamilyMembers_Component.php"); ?>
                                             </form>

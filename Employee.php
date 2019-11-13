@@ -190,6 +190,7 @@ if (isset($_SESSION['Username'])) {
             </div>
             <div class="cb-page-content">
                 <div class="container">
+
                     <div class="row">
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
@@ -239,9 +240,6 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                         </div>
 
                     </div>
-
-
-                    <!--Emp From tabel -->
                     <div class="row">
 
                         <div class="col-md-12">
@@ -449,9 +447,6 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
 
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
             <!-- container -->

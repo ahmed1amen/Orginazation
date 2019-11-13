@@ -5,6 +5,22 @@ window.onclick = function (event) {
     }
 }
 
+$("#table1").on('click', '#addmember', function () {
+
+
+
+    // get the current row
+    var currentRow = $(this).closest("tr");
+
+    $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+    window.location = './FamilyMembers.php?do=add&family_ID=1123';
+
+    //  $("form#frm-modal :input").each(function(){
+    //      $(this).val("asd");
+    //  });
+});
+
+
 
 $("#table1").on('click', '#btnedit', function () {
 
