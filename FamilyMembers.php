@@ -16,38 +16,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'config.php';
     header('Content-Type: text/html; charset=utf-8');
 
-    $Area_Name = $_POST["Area_Name"];
-    $Area_Office = $_POST["Area_Office"];
-    $Area_Section = $_POST["Area_Section"];
-    $Area_Description = $_POST["Area_Description"];
+    $family_ID = $_POST["family_ID"];
+    $FamilyMemberName = $_POST["FamilyMemberName"];
+    $FamilyMemberBirthday = $_POST["FamilyMemberBirthday"];
+    $FamilyMemberGender = $_POST["FamilyMemberGender"];
+    $FamilyMemberStudy = $_POST["FamilyMemberStudy"];
+    $FamilyMemberSchool = $_POST["FamilyMemberSchool"];
+    $FamilyMemberClassroom = $_POST["FamilyMemberClassroom"];
+    $FamilyMemberHelthy = $_POST["FamilyMemberHelthy"];
+    $FamilyMemberRatios = $_POST["FamilyMemberRatios"];
+    $FamilyMemberStudy = $_POST["FamilyMemberStudy"];
+    $FamilyMemberpic = $_POST["FamilyMemberpic"];
+
 
     if ($_POST["do"] == "add") {
 
-        if (empty($Area_Description)) $Area_Description = "NULL";
-        $stmt = $con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
-
+        $stmt = $con->prepare("INSERT INTO family_members
+(family_ID,FamilyMemberName,FamilyMemberBirthday,FamilyMemberGender,FamilyMemberStudy,FamilyMemberSchool,FamilyMemberClassroom,FamilyMemberHelthy,FamilyMemberRatios,FamilyMemberMarital,image) 
+VALUES ('$family_ID','$FamilyMemberName','$FamilyMemberBirthday','$FamilyMemberGender','$FamilyMemberStudy','$FamilyMemberSchool','$FamilyMemberClassroom','$FamilyMemberHelthy','$FamilyMemberRatios','$FamilyMemberMarital','$FamilyMemberpic')");
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
-        $Changed_ID = $_POST["currentrecord"];
-        if (!empty($Area_Name)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Area_Description)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
+        $currentrecord = $_POST["currentrecord"];
 
-        if (isset($_POST["Area_Office"])) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (isset($_POST["Area_Section"])) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-
-
+        $stmt = $con->prepare("UPDATE  family_members SET 
+family_ID=$family_ID ,FamilyMemberName = '$FamilyMemberName',FamilyMemberBirthday = '$FamilyMemberBirthday',FamilyMemberGender = '$FamilyMemberGender',FamilyMemberStudy = '$FamilyMemberStudy',FamilyMemberSchool = '$FamilyMemberSchool',FamilyMemberClassroom = '$FamilyMemberClassroom',FamilyMemberHelthy = '$FamilyMemberHelthy',FamilyMemberRatios = '$FamilyMemberRatios',FamilyMemberMarital = '$FamilyMemberMarital',  
+image = $FamilyMemberpic 
+WHERE ID=$currentrecord");
     }
 }
 ?>
@@ -224,10 +218,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE Area_ID=$textInfo LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE FamilyMemberID=$textInfo or family_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
-                                            or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE FamilyMemberName  LIKE '" . $_GET["searchq"] . "%' 
+                                            or FamilyMemberSchool='$textInfo' or FamilyMemberMarital='$textInfo' LIMIT 50");
                                         }
                                     } else {
 
@@ -276,10 +270,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     <thead>
                                                     <tr>
                                                         <td class="text-center"><b>كود الفرد</b></td>
+                                                        <td class="text-center"><b>كود العائلة</b></td>
                                                         <td class="text-center"><b>اسم الفرد</b></td>
-                                                        <td class="text-center"><b>وصف الفرد</b></td>
-                                                        <td class="text-center"><b>اسم المكتب</b></td>
-                                                        <td class="text-center"><b>اسم القطاع</b></td>
+                                                        <td class="text-center"><b>تاريخ التولد</b></td>
+                                                        <td class="text-center"><b>الجنس</b></td>
+                                                        <td class="text-center"><b>الحاله الدراسية</b></td>
+                                                        <td class="text-center"><b>اسم المدرسة</b></td>
+                                                        <td class="text-center"><b>الصف</b></td>
+                                                        <td class="text-center"><b>الحالة الصحية</b></td>
+                                                        <td class="text-center"><b>نسب الفرد</b></td>
+                                                        <td class="text-center"><b>الحالة الزوجية</b></td>
+                                                        <td class="text-center"><b>الصورة</b></td>
+
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -289,14 +291,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["Area_ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Name"] . "</td>";
-                                                        if ($row["Area_Description"] == "NULL")
-                                                            echo "<td class=\"text-center\">" . " " . "</td>";
-                                                        else
-                                                            echo "<td class=\"text-center\">" . $row["Area_Description"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Office"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Section"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["family_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberName"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberBirthday"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberGender"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberStudy"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberSchool"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberClassroom"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberHelthy"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberRatios"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["FamilyMemberMarital"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["image"] . "</td>";
+
                                                         echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             

@@ -16,36 +16,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include 'config.php';
     header('Content-Type: text/html; charset=utf-8');
 
-    $Area_Name = $_POST["Area_Name"];
-    $Area_Office = $_POST["Area_Office"];
-    $Area_Section = $_POST["Area_Section"];
-    $Area_Description = $_POST["Area_Description"];
+    $family_ID = $_POST["family_ID"];
+    $itemname = $_POST["itemname"];
+    $itemcount = $_POST["itemcount"];
+    $iteamPrepareYear = $_POST["iteamPrepareYear"];
+    $iteamPrepareMonth = $_POST["iteamPrepareMonth"];
+    $iteamSN = $_POST["iteamSN"];
+    $iteamCountOfPrepare = $_POST["iteamCountOfPrepare"];
+
+
 
     if ($_POST["do"] == "add") {
 
-        if (empty($Area_Description)) $Area_Description = "NULL";
-        $stmt = $con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+        $stmt = $con->prepare("INSERT INTO family_needs
+(family_ID,itemname,itemcount,iteamPrepareYear,iteamPrepareMonth,iteamSN,iteamCountOfPrepare) 
+VALUES ('$family_ID','$itemname','$itemcount','$iteamPrepareYear','$iteamPrepareMonth','$iteamSN','$iteamCountOfPrepare')");
 
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
-        $Changed_ID = $_POST["currentrecord"];
-        if (!empty($Area_Name)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Area_Description)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-
-        if (isset($_POST["Area_Office"])) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (isset($_POST["Area_Section"])) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
-            $stmt->execute();
-        }
+        $currentrecord = $_POST["currentrecord"];
+        $stmt = $con->prepare("UPDATE  family_needs SET 
+family_ID = '$family_ID',itemname = '$itemname',itemcount = '$itemcount',iteamPrepareYear = '$iteamPrepareYear',iteamPrepareMonth = '$iteamPrepareMonth',iteamSN = '$iteamSN',iteamCountOfPrepare = '$iteamCountOfPrepare'
+WHERE ID=$currentrecord");
+        $stmt->execute();
 
 
     }
@@ -224,10 +217,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE Area_ID=$textInfo LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE family_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
-                                            or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50");
+                                            $stmt = $con->prepare("SELECT * FROM family_needs WHERE itemname  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
                                         }
                                     } else {
 
@@ -275,11 +267,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود الفرد</b></td>
-                                                        <td class="text-center"><b>اسم الفرد</b></td>
-                                                        <td class="text-center"><b>وصف الفرد</b></td>
-                                                        <td class="text-center"><b>اسم المكتب</b></td>
-                                                        <td class="text-center"><b>اسم القطاع</b></td>
+                                                        <td class="text-center"><b>كود العائلة</b></td>
+                                                        <td class="text-center"><b>اسم المادة</b></td>
+                                                        <td class="text-center"><b>عدد المطلوب</b></td>
+                                                        <td class="text-center"><b>سنه التجهيز</b></td>
+                                                        <td class="text-center"><b>شهر التجهيز</b></td>
+                                                        <td class="text-center"><b>تسلسل الانفاق</b></td>
+                                                        <td class="text-center"><b>عدد المواد المجهزة</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -289,14 +283,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td class=\"text-center\">" . $row["Area_ID"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Name"] . "</td>";
-                                                        if ($row["Area_Description"] == "NULL")
-                                                            echo "<td class=\"text-center\">" . " " . "</td>";
-                                                        else
-                                                            echo "<td class=\"text-center\">" . $row["Area_Description"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Office"] . "</td>";
-                                                        echo "<td class=\"text-center\">" . $row["Area_Section"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["family_ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["itemname"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["itemcount"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["iteamPrepareYear"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["iteamPrepareMonth"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["iteamSN"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["iteamCountOfPrepare"] . "</td>";
+
                                                         echo "<td>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
