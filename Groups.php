@@ -308,7 +308,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["Group_CurrentSatuation"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Group_FollowEmployee"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Group_DateOfRecMoney"] . "</td>";
-                                                        echo "<td>
+                                                        echo "<td style='display: flex;'>
                                                             <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>

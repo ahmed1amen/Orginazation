@@ -408,7 +408,7 @@ WHERE RegisterID=$currentrecord");
                                                     echo "<td class=\"text-center\"> <input  name='chk' disabled type=\"checkbox\" name=\"country\"   " . ($row["RegisterArrivedCatch"] == 1 ? 'checked' : '') . " value=\"" . $row["RegisterArrivedCatch"] . "\" ></td>";
 
 
-                                                    echo "<td>
+                                                    echo "<td style='display: flex;'>
                                                             <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
