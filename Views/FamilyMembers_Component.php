@@ -1,5 +1,5 @@
 <div class="form-group">
-    <label class="control-label col-sm-1">حدد العائله</label>
+    <label class="control-label col-sm-1">الحاله الزوجيه</label>
     <div class="col-sm-10">
         <select required name="FamilyMemberStudy" class="form-control">
             <option>متزوج/متزوجه</option>

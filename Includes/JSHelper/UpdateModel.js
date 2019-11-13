@@ -13,11 +13,19 @@ $("#table1").on('click', '#addmember', function () {
     var currentRow = $(this).closest("tr");
 
     $("#currentrecord").val(currentRow.find("td:eq(0)").html());
-    window.location = './FamilyMembers.php?do=add&family_ID=1123';
+    window.location = './FamilyMembers.php?do=add&family_ID=' + currentRow.find("td:eq(0)").html();
 
-    //  $("form#frm-modal :input").each(function(){
-    //      $(this).val("asd");
-    //  });
+
+});
+$("#table1").on('click', '#addneeds', function () {
+
+    // get the current row
+    var currentRow = $(this).closest("tr");
+
+    $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+    window.location = './Familyneeds.php?do=add&family_ID=' + currentRow.find("td:eq(0)").html();
+
+
 });
 
 

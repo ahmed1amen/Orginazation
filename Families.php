@@ -518,6 +518,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     <td class="text-center"><b>رقم الجنسية</b></td>
                                     <td class="text-center"><b> تعديل/حذف</b></td>
                                     <td class="text-center"><b>اضافة افراد</b></td>
+                                    <td class="text-center"><b>اضافة احتياجات</b></td>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -567,6 +568,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     echo "<td>
 <button id='addmember' class='btn btn-danger'><span class='fa fa-plus-circle'></span></button>
+    
+ </td>";
+                                    echo "<td>
+<button id='addneeds' class='btn btn-danger'><span class='fa fa-plus-circle'></span></button>
     
  </td>";
 
