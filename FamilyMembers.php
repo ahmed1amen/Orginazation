@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $FamilyMemberClassroom = $_POST["FamilyMemberClassroom"];
     $FamilyMemberHelthy = $_POST["FamilyMemberHelthy"];
     $FamilyMemberRatios = $_POST["FamilyMemberRatios"];
-    $FamilyMemberStudy = $_POST["FamilyMemberStudy"];
+    $FamilyMemberMarital = $_POST["FamilyMemberMarital"];
     $FamilyMemberpic = $_POST["FamilyMemberpic"];
 
 
