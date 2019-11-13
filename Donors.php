@@ -277,7 +277,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["Donner_ID"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Donner_Name"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["Donner_Description"] . "</td>";
-                                                        echo "<td>
+                                                        echo "<td style='display: flex;'>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                             
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>

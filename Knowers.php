@@ -335,7 +335,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td id='Phone_Number1' class=\"text-center\">" . $row["Phone_Number1"] . "</td>";
                                                         echo "<td id='Phone_Number2' class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
                                                         echo "<td id='employee_office' class=\"text-center\">" . $row["employee_office"] . "</td>";
-                                                        echo "<td>
+                                                        echo "<td style='display: flex;'>
                                                           
                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
                                                       <button  class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>      
