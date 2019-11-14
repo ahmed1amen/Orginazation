@@ -45,8 +45,8 @@
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="knows" type="checkbox">
-            <label for="checkbox1"> Option 1</label>
+            <input name="roles[]" id="knowers" type="checkbox">
+            <label for="knowers">المعرفون</label>
         </div>
 
 

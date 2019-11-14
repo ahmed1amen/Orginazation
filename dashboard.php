@@ -44,11 +44,12 @@ else
     <link rel="stylesheet" href="assets/css/all.css" type="text/css"/>
     <link rel="stylesheet" href="assets/css/pages.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" />
-
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css"/>
     <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="assets/js/tileJs.js" type="text/javascript"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 
     <![endif]-->
@@ -102,7 +103,7 @@ else
             <div class="cb-page-content">
                 <div class="container">
 
-                    <div class="row">
+                    <div class="row  animated zoomInLeft">
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
@@ -190,7 +191,7 @@ else
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row animated zoomInRight">
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-danger">
                                 <?php
@@ -282,7 +283,7 @@ else
                         <div class="col-lg-12">
                             <div class="row">
 
-                                <div class="card-box">
+                                <div class="card-box animated bounceInUp">
                                     <div class="card-box-head">
                                         <h4 class="header-title m-t-0 pull-left">ادارة المستتخدمين</h4>
 
@@ -292,7 +293,7 @@ else
                                             <a style="color: #ffffff;" href="users.php?do=view">
                                                 <div class="cb-col-20 col-sm-6">
 
-                                                    <div class="widget-panel widget- bg-custom">
+                                                    <div class="widget-panel widget- bg-custom ">
 
 
                                                         <h2 class='m-0 text-white counter font-40 font-400 text-center '></h2>
