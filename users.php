@@ -4,82 +4,39 @@ if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
 } else {
 // كده مفيش , ف حوله علي اللوجن الخاص ب الموظفين
-    header('Location: EmpLogin.php');
+    header('Location: Login.php');
 
 }
 
 
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
     include 'config.php';
     header('Content-Type: text/html; charset=utf-8');
-// الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-    $Knower_Name = $_POST["Knower_Name"];
-    $Calling_Adj = $_POST["Calling_Adj"];
-    $Knower_Address = $_POST["Knower_Address"];
-    $Adjective = $_POST["Adjective"];
-    $Phone_Number1 = $_POST["Phone_Number1"];
-    $Phone_Number2 = $_POST["Phone_Number2"];
-    $employee_office = $_POST["employee_office"];
 
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $name = $_POST["name"];
+    $date = date('Y-m-d H:i:s');
     if ($_POST["do"] == "add") {
 
-        // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-        if (empty($Phone_Number2)) {
-            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
- VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$employee_office')");
-        } else {
-            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
- VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$Phone_Number2','$employee_office')");
+        if (empty($Area_Description)) $Area_Description = "NULL";
+        $stmt = $con->prepare("INSERT INTO org_users(username, password, name, jouned, roles) VALUES ('$username','$password','$name','$date','ADMIN')");
 
-        }
         $stmt->execute();
-        $stmt->errorCode();
-// بس خلاص الموظف اضاف تمام كده
-
-
     } elseif ($_POST["do"] == "update") {
-        $Changed_ID = $_POST["currentrecord"];
-        if (!empty($Knower_Name)) {
-            $stmt = $con->prepare("UPDATE knower SET Knower_Name='$Knower_Name' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Calling_Adj)) {
-            $stmt = $con->prepare("UPDATE knower SET Calling_Adj='$Calling_Adj' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Knower_Address)) {
-            $stmt = $con->prepare("UPDATE knower SET Knower_Address='$Knower_Address' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (isset($_POST["Adjective"])) {
+        $currentrecord = $_POST["currentrecord"];
+        $stmt = $con->prepare("UPDATE org_users SET
+        username='$username',password='$password',name='$name' WHERE ID=$currentrecord");
+        $stmt->execute();
 
-            $stmt = $con->prepare("UPDATE knower SET Adjective='$Adjective' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Phone_Number1)) {
-            $stmt = $con->prepare("UPDATE knower SET Phone_Number1='$Phone_Number1' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (!empty($Phone_Number2)) {
-            $stmt = $con->prepare("UPDATE knower SET Phone_Number2='$Phone_Number2' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        if (isset($_POST["employee_office"])) {
-            $stmt = $con->prepare("UPDATE knower SET employee_office='$employee_office' WHERE Knower_ID=$Changed_ID");
-            $stmt->execute();
-        }
-        header("Location: Knowers.php?do=view");
 
     }
-
-
 }
-
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -92,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>معرفو المؤسسة</title>
+    <title>المستخدمين</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -112,6 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <![endif]-->
 
     <!-- MODERNIZER -->
@@ -158,24 +116,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">المعرفون</h4>
+                <h4 class="page-title">المستخدمين</h4>
 
             </div>
             <div class="cb-page-content">
                 <div class="container">
                     <div class="row">
                         <div class="cb-col-20 col-sm-6">
-                            <div class="widget-panel widget-style-1 bg-primary">
+                            <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
                                 include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM knower");
+                                $stmt = $con->prepare("SELECT * FROM org_users");
+
                                 $stmt->execute();
 
-                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
                                 ?>
 
-                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المعرفون</div>
+                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المستخدمين</div>
                                 <div class="sparkline1"></div>
                             </div>
                         </div>
@@ -194,8 +153,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
                                     <div class="dropdown pull-left">
-                                        <button class="btn btn-danger btn-md dropdown-toggle" type="button"
-                                                data-toggle="dropdown" aria-expanded="false">المعرفون
+                                        <button class="btn btn-warning btn-md dropdown-toggle" type="button"
+                                                data-toggle="dropdown" aria-expanded="false">المستخدمين
                                             <i class="fa fa-group"></i>
                                             <span class="caret"></span></button>
                                         <ul class="dropdown-menu">
@@ -229,53 +188,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>اضافة معرف جديد</b></h4>
+                                            <h4 class="header-title"><b>اضافة منطقة جديدة</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
-
-
-                                            <form class="form-horizontal"
+                                            <form id="frm" class="form-horizontal"
                                                   action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
                                                   method="post">
                                                 <input type="hidden" name="do" value="add"/>
 
-
-                                                <?php include('Views/Knowers_Component.php'); ?>
-
+                                                <?php
+                                                include("Views/org_users_Component.php"); ?>
                                             </form>
-
-
                                         </div>
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
                                     include 'config.php';
 
-                                   if (isset($_GET["searchq"])) {
-                                        $textInfo=$_GET["searchq"];
-                                        if(preg_match('/[0-9]/', $textInfo))
-                                           {
-                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_ID=$textInfo LIMIT 50");
-                                           }
-                                        else
-                                           {
-                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' or
-                                        Calling_Adj='$textInfo' or Adjective='$textInfo' or employee_office='$textInfo' LIMIT 50");
-                                           }
-
+                                    if (isset($_GET["searchq"])) {
+                                        $textInfo = $_GET["searchq"];
+                                        if (preg_match('/[0-9]/', $textInfo)) {
+                                            $stmt = $con->prepare("SELECT * FROM org_users WHERE ID=$textInfo LIMIT 50");
+                                        } else {
+                                            $stmt = $con->prepare("SELECT * FROM org_users WHERE username  LIKE '" . $_GET["searchq"] . "%' 
+                                            or name='$textInfo'LIMIT 50");
+                                        }
                                     } else {
 
-                                       $stmt = $con->prepare("SELECT * FROM knower LIMIT 50 ");
+                                        $stmt = $con->prepare("SELECT * FROM org_users LIMIT 50 ");
                                     }
 
 
                                     $stmt->execute();
                                     $rows = $stmt->fetchAll();
                                     ?>
-
                                     <div class="card-box">
                                         <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b> بيانات المعرفين</b></h4>
+                                            <h4 class="header-title"><b> بيانات المستخدمين</b></h4>
                                         </div>
                                         <div class="card-box-content form-compoenent">
                                             <div class="cb-res-table">
@@ -310,14 +259,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <table id="table1" class="table table-bordred table-striped">
                                                     <thead>
                                                     <tr>
-                                                        <td class="text-center"><b>كود المعرف</b></td>
-                                                        <td class="text-center"><b>اسم المعرف</b></td>
-                                                        <td class="text-center"><b>صفة المناداة</b></td>
-                                                        <td class="text-center"><b>عنوان المعرف</b></td>
-                                                        <td class="text-center"><b>الصفه</b></td>
-                                                        <td class="text-center"><b>رقم الجوال 1</b></td>
-                                                        <td class="text-center"><b>رقم الجوال 2</b></td>
-                                                        <td class="text-center"><b>مكتب المؤسسة</b></td>
+                                                        <td class="text-center"><b>كود المستخدم</b></td>
+                                                        <td class="text-center"><b>اسم المستخدم</b></td>
+                                                        <td class="text-center"><b>كلمه السر</b></td>
+                                                        <td class="text-center"><b>الاسم المستعار</b></td>
+                                                        <td class="text-center"><b>تاريخ التسجيل</b></td>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
@@ -327,18 +273,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     foreach ($rows as $row) {
                                                         echo "<tr>";
 
-                                                        echo "<td id='Knower_ID' class=\"text-center\">" . $row["Knower_ID"] . "</td>";
-                                                        echo "<td id='Knower_Name' class=\"text-center\">" . $row["Knower_Name"] . "</td>";
-                                                        echo "<td id='Calling_Adj' class=\"text-center\">" . $row["Calling_Adj"] . "</td>";
-                                                        echo "<td id='Knower_Address' class=\"text-center\">" . $row["Knower_Address"] . "</td>";
-                                                        echo "<td id='Adjective' class=\"text-center\">" . $row["Adjective"] . "</td>";
-                                                        echo "<td id='Phone_Number1' class=\"text-center\">" . $row["Phone_Number1"] . "</td>";
-                                                        echo "<td id='Phone_Number2' class=\"text-center\">" . $row["Phone_Number2"] . "</td>";
-                                                        echo "<td id='employee_office' class=\"text-center\">" . $row["employee_office"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["username"] . "</td>";
+                                                        echo "<td type='password' class=\"text-center\">" . " 
+                                                         <input style='text-align: center;' id='password-field' type='password' class='form-control' name='password' value='" . $row["password"] . "'" . ">
+                                                         <span style='padding-right: 10px;' id='togglebtn' toggle=\"#password  -field\" class=\"fa fa-fw fa-eye field-icon toggle-password\"></span> " . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["name"] . "</td>";
+                                                        echo "<td class=\"text-center\">" . $row["jouned"] . "</td>";
                                                         echo "<td style='display: flex;'>
-                                                          
-                                                   <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
-                                                      <button  class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>      
+                                                    <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
+                                                            
+                                                            <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 
 
@@ -352,8 +297,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                     </tbody>
                                                 </table>
                                             </div>
-
-
                                             <div class="row mob-center">
                                                 <div class="col-sm-5">
                                                     <p>Showing 20-30 of 50 items</p>
@@ -375,7 +318,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                             </div>
                                         </div>
                                     </div>
-
                                     <div id="modal-wrapper" class="modal">
 
                                         <form method="post" id="frm-modal" class="modal-content animate"
@@ -399,7 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                 <div id="model-component" style="padding-top: 40px;">
 
 
-                                                    <?php include('Views/Knowers_Component.php'); ?>
+                                                    <?php include('Views/org_users_Component.php'); ?>
 
                                                     <div style='text-align: center;' class="col-sm-offset-2 col-sm-10">
 
@@ -412,7 +354,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                         </form>
                                     </div>
-
 
                                     <?php
 
@@ -450,6 +391,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 
+<!-- SmartBox Js files -->
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/pace.min.js"></script>
@@ -470,10 +413,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <script src="assets/js/jquery.app.js"></script>
 <script src="assets/js/cb-chart.js"></script>
 
-<script src="Includes/JSHelper/UpdateModel.js"></script>
+
+<script>
 
 
+    $("#table1").on('click', '.toggle-password', function () {
 
+        var currentRow = $(this).closest("tr");
+
+        currentRow.find("#togglebtn").toggleClass("fa-eye fa-eye-slash");
+        var input = $(currentRow.find("#password-field"));
+        if (input.attr("type") == "password") {
+            input.attr("type", "text");
+        } else {
+            input.attr("type", "password");
+        }
+
+    });
+
+
+    $("#table1").on('click', '#btnedit', function () {
+
+        $("#modal-wrapper").fadeIn("fast", function () {
+            (document.getElementById('modal-wrapper').style.display = 'block');
+        });
+
+
+        $("#btnsubmit").first().remove();
+        $("#model-component > div > div").attr("class", "col-sm-0");
+        $("#model-component > div > label").attr("class", "col-sm-0");
+        //    $("#model-component > div > div > input").removeAttr("required");
+
+        // get the current row
+        var currentRow = $(this).closest("tr");
+
+        $("#currentrecord").val(currentRow.find("td:eq(0)").html());
+        $("#model-component :input").eq(0).val(currentRow.find("td:eq(1)").html());
+        $("#model-component :input").eq(2).val(currentRow.find("td:eq(3)").html());
+        $("#model-component :input").eq(3).val(currentRow.find("td:eq(4)").html());
+        $("#model-component :input").eq(4).val(currentRow.find("td:eq(5)").html());
+        $("#model-component :input").eq(5).val(currentRow.find("td:eq(6)").html());
+
+
+        //  $("form#frm-modal :input").each(function(){
+        //      $(this).val("asd");
+        //  });
+    });
+
+
+</script>
 </body>
 </html>
-

@@ -10,7 +10,6 @@ if ($_SESSION['UserType'] == 'employee' ){
 
 }
 else
-
 {
 
     session_destroy();

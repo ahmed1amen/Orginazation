@@ -7,6 +7,8 @@
             <span class="clearfix"></span>
         </div>
         <ul class="nav navbar-nav hidden-xs">
+
+
             <li class="dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle waves-effect waves-light"
                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i
@@ -23,6 +25,8 @@
                     </li>
                 </ul>
             </li>
+
+
             <li class="dropdown">
                 <ul class="dropdown-menu">
                     <li><a href="javascript:void(0)">Action</a>
@@ -37,6 +41,13 @@
             </li>
         </ul>
 
+        <ul class="nav navbar-nav hidden-xs">
+            <li class="dropdown top-menu-item-xs"><a href="javascript:void(0)"
+                                                     class="right-bar-toggle profile waves-effect waves-light"><span
+                            class="user-name"> <?php if (isset($_SESSION['Username'])) echo $_SESSION['Username']; ?></span>
+                </a></li>
+
+        </ul>
         <ul class="nav navbar-nav navbar-right pull-right">
 
             <li class="dropdown top-menu-item-xs">

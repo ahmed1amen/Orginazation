@@ -31,7 +31,7 @@ else
     <meta name="author" content="SmartBox">
 
     <!-- TITLE -->
-    <title>SmartBox | Bootstrap3 Admin Dashboard Template</title>
+    <title>لوحة التحكم</title>
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -96,562 +96,250 @@ else
         <div class="content">
             <!-- Page-Title -->
             <div class="page-title-group">
-                <h4 class="page-title">Dashboard</h4>
-                <h5 class="text-muted page-title-alt">Dashboard & statistics!</h5>
+                <h3 class="page-title">لوحة التحكم</h3>
+                <h5 class="text-muted page-title-alt">الأدارة والأحصائيات</h5>
             </div>
             <div class="cb-page-content">
                 <div class="container">
+
                     <div class="row">
                         <div class="cb-col-20 col-sm-6">
+                            <div class="widget-panel widget-style-1 bg-warning">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM areas");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المناطق</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
-                                <h2 class="m-0 text-white counter font-40 font-400 text-center">1349</h2>
-                                <div class="text-white text-opt  m-t-5 text-center font-12">NEW FEEDBACKS</div>
-                                <div class="sparkline1"></div>
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM office_data");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المكاتب الحالية</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
                             </div>
                         </div>
                         <div class="cb-col-20 col-sm-6">
-                            <div class="widget-panel widget-style-1 bg-success">
-                                <h2 class="m-0 text-white counter font-40 font-400 text-center">$12,5 M</h2>
-                                <div class="text-white text-opt m-t-5 text-center font-12">TOTAL PROFIT</div>
-                                <div class="sparkline1"></div>
+                            <div class="widget-panel widget-style-1 bg-primary">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM employee_data");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد الموظفين</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
                             </div>
                         </div>
                         <div class="cb-col-20 col-sm-6">
-                            <div class="widget-panel widget-style-1 bg-info">
-                                <h2 class="m-0 text-white counter font-40 font-400 text-center">325</h2>
-                                <div class="text-white text-opt m-t-5 text-center font-12">NEW ORDERS</div>
-                                <div class="sparkline1"></div>
+                            <div class="widget-panel widget-style-1 bg-primary">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM knower");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المعرفون</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
                             </div>
                         </div>
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-purple">
-                                <h2 class="m-0 text-white counter font-40 font-400 text-center">+56%</h2>
-                                <div class="text-white text-opt m-t-5 text-center font-12">BRAND POPULARITY</div>
-                                <div class="sparkline1"></div>
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM family");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد العائلات</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cb-col-20 col-sm-6">
+                            <div class="widget-panel widget-style-1 bg-danger">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM agent");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد الوكلاء</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
                             </div>
                         </div>
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
-                                <h2 class="m-0 text-white counter font-40 font-400 text-center">$12,500</h2>
-                                <div class="text-white text-opt m-t-5 text-center font-12">REVENUE, 60% OF THE GOAL</div>
-                                <div class="sparkline1"></div>
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM groups");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المجاميع</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-col-20 col-sm-6">
+                            <div class="widget-panel widget-style-1 bg-warning">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM registers");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المشتركين</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-col-20 col-sm-6">
+                            <div class="widget-panel widget-style-1 bg-primary">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM sections");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد القطاعات الحالية</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-col-20 col-sm-6">
+                            <div class="widget-panel widget-style-1 bg-primary">
+                                <?php
+                                include 'config.php';
+
+                                $stmt = $con->prepare("SELECT * FROM donors");
+                                $stmt->execute();
+
+                                echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+                                ?>
+                                <div class="text-white text-opt  m-t-5 text-center font-12">عدد المبرات الحالية</div>
+                                <div class="sparkline1">
+                                    <canvas width="266" height="20"
+                                            style="display: inline-block; width: 266px; height: 20px; vertical-align: top;"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
+
                         <div class="col-lg-12">
                             <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="card-box">
-                                        <div class="card-box-head">
-                                            <h4 class="header-title m-t-0 pull-left">Analysis</h4>
-                                            <div class="dropdown pull-right">
-                                                <a href="javascript:void(0)" class="dropdown-toggle waves-effect waves-light text-dark" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Last 24 Hours<span class="caret"></span></a>
-                                                <ul class="dropdown-menu whitebg">
-                                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+
+                                <div class="card-box">
+                                    <div class="card-box-head">
+                                        <h4 class="header-title m-t-0 pull-left">ادارة المستتخدمين</h4>
+
+                                    </div>
+                                    <div class="card-box-content">
+                                        <div class="row">
+                                            <a style="color: #ffffff;" href="users.php?do=view">
+                                                <div class="cb-col-20 col-sm-6">
+
+                                                    <div class="widget-panel widget- bg-custom">
+
+
+                                                        <h2 class='m-0 text-white counter font-40 font-400 text-center '></h2>
+
+
+                                                        <i style="display: flex ; justify-content: center; position: unset ; padding: unset; background: unset;"
+                                                           class="fas fa-user-cog"></i>
+
+
+                                                        <div class="text-white text-opt  m-t-5 text-center font-12">تعديل المستخدمين</div>
+
+                                                    </div>
+                                                </a>
                                         </div>
-                                        <div class="card-box-content">
-                                            <div class="row">
-                                                <div class="col-md-8 col-sm-7">
-                                                    <div id="morris-donut-example" class="bar-280"></div>
+
+
+                                        <a style="color: #ffffff;" href="Employee.php?do=view">
+                                            <div class="cb-col-20 col-sm-6">
+
+                                                <div class="widget-panel widget- bg-custom">
+
+
+                                                    <h2 class='m-0 text-white counter font-40 font-400 text-center '></h2>
+
+
+                                                    <i style="display: flex ; justify-content: center; position: unset ; padding: unset; background: unset;"
+                                                       class="fas fa-user-tie"></i>
+
+
+                                                    <div class="text-white text-opt  m-t-5 text-center font-12">تعديل الموظفين</div>
+
                                                 </div>
-                                                <div class="col-md-4 col-sm-5">
-                                                    <ul class="list-inline chart-detail-list">
-                                                        <li>
-                                                            <h5><i class="fa fa-circle m-r-5 color-1"></i>United States</h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5><i class="fa fa-circle m-r-5 color-2"></i>Russia</h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5><i class="fa fa-circle m-r-5 color-3"></i>Itly</h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5><i class="fa fa-circle m-r-5 color-4"></i>Germany</h5>
-                                                        </li>
-                                                        <li>
-                                                            <h5><i class="fa fa-circle m-r-5 color-5"></i>Other</h5>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="card-box">
-                                        <div class="card-box-head">
-                                            <h4 class="header-title m-t-0 pull-left">Statistics</h4>
-                                            <div class="pull-right">
-                                                <ul class="nav nav nav-pills cb-rounded-nav">
-                                                    <li class="active"><a href="javascript:void(0)">Week</a></li>
-                                                    <li><a href="javascript:void(0)">Month</a></li>
-                                                    <li><a href="javascript:void(0)">Year</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="card-box-content">
-                                            <div id="morris-area-example" class="bar-215"></div>
-                                            <div class="cb-area-chart-des">
-                                                <div class="row">
-                                                    <div class="col-xs-3">
-                                                        <div class="area-chart-count">3,438</div>
-                                                        <div class="area-chart-text">Orders</div>
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <div class="area-chart-count">10,232</div>
-                                                        <div class="area-chart-text">Sellings</div>
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <div class="area-chart-count">21,550</div>
-                                                        <div class="area-chart-text">Items</div>
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <div class="area-chart-count">5,118</div>
-                                                        <div class="area-chart-text">Customers</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                             </div>
-                            <!-- end row -->
                         </div>
+
+
                     </div>
                     <!-- end row -->
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <div class="row">
-                                <!-- Members -->
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>Members</b> <span class="label label-success pull-right">35</span></h4>
-                                        </div>
-                                        <div class="card-box-content p-l-0 p-r-0">
-                                            <div class="contact-list nicescroll">
-                                                <ul class="list-group contacts-list">
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-box">
-                                                                <i class="fa fa-circle danger"></i>
-                                                                <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-name">Amelia Nelson</span>
-                                                                <span class="info-prof">UI Graphic</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-box">
-                                                                <i class="fa fa-circle online"></i>
-                                                                <img src="assets/images/users/avatar-2.jpg" alt="">
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-name">Alyssa Molligan</span>
-                                                                <span class="info-prof">Art director, Movie Cut</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-box">
-                                                                <i class="fa fa-circle online"></i>
-                                                                <img src="assets/images/users/avatar-3.jpg" alt="">
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-name">Kaitlyn Eddington</span>
-                                                                <span class="info-prof">Writter, Mag Editor</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-box">
-                                                                <i class="fa fa-circle danger"></i>
-                                                                <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-name">Amelia Nelson</span>
-                                                                <span class="info-prof">UI Graphic</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-box">
-                                                                <i class="fa fa-circle danger"></i>
-                                                                <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-name">Amelia Nelson</span>
-                                                                <span class="info-prof">UI Graphic</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end col -->
-                                <!-- CHAT -->
-                                <div class="col-md-6">
-                                    <div class="card-box">
-                                        <div class="card-box-head  border-b m-t-0">
-                                            <h4 class="header-title"><b>Tasks</b></h4>
-                                            <div class="dropdown pull-right card-drop-link">
-                                                <a href="javascript:void(0)" class="dropdown-toggle waves-effect waves-light text-dark " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i><i class="fa fa-circle" aria-hidden="true"></i></a>
-                                                <ul class="dropdown-menu whitebg">
-                                                    <li><a href="javascript:void(0)"><i class="ti-user m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                    <li><a href="javascript:void(0)"><i class="ti-settings m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                    <li><a href="javascript:void(0)"><i class="ti-lock m-r-10 text-custom"></i> Last 24 Hours</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="card-box-content p-l-0 p-r-0">
-                                            <div class="contact-list  nicescroll">
-                                                <ul class="list-group task-list">
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-icon bg-success">
-                                                                <i class="fa fa-plus text-white"></i>
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-des">Alexandra Jones <span class="text-muted">added a new project</span> Flat iOS UI Kit</span>
-                                                                <span class="info-time"><i class="fa fa-life-buoy" aria-hidden="true"></i> Just now</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-icon bg-purple">
-                                                                <i class="fa fa fa-check text-white"></i>
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-des">Alexandra Jones <span class="text-muted">added a new project</span> Flat iOS UI Kit</span>
-                                                                <span class="info-time"><i class="fa fa-life-buoy" aria-hidden="true"></i> Just now</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <a href="javascript:void(0)">
-                                                            <div class="thumb-icon bg-red">
-                                                                <i class="fa fa-close text-white" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="info-box">
-                                                                <span class="info-des">Alexandra Jones <span class="text-muted">added a new project</span> Flat iOS UI Kit</span>
-                                                                <span class="info-time"><i class="fa fa-life-buoy" aria-hidden="true"></i> Just now</span>
-                                                            </div>
-                                                        </a>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                    <li class="list-group-item">
-                                                        <div class="thumb-icon bg-info">
-                                                            <i class="fa fa-commenting-o text-white"></i>
-                                                        </div>
-                                                        <div class="info-box">
-                                                            <span class="info-des">Alexandra Jones <span class="text-muted">added a new project</span> Flat iOS UI Kit</span>
-                                                            <ul class="list-group list-inline avatar-group">
-                                                                <li class="list-group-item">
-                                                                    <div class="avatar">
-                                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                                    </div>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <div class="avatar">
-                                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                                    </div>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <div class="avatar">
-                                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                                    </div>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    <div class="avatar">
-                                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                            <span class="info-time"><i class="fa fa-life-buoy" aria-hidden="true"></i> Just now</span>
-                                                        </div>
-                                                        <span class="clearfix"></span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Activity app -->
-                        <div class="col-lg-4">
-                            <div class="card-box">
-                                <div class="card-box-head  border-b m-t-0 ">
-                                    <h4 class="header-title"><b>Activity</b> <span class="label label-success pull-right">35</span></h4>
-                                </div>
-                                <div class="card-box-content p-l-0 p-r-0">
-                                    <div class="act-alert-info">
-                                        10 members update their activies.
-                                        <a href="javascript:void(0)" data-toggle="remove" class="pull-right"><i class="fa fa-close"></i></a>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="contact-list  nicescroll">
-                                        <ul class="list-group act-list">
-                                            <li class="list-group-item">
-                                                <a href="javascript:void(0)">
-                                                    <div class="act-thumb-box">
-                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="info-box">
-                                                        <span class="info-name">Louis Elliot <span class="text-muted">5 min ago</span></span>
-                                                        <span class="info-des"><span class="text-muted">assign you a task Mockup Design</span> Mockup Design</span>
-                                                    </div>
-                                                </a>
-                                                <span class="clearfix"></span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="javascript:void(0)">
-                                                    <div class="act-thumb-box">
-                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="info-box">
-                                                        <span class="info-name">Louis Elliot <span class="text-muted">5 min ago</span></span>
-                                                        <span class="info-des"><span class="text-muted">assign you a task Mockup Design</span> Mockup Design</span>
-                                                    </div>
-                                                </a>
-                                                <span class="clearfix"></span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="javascript:void(0)">
-                                                    <div class="act-thumb-box">
-                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="info-box">
-                                                        <span class="info-name">Louis Elliot <span class="text-muted">5 min ago</span></span>
-                                                        <span class="info-des"><span class="text-muted">assign you a task Mockup Design</span> Mockup Design</span>
-                                                    </div>
-                                                </a>
-                                                <span class="clearfix"></span>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <a href="javascript:void(0)">
-                                                    <div class="act-thumb-box">
-                                                        <img src="assets/images/users/avatar-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="info-box">
-                                                        <span class="info-name">Louis Elliot <span class="text-muted">5 min ago</span></span>
-                                                        <span class="info-des"><span class="text-muted">assign you a task Mockup Design</span> Mockup Design</span>
-                                                    </div>
-                                                </a>
-                                                <span class="clearfix"></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end row -->
-                    <!--responsive tabel -->
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="card-box">
-                                <div class="card-box-head  border-b m-t-0">
-                                    <h4 class="header-title"><b>Responsive Table</b> <span class="pull-right m-l-5"><i class="fa fa-cog"></i></span></h4>
-                                </div>
-                                <div class="card-box-content form-compoenent">
-                                    <div class="cb-res-table">
-                                        <div class="cb-table-search">
-                                            <div class="dropdown pull-left ">
-                                                <button type="button" class="btn btn-default btn-md dropdown-toggle waves-effect waves-light text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bulk Action <span class="caret"></span>
-                                                </button>
-                                                <ul class="dropdown-menu whitebg drop-menu-checkbox">
-                                                    <li>
-                                                        <div class="checkbox checkbox-primary">
-                                                            <input id="checkbox11" type="checkbox">
-                                                            <label for="checkbox11">Select All</label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="checkbox checkbox-primary">
-                                                            <input id="checkbox12" type="checkbox">
-                                                            <label for="checkbox12">Delete All</label>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                <button type="button" class="btn btn-default waves-effect waves-light text-dark">Apply</button>
-                                            </div>
-                                            <div class="input-group pull-right cb-ta-search">
-                                                <input type="text" class="form-control" placeholder="Search...">
-                                                <span class="input-group-btn">
-												<button class="btn btn-default" type="button">Go!</button>
-												</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <br>
-                                    <div class="table-responsive data-table">
-                                        <table id="table1" class="table table-bordred table-striped">
-                                            <thead>
-                                            <tr>
-                                                <th></th>
-                                                <th><b>Name</b></th>
-                                                <th><b>Task</b></th>
-                                                <th><b>Date</b></th>
-                                                <th class="text-center"><b>Status</b></th>
-                                                <th><b>Action</b></th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox checkbox-primary">
-                                                        <input type="checkbox">
-                                                        <label></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="thumb-box"> <img src="assets/images/users/avatar-2.jpg" alt=""> </div>
-                                                    <b>Shaunta Pollan</b>
-                                                </td>
-                                                <td>Sketch out new idea for promote Great App</td>
-                                                <td>Jul 25, 2015</td>
-                                                <td><span class="badge btn-primary btn-sm">Done</span></td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-edit"></span></button>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox checkbox-primary">
-                                                        <input type="checkbox">
-                                                        <label></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="thumb-box"> <img src="assets/images/users/avatar-2.jpg" alt=""> </div>
-                                                    <b>Shaunta Pollan</b>
-                                                </td>
-                                                <td>Sketch out new idea for promote Great App</td>
-                                                <td>Jul 25, 2015</td>
-                                                <td><span class="badge btn-yellow btn-sm">Ongoing</span></td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-edit"></span></button>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox checkbox-primary">
-                                                        <input type="checkbox">
-                                                        <label></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="thumb-box"> <img src="assets/images/users/avatar-2.jpg" alt=""> </div>
-                                                    <b>Shaunta Pollan</b>
-                                                </td>
-                                                <td>Sketch out new idea for promote Great App</td>
-                                                <td>Jul 25, 2015</td>
-                                                <td><span class="badge btn-success btn-sm">In Review</span></td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-edit"></span></button>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox checkbox-primary">
-                                                        <input type="checkbox">
-                                                        <label></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="thumb-box"> <img src="assets/images/users/avatar-2.jpg" alt=""> </div>
-                                                    <b>Shaunta Pollan</b>
-                                                </td>
-                                                <td>Sketch out new idea for promote Great App</td>
-                                                <td>Jul 25, 2015</td>
-                                                <td><span class="badge btn-pink btn-sm">Pending</span></td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-edit"></span></button>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <div class="checkbox checkbox-primary">
-                                                        <input type="checkbox">
-                                                        <label></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="thumb-box"> <img src="assets/images/users/avatar-2.jpg" alt=""> </div>
-                                                    <b>Shaunta Pollan</b>
-                                                </td>
-                                                <td>Sketch out new idea for promote Great App</td>
-                                                <td>Jul 25, 2015</td>
-                                                <td><span class="badge btn-danger btn-sm">Removed</span></td>
-                                                <td>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-edit"></span></button>
-                                                    <button class="btn btn-default btn-xs"><span class="fa fa-trash"></span></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="row mob-center">
-                                        <div class="col-sm-5">
-                                            <p>Showing 20-30 of 50 items</p>
-                                        </div>
-                                        <div class="col-sm-7">
-                                            <ul class="pagination pull-right">
-                                                <li><a href="dashboard.php#"><span class="fa fa-angle-double-left"></span></a></li>
-                                                <li class="active"><a href="dashboard.php#">1</a></li>
-                                                <li><a href="dashboard.php#">2</a></li>
-                                                <li><a href="dashboard.php#">3</a></li>
-                                                <li><a href="dashboard.php#">4</a></li>
-                                                <li><a href="dashboard.php#">5</a></li>
-                                                <li><a href="dashboard.php#"><span class="fa fa-angle-double-right"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+
+
                 </div>
             </div>
             <!-- container -->

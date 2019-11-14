@@ -1,6 +1,6 @@
 <?php
 
-header("location:EmpLogin.php")
+header("location:login.php")
 
 
 ?>

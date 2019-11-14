@@ -4,7 +4,7 @@ if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
 } else {
 // كده مفيش , ف حوله علي اللوجن الخاص ب المشتركين
-    //    header('Location: EmpLogin.php');
+    header('Location: EmpLogin.php');
 
 }
 

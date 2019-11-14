@@ -68,7 +68,7 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 	<div class="container">
 		<a href="login.php#"><img src="assets/images/logo-2.png" class="img-responsive center-block" alt=""/></a>
         <p class="lead">مؤسسة ابي الزهراء الخيرية</p>
-        <form id="frm" method="post">
+        <form name="frm-login" id="frm-login" method="post">
 			<div class="form-group">
 				<label>اسم المستخدم</label>
 				<input name="Username" type="text" placeholder="ادخل اسم المستخدم" autocomplete="false" class="form-control" >
@@ -76,7 +76,8 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
      
 			<div class="form-group">
 				<label>كلمه المرور</label>
-				<input name="Passowrd" type="password" placeholder="ادخل كلمه المرور" autocomplete="false"  class="form-control" >
+                <input name="Password" type="password" placeholder="ادخل كلمه المرور" autocomplete="false"
+                       class="form-control">
 			</div>
 
             <button id="btn-login" style="margin-right: 0px;" type="submit" class="btn btn-success btn-md">دخول</button>
@@ -102,9 +103,6 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 </div>
 
 <!-- SmartBox Js files --> 
-<script>
-       var resizefunc = [];
-</script> 
 
 <script src="assets/js/jquery.min.js"></script> 
 <script src="assets/js/bootstrap.min.js"></script> 
@@ -129,11 +127,11 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 
 
 <script>
-    $(document).ready(function () {
+
 
         $("#btn-login").click(function () {
 
-            var data = $("frm").serialize();
+            var data = $("#frm-login").serialize();
             $.ajax({
                 type: 'POST',
                 url: 'test.php',
@@ -141,12 +139,15 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
                 beforeSend: function () {
                     $("#error").fadeOut();
                     $("#btn-login").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; جاري تسجيل الدخول ...');
+
                 },
                 success: function (response) {
-                    if ($.trim(response) === "1") {
 
-                        setTimeout(' window.location.href = "dashboard.php"; ', 2000);
+                    if ($.trim(response) === "1") {
+                        setTimeout(' window.location.href = "dashboard.php"; ', 1200);
+                        return true;
                     } else {
+
                         $("#error").fadeIn(1000, function () {
                             $("#error").html(response).show();
                         });
@@ -157,9 +158,9 @@ if   ($_SERVER['REQUEST_METHOD'] == 'POST')
             });
             return false;
 
-        })
+        });
 
-    });
+
 </script>
 
 

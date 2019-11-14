@@ -14,9 +14,8 @@
 /* =============
    Buttons
 ============= */
-@import url(//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-
-
+@import "all.css";
+@import "fontawesome.css";
 
 .btn-compoenent a {
 	margin:0 13px 13px 0;
@@ -540,9 +539,10 @@ label, label:before {
     outline: thin dotted;
 }
 .checkbox input[type="checkbox"]:checked + label::after {
-    font-family: FontAwesome;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     display: inline-block;
-    content: "\f046";
+    content: "\f00c";
 
 }
 .checkbox input[type="checkbox"]:disabled + label::before {
@@ -895,7 +895,7 @@ label, label:before {
     content: '\f0d8';
     display: block;
     float: right;
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     font-size: 14px;
     text-align: right;
     width: 25px;
@@ -1278,7 +1278,7 @@ table.focus-on tbody tr.focused td {
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:checked + label::after {
     content: "\f00c";
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
 }
 .table-rep-plugin .checkbox-row input[type="checkbox"]:disabled + label::before {
     background-color: #e4e4e4;
@@ -1349,7 +1349,7 @@ table.dataTable thead th.sorting_desc:after {
     top: 7px;
     right: 8px;
     display: block;
-    font-family: FontAwesome;
+    font-family: Font Awesome 5 Free;
 }
 table.dataTable thead th.sorting:after {
     content: "\f0dc";
@@ -1442,7 +1442,7 @@ table[data-toggle="table"] {
 }
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after,
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-descending button:after {
-    font-family: FontAwesome;
+    font-family: Font Awesome 5 Free;
     font-size: 10px;
 }
 .tablesaw-sortable .tablesaw-sortable-head.tablesaw-sortable-ascending button:after {
@@ -1915,7 +1915,7 @@ canvas {
 .gmap-info:before {
     color: #333333;
     content: "\f041";
-    font-family: "FontAwesome";
+    font-family: "Font Awesome 5 Free";
     font-size: 35px;
     left: 10px;
     position: absolute;
