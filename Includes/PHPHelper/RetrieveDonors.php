@@ -7,7 +7,7 @@
  */
 
 include dirname(__DIR__) . '../../config.php';
-$smt = $con->prepare("SELECT Donner_Name From donors");
+$smt = DBClass::$con->prepare("SELECT Donner_Name From donors");
 
 $smt->execute();
 

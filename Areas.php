@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -13,7 +15,7 @@ if (isset($_SESSION['Username'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 
     $Area_Name = $_POST["Area_Name"];
@@ -24,26 +26,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST["do"] == "add") {
 
         if(empty($Area_Description)) $Area_Description="NULL";
-        $stmt = $con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+        $stmt = DBClass::$con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
         
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
         $Changed_ID = $_POST["currentrecord"];
         if (!empty($Area_Name)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Area_Description)) {
-            $stmt = $con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
             $stmt->execute();
         }
 
         if (isset($_POST["Area_Office"])) {
-                $stmt = $con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
         }
         if (isset($_POST["Area_Section"])) {
-                $stmt = $con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
         }
 
@@ -140,9 +142,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM areas");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM areas");
 
                                 $stmt->execute();
 
@@ -218,22 +220,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo))
                                         {
-                                            $stmt = $con->prepare("SELECT * FROM areas WHERE Area_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM areas WHERE Area_ID=$textInfo LIMIT 50");
                                         }
                                         else
                                         {
-                                            $stmt = $con->prepare("SELECT * FROM areas WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM areas WHERE Area_Name  LIKE '" . $_GET["searchq"] . "%' 
                                             or Area_Office='$textInfo' or Area_Section='$textInfo' LIMIT 50"); 
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM areas LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM areas LIMIT 50 ");
                                     }
 
 

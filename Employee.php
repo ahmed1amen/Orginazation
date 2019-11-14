@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -14,7 +16,7 @@ if (isset($_SESSION['Username'])) {
     {
 
         // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
+
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
         $employee_name = $_POST["employee_name"];
@@ -29,7 +31,7 @@ if (isset($_SESSION['Username'])) {
         if ($_POST["do"] == "add") {
 
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
+            $stmt = DBClass::$con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
         $stmt->execute();
         $rows= $stmt->fetchAll();
             if ($stmt->rowCount() > 0)
@@ -40,7 +42,7 @@ if (isset($_SESSION['Username'])) {
         else
         {
              // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-        $stmt = $con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+            $stmt = DBClass::$con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
         $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
         }      
@@ -48,33 +50,33 @@ if (isset($_SESSION['Username'])) {
     } elseif ($_POST["do"] == "update") {
             $Changed_ID = $_POST["currentrecord"];
             if (!empty($employee_name)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_name='$employee_name' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_name='$employee_name' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (!empty($employee_number)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_number='$employee_number' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_number='$employee_number' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (!empty($employee_address)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_address='$employee_address' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_address='$employee_address' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (!empty($employee_salary)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_salary='$employee_salary' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_salary='$employee_salary' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (!empty($employee_jobName)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_jobName='$employee_jobName' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_jobName='$employee_jobName' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (!empty($employee_email)) //////////////////// check new mail exist or not
             {
-                $stmt = $con->prepare("SELECT employee_email FROM employee_data WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("SELECT employee_email FROM employee_data WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
                 $rows = $stmt->fetchAll();
                 $temp = $rows[0]["employee_email"];
 
-                $stmt = $con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
+                $stmt = DBClass::$con->prepare("SELECT * FROM employee_data WHERE employee_email='$employee_email'");
                 $stmt->execute();
                 $rows = $stmt->fetchAll();
                 if ($temp != $employee_email) {
@@ -82,17 +84,17 @@ if (isset($_SESSION['Username'])) {
                         $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
                         echo "<script type='text/javascript'>alert('$message');</script>";
                     } else {
-                        $stmt = $con->prepare("UPDATE employee_data SET employee_email='$employee_email' WHERE Employee_ID=$Changed_ID");
+                        $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_email='$employee_email' WHERE Employee_ID=$Changed_ID");
                         $stmt->execute();
                     }
                 }
             }
             if (!empty($employee_password)) {
-                $stmt = $con->prepare("UPDATE employee_data SET employee_password='$employee_password' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_password='$employee_password' WHERE Employee_ID=$Changed_ID");
                 $stmt->execute();
             }
             if (isset($_POST["employee_office"])) {
-                    $stmt = $con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
                     $stmt->execute();
             }
             header("Location: Employee.php?do=view");
@@ -195,9 +197,9 @@ if (isset($_SESSION['Username'])) {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt= $con->prepare("SELECT * FROM employee_data");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM employee_data");
                                 $stmt->execute();
 
 echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->rowCount(). "</h2>";
@@ -273,27 +275,27 @@ echo"<h2 class='m-0 text-white counter font-40 font-400 text-center'>".  $stmt->
                                     <?php
                                 }
                                 elseif($_GET['do']=="view"){
-                                include 'config.php';
+
 
                                     if (isset($_GET["searchq"])){
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
                                         {
-                                         $stmt= $con->prepare("SELECT * FROM employee_data WHERE Employee_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM employee_data WHERE Employee_ID=$textInfo LIMIT 50");
                                         }
                                         elseif(preg_match('/@/', $textInfo))
                                         {
-                                         $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_email='$textInfo' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM employee_data WHERE employee_email='$textInfo' LIMIT 50");
                                         }
                                         else
                                         {
-                                $stmt= $con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '".$_GET["searchq"]."%' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM employee_data WHERE employee_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
 
                                         }
 
                                     }else{
 
-                                        $stmt= $con->prepare("SELECT * FROM employee_data LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM employee_data LIMIT 50 ");
                                     }
 
 

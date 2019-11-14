@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -12,7 +14,7 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-        include 'config.php';
+
         header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
         $Agent_Type = $_POST["Agent_Type"];
@@ -36,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($_POST["do"] == "add") {
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
+        $stmt = DBClass::$con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
         if ($stmt->rowCount() > 0) {
@@ -46,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
             if (empty($Phnoe_Number2)) $Phnoe_Number2 = "NULL";
             if (empty($Note)) $Note = "NULL";
-            $stmt = $con->prepare("INSERT INTO Agent(Agent_Type, Charity_Office, Full_Name,Calling_Adj, Gender,Knower_Name,Phone_Number1,Phone_Number2,Facebook_Address,Email,Home_Address,Work_Address,Note,Form_Number,Form_Date,Wasy_Name,Wasy_Phone_Number) VALUES ('$Agent_Type', '$Charity_Office', '$Full_Name','$Calling_Adj', '$Gender','$Knower_Name','$Phone_Number1','$Phone_Number2','$Facebook_Address','$Email','$Home_Address','$Work_Address','$Note','$Form_Number',
+            $stmt = DBClass::$con->prepare("INSERT INTO Agent(Agent_Type, Charity_Office, Full_Name,Calling_Adj, Gender,Knower_Name,Phone_Number1,Phone_Number2,Facebook_Address,Email,Home_Address,Work_Address,Note,Form_Number,Form_Date,Wasy_Name,Wasy_Phone_Number) VALUES ('$Agent_Type', '$Charity_Office', '$Full_Name','$Calling_Adj', '$Gender','$Knower_Name','$Phone_Number1','$Phone_Number2','$Facebook_Address','$Email','$Home_Address','$Work_Address','$Note','$Form_Number',
             '$Form_Date','$Wasy_Name','$Wasy_Phone_Number')");
             $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
@@ -56,48 +58,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     {
         $Changed_ID = $_POST["currentrecord"];
         if (!empty($Agent_Type)) {
-            $stmt = $con->prepare("UPDATE Agent SET Agent_Type='$Agent_Type' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Agent_Type='$Agent_Type' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Charity_Office)) {
-            $stmt = $con->prepare("UPDATE Agent SET Charity_Office='$Charity_Office' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Charity_Office='$Charity_Office' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Full_Name)) {
-            $stmt = $con->prepare("UPDATE Agent SET Full_Name='$Full_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Full_Name='$Full_Name' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Calling_Adj)) {
-            $stmt = $con->prepare("UPDATE Agent SET Calling_Adj='$Calling_Adj' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Calling_Adj='$Calling_Adj' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Gender)) {
-            $stmt = $con->prepare("UPDATE Agent SET Gender='$Gender' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Gender='$Gender' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Knower_Name)) {
-            $stmt = $con->prepare("UPDATE Agent SET Knower_Name='$Knower_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Knower_Name='$Knower_Name' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Phone_Number1)) {
-            $stmt = $con->prepare("UPDATE Agent SET Phone_Number1='$Phone_Number1' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Phone_Number1='$Phone_Number1' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Phone_Number2)) {
-            $stmt = $con->prepare("UPDATE Agent SET Phone_Number2='$Phone_Number2' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Phone_Number2='$Phone_Number2' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Facebook_Address)) {
-            $stmt = $con->prepare("UPDATE Agent SET Facebook_Address='$Facebook_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Facebook_Address='$Facebook_Address' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Email)) {
-            $stmt = $con->prepare("SELECT Email FROM Agent WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("SELECT Email FROM Agent WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
             $rows = $stmt->fetchAll();
             $temp = $rows[0]["Email"];
 
-            $stmt = $con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
+            $stmt = DBClass::$con->prepare("SELECT * FROM Agent WHERE Email='$Email'");
             $stmt->execute();
             $rows = $stmt->fetchAll();
             if ($temp != $Email) {
@@ -105,38 +107,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                 } else {
-                    $stmt = $con->prepare("UPDATE Agent SET Email='$Email' WHERE Agent_ID=$Changed_ID");
+                    $stmt = DBClass::$con->prepare("UPDATE Agent SET Email='$Email' WHERE Agent_ID=$Changed_ID");
                     $stmt->execute();
 
                 }
             }
         }
         if (!empty($Home_Address)) {
-            $stmt = $con->prepare("UPDATE Agent SET Home_Address='$Home_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Home_Address='$Home_Address' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Work_Address)) {
-            $stmt = $con->prepare("UPDATE Agent SET Work_Address='$Work_Address' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Work_Address='$Work_Address' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Note)) {
-            $stmt = $con->prepare("UPDATE Agent SET Note='$Note' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Note='$Note' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Form_Number)) {
-            $stmt = $con->prepare("UPDATE Agent SET Form_Number='$Form_Number' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Form_Number='$Form_Number' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Form_Date)) {
-            $stmt = $con->prepare("UPDATE Agent SET Form_Date='$Form_Date' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Form_Date='$Form_Date' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Wasy_Name)) {
-            $stmt = $con->prepare("UPDATE Agent SET Wasy_Name='$Wasy_Name' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Wasy_Name='$Wasy_Name' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Wasy_Phone_Number)) {
-            $stmt = $con->prepare("UPDATE Agent SET Wasy_Phone_Number='$Wasy_Phone_Number' WHERE Agent_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE Agent SET Wasy_Phone_Number='$Wasy_Phone_Number' WHERE Agent_ID=$Changed_ID");
             $stmt->execute();
         }
 
@@ -234,9 +236,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-danger">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM agent");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM agent");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -311,22 +313,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
                                         {
                                             //or Agent_ID=$_GET["searchq"]
-                                             $stmt = $con->prepare("SELECT * FROM Agent WHERE Agent_ID=$textInfo or Form_Number=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM Agent WHERE Agent_ID=$textInfo or Form_Number=$textInfo LIMIT 50");
                                         }
                                         elseif(preg_match('/@/', $textInfo))
                                         {
-                                         $stmt= $con->prepare("SELECT * FROM Agent WHERE Email='$textInfo' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM Agent WHERE Email='$textInfo' LIMIT 50");
                                         }
                                         else
                                         {
-                                            $stmt = $con->prepare("SELECT * FROM Agent WHERE Full_Name  LIKE '".$_GET["searchq"]."%' 
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM Agent WHERE Full_Name  LIKE '" . $_GET["searchq"] . "%' 
                                             or Agent_Type='$textInfo' or Charity_Office='$textInfo' or Calling_Adj='$textInfo' or Gender='$textInfo' 
                                             or Knower_Name='$textInfo' or Facebook_Address='$textInfo' or Wasy_Name='$textInfo' LIMIT 50");
    
@@ -334,7 +336,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM Agent LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM Agent LIMIT 50 ");
                                     }
 
 

@@ -9,7 +9,7 @@
 include dirname(__DIR__) . '../../config.php';
 
 
-$smt = $con->prepare("SELECT Group_Name From groups");
+$smt = DBClass::$con->prepare("SELECT Group_Name From groups");
 
 $smt->execute();
 

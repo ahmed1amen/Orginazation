@@ -1,15 +1,17 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'] )){
     header('Location: DashBoard.php');
 }
-include 'config.php';
+
 if   ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     $username = $_POST['Username'];
     $password = $_POST['Passowrd'];
     // Check if user in DB
-    $stmt = $con->prepare("SELECT Username ,Password FROM Org_Users WHERE Username = ? AND Password = ?");
+    $stmt = DBClass::$con->prepare("SELECT Username ,Password FROM Org_Users WHERE Username = ? AND Password = ?");
     $stmt->execute(array($username, $password));
     $count = $stmt->rowCount();
     //Check If User Correct

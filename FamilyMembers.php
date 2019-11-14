@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -13,7 +15,7 @@ if (isset($_SESSION['Username'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 
     $family_ID = $_POST["family_ID"];
@@ -31,14 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($_POST["do"] == "add") {
 
-        $stmt = $con->prepare("INSERT INTO family_members
+        $stmt = DBClass::$con->prepare("INSERT INTO family_members
 (family_ID,FamilyMemberName,FamilyMemberBirthday,FamilyMemberGender,FamilyMemberStudy,FamilyMemberSchool,FamilyMemberClassroom,FamilyMemberHelthy,FamilyMemberRatios,FamilyMemberMarital,image) 
 VALUES ('$family_ID','$FamilyMemberName','$FamilyMemberBirthday','$FamilyMemberGender','$FamilyMemberStudy','$FamilyMemberSchool','$FamilyMemberClassroom','$FamilyMemberHelthy','$FamilyMemberRatios','$FamilyMemberMarital','$FamilyMemberpic')");
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
         $currentrecord = $_POST["currentrecord"];
 
-        $stmt = $con->prepare("UPDATE  family_members SET 
+        $stmt = DBClass::$con->prepare("UPDATE  family_members SET 
 family_ID=$family_ID ,FamilyMemberName = '$FamilyMemberName',FamilyMemberBirthday = '$FamilyMemberBirthday',FamilyMemberGender = '$FamilyMemberGender',FamilyMemberStudy = '$FamilyMemberStudy',FamilyMemberSchool = '$FamilyMemberSchool',FamilyMemberClassroom = '$FamilyMemberClassroom',FamilyMemberHelthy = '$FamilyMemberHelthy',FamilyMemberRatios = '$FamilyMemberRatios',FamilyMemberMarital = '$FamilyMemberMarital',  
 image = $FamilyMemberpic 
 WHERE ID=$currentrecord");
@@ -134,9 +136,9 @@ WHERE ID=$currentrecord");
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM family_members");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM family_members");
 
                                 $stmt->execute();
 
@@ -213,19 +215,19 @@ WHERE ID=$currentrecord");
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE FamilyMemberID=$textInfo or family_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM family_members WHERE FamilyMemberID=$textInfo or family_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM family_members WHERE FamilyMemberName  LIKE '" . $_GET["searchq"] . "%' 
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM family_members WHERE FamilyMemberName  LIKE '" . $_GET["searchq"] . "%' 
                                             or FamilyMemberSchool='$textInfo' or FamilyMemberMarital='$textInfo' LIMIT 50");
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM family_members LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM family_members LIMIT 50 ");
                                     }
 
 

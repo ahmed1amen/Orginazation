@@ -14,12 +14,12 @@ $index1 = 0;
 
 
 $reid = $_GET["registerid"];
-$smt = $con->prepare("SELECT * From regiters_donors where RegisterID=$reid");
+$smt = DBClass::$con->prepare("SELECT * From regiters_donors where RegisterID=$reid");
 $smt->execute();
 $tbl_regiters_donors = $smt->fetchAll();
 
 
-$smt = $con->prepare("SELECT Donner_Name From donors");
+$smt = DBClass::$con->prepare("SELECT Donner_Name From donors");
 
 $smt->execute();
 
@@ -28,7 +28,7 @@ $options = $smt->fetchAll();
 
 foreach ($tbl_regiters_donors as $row) {
     $currid = $row['DonorID'];
-    $smt = $con->prepare("SELECT Donner_Name From donors where Donner_ID=$currid");
+    $smt = DBClass::$con->prepare("SELECT Donner_Name From donors where Donner_ID=$currid");
     $smt->execute();
 
     $tbl_donors = $smt->fetch();

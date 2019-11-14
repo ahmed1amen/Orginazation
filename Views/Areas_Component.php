@@ -22,7 +22,7 @@
 
             <?php
 
-            include 'config.php';
+
             include("Includes/PHPHelper/RetrieveOffices.php"); ?>
         </select>
     </div>

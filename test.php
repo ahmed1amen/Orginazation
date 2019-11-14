@@ -1,5 +1,6 @@
 <?php
-include 'config.php';
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -9,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Username = $_POST["Username"];
         $Password = $_POST["Password"];
         // Check if user in DB
-        $stmt = $con->prepare("SELECT * FROM Org_Users WHERE username = '$Username' AND Password = '$Password'");
+        $stmt = DBClass::$con->prepare("SELECT * FROM Org_Users WHERE username = '$Username' AND Password = '$Password'");
         $stmt->execute();
         $row = $stmt->fetch();
 

@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -12,7 +14,7 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
 
@@ -25,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($_POST["do"] == "add") {
 
-        $stmt = $con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_facebook, Mangement_Nmber, Family_Number, Participants_Number)
+        $stmt = DBClass::$con->prepare("INSERT INTO office_data(Office_name, Office_address, Office_facebook, Mangement_Nmber, Family_Number, Participants_Number)
  VALUES ('$Office_name','$Office_address','$Office_facebook','$Mangement_Nmber', '$Family_Number','$Participants_Number')");
 
         $stmt->execute();
@@ -33,27 +35,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $Changed_ID = $_POST["currentrecord"];
 
         if (!empty($Office_name)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_name='$Office_name' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Office_name='$Office_name' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Office_address)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_address='$Office_address' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Office_address='$Office_address' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Office_facebook)) {
-            $stmt = $con->prepare("UPDATE office_data SET Office_facebook='$Office_facebook' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Office_facebook='$Office_facebook' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Mangement_Nmber)) {
-            $stmt = $con->prepare("UPDATE office_data SET Mangement_Nmber='$Mangement_Nmber' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Mangement_Nmber='$Mangement_Nmber' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Family_Number)) {
-            $stmt = $con->prepare("UPDATE office_data SET Family_Number='$Family_Number' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Family_Number='$Family_Number' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Participants_Number)) {
-            $stmt = $con->prepare("UPDATE office_data SET Participants_Number='$Participants_Number' WHERE Office_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE office_data SET Participants_Number='$Participants_Number' WHERE Office_ID=$Changed_ID");
             $stmt->execute();
         }
         header("Location: Office.php?do=view");
@@ -153,9 +155,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM office_data");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM office_data");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -234,26 +236,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo) && ! preg_match('/@/', $textInfo))
                                         {
-                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM office_data WHERE Office_ID=$textInfo LIMIT 50");
                                         }
                                         elseif(preg_match('/@/', $textInfo))
                                         {
-                                         $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_email='$textInfo' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM office_data WHERE Office_email='$textInfo' LIMIT 50");
                                         }
                                         else
                                         {
-                                       $stmt= $con->prepare("SELECT * FROM office_data WHERE Office_name  LIKE '".$_GET["searchq"]."%' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM office_data WHERE Office_name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
                                         }
 
                                     } else {
 
-                                             $stmt= $con->prepare("SELECT * FROM office_data LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM office_data LIMIT 50 ");
                                     }
 
 

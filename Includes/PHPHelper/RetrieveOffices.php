@@ -7,7 +7,7 @@
  */
 
 include dirname(__DIR__) . '../../config.php';
-$smt = $con->prepare("SELECT Office_Name From office_data");
+$smt = DBClass::$con->prepare("SELECT Office_Name From office_data");
 
 $smt->execute();
 

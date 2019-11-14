@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -14,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
     //الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
 
@@ -32,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST["do"] == "add") {
 
 
-        $stmt = $con->prepare("INSERT INTO
+        $stmt = DBClass::$con->prepare("INSERT INTO
    groups(Group_Office, Group_Name, Group_Agent, Group_Region,
    Group_Note, Group_Class, Group_CurrentSatuation, Group_FollowEmployee, Group_DateOfRecMoney) 
  VALUES ('$Group_Office','$Group_Name','$Group_Agent','$Group_Region',
@@ -42,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } elseif ($_POST["do"] == "update") {
         $currentrecord = $_POST["currentrecord"];
-        $stmt = $con->prepare("UPDATE groups SET
+        $stmt = DBClass::$con->prepare("UPDATE groups SET
         Group_Office='$Group_Office',Group_Name='$Group_Name',Group_Agent='$Group_Agent',Group_Region='$Group_Region',
         Group_Note='$Group_Note',Group_Class='$Group_Class',Group_CurrentSatuation='$Group_CurrentSatuation',
         Group_FollowEmployee='$Group_FollowEmployee',Group_DateOfRecMoney='$Group_DateOfRecMoney' WHERE Group_ID=$currentrecord");
@@ -143,9 +145,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM groups");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM groups");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -221,19 +223,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM groups WHERE Group_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM groups WHERE Group_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM groups WHERE Group_Name  LIKE '" . $_GET["searchq"] . "%'
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM groups WHERE Group_Name  LIKE '" . $_GET["searchq"] . "%'
                                          or Group_Office LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM groups LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM groups LIMIT 50 ");
                                     }
 
 

@@ -1,4 +1,8 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
+
+
 session_start();
 if (isset($_SESSION['Username'] )){
 
@@ -7,6 +11,7 @@ else
 {
  //   header('Location: Login.php');
 }
+
 
 
 
@@ -106,13 +111,15 @@ else
                     <div class="row  animated zoomInLeft">
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
-                                <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM areas");
+                                <?php
+
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM areas");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
+
                                 ?>
                                 <div class="text-dark text-opt  m-t-5 text-center font-12">عدد المناطق</div>
                                 <div class="sparkline1">
@@ -124,9 +131,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM office_data");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM office_data");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -141,9 +148,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM employee_data");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM employee_data");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -158,9 +165,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM knower");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM knower");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -175,9 +182,8 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-purple">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM family");
+                                $stmt = DBClass::$con->prepare("SELECT * FROM family");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -195,9 +201,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-danger">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM agent");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM agent");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -212,9 +218,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM groups");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM groups");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -229,9 +235,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM registers");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM registers");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-dark counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -246,9 +252,9 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM sections");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM sections");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -263,9 +269,8 @@ else
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM donors");
+                                $stmt = DBClass::$con->prepare("SELECT * FROM donors");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";

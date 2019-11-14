@@ -28,43 +28,63 @@
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="areas" type="checkbox">
+            <input name="roles[]" id="areas" type="checkbox" value="areas">
             <label for="areas">المناطق</label>
         </div>
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="offices" type="checkbox">
+            <input name="roles[]" id="offices" type="checkbox" value="offices">
             <label for="offices"> المكاتب</label>
         </div>
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="employees" type="checkbox">
+            <input name="roles[]" id="employees" type="checkbox" value="employees">
             <label for="employees"> الموظفين</label>
         </div>
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="knowers" type="checkbox">
+            <input name="roles[]" id="knowers" type="checkbox" value="knowers">
             <label for="knowers">المعرفون</label>
         </div>
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="checkbox1" type="checkbox">
-            <label for="checkbox1"> Option 1</label>
+            <input name="roles[]" id="families" type="checkbox" value="families">
+            <label for="families">العوائل</label>
         </div>
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="checkbox1" type="checkbox">
-            <label for="checkbox1"> Option 1</label>
+            <input name="roles[]" id="agents" type="checkbox" value="agents">
+            <label for="agents">الوكلاء</label>
         </div>
 
 
         <div class="checkbox checkbox-success col-md-2">
-            <input name="roles[]" id="checkbox1" type="checkbox">
-            <label for="checkbox1"> Option 1</label>
+            <input name="roles[]" id="groups" type="checkbox" value="groups">
+            <label for="groups">المجاميع</label>
+        </div>
+        <div class="checkbox checkbox-success col-md-2">
+            <input name="roles[]" id="registers" type="checkbox" value="registers">
+            <label for="registers">المشتركين</label>
+        </div>
+        <div class="checkbox checkbox-success col-md-2">
+            <input name="roles[]" id="sections" type="checkbox" value="sections">
+            <label for="sections">القطاعات</label>
+        </div>
+        <div class="checkbox checkbox-success col-md-2">
+            <input name="roles[]" id="donors" type="checkbox" value="donors">
+            <label for="donors">المبرات</label>
+        </div>
+        <div class="checkbox checkbox-success col-md-2">
+            <input name="roles[]" id="funds" type="checkbox" value="funds">
+            <label for="funds">الحسابات</label>
+        </div>
+        <div class="checkbox checkbox-success col-md-2">
+            <input name="roles[]" id="records" type="checkbox" value="records">
+            <label for="records">سجل الايراد</label>
         </div>
 
 

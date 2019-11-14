@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -12,7 +14,7 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
 
@@ -22,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($_POST["do"] == "add") {
 
-        $stmt = $con->prepare("INSERT INTO donors(Donner_Name, Donner_Description)
+        $stmt = DBClass::$con->prepare("INSERT INTO donors(Donner_Name, Donner_Description)
  VALUES ('$SectionName','$SectionDiscription')");
 
         $stmt->execute();
@@ -30,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $currentrecord = $_POST["currentrecord"];
 
 
-        $stmt = $con->prepare("UPDATE donors SET
+        $stmt = DBClass::$con->prepare("UPDATE donors SET
         Donner_Name='$SectionName',Donner_Description='$SectionDiscription' WHERE Donner_ID=$currentrecord");
         $stmt->execute();
 
@@ -129,9 +131,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM donors");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM donors");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -207,18 +209,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM donors WHERE Donner_ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM donors WHERE Donner_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM donors WHERE Donner_Name  LIKE '" . $_GET["searchq"] . "%' LIMIT 50");
                                         }
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM donors LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM donors LIMIT 50 ");
                                     }
 
 

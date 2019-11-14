@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -12,7 +14,7 @@ if (isset($_SESSION['Username'])) {
 // دي بتتنفذ فقط اذا تم عمل بوست من الفورم الي في الدااتا , وعلشان ال Validate حطيت attribute اسمه required ف كل input علشان يسهل علينا ال Validate بدل ما نعمله ب IF
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
-    include 'config.php';
+
 
     $RegisterName = $_POST["RegisterName"];
     $RegisterOffice = $_POST["RegisterOffice"];
@@ -37,26 +39,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
         // check duplication of email
-        $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$RegisterE_mail'");
+        $stmt = DBClass::$con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$RegisterE_mail'");
         $stmt->execute();
         $rows = $stmt->fetchAll();
         if ($stmt->rowCount() > 0) {
             $message = "Please enter another email address/  برجاء إدخال عنوان بريد آخر ";
             echo "<script type='text/javascript'>alert('$message');</script>";
         } else {
-            $stmt = $con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterFacebook, RegisterArrivedCatch)
+            $stmt = DBClass::$con->prepare("INSERT INTO registers(RegisterName, RegisterOffice,RegisterGroup, RegisterNickname, RegisterGender, Knower_Name,RegisterHomeAddress, RegisterJobAddress, RegisterPhone1, RegisterPhone2, RegisterE_mail, RegisterFacebook, RegisterArrivedCatch)
         VALUES ('$RegisterName', ' $RegisterOffice','$RegisterGroup', '$RegisterNickname', '$RegisterGender', '$Knower_Name','$RegisterHomeAddress', '$RegisterJobAddress', '$RegisterPhone1', '$RegisterPhone2', '$RegisterE_mail','$RegisterFacebook', '$RegisterArrivedCatch')");
             $stmt->execute();
 
             //DonorID
-            $RegisterID = $con->lastInsertId();
+            $RegisterID = DBClass::$con->lastInsertId();
             //RegisterCredit
 
             $Donors_IDs = array();
             $index1 = 0;
             if (isset($_POST["Donner_Name"]) && is_array($_POST["Donner_Name"])) {
                 foreach ($_POST["Donner_Name"] as $key => $text_field) {
-                    $stmt = $con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
+                    $stmt = DBClass::$con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
                     $stmt->execute();
                     $rows = $stmt->fetchAll();
                     $DonorID = $rows[0]["Donner_ID"];
@@ -77,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // IN LOOP
             $length = count($Credit);
             for ($x = 0; $x < $length; $x++) {
-                $stmt = $con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
+                $stmt = DBClass::$con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
              values ('$Donors_IDs[$x]','$RegisterID','$Credit[$x]')");
                 $stmt->execute();
             }
@@ -92,20 +94,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     } else if ($_POST["do"] == "update") {
         $currentrecord = $_POST["currentrecord"];
-        $stmt = $con->prepare("UPDATE  Registers SET 
+        $stmt = DBClass::$con->prepare("UPDATE  Registers SET 
 RegisterName = '$RegisterName',RegisterOffice = '$RegisterOffice',RegisterGroup = '$RegisterGroup',RegisterNickname = '$RegisterNickname',RegisterGender = '$RegisterGender',Knower_Name = '$Knower_Name',RegisterHomeAddress = '$RegisterHomeAddress',RegisterJobAddress = '$RegisterJobAddress',RegisterPhone1  = '$RegisterPhone1 ',RegisterPhone2 = '$RegisterPhone2',RegisterE_mail = '$RegisterE_mail',RegisterFacebook = '$RegisterFacebook',RegisterArrivedCatch = '$RegisterArrivedCatch'
 WHERE RegisterID=$currentrecord");
         $stmt->execute();
 
 
-        $stmt = $con->prepare("DELETE FROM regiters_donors WHERE RegisterID=$currentrecord");
+        $stmt = DBClass::$con->prepare("DELETE FROM regiters_donors WHERE RegisterID=$currentrecord");
         $stmt->execute();
 
         $Donors_IDs = array();
         $index1 = 0;
         if (isset($_POST["Donner_Name"]) && is_array($_POST["Donner_Name"])) {
             foreach ($_POST["Donner_Name"] as $key => $text_field) {
-                $stmt = $con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
+                $stmt = DBClass::$con->prepare("SELECT Donner_ID FROM donors WHERE Donner_Name='$text_field'");
                 $stmt->execute();
                 $DonorID = $stmt->fetch()['Donner_ID'];
                 $Donors_IDs[$index1] = $DonorID;
@@ -127,7 +129,7 @@ WHERE RegisterID=$currentrecord");
 
         $N = count($Credit);
         for ($i = 0; $i < $N; $i++) {
-            $stmt = $con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
+            $stmt = DBClass::$con->prepare("INSERT INTO regiters_donors(DonorID,RegisterID,RegisterCredit)
              values ('$Donors_IDs[$i]','$currentrecord','$Credit[$i]')");
             $stmt->execute();
         }
@@ -228,9 +230,9 @@ WHERE RegisterID=$currentrecord");
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM registers");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM registers");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -284,7 +286,7 @@ WHERE RegisterID=$currentrecord");
                             if (isset($_GET["do"])) {
 
                                 if ($_GET["do"] == "add") {
-                                    include 'config.php';
+
                                     ?>
 
 
@@ -307,22 +309,22 @@ WHERE RegisterID=$currentrecord");
                                     <?php
 
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo) && !preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM registers WHERE 	RegisterID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM registers WHERE 	RegisterID=$textInfo LIMIT 50");
                                         } elseif (preg_match('/@/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$textInfo' LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM registers WHERE RegisterE_mail='$textInfo' LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM registers WHERE RegisterName  LIKE '" . $_GET["searchq"] . "%' or 
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM registers WHERE RegisterName  LIKE '" . $_GET["searchq"] . "%' or 
                                             RegisterOffice LIKE '" . $_GET["searchq"] . "%' LIMIT 50 ");
                                         }
 
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM registers LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM registers LIMIT 50 ");
                                     }
 
 

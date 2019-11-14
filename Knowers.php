@@ -1,4 +1,6 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -13,7 +15,7 @@ if (isset($_SESSION['Username'])) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // انادي علي الكونفج الي هوا هيمعلي ال Connection مع الداتا بيز
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 // الداتا الي جايه من الفورم عملتلها ريتريف في متغيرات
     $Knower_Name = $_POST["Knower_Name"];
@@ -28,10 +30,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
         if (empty($Phone_Number2)) {
-            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
+            $stmt = DBClass::$con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,employee_office)
  VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$employee_office')");
         } else {
-            $stmt = $con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
+            $stmt = DBClass::$con->prepare("INSERT INTO knower (Knower_Name,Calling_Adj,Knower_Address,Adjective,Phone_Number1,Phone_Number2,employee_office)
  VALUES ('$Knower_Name','$Calling_Adj','$Knower_Address','$Adjective','$Phone_Number1','$Phone_Number2','$employee_office')");
 
         }
@@ -43,32 +45,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } elseif ($_POST["do"] == "update") {
         $Changed_ID = $_POST["currentrecord"];
         if (!empty($Knower_Name)) {
-            $stmt = $con->prepare("UPDATE knower SET Knower_Name='$Knower_Name' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Knower_Name='$Knower_Name' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Calling_Adj)) {
-            $stmt = $con->prepare("UPDATE knower SET Calling_Adj='$Calling_Adj' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Calling_Adj='$Calling_Adj' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Knower_Address)) {
-            $stmt = $con->prepare("UPDATE knower SET Knower_Address='$Knower_Address' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Knower_Address='$Knower_Address' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (isset($_POST["Adjective"])) {
 
-            $stmt = $con->prepare("UPDATE knower SET Adjective='$Adjective' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Adjective='$Adjective' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Phone_Number1)) {
-            $stmt = $con->prepare("UPDATE knower SET Phone_Number1='$Phone_Number1' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Phone_Number1='$Phone_Number1' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Phone_Number2)) {
-            $stmt = $con->prepare("UPDATE knower SET Phone_Number2='$Phone_Number2' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET Phone_Number2='$Phone_Number2' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         if (isset($_POST["employee_office"])) {
-            $stmt = $con->prepare("UPDATE knower SET employee_office='$employee_office' WHERE Knower_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE knower SET employee_office='$employee_office' WHERE Knower_ID=$Changed_ID");
             $stmt->execute();
         }
         header("Location: Knowers.php?do=view");
@@ -167,9 +169,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM knower");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM knower");
                                 $stmt->execute();
 
                                 echo "<h2 class='m-0 text-white counter font-40 font-400 text-center'>" . $stmt->rowCount() . "</h2>";
@@ -249,23 +251,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                    if (isset($_GET["searchq"])) {
                                         $textInfo=$_GET["searchq"];
                                         if(preg_match('/[0-9]/', $textInfo))
                                            {
-                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_ID=$textInfo LIMIT 50");
+                                               $stmt = DBClass::$con->prepare("SELECT * FROM knower WHERE Knower_ID=$textInfo LIMIT 50");
                                            }
                                         else
                                            {
-                                               $stmt = $con->prepare("SELECT * FROM knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' or
+                                               $stmt = DBClass::$con->prepare("SELECT * FROM knower WHERE Knower_Name  LIKE '" . $_GET["searchq"] . "%' or
                                         Calling_Adj='$textInfo' or Adjective='$textInfo' or employee_office='$textInfo' LIMIT 50");
                                            }
 
                                     } else {
 
-                                       $stmt = $con->prepare("SELECT * FROM knower LIMIT 50 ");
+                                       $stmt = DBClass::$con->prepare("SELECT * FROM knower LIMIT 50 ");
                                     }
 
 

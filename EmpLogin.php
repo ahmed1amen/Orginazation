@@ -1,11 +1,13 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
 session_start();
 $Error = false;
 if (isset($_SESSION['Username'])) {
     header('Location: Employee.php');
 
 }
-include 'config.php';
+
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -14,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['Passowrd'];
 
     // Check if user in DB
-    $stmt = $con->prepare("SELECT employee_email ,employee_password FROM employee_data WHERE employee_email = ? AND employee_password = ?");
+    $stmt = DBClass::$con->prepare("SELECT employee_email ,employee_password FROM employee_data WHERE employee_email = ? AND employee_password = ?");
 
     $stmt->execute(array($employee_email, $password));
     $count = $stmt->rowCount();

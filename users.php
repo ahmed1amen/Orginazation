@@ -1,4 +1,8 @@
 <?php
+include 'Includes/config.php';
+DBClass::connect();
+
+
 session_start();
 if (isset($_SESSION['Username'])) {
     // في موظف مسجل الدخول كده .
@@ -13,22 +17,35 @@ if (isset($_SESSION['Username'])) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    include 'config.php';
+
     header('Content-Type: text/html; charset=utf-8');
 
     $username = $_POST["username"];
     $password = $_POST["password"];
     $name = $_POST["name"];
+    $roles = $_POST['roles'];
     $date = date('Y-m-d H:i:s');
     if ($_POST["do"] == "add") {
 
+        print_r($roles);
+
+
+        echo "<br>";
+        if (in_array("agents", $roles))
+            echo "yes";
+        else
+            echo "no";
+        die();
+
+
+
         if (empty($Area_Description)) $Area_Description = "NULL";
-        $stmt = $con->prepare("INSERT INTO org_users(username, password, name, jouned, roles) VALUES ('$username','$password','$name','$date','ADMIN')");
+        $stmt = DBClass::$con->prepare("INSERT INTO org_users(username, password, name, jouned, roles) VALUES ('$username','$password','$name','$date','ADMIN')");
 
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
         $currentrecord = $_POST["currentrecord"];
-        $stmt = $con->prepare("UPDATE org_users SET
+        $stmt = DBClass::$con->prepare("UPDATE org_users SET
         username='$username',password='$password',name='$name' WHERE ID=$currentrecord");
         $stmt->execute();
 
@@ -125,9 +142,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-warning">
                                 <?php
-                                include 'config.php';
 
-                                $stmt = $con->prepare("SELECT * FROM org_users");
+
+                                $stmt = DBClass::$con->prepare("SELECT * FROM org_users");
 
                                 $stmt->execute();
 
@@ -203,19 +220,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <?php
                                 } elseif ($_GET['do'] == "view") {
-                                    include 'config.php';
+
 
                                     if (isset($_GET["searchq"])) {
                                         $textInfo = $_GET["searchq"];
                                         if (preg_match('/[0-9]/', $textInfo)) {
-                                            $stmt = $con->prepare("SELECT * FROM org_users WHERE ID=$textInfo LIMIT 50");
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM org_users WHERE ID=$textInfo LIMIT 50");
                                         } else {
-                                            $stmt = $con->prepare("SELECT * FROM org_users WHERE username  LIKE '" . $_GET["searchq"] . "%' 
+                                            $stmt = DBClass::$con->prepare("SELECT * FROM org_users WHERE username  LIKE '" . $_GET["searchq"] . "%' 
                                             or name='$textInfo'LIMIT 50");
                                         }
                                     } else {
 
-                                        $stmt = $con->prepare("SELECT * FROM org_users LIMIT 50 ");
+                                        $stmt = DBClass::$con->prepare("SELECT * FROM org_users LIMIT 50 ");
                                     }
 
 

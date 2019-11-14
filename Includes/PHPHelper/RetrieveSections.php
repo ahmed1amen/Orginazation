@@ -7,7 +7,7 @@
  */
 
 include dirname(__DIR__) . '../../config.php';
-$smt = $con->prepare("SELECT SectionName From sections");
+$smt = DBClass::$con->prepare("SELECT SectionName From sections");
 
 $smt->execute();
 
