@@ -276,7 +276,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["ID"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["username"] . "</td>";
                                                         echo "<td type='password' class=\"text-center\">" . " 
-                                                         <input style='text-align: center;' id='password-field' type='password' class='form-control' name='password' value='" . $row["password"] . "'" . ">
+                                                         <input style='text-align: center;' readonly id='password-field' type='password' class='form-control' name='password' value='" . $row["password"] . "'" . ">
                                                          <span style='padding-right: 10px;' id='togglebtn' toggle=\"#password  -field\" class=\"fa fa-fw fa-eye field-icon toggle-password\"></span> " . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["name"] . "</td>";
                                                         echo "<td class=\"text-center\">" . $row["jouned"] . "</td>";
