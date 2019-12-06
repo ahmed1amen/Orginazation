@@ -26,26 +26,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($_POST["do"] == "add") {
 
         if(empty($Area_Description)) $Area_Description="NULL";
-        $stmt = DBClass::$con->prepare("INSERT INTO Area(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
-        
+        $stmt = DBClass::$con->prepare("INSERT INTO areas(Area_Name, Area_Office, Area_Section, Area_Description) VALUES ('$Area_Name','$Area_Office','$Area_Section','$Area_Description')");
+
         $stmt->execute();
     } elseif ($_POST["do"] == "update") {
         $Changed_ID = $_POST["currentrecord"];
         if (!empty($Area_Name)) {
-            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE areas SET Area_Name='$Area_Name' WHERE Area_ID=$Changed_ID");
             $stmt->execute();
         }
         if (!empty($Area_Description)) {
-            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE areas SET Area_Description='$Area_Description' WHERE Area_ID=$Changed_ID");
             $stmt->execute();
         }
 
         if (isset($_POST["Area_Office"])) {
-            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE areas SET Area_Office='$Area_Office' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
         }
         if (isset($_POST["Area_Section"])) {
-            $stmt = DBClass::$con->prepare("UPDATE Area SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
+            $stmt = DBClass::$con->prepare("UPDATE areas SET Area_Section='$Area_Section' WHERE Area_ID=$Changed_ID");
                 $stmt->execute();
         }
 
@@ -303,7 +303,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                                         echo "<td class=\"text-center\">" . $row["Area_Section"] . "</td>";
                                                         echo "<td style='display: flex;'>
                                                     <button id='btnedit'  class='btn btn-default btn-xs'><span class='fa fa-edit'></span></button>
-                                                            
+                                                               
                                                             <button class='btn btn-default btn-xs'><span class='fa fa-trash'></span></button>
                                                              </td>";
 

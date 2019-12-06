@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Check if user in DB
         $stmt = DBClass::$con->prepare("SELECT * FROM Org_Users WHERE username = '$Username' AND Password = '$Password'");
         $stmt->execute();
+        $row = array();
         $row = $stmt->fetch();
 
         //Check If User Correct

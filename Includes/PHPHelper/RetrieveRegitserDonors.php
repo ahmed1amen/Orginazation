@@ -6,8 +6,6 @@
  * Time: 10:25 AM
  */
 
-include dirname(__DIR__) . '../../config.php';
-
 
 $Donners = array();
 $index1 = 0;

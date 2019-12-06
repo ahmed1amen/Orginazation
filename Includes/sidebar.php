@@ -1,4 +1,4 @@
-<div class="sidebar-inner slimscrollleft" style="font-size: 18px;">
+<div style="overflow-x: auto" class="sidebar-inner slimscrollleft" style="font-size: 18px;">
     <!--- Divider -->
     <div id="sidebar-menu">
         <ul>

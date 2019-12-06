@@ -20,8 +20,12 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> اسم الوكيل</label>
     <div class="col-sm-10">
-        <input name="Group_Agent" type="text" class="form-control"
-               placeholder=" ادخل اسم الوكيل">
+        <select name="Group_Office" class="form-control">
+            <?php
+
+            include("Includes/PHPHelper/RetrieveAgents.php"); ?>
+        </select>
+        </select>
     </div>
 </div>
 <div class="form-group">
@@ -61,10 +65,12 @@
     </div>
 </div>
 <div class="form-group">
-    <label class="control-label col-sm-1"> موظف المتابعة</label>
+    <label class="control-label col-sm-1">موظف المتابعة</label>
     <div class="col-sm-10">
         <select name="Group_FollowEmployee" class="form-control">
+            <?php
 
+            include("Includes/PHPHelper/RetrieveEmplyees.php"); ?>
         </select>
     </div>
 </div>

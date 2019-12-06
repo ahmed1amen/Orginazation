@@ -6,7 +6,7 @@
  * Time: 10:25 AM
  */
 
-include dirname(__DIR__) . '../../config.php';
+
 $smt = DBClass::$con->prepare("SELECT Office_Name From office_data");
 
 $smt->execute();

@@ -424,8 +424,7 @@
                                        data-parent="#accordion-test-2"
                                        href="tabs-accordions.html#collapseOne-2"
                                        aria-expanded="true">
-                                        <i class="fa fa-tachometer-alt"> مؤسسات
-                                            اخري </i>
+                                        <i class="fa fa-tachometer-alt"> مؤسسات اخري </i>
                                     </a>
 
                                 </h4>
@@ -434,33 +433,75 @@
                                  aria-expanded="true" style="">
                                 <div class="panel-body">
 
-                                    <div class="checkbox checkbox-primary col-sm-4">
+
+                                    <div class="checkbox checkbox-primary col-md-6">
                                         <input name="another_companies[]"
-                                               value="salaries" id="ch1"
+                                               value="salaries" id="ch111"
                                                type="checkbox">
-                                        <label for="ch1"> رواتب شهداء الحشد
-                                            الشعبي</label>
+                                        <label for="ch111">مؤسسة اليتيم الخيرية </label>
                                     </div>
-                                    <div class="checkbox checkbox-primary col-sm-4">
+
+                                    <div class="checkbox checkbox-primary col-md-6">
+                                        <input name="another_companies[]"
+                                               value="charity_company" id="ch16"
+                                               type="checkbox">
+                                        <label for="ch16">دائرة التقاعد</label>
+                                    </div>
+
+
+                                    <div class="checkbox checkbox-primary col-md-6">
                                         <input name="another_companies[]" value="social"
-                                               id="ch2" type="checkbox">
-                                        <label for="ch2"> شبكة الرعاية
-                                            الاجتماعية</label>
+                                               id="ch12" type="checkbox">
+                                        <label for="ch12">مؤسسة العين الخيرية</label>
                                     </div>
 
 
-                                    <div class="checkbox checkbox-primary col-sm-4">
+                                    <div class="checkbox checkbox-primary col-md-6">
                                         <input name="another_companies[]"
-                                               value="company" id="ch3" type="checkbox">
-                                        <label for="ch3"> مؤسسة الباقر ع</label>
+                                               value="company" id="ch13" type="checkbox">
+                                        <label for="ch13">مؤسسة السجاد الخيرية</label>
                                     </div>
-                                    <div class="checkbox checkbox-primary col-sm-4">
+
+
+                                    <div class="checkbox checkbox-primary col-md-6">
                                         <input name="another_companies[]"
-                                               value="charity_company" id="ch4"
+                                               value="charity_company" id="ch14"
                                                type="checkbox">
-                                        <label for="ch4"> مؤسسة السجاد الخيرية</label>
+                                        <label for="ch14">لا توجد مؤسسة</label>
                                     </div>
+                                    <div class="checkbox checkbox-primary col-md-6">
+                                        <input name="another_companies[]"
+                                               value="charity_company" id="ch15"
+                                               type="checkbox">
+                                        <label for="ch15">شبكة الرعاية الاجتماعية</label>
+                                    </div>
+
+
+                                    <div class="checkbox checkbox-primary col-md-6">
+                                        <input name="another_companies[]"
+                                               value="charity_company" id="ch17"
+                                               type="checkbox">
+                                        <label for="ch17">وظيفة خدمة</label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-primary col-md-6">
+                                        <input name="another_companies[]"
+                                               value="charity_company" id="ch18"
+                                               type="checkbox">
+                                        <label for="ch18">رواتب شهداء الحشد الشعبي</label>
+                                    </div>
+
+                                    <div class="checkbox checkbox-primary col-md-6">
+                                        <input name="another_companies[]"
+                                               value="charity_company" id="ch19"
+                                               type="checkbox">
+                                        <label for="ch19">مؤسسة الباقر ع</label>
+                                    </div>
+
+
                                 </div>
+
+                            </div>
 
                             </div>
                         </div>

@@ -11,7 +11,7 @@
  Target Server Version : 100138
  File Encoding         : 65001
 
- Date: 13/11/2019 18:58:03
+ Date: 06/12/2019 14:15:12
 */
 
 SET NAMES utf8mb4;
@@ -81,6 +81,7 @@ CREATE TABLE `employee_data`  (
   `employee_email` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `employee_password` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `employee_office` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `employee_adj` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`Employee_ID`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 

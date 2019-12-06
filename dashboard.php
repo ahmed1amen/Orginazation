@@ -78,7 +78,6 @@ else
             </a>
             <!-- Image Logo here -->
         </div>
-
         <!-- Button mobile view to collapse sidebar menu -->
         <div class="navbar navbar-default" role="navigation">
             <?php include('Includes/navbar.php'); ?>
@@ -268,6 +267,7 @@ else
                         </div>
                         <div class="cb-col-20 col-sm-6">
                             <div class="widget-panel widget-style-1 bg-primary">
+
                                 <?php
 
                                 $stmt = DBClass::$con->prepare("SELECT * FROM donors");

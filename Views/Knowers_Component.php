@@ -9,9 +9,10 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> صفة المناداة</label>
     <div class="col-sm-10">
-        <input required name="Calling_Adj" type="text"
-               class="form-control"
-               placeholder=" ادخل صفة المناداة">
+        <select required class="form-control" name="employee_office"
+                id="sel1">
+
+        </select>
     </div>
 </div>
 <div class="form-group">

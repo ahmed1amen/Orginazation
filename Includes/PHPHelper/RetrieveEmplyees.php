@@ -6,7 +6,8 @@
  * Time: 10:25 AM
  */
 
-$smt = DBClass::$con->prepare("SELECT Donner_Name From donors");
+
+$smt = DBClass::$con->prepare("SELECT employee_name From employee_data");
 
 $smt->execute();
 
@@ -15,7 +16,7 @@ $rows = $smt->fetchAll();
 
 foreach ($rows as $row) {
 
-    echo ' <option>' . $row['Donner_Name'] . '</option>';
+    echo ' <option>' . $row['employee_name'] . '</option>';
 }
 
 

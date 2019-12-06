@@ -50,7 +50,9 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> اسم المعرف</label>
     <div class="col-sm-10">
-        <input required type="text" class="form-control" placeholder=" ادخل اسم المعرف" name="Knower_Name">
+        <select name="Group_Office" class="form-control">
+
+        </select>
     </div>
 </div>
 

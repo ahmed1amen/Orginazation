@@ -6,7 +6,6 @@
  * Time: 10:25 AM
  */
 
-include dirname(__DIR__) . '../../config.php';
 
 
 $smt = DBClass::$con->prepare("SELECT Group_Name From groups");

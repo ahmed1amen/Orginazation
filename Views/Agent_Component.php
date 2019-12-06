@@ -5,9 +5,11 @@
         <div class="form-group">
             <label class="control-label col-sm-3"> صنف الوكيل</label>
             <div class="col-sm-12">
-                <input required name="Agent_Type" type="text"
-                       class="form-control"
-                       placeholder=" ادخل صنف الوكيل">
+                <select required name="Agent_Type" id="Agent_Type" class="form-control">
+                    <option>جابي</option>
+                    <option>معتمد</option>
+                    <option>مندوب</option>
+                </select>
             </div>
         </div>
     </div>
@@ -44,20 +46,34 @@
 
 
                 <div class="form-group">
-                    <label class="control-label col-sm-3"> الصفة
-                        للمناداة</label>
+                    <label class="control-label col-sm-3"> الصفة للمناداة</label>
                     <div class="col-sm-12">
-                        <input required name="Calling_Adj" type="text"
-                               class="form-control"
-                               placeholder=" ادخل الصفة للمناداة">
+                        <select required name="Calling_Adj" id="Calling_Adj" class="form-control">
+                            <option> السيد الفاضل</option>
+                            <option> الأستاذ الفاضل</option>
+                            <option> الأستاذة الفاضلة</option>
+                            <option> الأخ الفاضل</option>
+                            <option> الأخت الفاضلة</option>
+                            <option> الشيخ</option>
+                            <option> الست الفاضلة</option>
+                            <option> العلوية الفاضلة</option>
+                            <option> الدكتور الفاضل</option>
+                            <option> الحاج</option>
+                            <option> المهندس الفاضل</option>
+                            <option> المحامي الفاضل</option>
+                            <option> السادة الأفاضل</option>
+
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-3"> الجنس</label>
                     <div class="col-sm-12">
-                        <input required name="Gender" type="text"
-                               class="form-control"
-                               placeholder=" ادخل الجنس">
+                        <select required name="Gender" id="Gender" class="form-control">
+                            <option>ذكر</option>
+                            <option>انثي</option>
+
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
