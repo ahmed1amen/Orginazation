@@ -50,8 +50,10 @@
 <div class="form-group">
     <label class="control-label col-sm-1"> اسم المعرف</label>
     <div class="col-sm-10">
-        <select name="Group_Office" class="form-control">
+        <select name="Knower_Name" class="form-control">
+            <?php
 
+            include("Includes/PHPHelper/RetrieveKnowers.php"); ?>
         </select>
     </div>
 </div>
@@ -105,7 +107,15 @@
                 <button type="button" name="add" id="add" class="btn btn-success">اضافة مبرة</button>
             </td>
             <td><select type="text" name="Donner_Name[]"
-                        class="form-control name_list">      <?php include("Includes/PHPHelper/RetrieveDonors.php"); ?>   </select>
+                        class="form-control name_list">
+                    <?php
+
+                    require_once("Includes/PHPHelper/RetrieveDonors.php");
+
+
+                    ?>
+
+                </select>
             </td>
             <td><input type="number" name="RegisterCredit[]" placeholder="ادخل القيمه" class="form-control name_list"
                        value="0"/></td>

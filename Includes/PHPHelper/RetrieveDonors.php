@@ -6,6 +6,16 @@
  * Time: 10:25 AM
  */
 
+
+if (isset($_GET["P1"])) {
+
+
+    if (!file_exists("config.php")) {
+        include dirname(__DIR__) . '/config.php';
+        DBClass::connect();
+    }
+
+}
 $smt = DBClass::$con->prepare("SELECT Donner_Name From donors");
 
 $smt->execute();

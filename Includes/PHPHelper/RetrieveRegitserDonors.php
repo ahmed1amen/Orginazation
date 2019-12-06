@@ -5,6 +5,12 @@
  * Date: 11/1/2019
  * Time: 10:25 AM
  */
+//include 'Includes/config.php';
+
+if (!file_exists("config.php")) {
+    include dirname(__DIR__) . '/config.php';
+    DBClass::connect();
+}
 
 
 $Donners = array();

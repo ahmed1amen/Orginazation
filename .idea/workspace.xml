@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveAgents.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php" afterDir="false" />
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="New Modification">
+      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveKnowers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas.php" beforeDir="false" afterPath="$PROJECT_DIR$/Areas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveGroups.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveGroups.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Agent_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Agent_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Families_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Families_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Groups_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Groups_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Knowers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Knowers_Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Registers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Registers_Component.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/components.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/components.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +51,11 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server host="localhost" id="0f1bfbf9-84ca-43ef-824a-6b962f0a7f61" name="localhost" port="8080" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6">
     <include_path>
@@ -109,8 +98,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="PHP Script.Registers.php">
+  <component name="RunManager" selected="JavaScript Debug.RetrieveDonors.php">
     <configuration name="Registers.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:54815/OrginaztionGIT/Registers.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="RetrieveDonors.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OrginaztionGIT/Includes/PHPHelper/RetrieveDonors.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="Registers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Registers.php">
@@ -121,9 +113,11 @@
     <list>
       <item itemvalue="JavaScript Debug.Registers.php" />
       <item itemvalue="PHP Script.Registers.php" />
+      <item itemvalue="JavaScript Debug.RetrieveDonors.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.RetrieveDonors.php" />
         <item itemvalue="PHP Script.Registers.php" />
         <item itemvalue="JavaScript Debug.Registers.php" />
       </list>
@@ -214,14 +208,7 @@
       <workItem from="1575241410248" duration="2929000" />
       <workItem from="1575374604396" duration="2358000" />
       <workItem from="1575565646357" duration="1193000" />
-      <workItem from="1575618591292" duration="10102000" />
-    </task>
-    <task id="LOCAL-00006" summary="Complete-Design">
-      <created>1568314969506</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1568314969506</updated>
+      <workItem from="1575618591292" duration="15725000" />
     </task>
     <task id="LOCAL-00007" summary="Complete-Design">
       <created>1568315064713</created>
@@ -559,17 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1573751358435</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="New Modification">
+      <created>1575634575988</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1575634575990</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -599,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Script - Split Component - Add Update Feature" />
     <MESSAGE value="Remove attribute Required &amp; Move View Handel Script to JSHELPER - Fixing CurrentRecord Issue" />
     <MESSAGE value="Fixing Form Method" />
     <MESSAGE value="Change Method &quot;Remove Require Attribute&quot; + Add DataRow To Update Model" />
@@ -624,8 +608,16 @@
     <MESSAGE value="adding animation" />
     <MESSAGE value="deleting" />
     <MESSAGE value="Restructure TO OOP Paradigm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructure TO OOP Paradigm" />
+    <MESSAGE value="New Modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Modification" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="RetrieveRegitserDonors.php">
+        <watch expression="$_REQUEST" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="masterDetails">
     <states>

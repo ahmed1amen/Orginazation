@@ -563,7 +563,7 @@ WHERE RegisterID=$currentrecord");
 
 
     $.ajax({
-        url: "Includes/PHPHelper/RetrieveDonors.php",
+        url: "Includes/PHPHelper/RetrieveDonors.php?P1=1",
         method: "GET",
         success: function (data) {
             OptionsData = data;
@@ -574,7 +574,7 @@ WHERE RegisterID=$currentrecord");
     $('#add').click(function () {
         i = document.getElementById("dynamic_field").getElementsByTagName("tbody")[0].getElementsByTagName("tr").length;
         i++;
-        $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + ' class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="number" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
+        $('#dynamic_field').append('<tr id="row' + i + '"> <td><button type="button" name="remove" id=' + i + '  onclick="$(' + "'" + '#row' + i + "'" + ').remove();" class="btn btn-danger btn_remove">X</button></td> <td><select  name="Donner_Name[]" class="form-control name_list" >' + OptionsData + '</select> </td><td><input type="number" name="RegisterCredit[]"  value="0" placeholder="ادخل القيمة" class="form-control name_list" /></td></tr>');
     });
 
     function checkdup() {
