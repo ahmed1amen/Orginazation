@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="New Modification">
-      <change afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveKnowers.php" afterDir="false" />
+    <list default="true" id="4e5f2c68-3ba6-45bf-be69-cb5af88f3238" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registers.php" beforeDir="false" afterPath="$PROJECT_DIR$/Registers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Registers_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Registers_Component.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Includes/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Includes/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee_Component.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee_Component.php" afterDir="false" />
     </list>
+    <ignored path="C:\xampp\htdocs\octopus-master\OrginaztionGIT\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -34,6 +28,31 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Employee.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Employee.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="106" column="36" lean-forward="true" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
+              <folding>
+                <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee_Component.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Views/Employee_Component.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,7 +70,72 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Includes/alerterror.php" />
+        <option value="$USER_HOME$/Downloads/calendar.xml" />
+        <option value="$PROJECT_DIR$/Test.xml" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$USER_HOME$/Downloads/Knowers.php" />
+        <option value="$USER_HOME$/Downloads/Agents.php" />
+        <option value="$PROJECT_DIR$/../popup-box/popup-box/index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/assets/css/components.css" />
+        <option value="$PROJECT_DIR$/Views/Knowers_Component.php" />
+        <option value="$PROJECT_DIR$/Views/Office_Component.php" />
+        <option value="$PROJECT_DIR$/Views/Agent_Component.php" />
+        <option value="$PROJECT_DIR$/Includes/UpdateModel.php" />
+        <option value="$PROJECT_DIR$/EmpLogin.php" />
+        <option value="$PROJECT_DIR$/areas.php" />
+        <option value="$PROJECT_DIR$/Agents.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/assets/css/core.css" />
+        <option value="$PROJECT_DIR$/Views/Sections_Component.php" />
+        <option value="$PROJECT_DIR$/Office.php" />
+        <option value="$PROJECT_DIR$/Sections.php" />
+        <option value="$PROJECT_DIR$/Knowers.php" />
+        <option value="$PROJECT_DIR$/Areas.php" />
+        <option value="$PROJECT_DIR$/Groups.php" />
+        <option value="$PROJECT_DIR$/Views/Donors_Component.php" />
+        <option value="$PROJECT_DIR$/Includes/sidebar.php" />
+        <option value="$PROJECT_DIR$/Donors.php" />
+        <option value="$PROJECT_DIR$/../../dynamically-add-remove-field/dynamically-add-remove-field/name.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveGroups.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php" />
+        <option value="$PROJECT_DIR$/Views/Areas_Component.php" />
+        <option value="$PROJECT_DIR$/Views/Families_Component.php" />
+        <option value="$PROJECT_DIR$/Views/Groups_Component.php" />
+        <option value="$PROJECT_DIR$/../../dynamically-add-remove-field/dynamically-add-remove-field/index.php" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php" />
+        <option value="$PROJECT_DIR$/Views/Registers_Component.php" />
+        <option value="$PROJECT_DIR$/Registers.php" />
+        <option value="$PROJECT_DIR$/SQL File - Updated/OrgDB.sql" />
+        <option value="$PROJECT_DIR$/Views/Familyneeds_Component.php" />
+        <option value="$PROJECT_DIR$/Includes/PHPHelper/RetrieveFamilies.php" />
+        <option value="$PROJECT_DIR$/Families.php" />
+        <option value="$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js" />
+        <option value="$PROJECT_DIR$/Familyneeds.php" />
+        <option value="$PROJECT_DIR$/Views/FamilyMembers_Component.php" />
+        <option value="$PROJECT_DIR$/FamilyMembers.php" />
+        <option value="$PROJECT_DIR$/Includes/config.php" />
+        <option value="$PROJECT_DIR$/Views/Employee_Component.php" />
+        <option value="$PROJECT_DIR$/Employee.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="0f1bfbf9-84ca-43ef-824a-6b962f0a7f61" name="localhost" port="8080" />
@@ -59,11 +143,45 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 5.6">
     <include_path>
-      <path value="$PROJECT_DIR$/../../../php/PEAR" />
+      <path value="C:/php/PEAR" />
     </include_path>
   </component>
   <component name="ProjectId" id="1U9TgktuPw4w05GwRZd84051WqV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Organization_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Organization_" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Organization_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Organization_" type="462c0819:PsiDirectoryNode" />
+              <item name="Includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Organization_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Organization_" type="462c0819:PsiDirectoryNode" />
+              <item name="SQL File - Updated" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Organization_" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Organization_" type="462c0819:PsiDirectoryNode" />
+              <item name="Views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -86,6 +204,213 @@
       <recent name="C:\xampp\htdocs\octopus-master\OrginaztionGIT\Includes" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Agents.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Areas.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Donors.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/EmpLogin.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Employee.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Families.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/FamilyMembers.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Familyneeds.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Groups.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveGroups.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/navbar.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/sidebar.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Knowers.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Office.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Registers.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/SQL File - Updated/OrgDB.sql</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sections.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Agent_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Areas_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Employee_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Families_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Groups_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Knowers_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/Registers_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/components.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/dashboard.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/index.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/login.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/logout.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/sqldialects.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveAgents.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveEmplyees.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/RetrieveKnowers.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/PHPHelper/permissions.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Includes/config.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Views/org_users_Component.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/all.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/all.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/animate.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/animate.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-grid.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-grid.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-grid.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-grid.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-reboot.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-reboot.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap-reboot.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/bootstrap.min.css.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/brands.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/brands.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/fontawesome.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/fontawesome.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/icons.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/regular.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/regular.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/solid.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/solid.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/svg-with-js.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/svg-with-js.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/v4-shims.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/css/v4-shims.min.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/_notes/dwsync.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.bundle.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.bundle.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.bundle.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/bootstrap.min.js.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/jquery-3.4.1.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/js/jquery-3.4.1.min.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-brands-400.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-brands-400.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-brands-400.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-brands-400.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-brands-400.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-regular-400.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-regular-400.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-regular-400.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-regular-400.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-regular-400.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-solid-900.eot</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-solid-900.svg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-solid-900.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-solid-900.woff</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/webfonts/fa-solid-900.woff2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/error_log</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/test.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/users.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/config.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -98,26 +423,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.RetrieveDonors.php">
-    <configuration name="Registers.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:54815/OrginaztionGIT/Registers.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="RetrieveDonors.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OrginaztionGIT/Includes/PHPHelper/RetrieveDonors.php" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="PHP Script.Registers.php">
+    <configuration name="Registers.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:54815/OrginaztionGIT/Registers.php" />
     <configuration name="Registers.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Registers.php">
-      <method v="2">
+      <method>
         <option name="LaunchBrowser.Before.Run" url="http://localhost:54815/OrginaztionGIT/Registers.php" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.Registers.php" />
       <item itemvalue="PHP Script.Registers.php" />
-      <item itemvalue="JavaScript Debug.RetrieveDonors.php" />
+      <item itemvalue="JavaScript Debug.Registers.php" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.RetrieveDonors.php" />
         <item itemvalue="PHP Script.Registers.php" />
         <item itemvalue="JavaScript Debug.Registers.php" />
       </list>
@@ -194,21 +512,35 @@
       <workItem from="1573496835211" duration="768000" />
       <workItem from="1573506163216" duration="2586000" />
       <workItem from="1573604524518" duration="2157000" />
-      <workItem from="1573638527801" duration="26853000" />
-      <workItem from="1573730776226" duration="14097000" />
-      <workItem from="1573759227117" duration="2817000" />
-      <workItem from="1574767930082" duration="586000" />
-      <workItem from="1574768544395" duration="658000" />
-      <workItem from="1574809404822" duration="1939000" />
-      <workItem from="1574842007658" duration="1251000" />
-      <workItem from="1574845953631" duration="5228000" />
-      <workItem from="1574970172638" duration="1613000" />
-      <workItem from="1575108006802" duration="601000" />
-      <workItem from="1575241391657" duration="3000" />
-      <workItem from="1575241410248" duration="2929000" />
-      <workItem from="1575374604396" duration="2358000" />
-      <workItem from="1575565646357" duration="1193000" />
-      <workItem from="1575618591292" duration="15725000" />
+      <workItem from="1575994969787" duration="8602000" />
+    </task>
+    <task id="LOCAL-00003" summary="Complete Design">
+      <created>1568312212753</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568312212753</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Complete Design">
+      <created>1568312252524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568312252524</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Complete-Design">
+      <created>1568312391065</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568312391065</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Complete-Design">
+      <created>1568314969506</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568314969506</updated>
     </task>
     <task id="LOCAL-00007" summary="Complete-Design">
       <created>1568315064713</created>
@@ -518,43 +850,46 @@
       <option name="project" value="LOCAL" />
       <updated>1573606317124</updated>
     </task>
-    <task id="LOCAL-00051" summary="Beatify LoginSystem , adding Permission">
-      <created>1573691793464</created>
+    <task id="LOCAL-00051" summary="family id">
+      <created>1573608051781</created>
       <option name="number" value="00051" />
       <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1573691793466</updated>
+      <updated>1573608051781</updated>
     </task>
-    <task id="LOCAL-00052" summary="adding animation">
-      <created>1573737803177</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1573737803177</updated>
-    </task>
-    <task id="LOCAL-00053" summary="deleting">
-      <created>1573742397182</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1573742397182</updated>
-    </task>
-    <task id="LOCAL-00054" summary="Restructure TO OOP Paradigm">
-      <created>1573751358435</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1573751358435</updated>
-    </task>
-    <task id="LOCAL-00055" summary="New Modification">
-      <created>1575634575988</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1575634575990</updated>
-    </task>
-    <option name="localTasksCounter" value="56" />
+    <option name="localTasksCounter" value="52" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="278472000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49782136" visible="true" weight="0.16837482" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5014641" side_tool="true" visible="true" weight="0.25157234" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49853587" visible="true" weight="0.25157234" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32897604" />
+      <window_info id="Structure" order="1" sideWeight="0.50217867" side_tool="true" weight="0.1748401" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39978212" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="0" weight="0.32897604" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="14" weight="0.32897604" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32897604" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32897604" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -576,14 +911,35 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="COLUMN_ORDER" />
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
             </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update Database File" />
+    <MESSAGE value="Bounded-WithDatabase" />
+    <MESSAGE value="Implement Ajax" />
+    <MESSAGE value="Update &amp; Implement Update Dialog" />
+    <MESSAGE value="Implement Script - Split Component - Add Update Feature" />
     <MESSAGE value="Remove attribute Required &amp; Move View Handel Script to JSHELPER - Fixing CurrentRecord Issue" />
     <MESSAGE value="Fixing Form Method" />
     <MESSAGE value="Change Method &quot;Remove Require Attribute&quot; + Add DataRow To Update Model" />
@@ -604,12 +960,7 @@
     <MESSAGE value="ADD BUTTONS" />
     <MESSAGE value="remove Marital input" />
     <MESSAGE value="family id" />
-    <MESSAGE value="Beatify LoginSystem , adding Permission" />
-    <MESSAGE value="adding animation" />
-    <MESSAGE value="deleting" />
-    <MESSAGE value="Restructure TO OOP Paradigm" />
-    <MESSAGE value="New Modification" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="family id" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -618,6 +969,328 @@
         <watch expression="$_REQUEST" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Views/Knowers_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="52" column="47" selection-start-line="52" selection-start-column="47" selection-end-line="52" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/PDO/PDO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35912">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Sections.php" />
+    <entry file="file://$PROJECT_DIR$/Includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4725">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Areas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5751">
+          <caret line="213" column="53" selection-start-line="213" selection-start-column="53" selection-end-line="213" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmpLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3915">
+          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php" />
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="139" column="32" lean-forward="true" selection-start-line="139" selection-start-column="32" selection-end-line="139" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveGroups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveSections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Agent_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="229" column="48" selection-start-line="229" selection-start-column="34" selection-end-line="229" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Groups_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Office_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-588">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Sections_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Donors_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../dynamically-add-remove-field/dynamically-add-remove-field/name.php" />
+    <entry file="file://$PROJECT_DIR$/../../dynamically-add-remove-field/dynamically-add-remove-field/index.php" />
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/DonorRegister_Component.php" />
+    <entry file="file://$PROJECT_DIR$/Views/Areas_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Office.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="197" lean-forward="true" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_9.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="123" column="13" lean-forward="true" selection-start-line="123" selection-start-column="13" selection-end-line="123" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveDonors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="4553" column="51" lean-forward="true" selection-start-line="4553" selection-start-column="51" selection-end-line="4553" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/bootstrap.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/assets/js/jquery-3.4.1.js" />
+    <entry file="file://$PROJECT_DIR$/SQL File - Updated/OrgDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="212" lean-forward="true" selection-start-line="212" selection-end-line="212" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveRegitserDonors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1464">
+          <caret line="85" column="31" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveFamilies.php" />
+    <entry file="file://$PROJECT_DIR$/Includes/PHPHelper/RetrieveOffices.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/JSHelper/UpdateModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Familyneeds_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="54" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Families_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2868">
+          <caret line="503" selection-start-line="503" selection-end-line="514" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Families.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="125" column="50" lean-forward="true" selection-start-line="125" selection-start-column="50" selection-end-line="125" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/FamilyMembers_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FamilyMembers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Includes/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="158" lean-forward="true" selection-start-line="158" selection-end-line="158" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sections.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Donors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="93" column="16" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Familyneeds.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knowers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Registers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="95" column="46" lean-forward="true" selection-start-line="95" selection-start-column="46" selection-end-line="95" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Registers_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="107" column="17" lean-forward="true" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Employee.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="106" column="36" lean-forward="true" selection-start-line="106" selection-start-column="36" selection-end-line="106" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#td#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Employee_Component.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>

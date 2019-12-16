@@ -32,7 +32,7 @@
 
         <div class="multiselect" id="countries" multiple="multiple" data-target="multi-0">
             <div class="title noselect">
-                <span class="text">اختر</span>
+                <input required name="employee_jobs" class="text">اختر</input>
                 <span class="close-icon">&times;</span>
                 <span class="expand-icon">&plus;</span>
             </div>
@@ -81,7 +81,7 @@
 <div class="form-group">
     <label class="control-label col-sm-1">صفة المناداة</label>
     <div class="col-sm-10">
-        <select class="form-control" name="employee_adj" id="employee_adj">
+        <select required class="form-control" name="employee_adj" id="employee_adj">
             <option> السيد الفاضل</option>
             <option> الأستاذ الفاضل</option>
             <option> الأستاذة الفاضلة</option>

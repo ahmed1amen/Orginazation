@@ -27,6 +27,8 @@ if (isset($_SESSION['Username'])) {
         $employee_email = $_POST["employee_email"];
         $employee_password = $_POST["employee_password"];
         $employee_office = $_POST["employee_office"];
+        $employee_adj = $_POST["employee_adj"];
+        $employee_jobs = $_POST["employee_jobs"];
 
         if ($_POST["do"] == "add") {
 
@@ -42,7 +44,8 @@ if (isset($_SESSION['Username'])) {
         else
         {
              // دي طريقه اسمها PDO ف ال PHP  , تعامل اسهل مع قاعده البيانات
-            $stmt = DBClass::$con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office) VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office')");
+            $stmt = DBClass::$con->prepare("INSERT INTO Employee_Data(employee_name, employee_number, employee_address, employee_salary, employee_jobName, employee_email, employee_password, employee_office,employee_adj,employee_jobs)
+                                                            VALUES ('$employee_name','$employee_number','$employee_address','$employee_salary','$employee_jobName','$employee_email','$employee_password','$employee_office','$employee_adj','$employee_jobs')");
         $stmt->execute();
 // بس خلاص الموظف اضاف تمام كده
         }      
@@ -96,6 +99,14 @@ if (isset($_SESSION['Username'])) {
             if (isset($_POST["employee_office"])) {
                 $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_office='$employee_office' WHERE Employee_ID=$Changed_ID");
                     $stmt->execute();
+            }
+            if (isset($_POST["employee_adj"])) {
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_adj='$employee_adj' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
+            }
+            if (isset($_POST["employee_jobs"])) {
+                $stmt = DBClass::$con->prepare("UPDATE employee_data SET employee_jobs='$employee_jobs' WHERE Employee_ID=$Changed_ID");
+                $stmt->execute();
             }
             header("Location: Employee.php?do=view");
         }
